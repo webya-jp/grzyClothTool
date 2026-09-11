@@ -6,9 +6,10 @@
         xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
         xmlns:local="clr-namespace:grzyClothTool.Views"
         xmlns:c="clr-namespace:grzyClothTool.Controls"
+        xmlns:loc="clr-namespace:grzyClothTool.Localization"
         Background="{DynamicResource Brush50}"
         mc:Ignorable="d"
-        Title="Optimize textures" MinHeight="420" MaxHeight="420" MinWidth="690" MaxWidth="690">
+        Title="{loc:Loc Optimize_Title}" MinHeight="420" MaxHeight="420" MinWidth="690" MaxWidth="690">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="330" />
@@ -21,17 +22,17 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="70" />
             </Grid.RowDefinitions>
-            <GroupBox Header="Current texture" Margin="5" Grid.Row="0" Style="{DynamicResource FixedGroupBox}">
+            <GroupBox Header="{loc:Loc Optimize_CurrentTexture}" Margin="5" Grid.Row="0" Style="{DynamicResource FixedGroupBox}">
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Name: " />
+                        <TextBlock Text="{loc:Loc Optimize_NameLabel}" />
                         <TextBlock>
                             <TextBlock.Style>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="Text" Value="{Binding TextureName}" />
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding MultipleTexturesSelected}" Value="True">
-                                            <Setter Property="Text" Value="{Binding SelectedTextureCount, StringFormat='Selected {0} textures'}" />
+                                            <Setter Property="Text" Value="{Binding SelectedTextureCount, StringFormat={loc:Loc Optimize_SelectedTextures}}" />
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
@@ -39,19 +40,19 @@
                         </TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Compression: " />
+                        <TextBlock Text="{loc:Loc Optimize_CompressionLabel}" />
                         <TextBlock Text="{Binding TextureDetails.Compression}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Width: " />
+                        <TextBlock Text="{loc:Loc Optimize_WidthLabel}" />
                         <TextBlock Text="{Binding TextureDetails.Width}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Height: " />
+                        <TextBlock Text="{loc:Loc Optimize_HeightLabel}" />
                         <TextBlock Text="{Binding TextureDetails.Height}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Mipmap amount: " />
+                        <TextBlock Text="{loc:Loc Optimize_MipmapLabel}" />
                         <TextBlock Text="{Binding TextureDetails.MipMapCount}" />
                     </StackPanel>
                 </StackPanel>
@@ -59,14 +60,14 @@
             <StackPanel Grid.Row="1" Margin="0,15,0,0" >
 
                 <c:ModernLabelCheckBox
-                    Label="Downscale texture size"
+                    Label="{loc:Loc Optimize_DownscaleTextureSize}"
                     IsChecked="{Binding IsTextureDownsizeEnabled}"
                     
     
                     />
                 <c:ModernLabelComboBox
                     IsEnabled="{Binding IsTextureDownsizeEnabled}"
-                    Label="Select texture size"
+                    Label="{loc:Loc Optimize_SelectTextureSize}"
                     SelectedItem="{Binding SelectedTextureSize}"
                     ItemsSource="{Binding AvailableTextureSizes}"
                     />
@@ -84,7 +85,7 @@
                     </Style>
                 </StackPanel.Style>
                 <icons:MaterialIcon Kind="WarningBoxOutline" Width="40" Height="40" Foreground="{DynamicResource Brush950}" />
-                <TextBlock Width="280" FontWeight="Medium" Foreground="{DynamicResource Brush950}" Text="Changing texture size here will make quality worse. To preserve texture quality this should be done with 3d programs and texture baking." TextWrapping="WrapWithOverflow" FontSize="12"/>
+                <TextBlock Width="280" FontWeight="Medium" Foreground="{DynamicResource Brush950}" Text="{loc:Loc Optimize_QualityWarning}" TextWrapping="WrapWithOverflow" FontSize="12"/>
             </StackPanel>
         </Grid>
 
@@ -94,17 +95,17 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="70" />
             </Grid.RowDefinitions>
-            <GroupBox Header="Output texture" Margin="5" Grid.Row="0" Style="{DynamicResource FixedGroupBox}">
+            <GroupBox Header="{loc:Loc Optimize_OutputTexture}" Margin="5" Grid.Row="0" Style="{DynamicResource FixedGroupBox}">
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Name: " />
+                        <TextBlock Text="{loc:Loc Optimize_NameLabel}" />
                         <TextBlock>
                             <TextBlock.Style>
                                 <Style TargetType="TextBlock">
                                     <Setter Property="Text" Value="{Binding TextureName}" />
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding MultipleTexturesSelected}" Value="True">
-                                            <Setter Property="Text" Value="{Binding SelectedTextureCount, StringFormat='Selected {0} textures'}" />
+                                            <Setter Property="Text" Value="{Binding SelectedTextureCount, StringFormat={loc:Loc Optimize_SelectedTextures}}" />
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
@@ -112,19 +113,19 @@
                         </TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Compression: " />
+                        <TextBlock Text="{loc:Loc Optimize_CompressionLabel}" />
                         <TextBlock Text="{Binding OutputTextureDetails.Compression}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Width: " />
+                        <TextBlock Text="{loc:Loc Optimize_WidthLabel}" />
                         <TextBlock Text="{Binding OutputTextureDetails.Width}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Height: " />
+                        <TextBlock Text="{loc:Loc Optimize_HeightLabel}" />
                         <TextBlock Text="{Binding OutputTextureDetails.Height}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Mipmap amount: " />
+                        <TextBlock Text="{loc:Loc Optimize_MipmapLabel}" />
                         <TextBlock Text="{Binding OutputTextureDetails.MipMapCount}" />
                     </StackPanel>
                 </StackPanel>
@@ -132,12 +133,12 @@
             <StackPanel Grid.Row="1" Margin="0,15,0,0">
                 <c:ModernLabelCheckBox
                     IsChecked="{Binding IsTextureCompressionEnabled}"
-                    Label="Change texture compression"
+                    Label="{loc:Loc Optimize_ChangeTextureCompression}"
     
                     />
                 <c:ModernLabelComboBox
                     IsEnabled="{Binding IsTextureCompressionEnabled}"
-                    Label="Select compression"
+                    Label="{loc:Loc Optimize_SelectCompression}"
                     ItemsSource="{Binding AvailableCompression}"
                     SelectedItem="{Binding SelectedCompression}"
                     />
@@ -150,7 +151,7 @@
                     CornerRadius="5"
                     Height="40"
                     Width="100"
-                    Label="Cancel"
+                    Label="{loc:Loc Common_Cancel}"
                     MyBtnClickEvent="CancelBtn_Click"
                 />
                 <c:CustomButton 
@@ -159,7 +160,7 @@
                     CornerRadius="5"
                     Height="40"
                     Width="180"
-                    Label="Optimize"
+                    Label="{loc:Loc Optimize_Optimize}"
                     MyBtnClickEvent="OptimizeTexture_Click"
                 />
             </StackPanel>

@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:grzyClothTool.Views"
         xmlns:c="clr-namespace:grzyClothTool.Controls"
+        xmlns:loc="clr-namespace:grzyClothTool.Localization"
         mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterOwner"
         MouseDown="Window_MouseDown"
         Closing="Window_Closing"
-        Title="grzyClothTool - Build resource"
+        Title="{loc:Loc Build_Title}"
         Background="{DynamicResource Brush50}"
         Height="550"
         Width="500">
@@ -21,7 +22,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
 
-            <GroupBox Header="Select resource type" Margin="15" Style="{DynamicResource FixedGroupBox}">
+            <GroupBox Header="{loc:Loc Build_SelectResourceType}" Margin="15" Style="{DynamicResource FixedGroupBox}">
                 <StackPanel>
                     <c:ModernLabelRadioButton 
                         Margin="5,5,5,0"
@@ -47,7 +48,7 @@
 
             <c:ModernLabelTextBox 
                 x:Name="name"
-                Label="Project name"
+                Label="{loc:Loc Build_ProjectName}"
                 Margin="15,15,15,0"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Stretch"
@@ -56,7 +57,7 @@
 
             <c:ModernLabelTextBox 
                 x:Name="output"
-                Label="Output folder"
+                Label="{loc:Loc Build_OutputFolder}"
                 Margin="15,15,15,0"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Stretch"
@@ -64,7 +65,7 @@
                 Text="{Binding BuildPath}" />
 
             <c:ModernLabelCheckBox 
-                Label="Build addons as separate resources" 
+                Label="{loc:Loc Build_SplitAddons}" 
                 x:Name="split_addons" 
                 VerticalAlignment="Top" 
                 Margin="10,10,10,0"
@@ -104,7 +105,7 @@
                     CornerRadius="5"
                     Width="150"
                     IsEnabled="{Binding CanBuild}"
-                    Label="Build resource"
+                    Label="{loc:Loc Build_BuildResource}"
                     MyBtnClickEvent="build_MyBtnClickEvent" />
             </Border>
         </Grid>

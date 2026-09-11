@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 
 namespace grzyClothTool.Views
 {
@@ -10,7 +11,7 @@ namespace grzyClothTool.Views
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string _dialogTitle = "Create New Project";
+        private string _dialogTitle = Loc.T("ProjectSetup_CreateNewProject");
         public string DialogTitle
         {
             get => _dialogTitle;
@@ -32,7 +33,7 @@ namespace grzyClothTool.Views
             }
         }
         public string ProjectExistsWarning =>
-            $"A project named \"{ProjectName}\" already exists. Continuing will overwrite it.";
+            Loc.T("ProjectSetup_ProjectExistsWarning", ProjectName);
 
         private bool _isSelfContained = true;
         public bool IsSelfContained
@@ -71,7 +72,7 @@ namespace grzyClothTool.Views
             set { _drawableCountMessage = value; OnPropertyChanged(); }
         }
 
-        private string _confirmButtonText = "Create";
+        private string _confirmButtonText = Loc.T("ProjectSetup_Create");
         public string ConfirmButtonText
         {
             get => _confirmButtonText;
@@ -109,8 +110,8 @@ namespace grzyClothTool.Views
             var dialog = new ProjectSetupDialog
             {
                 Owner = owner,
-                DialogTitle = "Create New Project",
-                ConfirmButtonText = "Create",
+                DialogTitle = Loc.T("ProjectSetup_CreateNewProject"),
+                ConfirmButtonText = Loc.T("ProjectSetup_Create"),
                 IsSelfContained = true,
                 ShowDrawableCount = false
             };
@@ -125,14 +126,14 @@ namespace grzyClothTool.Views
             var dialog = new ProjectSetupDialog
             {
                 Owner = owner,
-                DialogTitle = "Open Existing Addon",
-                ConfirmButtonText = "Open",
+                DialogTitle = Loc.T("ProjectSetup_OpenExistingAddon"),
+                ConfirmButtonText = Loc.T("Common_Open"),
                 ProjectName = suggestedName,
                 IsSelfContained = false,
                 ShowDrawableCount = true,
                 DrawableCountMessage = metaFileCount > 1 
-                    ? $"Found {drawableCount} drawable(s) in {metaFileCount} .meta files"
-                    : $"Found {drawableCount} drawable(s)"
+                    ? Loc.T("ProjectSetup_FoundDrawablesInMetaFiles", drawableCount, metaFileCount)
+                    : Loc.T("ProjectSetup_FoundDrawables", drawableCount)
             };
             
             dialog.ProjectNameTextBox.SelectAll();
@@ -151,8 +152,8 @@ namespace grzyClothTool.Views
             if (ShowProjectExistsWarning)
             {
                 var result = Controls.CustomMessageBox.Show(
-                    $"A project named \"{ProjectName}\" already exists.\n\nDo you want to overwrite it? This cannot be undone.",
-                    "Project Already Exists",
+                    Loc.T("ProjectSetup_OverwriteConfirmMessage", ProjectName),
+                    Loc.T("ProjectSetup_ProjectExistsTitle"),
                     Controls.CustomMessageBox.CustomMessageBoxButtons.YesNo,
                     Controls.CustomMessageBox.CustomMessageBoxIcon.Warning);
 

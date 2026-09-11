@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using grzyClothTool.Constants;
+using grzyClothTool.Localization;
 using grzyClothTool.Models.Drawable;
 using grzyClothTool.Models.Texture;
 using grzyClothTool.Views;
@@ -367,7 +368,7 @@ public static class FileHelper
         }
         catch (Exception ex)
         {
-            MessageBox.Show($"An error occurred while trying to open the file location: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show(Loc.T("File_OpenLocationError", ex.Message), Loc.T("Common_Error"), MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 

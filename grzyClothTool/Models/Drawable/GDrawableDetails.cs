@@ -1,4 +1,5 @@
 ﻿using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models.Texture;
 using System;
 using System.Collections.Generic;
@@ -156,7 +157,7 @@ public class GDrawableDetails : INotifyPropertyChanged
             if (model == null)
             {
                 IsWarning = true;
-                Tooltip += $"[{detailLevel}] Missing LOD model.\n";
+                Tooltip += Loc.T("Drawable_MissingLodModel", detailLevel);
                 continue;
             }
 
@@ -171,7 +172,7 @@ public class GDrawableDetails : INotifyPropertyChanged
             if (model.PolyCount > polygonLimit)
             {
                 IsWarning = true;
-                Tooltip += $"[{detailLevel}] Polygon count of {model.PolyCount} exceeds the limit of {polygonLimit}.\n";
+                Tooltip += Loc.T("Drawable_PolygonLimitExceeded", detailLevel, model.PolyCount, polygonLimit);
             }
         }
 
@@ -181,7 +182,7 @@ public class GDrawableDetails : INotifyPropertyChanged
             if (txt == null || !txt.HasOriginalTexture)
             {
                 IsWarning = true;
-                Tooltip += $"Missing {key} texture.\n";
+                Tooltip += Loc.T("Drawable_MissingEmbeddedTexture", key);
                 continue;
             }
             
@@ -194,7 +195,7 @@ public class GDrawableDetails : INotifyPropertyChanged
         if (TexturesCount == 0)
         {
             IsWarning = true;
-            Tooltip += "Drawable has no textures.\n";
+            Tooltip += Loc.T("Drawable_NoTextures");
         }
         
         if (textures != null && textures.Count > 0)
@@ -221,7 +222,7 @@ public class GDrawableDetails : INotifyPropertyChanged
         
         if (HasTextureWarnings || HasEmbeddedTextureWarnings)
         {
-            Tooltip += "Some textures have warnings. Check texture details.\n";
+            Tooltip += Loc.T("Drawable_TextureWarnings");
             IsWarning = true;
         }
 
@@ -229,7 +230,7 @@ public class GDrawableDetails : INotifyPropertyChanged
         {
             HasHighHeelsWarning = true;
             IsWarning = true;
-            Tooltip += "Shoes might be under floor. Consider enabling High heels and validating manually in the 3D preview.\n";
+            Tooltip += Loc.T("Drawable_HighHeelsWarning");
         }
 
         // Remove trailing newline character

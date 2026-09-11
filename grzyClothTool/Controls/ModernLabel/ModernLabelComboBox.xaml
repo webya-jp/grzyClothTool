@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:grzyClothTool.Controls"
              xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+             xmlns:loc="clr-namespace:grzyClothTool.Localization"
              ClipToBounds="False"
              x:Name="MyModernLabelComboBox">
 
@@ -28,7 +29,11 @@
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="SingleSelectTemplate">
-            <TextBlock Text="{Binding}" VerticalAlignment="Center" Margin="5,0,0,0"/>
+            <!-- ItemDisplayTemplate lets a caller show a localized label while keeping the raw bound value.
+                 When it is not set, ContentControl falls back to the item's ToString(). -->
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{Binding ItemDisplayTemplate, ElementName=MyModernLabelComboBox}"
+                            VerticalAlignment="Center" Margin="5,0,0,0"/>
         </DataTemplate>
     </UserControl.Resources>
 
@@ -272,7 +277,7 @@
                 Background="Transparent"
                 BorderThickness="0"
                 Cursor="Hand"
-                ToolTip="Clear Group"
+                ToolTip="{loc:Loc ModernLabel_ClearGroup}"
                 Visibility="Collapsed"
                 Click="ClearButton_Click">
             <Button.Style>

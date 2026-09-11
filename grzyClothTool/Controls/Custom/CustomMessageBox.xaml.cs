@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using grzyClothTool.Localization;
+using System.Drawing;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -29,7 +30,7 @@ namespace grzyClothTool.Controls
             get
             {
                 var b = GetDefaultButton();
-                b.Content = nameof(OK);
+                b.Content = Loc.T("Common_Ok");
                 b.Click += delegate { result = CustomMessageBoxResult.OK; Close(); };
                 return b;
             }
@@ -39,7 +40,7 @@ namespace grzyClothTool.Controls
             get
             {
                 var b = GetDefaultButton();
-                b.Content = nameof(Cancel);
+                b.Content = Loc.T("Common_Cancel");
                 b.Click += delegate { result = CustomMessageBoxResult.Cancel; Close(); };
                 return b;
             }
@@ -49,7 +50,7 @@ namespace grzyClothTool.Controls
             get
             {
                 var b = GetDefaultButton();
-                b.Content = nameof(Yes);
+                b.Content = Loc.T("Common_Yes");
                 b.Click += delegate { result = CustomMessageBoxResult.Yes; Close(); };
                 return b;
             }
@@ -59,7 +60,7 @@ namespace grzyClothTool.Controls
             get
             {
                 var b = GetDefaultButton();
-                b.Content = nameof(No);
+                b.Content = Loc.T("Common_No");
                 b.Click += delegate { result = CustomMessageBoxResult.No; Close(); };
                 return b;
             }
@@ -69,7 +70,7 @@ namespace grzyClothTool.Controls
             get
             {
                 var b = GetDefaultButton();
-                b.Content = "Open Folder";
+                b.Content = Loc.T("MsgBox_OpenFolder");
                 b.Click += delegate { result = CustomMessageBoxResult.OpenFolder; Close(); };
                 return b;
             }
@@ -80,7 +81,7 @@ namespace grzyClothTool.Controls
             get
             {
                 var b = GetDefaultButton();
-                b.Content = "Delete";
+                b.Content = Loc.T("Common_Delete");
                 b.Click += delegate { result = CustomMessageBoxResult.Delete; Close(); };
                 return b;
             }
@@ -91,7 +92,7 @@ namespace grzyClothTool.Controls
             get
             {
                 var b = GetDefaultButton();
-                b.Content = "Replace";
+                b.Content = Loc.T("MsgBox_Replace");
                 b.Click += delegate { result = CustomMessageBoxResult.Replace; Close(); };
                 return b;
             }
@@ -102,7 +103,7 @@ namespace grzyClothTool.Controls
             get
             {
                 var b = GetDefaultButton();
-                b.Content = "Male";
+                b.Content = Loc.T("Common_Male");
                 b.Click += delegate { result = CustomMessageBoxResult.Male; Close(); };
                 return b;
             }
@@ -113,7 +114,7 @@ namespace grzyClothTool.Controls
             get
             {
                 var b = GetDefaultButton();
-                b.Content = "Female";
+                b.Content = Loc.T("Common_Female");
                 b.Click += delegate { result = CustomMessageBoxResult.Female; Close(); };
                 return b;
             }
@@ -313,8 +314,9 @@ namespace grzyClothTool.Controls
         // Returns simple Button with pre-defined properties
         private static Button GetDefaultButton() => new Button
         {
-            Width = 72,
+            MinWidth = 72,
             Height = 28,
+            Padding = new Thickness(8, 0, 8, 0),
             Margin = new Thickness(0, 4, 6, 4),
             Background = Brushes.White,
             BorderBrush = Brushes.DarkGray,

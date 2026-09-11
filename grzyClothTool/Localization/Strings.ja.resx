@@ -184,4 +184,1478 @@
   <data name="Settings_LanguageDescription" xml:space="preserve">
     <value>自動 を選ぶと Windows の言語に従います。変更はすぐに反映されます。一部のテキストは再起動後に反映されます。</value>
   </data>
+  <data name="Slot_head" xml:space="preserve">
+    <value>顔/頭</value>
+  </data>
+  <data name="Slot_berd" xml:space="preserve">
+    <value>マスク</value>
+  </data>
+  <data name="Slot_hair" xml:space="preserve">
+    <value>髪</value>
+  </data>
+  <data name="Slot_uppr" xml:space="preserve">
+    <value>上半身 (腕/素体)</value>
+  </data>
+  <data name="Slot_lowr" xml:space="preserve">
+    <value>下半身 (ズボン)</value>
+  </data>
+  <data name="Slot_hand" xml:space="preserve">
+    <value>バッグ/手</value>
+  </data>
+  <data name="Slot_feet" xml:space="preserve">
+    <value>靴</value>
+  </data>
+  <data name="Slot_teef" xml:space="preserve">
+    <value>アクセサリ (首)</value>
+  </data>
+  <data name="Slot_accs" xml:space="preserve">
+    <value>インナー</value>
+  </data>
+  <data name="Slot_task" xml:space="preserve">
+    <value>アーマー</value>
+  </data>
+  <data name="Slot_decl" xml:space="preserve">
+    <value>デカール</value>
+  </data>
+  <data name="Slot_jbib" xml:space="preserve">
+    <value>トップス</value>
+  </data>
+  <data name="Slot_p_head" xml:space="preserve">
+    <value>帽子</value>
+  </data>
+  <data name="Slot_p_eyes" xml:space="preserve">
+    <value>メガネ</value>
+  </data>
+  <data name="Slot_p_ears" xml:space="preserve">
+    <value>イヤリング</value>
+  </data>
+  <data name="Slot_p_mouth" xml:space="preserve">
+    <value>口</value>
+  </data>
+  <data name="Slot_p_lhand" xml:space="preserve">
+    <value>左手</value>
+  </data>
+  <data name="Slot_p_rhand" xml:space="preserve">
+    <value>右手</value>
+  </data>
+  <data name="Slot_p_lwrist" xml:space="preserve">
+    <value>左手首 (時計)</value>
+  </data>
+  <data name="Slot_p_rwrist" xml:space="preserve">
+    <value>右手首 (ブレス)</value>
+  </data>
+  <data name="Slot_p_hip" xml:space="preserve">
+    <value>腰</value>
+  </data>
+  <data name="Slot_p_lfoot" xml:space="preserve">
+    <value>左足</value>
+  </data>
+  <data name="Slot_p_rfoot" xml:space="preserve">
+    <value>右足</value>
+  </data>
+  <data name="Slot_p_ph_l_hand" xml:space="preserve">
+    <value>左手 (物理)</value>
+  </data>
+  <data name="Slot_p_ph_r_hand" xml:space="preserve">
+    <value>右手 (物理)</value>
+  </data>
+  <data name="SelDraw_NoDrawableSelected" xml:space="preserve">
+    <value>ドロウアブルが選択されていません</value>
+  </data>
+  <data name="SelDraw_NoDrawableHint" xml:space="preserve">
+    <value>リストからドロウアブルを選択すると、プロパティの確認と編集ができます</value>
+  </data>
+  <data name="SelDraw_ReservedTitle" xml:space="preserve">
+    <value>予約済みドロウアブル</value>
+  </data>
+  <data name="SelDraw_ReservedDescription" xml:space="preserve">
+    <value>これは予約済みのドロウアブルスロットのため、編集できません。</value>
+  </data>
+  <data name="SelDraw_ReplaceReservedButton" xml:space="preserve">
+    <value>予約済みドロウアブルを置き換える</value>
+  </data>
+  <data name="SelDraw_OptionsDisabled" xml:space="preserve">
+    <value>オプションは無効です</value>
+  </data>
+  <data name="SelDraw_SelectedDrawablesCount" xml:space="preserve">
+    <value>{0} 件のドロウアブルを選択中</value>
+  </data>
+  <data name="SelDraw_WarningLabel" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="SelDraw_MultipleNotSameWarning" xml:space="preserve">
+    <value>選択したドロウアブルの内容が一致していません。ドロウアブルオプションを編集するには、内容が同じものを選択するか、下のボタンで強制的に上書きしてください。</value>
+  </data>
+  <data name="SelDraw_ForceOverride" xml:space="preserve">
+    <value>強制的に上書き</value>
+  </data>
+  <data name="SelDraw_OverrideDisabled" xml:space="preserve">
+    <value>上書きは無効</value>
+  </data>
+  <data name="SelDraw_OverrideEnabled" xml:space="preserve">
+    <value>上書きが有効</value>
+  </data>
+  <data name="SelDraw_OverrideDifferentTypeInfo" xml:space="preserve">
+    <value>種類が異なるドロウアブルでは上書きを有効にできません。同じ種類のドロウアブルだけを選択してください</value>
+  </data>
+  <data name="SelDraw_DrawableOptions" xml:space="preserve">
+    <value>ドロウアブルオプション</value>
+  </data>
+  <data name="SelDraw_LabelAudio" xml:space="preserve">
+    <value>オーディオ</value>
+  </data>
+  <data name="SelDraw_LabelRenderFlag" xml:space="preserve">
+    <value>RenderFlag</value>
+  </data>
+  <data name="SelDraw_LabelHasSkin" xml:space="preserve">
+    <value>スキンあり</value>
+  </data>
+  <data name="SelDraw_LabelFlags" xml:space="preserve">
+    <value>フラグ</value>
+  </data>
+  <data name="SelDraw_LabelHidesHair" xml:space="preserve">
+    <value>髪を隠す</value>
+  </data>
+  <data name="SelDraw_LabelEnableHairScale" xml:space="preserve">
+    <value>髪のスケールを有効化</value>
+  </data>
+  <data name="SelDraw_LabelHairScale" xml:space="preserve">
+    <value>髪のスケール</value>
+  </data>
+  <data name="SelDraw_LabelEnableHighHeels" xml:space="preserve">
+    <value>ハイヒールを有効化</value>
+  </data>
+  <data name="SelDraw_LabelHighHeelsAmount" xml:space="preserve">
+    <value>ハイヒールの高さ</value>
+  </data>
+  <data name="SelDraw_PreviewOptions" xml:space="preserve">
+    <value>プレビューオプション</value>
+  </data>
+  <data name="SelDraw_RunPreviewToEnable" xml:space="preserve">
+    <value>3D プレビューを実行するとオプションが有効になります</value>
+  </data>
+  <data name="SelDraw_LabelKeepPreview" xml:space="preserve">
+    <value>プレビューを保持</value>
+  </data>
+  <data name="SelDraw_Organization" xml:space="preserve">
+    <value>整理</value>
+  </data>
+  <data name="SelDraw_Group" xml:space="preserve">
+    <value>グループ</value>
+  </data>
+  <data name="SelDraw_MultipleGroups" xml:space="preserve">
+    <value>(複数のグループ)</value>
+  </data>
+  <data name="SelDraw_Tags" xml:space="preserve">
+    <value>タグ</value>
+  </data>
+  <data name="SelDraw_LabelDisplayName" xml:space="preserve">
+    <value>表示名</value>
+  </data>
+  <data name="SelDraw_LabelDrawableType" xml:space="preserve">
+    <value>ドロウアブルの種類</value>
+  </data>
+  <data name="SelDraw_LabelSex" xml:space="preserve">
+    <value>性別</value>
+  </data>
+  <data name="SelDraw_LabelFirstPersonFile" xml:space="preserve">
+    <value>一人称ファイル</value>
+  </data>
+  <data name="SelDraw_LabelClothPhysicsFile" xml:space="preserve">
+    <value>布の物理演算ファイル (.yld)</value>
+  </data>
+  <data name="SelDraw_TabTextures" xml:space="preserve">
+    <value>テクスチャ</value>
+  </data>
+  <data name="SelDraw_TexturesWarningTooltip" xml:space="preserve">
+    <value>警告のあるテクスチャが 1 つ以上あります</value>
+  </data>
+  <data name="SelDraw_TabEmbedded" xml:space="preserve">
+    <value>埋め込み</value>
+  </data>
+  <data name="SelDraw_EmbeddedWarningTooltip" xml:space="preserve">
+    <value>警告のある埋め込みテクスチャが 1 つ以上あります</value>
+  </data>
+  <data name="SelDraw_WillBeOptimizedTooltip" xml:space="preserve">
+    <value>このテクスチャはリソースのビルド時に最適化されます</value>
+  </data>
+  <data name="SelDraw_TextureNotFoundTooltip" xml:space="preserve">
+    <value>テクスチャが見つかりません。この .ytd は空の可能性があります</value>
+  </data>
+  <data name="SelDraw_Preview" xml:space="preserve">
+    <value>プレビュー</value>
+  </data>
+  <data name="SelDraw_OptimizeTexture" xml:space="preserve">
+    <value>テクスチャを最適化</value>
+  </data>
+  <data name="SelDraw_UndoOptimize" xml:space="preserve">
+    <value>最適化を元に戻す</value>
+  </data>
+  <data name="SelDraw_Replace" xml:space="preserve">
+    <value>置き換え</value>
+  </data>
+  <data name="SelDraw_OpenFileLocation" xml:space="preserve">
+    <value>ファイルの場所を開く</value>
+  </data>
+  <data name="SelDraw_ExportAsYtd" xml:space="preserve">
+    <value>YTD としてエクスポート</value>
+  </data>
+  <data name="SelDraw_ExportTextureAsDds" xml:space="preserve">
+    <value>テクスチャを DDS としてエクスポート</value>
+  </data>
+  <data name="SelDraw_ExportTextureAsPng" xml:space="preserve">
+    <value>テクスチャを PNG としてエクスポート</value>
+  </data>
+  <data name="SelDraw_ReplacementTextureTooltip" xml:space="preserve">
+    <value>これは置き換え用のテクスチャです</value>
+  </data>
+  <data name="SelDraw_ExportAsDds" xml:space="preserve">
+    <value>DDS としてエクスポート</value>
+  </data>
+  <data name="SelDraw_ExportAsPng" xml:space="preserve">
+    <value>PNG としてエクスポート</value>
+  </data>
+  <data name="SelDraw_AddTextures" xml:space="preserve">
+    <value>テクスチャを追加</value>
+  </data>
+  <data name="SelDraw_DeleteSelectedTooltip" xml:space="preserve">
+    <value>選択項目を削除</value>
+  </data>
+  <data name="SelDraw_TxtStatusReplacement" xml:space="preserve">
+    <value>置き換え</value>
+  </data>
+  <data name="SelDraw_TxtStatusEmbedded" xml:space="preserve">
+    <value>埋め込み</value>
+  </data>
+  <data name="SelDraw_MaxTexturesReached" xml:space="preserve">
+    <value>1 つのドロウアブルに設定できるテクスチャは {0} 個までです。</value>
+  </data>
+  <data name="SelDraw_SelectTexturesTitle" xml:space="preserve">
+    <value>テクスチャを選択</value>
+  </data>
+  <data name="SelDraw_TextureFileFilter" xml:space="preserve">
+    <value>テクスチャファイル (*.ytd)|*.ytd|画像ファイル (*.jpg;*.png;*.dds)|*.jpg;*.png;*.dds</value>
+  </data>
+  <data name="SelDraw_ImageFileFilter" xml:space="preserve">
+    <value>画像ファイル (*.jpg;*.png;*.dds)|*.jpg;*.png;*.dds</value>
+  </data>
+  <data name="SelDraw_DrawableFileFilter" xml:space="preserve">
+    <value>ドロウアブルファイル (*.ydd)|*.ydd</value>
+  </data>
+  <data name="SelDraw_TextureLimitReached" xml:space="preserve">
+    <value>テクスチャの上限 {0} 個に達しました。最後に追加されたテクスチャ: {1}</value>
+  </data>
+  <data name="SelDraw_InfoCaption" xml:space="preserve">
+    <value>情報</value>
+  </data>
+  <data name="SelDraw_MixedOptimizeState" xml:space="preserve">
+    <value>最適化済みのテクスチャと未最適化のテクスチャが混在しています。同じ状態のテクスチャを選択してください。</value>
+  </data>
+  <data name="SelDraw_FilesNotAccessibleMessage" xml:space="preserve">
+    <value>次のテクスチャファイルにアクセスできませんでした:
+
+{0}
+
+仮想パスの可能性があります。先にフォルダーへ展開し、そこからドラッグしてください。</value>
+  </data>
+  <data name="SelDraw_FilesNotAccessibleCaption" xml:space="preserve">
+    <value>ファイルにアクセスできません</value>
+  </data>
+  <data name="SelDraw_DropErrorMessage" xml:space="preserve">
+    <value>ドロップされたテクスチャファイルの処理中にエラーが発生しました:
+
+{0}</value>
+  </data>
+  <data name="SelDraw_DropErrorCaption" xml:space="preserve">
+    <value>ドラッグ&amp;ドロップのエラー</value>
+  </data>
+  <data name="SelDraw_TextureSizeMismatch" xml:space="preserve">
+    <value>テクスチャ {0} のサイズが他のテクスチャと一致していません。</value>
+  </data>
+  <data name="SelDraw_SelectReservedReplacementTitle" xml:space="preserve">
+    <value>予約済みと置き換えるドロウアブルファイルを選択</value>
+  </data>
+  <data name="SelDraw_ExportTexturesFolderTitle" xml:space="preserve">
+    <value>テクスチャを {0} としてエクスポートするフォルダーを選択</value>
+  </data>
+  <data name="SelDraw_ExportErrorMessage" xml:space="preserve">
+    <value>エクスポート中にエラーが発生しました: {0}</value>
+  </data>
+  <data name="SelDraw_ExportErrorCaption" xml:space="preserve">
+    <value>エクスポートエラー</value>
+  </data>
+  <data name="SelDraw_SelectReplaceTextureTitle" xml:space="preserve">
+    <value>{0} と置き換えるテクスチャファイルを選択</value>
+  </data>
+  <data name="SelDraw_ReplaceTextureFailed" xml:space="preserve">
+    <value>テクスチャを置き換えられませんでした: {0}</value>
+  </data>
+  <data name="SelDraw_EmbeddedMissingNothingToExport" xml:space="preserve">
+    <value>この埋め込みテクスチャは存在しないため、エクスポートできる画像データがありません。</value>
+  </data>
+  <data name="SelDraw_NothingToExportCaption" xml:space="preserve">
+    <value>エクスポート対象なし</value>
+  </data>
+  <data name="SelDraw_ExportEmbeddedFolderTitle" xml:space="preserve">
+    <value>埋め込みテクスチャを {0} としてエクスポートするフォルダーを選択</value>
+  </data>
+  <data name="SelDraw_RenameEmbeddedTextureTitle" xml:space="preserve">
+    <value>埋め込みテクスチャの名前を変更</value>
+  </data>
+  <data name="SelDraw_EnterNewName" xml:space="preserve">
+    <value>新しい名前を入力してください:</value>
+  </data>
+  <data name="SelDraw_SelectReplaceEmbeddedTitle" xml:space="preserve">
+    <value>埋め込み {0} と置き換えるテクスチャファイルを選択</value>
+  </data>
+  <data name="SelDraw_ReplaceEmbeddedFailed" xml:space="preserve">
+    <value>埋め込みテクスチャを置き換えられませんでした: {0}</value>
+  </data>
+  <data name="SelDraw_LoadImageFailed" xml:space="preserve">
+    <value>指定されたファイルから画像を読み込めませんでした。</value>
+  </data>
+  <data name="DrawList_ShowInDuplicateInspector" xml:space="preserve">
+    <value>重複インスペクターで表示</value>
+  </data>
+  <data name="DrawList_Replace" xml:space="preserve">
+    <value>置き換え</value>
+  </data>
+  <data name="DrawList_DuplicateToOppositeGender" xml:space="preserve">
+    <value>反対の性別に複製</value>
+  </data>
+  <data name="DrawList_MoveToAnotherAddon" xml:space="preserve">
+    <value>別のアドオンへ移動</value>
+  </data>
+  <data name="DrawList_Move" xml:space="preserve">
+    <value>移動</value>
+  </data>
+  <data name="DrawList_OpenFileLocation" xml:space="preserve">
+    <value>ファイルの場所を開く</value>
+  </data>
+  <data name="DrawList_ExportAsYdd" xml:space="preserve">
+    <value>YDD としてエクスポート</value>
+  </data>
+  <data name="DrawList_ExportAsYddWithTextures" xml:space="preserve">
+    <value>テクスチャ付きで YDD としてエクスポート</value>
+  </data>
+  <data name="DrawList_ExportTexturesAsDds" xml:space="preserve">
+    <value>テクスチャのみ DDS としてエクスポート</value>
+  </data>
+  <data name="DrawList_ExportTexturesAsPng" xml:space="preserve">
+    <value>テクスチャのみ PNG としてエクスポート</value>
+  </data>
+  <data name="DrawList_IgnoreWarnings" xml:space="preserve">
+    <value>警告を無視</value>
+  </data>
+  <data name="DrawList_IgnoreWarningsMessage" xml:space="preserve">
+    <value>警告を無視しても、このドロウアブルの警告表示が隠れるだけです。アセット自体の修正が必要な場合があり、このオプションを解除すると警告は再び表示されます。
+
+このドロウアブルの警告を無視しますか?</value>
+  </data>
+  <data name="DrawList_ReservedTooltip" xml:space="preserve">
+    <value>予約済み</value>
+  </data>
+  <data name="DrawList_NewTooltip" xml:space="preserve">
+    <value>新規</value>
+  </data>
+  <data name="DrawList_SelectedTooltip" xml:space="preserve">
+    <value>選択中</value>
+  </data>
+  <data name="DrawList_EncryptedCannotPreview" xml:space="preserve">
+    <value>暗号化されています - プレビューできません</value>
+  </data>
+  <data name="DrawList_AddonFullMessage" xml:space="preserve">
+    <value>選択したアドオンには、選択したドロウアブルを収めきれません。</value>
+  </data>
+  <data name="DrawList_AddonFullTitle" xml:space="preserve">
+    <value>アドオンが満杯</value>
+  </data>
+  <data name="DrawList_DuplicateFailed" xml:space="preserve">
+    <value>ドロウアブルを複製できませんでした: {0}</value>
+  </data>
+  <data name="DrawList_ReplaceDialogTitle" xml:space="preserve">
+    <value>'{0}' を置き換えるドロウアブルファイルを選択してください</value>
+  </data>
+  <data name="DrawList_DrawableFilesFilter" xml:space="preserve">
+    <value>ドロウアブルファイル (*.ydd)|*.ydd</value>
+  </data>
+  <data name="DrawList_ReplaceFailed" xml:space="preserve">
+    <value>ドロウアブルを置き換えられませんでした: {0}</value>
+  </data>
+  <data name="DrawList_ExportTexturesFolderTitle" xml:space="preserve">
+    <value>テクスチャを {0} としてエクスポートするフォルダーを選択してください</value>
+  </data>
+  <data name="DrawList_ExportDrawableWithTexturesFolderTitle" xml:space="preserve">
+    <value>ドロウアブルをテクスチャ付きでエクスポートするフォルダーを選択してください</value>
+  </data>
+  <data name="DrawList_ExportDrawableFolderTitle" xml:space="preserve">
+    <value>ドロウアブルをエクスポートするフォルダーを選択してください</value>
+  </data>
+  <data name="DrawList_ExportError" xml:space="preserve">
+    <value>エクスポート中にエラーが発生しました: {0}</value>
+  </data>
+  <data name="DrawList_ExportErrorTitle" xml:space="preserve">
+    <value>エクスポートエラー</value>
+  </data>
+  <data name="Main_VersionLabel" xml:space="preserve">
+    <value>バージョン: </value>
+  </data>
+  <data name="Main_MenuProject" xml:space="preserve">
+    <value>プロジェクト(_P)</value>
+  </data>
+  <data name="Main_MenuBackToHome" xml:space="preserve">
+    <value>ホーム画面に戻る(_B)</value>
+  </data>
+  <data name="Main_MenuSave" xml:space="preserve">
+    <value>保存(_S)</value>
+  </data>
+  <data name="Main_MenuOpenAddon" xml:space="preserve">
+    <value>アドオンを開く(_O)</value>
+  </data>
+  <data name="Main_MenuOpenAddonTooltip" xml:space="preserve">
+    <value>アドオンファイルを開きます (現在のプロジェクトを置き換えます)</value>
+  </data>
+  <data name="Main_MenuAddAddon" xml:space="preserve">
+    <value>アドオンを追加(_A)</value>
+  </data>
+  <data name="Main_MenuAddAddonTooltip" xml:space="preserve">
+    <value>現在のプロジェクトにアドオンファイルを追加します</value>
+  </data>
+  <data name="Main_MenuImportProject" xml:space="preserve">
+    <value>プロジェクトをインポート(_I)</value>
+  </data>
+  <data name="Main_MenuExportProject" xml:space="preserve">
+    <value>プロジェクトをエクスポート(_E)</value>
+  </data>
+  <data name="Main_MenuSettings" xml:space="preserve">
+    <value>設定(_S)</value>
+  </data>
+  <data name="Main_MenuView" xml:space="preserve">
+    <value>表示(_V)</value>
+  </data>
+  <data name="Main_MenuLogs" xml:space="preserve">
+    <value>ログ(_L)</value>
+  </data>
+  <data name="Main_MenuDuplicateInspector" xml:space="preserve">
+    <value>重複インスペクター(_D)</value>
+  </data>
+  <data name="Main_LinkSourceCode" xml:space="preserve">
+    <value>ソースコード</value>
+  </data>
+  <data name="Main_LinkSupportMe" xml:space="preserve">
+    <value>支援する!</value>
+  </data>
+  <data name="Main_Preview3DTitle" xml:space="preserve">
+    <value>3D プレビュー</value>
+  </data>
+  <data name="Main_SplashCheckingUpdates" xml:space="preserve">
+    <value>更新を確認しています...</value>
+  </data>
+  <data name="Main_SplashStartingApp" xml:space="preserve">
+    <value>アプリを起動しています</value>
+  </data>
+  <data name="Main_SelectMetaFilesTitle" xml:space="preserve">
+    <value>.meta ファイルを選択</value>
+  </data>
+  <data name="Main_SelectMetaFilesToAddTitle" xml:space="preserve">
+    <value>追加する .meta ファイルを選択</value>
+  </data>
+  <data name="Main_MetaFilesFilter" xml:space="preserve">
+    <value>Meta ファイル (*.meta)|*.meta</value>
+  </data>
+  <data name="Main_NoValidMetaFilesMsg" xml:space="preserve">
+    <value>有効な .meta ファイルが選択されていません。</value>
+  </data>
+  <data name="Main_NoDrawablesFoundMsg" xml:space="preserve">
+    <value>選択した .meta ファイルに対応するドロウアブルファイル (.ydd) が見つかりませんでした。
+
+.ydd ファイルが .meta ファイルと同じフォルダーまたはそのサブフォルダーにあることを確認してください。</value>
+  </data>
+  <data name="Main_NoDrawablesFoundTitle" xml:space="preserve">
+    <value>ドロウアブルが見つかりません</value>
+  </data>
+  <data name="Main_ImportProjectDialogTitle" xml:space="preserve">
+    <value>プロジェクトをインポート</value>
+  </data>
+  <data name="Main_ExportProjectDialogTitle" xml:space="preserve">
+    <value>プロジェクトをエクスポート</value>
+  </data>
+  <data name="Main_GctProjectFilter" xml:space="preserve">
+    <value>grzyClothTool プロジェクト (*.gctproject)|*.gctproject</value>
+  </data>
+  <data name="Home_StartYourJourney" xml:space="preserve">
+    <value>はじめる</value>
+  </data>
+  <data name="Home_CreateNewProject" xml:space="preserve">
+    <value>新規プロジェクトを作成</value>
+  </data>
+  <data name="Home_ImportProject" xml:space="preserve">
+    <value>プロジェクトをインポート</value>
+  </data>
+  <data name="Home_OpenAddon" xml:space="preserve">
+    <value>アドオンを開く</value>
+  </data>
+  <data name="Home_OpenSave" xml:space="preserve">
+    <value>セーブを開く</value>
+  </data>
+  <data name="Home_RecentlyOpened" xml:space="preserve">
+    <value>最近使ったプロジェクト</value>
+  </data>
+  <data name="Home_BadgeSelfContained" xml:space="preserve">
+    <value>自己完結型</value>
+  </data>
+  <data name="Home_BadgeExternal" xml:space="preserve">
+    <value>外部参照型</value>
+  </data>
+  <data name="Home_RecentAddonsSuffix" xml:space="preserve">
+    <value> 件のアドオン</value>
+  </data>
+  <data name="Home_RecentDrawablesSuffix" xml:space="preserve">
+    <value> 件のドロウアブル</value>
+  </data>
+  <data name="Home_LastModifiedFormat" xml:space="preserve">
+    <value>最終更新: {0:yyyy-MM-dd HH:mm}</value>
+  </data>
+  <data name="Home_NoRecentProjects" xml:space="preserve">
+    <value>最近使ったプロジェクトはありません</value>
+  </data>
+  <data name="Home_ExploreOtherTools" xml:space="preserve">
+    <value>他のツールを見る</value>
+  </data>
+  <data name="Home_ClickToLearnMore" xml:space="preserve">
+    <value>クリックして詳細を見る</value>
+  </data>
+  <data name="Home_DidYouKnowHeader" xml:space="preserve">
+    <value>豆知識</value>
+  </data>
+  <data name="Home_LatestChanges" xml:space="preserve">
+    <value>最新の変更</value>
+  </data>
+  <data name="Home_VersionLabel" xml:space="preserve">
+    <value>バージョン: </value>
+  </data>
+  <data name="Home_ViewFullChangelog" xml:space="preserve">
+    <value>GitHub で変更履歴の全文を見る</value>
+  </data>
+  <data name="Home_Supporters" xml:space="preserve">
+    <value>支援者</value>
+  </data>
+  <data name="Home_DidYouKnow1" xml:space="preserve">
+    <value>既存のアドオンを開くと、ヒールや帽子などのプロパティもすべて読み込まれます。</value>
+  </data>
+  <data name="Home_DidYouKnow2" xml:space="preserve">
+    <value>作業途中のプロジェクトをエクスポートしておけば、後でインポートして続きから作業できます。</value>
+  </data>
+  <data name="Home_DidYouKnow3" xml:space="preserve">
+    <value>設定にダークテーマを有効にするスイッチがあります。</value>
+  </data>
+  <data name="Home_DidYouKnow4" xml:space="preserve">
+    <value>3D プレビューには「ライブテクスチャ」機能があります。変更後もリアルタイムでモデル上のテクスチャを確認できます。</value>
+  </data>
+  <data name="Home_DidYouKnow5" xml:space="preserve">
+    <value>SHIFT + DEL を押すと、確認なしで選択中のドロウアブルをすぐに削除できます。</value>
+  </data>
+  <data name="Home_DidYouKnow6" xml:space="preserve">
+    <value>CTRL + DEL を押すと、選択中のドロウアブルを予約ドロウアブルにすぐ置き換えられます。</value>
+  </data>
+  <data name="Home_DidYouKnow7" xml:space="preserve">
+    <value>ドロウアブルを予約しておき、後で実際のモデルに差し替えられます。</value>
+  </data>
+  <data name="Home_DidYouKnow8" xml:space="preserve">
+    <value>Patreon の月額支援をしていただくと、ツールの開発が加速します!</value>
+  </data>
+  <data name="Home_DidYouKnow9" xml:space="preserve">
+    <value>警告アイコンにカーソルを合わせると、ドロウアブルやテクスチャの問題を確認できます。</value>
+  </data>
+  <data name="Home_ToolOptimizerDesc" xml:space="preserve">
+    <value>見た目の品質を保ちながら YDD モデルを最適化し、ポリゴン数と頂点数を削減します。</value>
+  </data>
+  <data name="Home_ToolTattooDesc" xml:space="preserve">
+    <value>タトゥーの作成と編集ができ、プレビューと FiveM 向けアドオンリソースの生成にも対応します。</value>
+  </data>
+  <data name="Home_FailedFetchPatreons" xml:space="preserve">
+    <value>支援者一覧を取得できませんでした</value>
+  </data>
+  <data name="Home_UnableFetchVersion" xml:space="preserve">
+    <value>バージョンを取得できません</value>
+  </data>
+  <data name="Home_FailedLoadChangelog" xml:space="preserve">
+    <value>変更履歴のハイライトを読み込めませんでした</value>
+  </data>
+  <data name="Home_NoChangelogAvailable" xml:space="preserve">
+    <value>変更履歴はありません</value>
+  </data>
+  <data name="Home_SeeFullChangelog" xml:space="preserve">
+    <value>詳細は変更履歴の全文を確認してください</value>
+  </data>
+  <data name="Home_FailedOpenChangelog" xml:space="preserve">
+    <value>変更履歴を開けませんでした: {0}</value>
+  </data>
+  <data name="Home_FailedOpenWebsite" xml:space="preserve">
+    <value>ウェブサイトを開けませんでした: {0}</value>
+  </data>
+  <data name="Home_FailedOpenUrl" xml:space="preserve">
+    <value>URL を開けませんでした: {0}</value>
+  </data>
+  <data name="Home_ConfigureMainFolderMsg" xml:space="preserve">
+    <value>先に設定でメインプロジェクトフォルダーを指定してください。</value>
+  </data>
+  <data name="Home_ConfigurationRequiredTitle" xml:space="preserve">
+    <value>設定が必要です</value>
+  </data>
+  <data name="Home_MainFolderNotExistMsg" xml:space="preserve">
+    <value>メインプロジェクトフォルダーが存在しません: {0}
+
+設定で変更してください。</value>
+  </data>
+  <data name="Home_FolderNotFoundTitle" xml:space="preserve">
+    <value>フォルダーが見つかりません</value>
+  </data>
+  <data name="Home_InvalidProjectNameMsg" xml:space="preserve">
+    <value>プロジェクト名に使用できない文字が含まれています。別の名前を指定してください。</value>
+  </data>
+  <data name="Home_InvalidNameTitle" xml:space="preserve">
+    <value>無効な名前</value>
+  </data>
+  <data name="Home_FailedCreateProject" xml:space="preserve">
+    <value>新規プロジェクトを作成できませんでした: {0}</value>
+  </data>
+  <data name="Home_OpenSaveDialogTitle" xml:space="preserve">
+    <value>セーブファイルを開く</value>
+  </data>
+  <data name="Home_OpenSaveDialogFilter" xml:space="preserve">
+    <value>セーブファイル (*.json)|*.json|すべてのファイル (*.*)|*.*</value>
+  </data>
+  <data name="Home_FailedLoadSave" xml:space="preserve">
+    <value>セーブを読み込めませんでした: {0}</value>
+  </data>
+  <data name="Home_SaveFileGoneMsg" xml:space="preserve">
+    <value>このセーブファイルは存在しません。</value>
+  </data>
+  <data name="Home_FileNotFoundTitle" xml:space="preserve">
+    <value>ファイルが見つかりません</value>
+  </data>
+  <data name="Log_Title" xml:space="preserve">
+    <value>ログ</value>
+  </data>
+  <data name="Log_ColumnTimestamp" xml:space="preserve">
+    <value>タイムスタンプ</value>
+  </data>
+  <data name="Log_ColumnMessage" xml:space="preserve">
+    <value>メッセージ</value>
+  </data>
+  <data name="Accounts_PatreonInformation" xml:space="preserve">
+    <value>Patreon の情報</value>
+  </data>
+  <data name="Accounts_StatusFormat" xml:space="preserve">
+    <value>ステータス: {0}</value>
+  </data>
+  <data name="Accounts_LastPaymentFormat" xml:space="preserve">
+    <value>前回の支払い: {0}</value>
+  </data>
+  <data name="Accounts_NextPaymentFormat" xml:space="preserve">
+    <value>次回の支払い: {0}</value>
+  </data>
+  <data name="Accounts_Login" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="Accounts_Logout" xml:space="preserve">
+    <value>ログアウト</value>
+  </data>
+  <data name="Accounts_StatusActive" xml:space="preserve">
+    <value>有効</value>
+  </data>
+  <data name="Accounts_StatusNotActive" xml:space="preserve">
+    <value>無効</value>
+  </data>
+  <data name="Accounts_LoginFailed" xml:space="preserve">
+    <value>ログインできませんでした</value>
+  </data>
+  <data name="Project_DrawablesHeader" xml:space="preserve">
+    <value>ドロウアブル</value>
+  </data>
+  <data name="Project_SearchPlaceholder" xml:space="preserve">
+    <value>検索...</value>
+  </data>
+  <data name="Project_AddDrawables" xml:space="preserve">
+    <value>ドロウアブルを追加</value>
+  </data>
+  <data name="Project_SelectFolderAuto" xml:space="preserve">
+    <value>フォルダーを選択 (自動判別)</value>
+  </data>
+  <data name="Project_SelectFilesAsFemale" xml:space="preserve">
+    <value>女性としてファイルを選択</value>
+  </data>
+  <data name="Project_SelectFolderAsFemale" xml:space="preserve">
+    <value>女性としてフォルダーを選択</value>
+  </data>
+  <data name="Project_SelectFilesAsMale" xml:space="preserve">
+    <value>男性としてファイルを選択</value>
+  </data>
+  <data name="Project_SelectFolderAsMale" xml:space="preserve">
+    <value>男性としてフォルダーを選択</value>
+  </data>
+  <data name="Project_DeleteSelectedDrawableTooltip" xml:space="preserve">
+    <value>選択したドロウアブルを削除</value>
+  </data>
+  <data name="Project_Preview3D" xml:space="preserve">
+    <value>3D プレビュー</value>
+  </data>
+  <data name="Project_Build" xml:space="preserve">
+    <value>ビルド</value>
+  </data>
+  <data name="Project_SelectDrawableFiles" xml:space="preserve">
+    <value>ドロウアブルファイルを選択</value>
+  </data>
+  <data name="Project_SelectDrawableFilesFor" xml:space="preserve">
+    <value>ドロウアブルファイルを選択 ({0})</value>
+  </data>
+  <data name="Project_SelectDrawableFolderFor" xml:space="preserve">
+    <value>ドロウアブルファイルを含むフォルダーを選択 ({0})</value>
+  </data>
+  <data name="Project_SelectDrawableFolders" xml:space="preserve">
+    <value>ドロウアブルファイルを含むフォルダーを選択</value>
+  </data>
+  <data name="Project_SelectDrawableFoldersFor" xml:space="preserve">
+    <value>ドロウアブルファイルを含むフォルダーを選択 ({0})</value>
+  </data>
+  <data name="Project_DrawableFilesFilter" xml:space="preserve">
+    <value>ドロウアブルファイル (*.ydd)|*.ydd</value>
+  </data>
+  <data name="Project_NoDrawablesSelected" xml:space="preserve">
+    <value>ドロウアブルが選択されていません</value>
+  </data>
+  <data name="Project_DeleteDrawableTitle" xml:space="preserve">
+    <value>ドロウアブルの削除</value>
+  </data>
+  <data name="Project_DeleteConfirmOne" xml:space="preserve">
+    <value>このドロウアブルを削除してもよろしいですか? ({0})</value>
+  </data>
+  <data name="Project_DeleteConfirmMany" xml:space="preserve">
+    <value>選択した {0} 件のドロウアブルを削除してもよろしいですか?</value>
+  </data>
+  <data name="Project_DeleteConfirmSuffix" xml:space="preserve">
+    <value>
+警告: このドロウアブル以降のすべての番号が変更されます。
+
+代わりに予約スロットに置き換えますか?</value>
+  </data>
+  <data name="Project_NoProjectLoadedMessage" xml:space="preserve">
+    <value>プロジェクトが読み込まれていません。先にプロジェクトを作成するか開いてください。</value>
+  </data>
+  <data name="Project_NoProjectLoadedTitle" xml:space="preserve">
+    <value>プロジェクトなし</value>
+  </data>
+  <data name="Project_FilesNotAccessibleMessage" xml:space="preserve">
+    <value>次のファイルにアクセスできません:
+
+{0}
+
+仮想パスの可能性があります。一度フォルダーに展開してから、そこからドラッグしてください。</value>
+  </data>
+  <data name="Project_FilesNotAccessibleTitle" xml:space="preserve">
+    <value>ファイルにアクセスできません</value>
+  </data>
+  <data name="Project_DropErrorMessage" xml:space="preserve">
+    <value>ドロップされたファイルの処理中にエラーが発生しました:
+
+{0}</value>
+  </data>
+  <data name="Project_DropErrorTitle" xml:space="preserve">
+    <value>ドラッグ &amp; ドロップのエラー</value>
+  </data>
+  <data name="ProjectSetup_WindowTitle" xml:space="preserve">
+    <value>プロジェクトの設定</value>
+  </data>
+  <data name="ProjectSetup_ProjectNameLabel" xml:space="preserve">
+    <value>プロジェクト名</value>
+  </data>
+  <data name="ProjectSetup_ProjectTypeLabel" xml:space="preserve">
+    <value>プロジェクトの種類</value>
+  </data>
+  <data name="ProjectSetup_SelfContainedTitle" xml:space="preserve">
+    <value>自己完結型</value>
+  </data>
+  <data name="ProjectSetup_SelfContainedDescription" xml:space="preserve">
+    <value>ファイルをプロジェクトフォルダーにコピーします。プロジェクトの移動や共有が簡単です。</value>
+  </data>
+  <data name="ProjectSetup_ExternalTitle" xml:space="preserve">
+    <value>外部参照型</value>
+  </data>
+  <data name="ProjectSetup_ExternalDescription" xml:space="preserve">
+    <value>ファイルは元の場所に残ります。ディスク容量は節約できますが、持ち運びはできません。</value>
+  </data>
+  <data name="ProjectSetup_ExternalWarning" xml:space="preserve">
+    <value>元のファイルを移動または削除すると、プロジェクトが壊れます。</value>
+  </data>
+  <data name="ProjectSetup_CreateNewProject" xml:space="preserve">
+    <value>新しいプロジェクトを作成</value>
+  </data>
+  <data name="ProjectSetup_Create" xml:space="preserve">
+    <value>作成</value>
+  </data>
+  <data name="ProjectSetup_OpenExistingAddon" xml:space="preserve">
+    <value>既存のアドオンを開く</value>
+  </data>
+  <data name="ProjectSetup_ProjectExistsWarning" xml:space="preserve">
+    <value>「{0}」という名前のプロジェクトは既に存在します。続行すると上書きされます。</value>
+  </data>
+  <data name="ProjectSetup_FoundDrawables" xml:space="preserve">
+    <value>{0} 件のドロウアブルが見つかりました</value>
+  </data>
+  <data name="ProjectSetup_FoundDrawablesInMetaFiles" xml:space="preserve">
+    <value>{1} 個の .meta ファイルから {0} 件のドロウアブルが見つかりました</value>
+  </data>
+  <data name="ProjectSetup_OverwriteConfirmMessage" xml:space="preserve">
+    <value>「{0}」という名前のプロジェクトは既に存在します。
+
+上書きしますか? 警告: この操作は元に戻せません。</value>
+  </data>
+  <data name="ProjectSetup_ProjectExistsTitle" xml:space="preserve">
+    <value>プロジェクトは既に存在します</value>
+  </data>
+  <data name="Settings_PolygonLimitHeader" xml:space="preserve">
+    <value>ドロウアブルのポリゴン数上限</value>
+  </data>
+  <data name="Settings_PolygonLimitDescription" xml:space="preserve">
+    <value>ドロウアブルのポリゴン数の上限を設定します。この数を超えると警告が表示されます</value>
+  </data>
+  <data name="Settings_PolygonLimitHigh" xml:space="preserve">
+    <value>高 LOD</value>
+  </data>
+  <data name="Settings_PolygonLimitMedium" xml:space="preserve">
+    <value>中 LOD</value>
+  </data>
+  <data name="Settings_PolygonLimitLow" xml:space="preserve">
+    <value>低 LOD</value>
+  </data>
+  <data name="Settings_TextureResolutionHeader" xml:space="preserve">
+    <value>テクスチャ解像度の上限</value>
+  </data>
+  <data name="Settings_TextureResolutionDescription" xml:space="preserve">
+    <value>テクスチャの種類ごとに最大解像度を設定します。幅または高さが上限を超えると警告が表示されます</value>
+  </data>
+  <data name="Settings_TextureDiffuse" xml:space="preserve">
+    <value>ディフューズ</value>
+  </data>
+  <data name="Settings_TextureNormal" xml:space="preserve">
+    <value>ノーマル</value>
+  </data>
+  <data name="Settings_TextureSpecular" xml:space="preserve">
+    <value>スペキュラ</value>
+  </data>
+  <data name="Settings_GroupingHeader" xml:space="preserve">
+    <value>ドロウアブル一覧のグループ化</value>
+  </data>
+  <data name="Settings_GroupingDescription" xml:space="preserve">
+    <value>ドロウアブル一覧に表示されるセクション見出しを設定します。</value>
+  </data>
+  <data name="Settings_GroupingNone" xml:space="preserve">
+    <value>なし - セクション分けなしの単一リスト</value>
+  </data>
+  <data name="Settings_GroupingByType" xml:space="preserve">
+    <value>種類別 - 衣装やプロップの種類ごとにセクション分け</value>
+  </data>
+  <data name="Settings_GroupingByGroup" xml:space="preserve">
+    <value>グループ別 - 自分で作成したグループごとにセクション分け</value>
+  </data>
+  <data name="Settings_GroupingBoth" xml:space="preserve">
+    <value>両方 - 先にグループ、その中で種類別</value>
+  </data>
+  <data name="Settings_DrawablesPerAddonHeader" xml:space="preserve">
+    <value>アドオンあたりのドロウアブル数</value>
+  </data>
+  <data name="Settings_DrawablesPerAddonDescription" xml:space="preserve">
+    <value>新しいアドオンが作成されるまでに 1 つのアドオンへ保持される、種類ごとのドロウアブルの最大数です。変更すると既存のアドオンが再編成されます。</value>
+  </data>
+  <data name="Settings_MaxDrawableNumberLabel" xml:space="preserve">
+    <value>アドオンあたりの最大ドロウアブル番号 (0-255)</value>
+  </data>
+  <data name="Settings_GeneralHeader" xml:space="preserve">
+    <value>一般設定</value>
+  </data>
+  <data name="Settings_MainProjectsFolderLabel" xml:space="preserve">
+    <value>メインプロジェクトフォルダー</value>
+  </data>
+  <data name="Settings_MainProjectsFolderDescription" xml:space="preserve">
+    <value>すべての衣装プロジェクトを保存するメインフォルダーです</value>
+  </data>
+  <data name="Settings_MainProjectsFolderTitle" xml:space="preserve">
+    <value>メインプロジェクトフォルダーを選択してください</value>
+  </data>
+  <data name="Settings_GtavPathLabel" xml:space="preserve">
+    <value>現在の GTA V パス</value>
+  </data>
+  <data name="Settings_GtavPathDescription" xml:space="preserve">
+    <value>3D プレビューを使用するには GTA V のパスが必要です</value>
+  </data>
+  <data name="Settings_GtavPathTitle" xml:space="preserve">
+    <value>GTA V のパスを選択してください</value>
+  </data>
+  <data name="Settings_DisplayDrawablePathLabel" xml:space="preserve">
+    <value>ドロウアブルのパスを表示</value>
+  </data>
+  <data name="Settings_DisplayDrawablePathText" xml:space="preserve">
+    <value>有効にすると、選択したドロウアブルのパスが表示されます</value>
+  </data>
+  <data name="Settings_AutoDeleteFilesLabel" xml:space="preserve">
+    <value>ドロウアブルのファイルを自動的に削除</value>
+  </data>
+  <data name="Settings_AutoDeleteFilesText" xml:space="preserve">
+    <value>有効にすると、アドオンからドロウアブルを削除したときに、関連するファイルも PC から自動的に削除されます</value>
+  </data>
+  <data name="Settings_AutoDeleteFilesWarning" xml:space="preserve">
+    <value>警告: この機能は PC 上のファイルを変更・削除します。削除されたファイルは元に戻せません。
+
+有効にしてもよろしいですか?</value>
+  </data>
+  <data name="Settings_MarkNewDrawablesLabel" xml:space="preserve">
+    <value>新しいドロウアブルに印を付ける</value>
+  </data>
+  <data name="Settings_MarkNewDrawablesText" xml:space="preserve">
+    <value>有効にすると、新しいドロウアブルに黄色のドットが表示されます</value>
+  </data>
+  <data name="Settings_InvalidGtavFolderMessage" xml:space="preserve">
+    <value>そのフォルダーは有効な GTA V のインストール先ではないようです (GTA5.exe が見つかりませんでした)。
+
+GTA5.exe があるフォルダーを選択してください。</value>
+  </data>
+  <data name="Settings_InvalidGtavFolderTitle" xml:space="preserve">
+    <value>無効な GTA V フォルダー</value>
+  </data>
+  <data name="Settings_SelectMainProjectsFolderFallbackTitle" xml:space="preserve">
+    <value>メインプロジェクトフォルダーを選択</value>
+  </data>
+  <data name="Settings_RootDriveNotAllowedMessage" xml:space="preserve">
+    <value>ルートドライブ (例: C:\) をメインフォルダーとして使用することはできません。
+
+サブフォルダーを選択するか作成してください。</value>
+  </data>
+  <data name="Settings_InvalidFolderTitle" xml:space="preserve">
+    <value>無効なフォルダー</value>
+  </data>
+  <data name="Settings_AccessDeniedMessage" xml:space="preserve">
+    <value>アクセスが拒否されました。書き込み権限のあるフォルダーを選択してください。</value>
+  </data>
+  <data name="Settings_SetMainProjectsFolderErrorMessage" xml:space="preserve">
+    <value>メインプロジェクトフォルダーの設定中にエラーが発生しました: {0}</value>
+  </data>
+  <data name="Build_Title" xml:space="preserve">
+    <value>grzyClothTool - リソースをビルド</value>
+  </data>
+  <data name="Build_SelectResourceType" xml:space="preserve">
+    <value>リソースの種類を選択</value>
+  </data>
+  <data name="Build_ProjectName" xml:space="preserve">
+    <value>プロジェクト名</value>
+  </data>
+  <data name="Build_OutputFolder" xml:space="preserve">
+    <value>出力フォルダー</value>
+  </data>
+  <data name="Build_SplitAddons" xml:space="preserve">
+    <value>アドオンを個別のリソースとしてビルド</value>
+  </data>
+  <data name="Build_BuildResource" xml:space="preserve">
+    <value>リソースをビルド</value>
+  </data>
+  <data name="Build_PathNotDetermined" xml:space="preserve">
+    <value>ビルド先のパスを特定できませんでした。プロジェクト設定を確認してください。</value>
+  </data>
+  <data name="Build_NoDrawables" xml:space="preserve">
+    <value>ドロウアブルがありません。リソースをビルドするにはドロウアブルを追加してください。</value>
+  </data>
+  <data name="Build_FillAllFields" xml:space="preserve">
+    <value>すべての項目を入力してください。プロジェクトが読み込まれているか確認してください。</value>
+  </data>
+  <data name="Build_Done" xml:space="preserve">
+    <value>ビルドが完了しました。所要時間: {0}</value>
+  </data>
+  <data name="Build_DoneCaption" xml:space="preserve">
+    <value>ビルド完了</value>
+  </data>
+  <data name="Build_Failed" xml:space="preserve">
+    <value>ビルドに失敗しました:
+
+{0}</value>
+  </data>
+  <data name="Build_ProjectNameEmpty" xml:space="preserve">
+    <value>プロジェクト名を空にすることはできません</value>
+  </data>
+  <data name="Build_ProjectNameTooShort" xml:space="preserve">
+    <value>プロジェクト名は 3 文字以上で入力してください</value>
+  </data>
+  <data name="Build_ProjectNameTooLong" xml:space="preserve">
+    <value>プロジェクト名は 50 文字以内で入力してください</value>
+  </data>
+  <data name="Build_ProjectNameInvalidChars" xml:space="preserve">
+    <value>プロジェクト名には英小文字・数字・アンダースコアのみ使用できます</value>
+  </data>
+  <data name="Optimize_Title" xml:space="preserve">
+    <value>テクスチャを最適化</value>
+  </data>
+  <data name="Optimize_CurrentTexture" xml:space="preserve">
+    <value>現在のテクスチャ</value>
+  </data>
+  <data name="Optimize_OutputTexture" xml:space="preserve">
+    <value>出力テクスチャ</value>
+  </data>
+  <data name="Optimize_NameLabel" xml:space="preserve">
+    <value>名前: </value>
+  </data>
+  <data name="Optimize_CompressionLabel" xml:space="preserve">
+    <value>圧縮形式: </value>
+  </data>
+  <data name="Optimize_WidthLabel" xml:space="preserve">
+    <value>幅: </value>
+  </data>
+  <data name="Optimize_HeightLabel" xml:space="preserve">
+    <value>高さ: </value>
+  </data>
+  <data name="Optimize_MipmapLabel" xml:space="preserve">
+    <value>ミップマップ数: </value>
+  </data>
+  <data name="Optimize_SelectedTextures" xml:space="preserve">
+    <value>{0} 件のテクスチャを選択中</value>
+  </data>
+  <data name="Optimize_DownscaleTextureSize" xml:space="preserve">
+    <value>テクスチャサイズを縮小</value>
+  </data>
+  <data name="Optimize_SelectTextureSize" xml:space="preserve">
+    <value>テクスチャサイズを選択</value>
+  </data>
+  <data name="Optimize_QualityWarning" xml:space="preserve">
+    <value>ここでテクスチャサイズを変更すると画質が低下します。品質を保つには、3D ソフトでのテクスチャベイクで行ってください。</value>
+  </data>
+  <data name="Optimize_ChangeTextureCompression" xml:space="preserve">
+    <value>テクスチャの圧縮形式を変更</value>
+  </data>
+  <data name="Optimize_SelectCompression" xml:space="preserve">
+    <value>圧縮形式を選択</value>
+  </data>
+  <data name="Optimize_Optimize" xml:space="preserve">
+    <value>最適化</value>
+  </data>
+  <data name="Optimize_NoOptionsSelected" xml:space="preserve">
+    <value>最適化オプションが選択されていません</value>
+  </data>
+  <data name="ImportResolve_Title" xml:space="preserve">
+    <value>ドロウアブルのインポートを解決</value>
+  </data>
+  <data name="ImportResolve_ShowResolved" xml:space="preserve">
+    <value>解決済みを表示</value>
+  </data>
+  <data name="ImportResolve_SelectAll" xml:space="preserve">
+    <value>すべて選択</value>
+  </data>
+  <data name="ImportResolve_SelectNone" xml:space="preserve">
+    <value>選択を解除</value>
+  </data>
+  <data name="ImportResolve_Gender" xml:space="preserve">
+    <value>性別</value>
+  </data>
+  <data name="ImportResolve_ApplyGender" xml:space="preserve">
+    <value>性別を適用</value>
+  </data>
+  <data name="ImportResolve_AssetType" xml:space="preserve">
+    <value>アセットの種類</value>
+  </data>
+  <data name="ImportResolve_DrawableType" xml:space="preserve">
+    <value>ドロウアブルの種類</value>
+  </data>
+  <data name="ImportResolve_ApplyProperties" xml:space="preserve">
+    <value>プロパティを適用</value>
+  </data>
+  <data name="ImportResolve_GenderNotSet" xml:space="preserve">
+    <value>性別が未設定</value>
+  </data>
+  <data name="ImportResolve_PropertiesNotSet" xml:space="preserve">
+    <value>プロパティが未設定</value>
+  </data>
+  <data name="ImportResolve_Prop" xml:space="preserve">
+    <value>プロップ</value>
+  </data>
+  <data name="ImportResolve_Component" xml:space="preserve">
+    <value>コンポーネント</value>
+  </data>
+  <data name="ImportResolve_HeaderOne" xml:space="preserve">
+    <value>インポート前に 1 件のドロウアブルを解決してください</value>
+  </data>
+  <data name="ImportResolve_HeaderMany" xml:space="preserve">
+    <value>インポート前に {0} 件のドロウアブルを解決してください</value>
+  </data>
+  <data name="ImportResolve_HelpText" xml:space="preserve">
+    <value>行をクリックしてチェックを入れ、チェックしたファイルに{0}を適用してください。解決済みのファイルは「解決済みを表示」を有効にするまで表示されません。</value>
+  </data>
+  <data name="ImportResolve_HelpTextJoiner" xml:space="preserve">
+    <value>と</value>
+  </data>
+  <data name="ImportResolve_HelpPartGender" xml:space="preserve">
+    <value>性別</value>
+  </data>
+  <data name="ImportResolve_HelpPartDrawableProperties" xml:space="preserve">
+    <value>ドロウアブルのプロパティ</value>
+  </data>
+  <data name="ImportResolve_SelectionSummary" xml:space="preserve">
+    <value>{0} 件をチェック中、{2} 件中 {1} 件が解決済み</value>
+  </data>
+  <data name="DupInspector_Title" xml:space="preserve">
+    <value>重複インスペクター</value>
+  </data>
+  <data name="DupInspector_DupBadge" xml:space="preserve">
+    <value>重複</value>
+  </data>
+  <data name="DupInspector_DeleteAllExceptFirst" xml:space="preserve">
+    <value>最初以外をすべて削除</value>
+  </data>
+  <data name="DupInspector_DeleteAllDuplicates" xml:space="preserve">
+    <value>重複をすべて削除</value>
+  </data>
+  <data name="DupInspector_NoDuplicatesFound" xml:space="preserve">
+    <value>重複は見つかりませんでした</value>
+  </data>
+  <data name="DupInspector_FoundGroupsOne" xml:space="preserve">
+    <value>{0} 件の重複グループが見つかりました</value>
+  </data>
+  <data name="DupInspector_FoundGroupsMany" xml:space="preserve">
+    <value>{0} 件の重複グループが見つかりました</value>
+  </data>
+  <data name="DupInspector_GroupTitle" xml:space="preserve">
+    <value>ドロウアブル: {0}</value>
+  </data>
+  <data name="DupInspector_GroupDescription" xml:space="preserve">
+    <value>同一のドロウアブル {0} 件</value>
+  </data>
+  <data name="DupInspector_LocationUnknown" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="DupInspector_LocationAddon" xml:space="preserve">
+    <value>アドオン {0}</value>
+  </data>
+  <data name="DupInspector_ConfirmDeleteMessage" xml:space="preserve">
+    <value>'{0}' を削除してもよろしいですか?</value>
+  </data>
+  <data name="DupInspector_ConfirmDeleteCaption" xml:space="preserve">
+    <value>削除の確認</value>
+  </data>
+  <data name="DupInspector_AllResolved" xml:space="preserve">
+    <value>重複はすべて解消されました。</value>
+  </data>
+  <data name="DupInspector_ConfirmGroupDeleteMessage" xml:space="preserve">
+    <value>このグループから重複 {0} 件を削除し、最初の 1 件だけを残します。\n\n実行してもよろしいですか?</value>
+  </data>
+  <data name="DupInspector_ConfirmBulkDeleteCaption" xml:space="preserve">
+    <value>一括削除の確認</value>
+  </data>
+  <data name="DupInspector_DeletedItemsAllResolved" xml:space="preserve">
+    <value>重複 {0} 件を削除しました。\n\n重複はすべて解消されました。</value>
+  </data>
+  <data name="DupInspector_DeletedItems" xml:space="preserve">
+    <value>重複 {0} 件を削除しました。</value>
+  </data>
+  <data name="DupInspector_DeletedOneItemAllResolved" xml:space="preserve">
+    <value>重複 {0} 件を削除しました。\n\n重複はすべて解消されました。</value>
+  </data>
+  <data name="DupInspector_DeletedOneItem" xml:space="preserve">
+    <value>重複 {0} 件を削除しました。</value>
+  </data>
+  <data name="DupInspector_ConfirmDeleteAllOne" xml:space="preserve">
+    <value>{1} 件の重複グループから重複 {0} 件を削除し、各グループの最初の 1 件を残します。\n\n実行してもよろしいですか?</value>
+  </data>
+  <data name="DupInspector_ConfirmDeleteAllMany" xml:space="preserve">
+    <value>{1} 件の重複グループから重複 {0} 件を削除し、各グループの最初の 1 件を残します。\n\n実行してもよろしいですか?</value>
+  </data>
+  <data name="DupInspector_ConfirmDeleteAllCaption" xml:space="preserve">
+    <value>重複の一括削除の確認</value>
+  </data>
+  <data name="FirstRun_Title" xml:space="preserve">
+    <value>grzyClothTool へようこそ - 初回セットアップ</value>
+  </data>
+  <data name="FirstRun_Welcome" xml:space="preserve">
+    <value>grzyClothTool へようこそ</value>
+  </data>
+  <data name="FirstRun_Subtitle" xml:space="preserve">
+    <value>初回セットアップ</value>
+  </data>
+  <data name="FirstRun_SelectFolderHeader" xml:space="preserve">
+    <value>メインプロジェクトフォルダーの選択</value>
+  </data>
+  <data name="FirstRun_FolderDescription" xml:space="preserve">
+    <value>すべてのプロジェクトをまとめて保存するメインフォルダーを選んでください。</value>
+  </data>
+  <data name="FirstRun_ExampleLabel" xml:space="preserve">
+    <value>例: </value>
+  </data>
+  <data name="FirstRun_FolderHint" xml:space="preserve">
+    <value>(個別のプロジェクトフォルダーは選ばないでください。複数のプロジェクトを格納する親フォルダーを選択してください)</value>
+  </data>
+  <data name="FirstRun_Browse" xml:space="preserve">
+    <value>参照...</value>
+  </data>
+  <data name="FirstRun_ImportantInfo" xml:space="preserve">
+    <value>[i] 重要な情報</value>
+  </data>
+  <data name="FirstRun_InfoPersist" xml:space="preserve">
+    <value>* この設定はユーザープロファイルに保存され、アプリの更新後も保持されます。</value>
+  </data>
+  <data name="FirstRun_InfoChangeLater" xml:space="preserve">
+    <value>* このフォルダーは後から設定メニューで変更できます。</value>
+  </data>
+  <data name="FirstRun_ExitConfirmMessage" xml:space="preserve">
+    <value>アプリの使用を続けるには、メインフォルダーを選択する必要があります。\n\nこのまま閉じるとアプリを終了します。よろしいですか?</value>
+  </data>
+  <data name="FirstRun_ExitConfirmCaption" xml:space="preserve">
+    <value>セットアップが必要です</value>
+  </data>
+  <data name="FirstRun_BrowseDialogDescription" xml:space="preserve">
+    <value>すべてのプロジェクトを保存するメインフォルダーを選択してください (個別のプロジェクトフォルダーではありません)</value>
+  </data>
+  <data name="FirstRun_ValidationNoFolder" xml:space="preserve">
+    <value>続行する前にメインフォルダーを選択してください。</value>
+  </data>
+  <data name="FirstRun_ValidationRootDrive" xml:space="preserve">
+    <value>ドライブ直下 (例: C:\) はメインフォルダーに使用できません。サブフォルダーを選択するか作成してください。</value>
+  </data>
+  <data name="FirstRun_ValidationAccessDenied" xml:space="preserve">
+    <value>アクセスが拒否されました。書き込み権限のあるフォルダーを選択してください。</value>
+  </data>
+  <data name="FirstRun_ValidationError" xml:space="preserve">
+    <value>エラー: {0}</value>
+  </data>
+  <data name="MsgBox_OpenFolder" xml:space="preserve">
+    <value>フォルダーを開く</value>
+  </data>
+  <data name="MsgBox_Replace" xml:space="preserve">
+    <value>置き換える</value>
+  </data>
+  <data name="DupBatch_Title" xml:space="preserve">
+    <value>重複するドロウアブルを検出</value>
+  </data>
+  <data name="DupBatch_Description" xml:space="preserve">
+    <value>次のドロウアブルは既存の項目と重複しているようです。追加するものを選択してください:</value>
+  </data>
+  <data name="DupBatch_SelectAll" xml:space="preserve">
+    <value>すべて選択</value>
+  </data>
+  <data name="DupBatch_SelectNone" xml:space="preserve">
+    <value>選択解除</value>
+  </data>
+  <data name="DupBatch_CancelAll" xml:space="preserve">
+    <value>すべて中止</value>
+  </data>
+  <data name="DupBatch_UnknownName" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="DupBatch_NoExistingDuplicates" xml:space="preserve">
+    <value>既存の重複は見つかりませんでした</value>
+  </data>
+  <data name="DupBatch_DuplicateOf" xml:space="preserve">
+    <value>重複元: {0}</value>
+  </data>
+  <data name="DupBatch_MoreCount" xml:space="preserve">
+    <value> (他 {0} 件)</value>
+  </data>
+  <data name="DupBatch_TypeProp" xml:space="preserve">
+    <value>プロップ</value>
+  </data>
+  <data name="DupBatch_TypeComponent" xml:space="preserve">
+    <value>コンポーネント</value>
+  </data>
+  <data name="DupBatch_Summary" xml:space="preserve">
+    <value>重複 {1} 件のうち {0} 件を追加します</value>
+  </data>
+  <data name="AutoSave_AutoSavingIn" xml:space="preserve">
+    <value>{0} 秒後に自動保存します</value>
+  </data>
+  <data name="AutoSave_SaveInProgress" xml:space="preserve">
+    <value>保存中</value>
+  </data>
+  <data name="Preview_UnavailableSetGtaPath" xml:space="preserve">
+    <value>3D プレビューを利用できません。設定で有効な GTA V のパスを指定してください</value>
+  </data>
+  <data name="Preview_UnavailableGtaInstallIssue" xml:space="preserve">
+    <value>3D プレビューを利用できません (GTA V のインストールに問題があります。ログを確認してください)</value>
+  </data>
+  <data name="Preview_UnavailableGpuError" xml:space="preserve">
+    <value>3D プレビューを利用できません (GPU/グラフィックスのエラーです。ログを確認してください)</value>
+  </data>
+  <data name="Preview_DisabledDueToErrors" xml:space="preserve">
+    <value>エラーのため 3D プレビューを無効にしました (ログを確認してください)</value>
+  </data>
+  <data name="ModernLabel_ClearGroup" xml:space="preserve">
+    <value>グループをクリア</value>
+  </data>
+  <data name="ModernLabel_FileFilter" xml:space="preserve">
+    <value>{0} ファイル (*{0})|*{0}</value>
+  </data>
+  <data name="Save_UnsavedChangesTitleSuffix" xml:space="preserve">
+    <value> (未保存の変更あり)</value>
+  </data>
+  <data name="Save_UnsavedChangesMessage" xml:space="preserve">
+    <value>未保存の変更があります。この操作を続行しますか?</value>
+  </data>
+  <data name="Save_UnsavedChangesCaption" xml:space="preserve">
+    <value>未保存の変更</value>
+  </data>
+  <data name="Save_BrokenSaveMessage" xml:space="preserve">
+    <value>このセーブファイルは読み込めませんでした。破損している可能性があります。
+
+セーブファイル:
+{0}
+
+エラー:
+{1}
+
+バックアップが {2} 件見つかりました。最新のバックアップの作成日時は {3} です。
+
+代わりに最新の正常なバックアップを読み込みますか?</value>
+  </data>
+  <data name="Save_BrokenSaveCaption" xml:space="preserve">
+    <value>破損したセーブファイル</value>
+  </data>
+  <data name="Save_BackupLoadedMessage" xml:space="preserve">
+    <value>バックアップを読み込みました:
+{0}</value>
+  </data>
+  <data name="Save_BackupLoadedCaption" xml:space="preserve">
+    <value>バックアップを読み込みました</value>
+  </data>
+  <data name="Save_AllBackupsFailed" xml:space="preserve">
+    <value>元のセーブファイルと、利用可能なすべてのバックアップの読み込みに失敗しました。</value>
+  </data>
+  <data name="Save_DeserializeFailed" xml:space="preserve">
+    <value>セーブファイルの読み取りに失敗しました。</value>
+  </data>
+  <data name="File_OpenLocationError" xml:space="preserve">
+    <value>ファイルの場所を開く際にエラーが発生しました: {0}</value>
+  </data>
+  <data name="App_UnhandledError" xml:space="preserve">
+    <value>エラーが発生しました: {0}</value>
+  </data>
+  <data name="Update_CompletingUpdate" xml:space="preserve">
+    <value>更新を完了しています...</value>
+  </data>
+  <data name="Update_CheckingForUpdates" xml:space="preserve">
+    <value>更新を確認しています...</value>
+  </data>
+  <data name="Update_CouldNotCheck" xml:space="preserve">
+    <value>更新を確認できませんでした。</value>
+  </data>
+  <data name="Update_UpToDate" xml:space="preserve">
+    <value>最新バージョンです</value>
+  </data>
+  <data name="Update_Downloading" xml:space="preserve">
+    <value>v{0} をダウンロードしています...</value>
+  </data>
+  <data name="Update_CheckTimedOut" xml:space="preserve">
+    <value>更新の確認がタイムアウトしました。</value>
+  </data>
+  <data name="Update_CheckFailed" xml:space="preserve">
+    <value>更新の確認に失敗しました。</value>
+  </data>
+  <data name="Update_DownloadCompleteInstalling" xml:space="preserve">
+    <value>ダウンロードが完了しました。インストールしています...</value>
+  </data>
+  <data name="Update_DownloadCancelled" xml:space="preserve">
+    <value>ダウンロードをキャンセルしました。</value>
+  </data>
+  <data name="Update_DownloadFailed" xml:space="preserve">
+    <value>ダウンロードに失敗しました。しばらくしてからもう一度お試しください。</value>
+  </data>
+  <data name="Update_InstallFailed" xml:space="preserve">
+    <value>インストールに失敗しました。手動で更新してください。</value>
+  </data>
+  <data name="Drawable_MissingLodModel" xml:space="preserve">
+    <value>[{0}] LOD モデルがありません。
+</value>
+  </data>
+  <data name="Drawable_PolygonLimitExceeded" xml:space="preserve">
+    <value>[{0}] ポリゴン数 {1} が上限 {2} を超えています。
+</value>
+  </data>
+  <data name="Drawable_MissingEmbeddedTexture" xml:space="preserve">
+    <value>{0} テクスチャがありません。
+</value>
+  </data>
+  <data name="Drawable_NoTextures" xml:space="preserve">
+    <value>このドロウアブルにはテクスチャがありません。
+</value>
+  </data>
+  <data name="Drawable_TextureWarnings" xml:space="preserve">
+    <value>一部のテクスチャに警告があります。テクスチャの詳細を確認してください。
+</value>
+  </data>
+  <data name="Drawable_HighHeelsWarning" xml:space="preserve">
+    <value>靴が床に埋まっている可能性があります。High heels を有効にして、3D プレビューで手動で確認してください。
+</value>
+  </data>
+  <data name="Drawable_FlagsSelected" xml:space="preserve">
+    <value>{0} ({1} 件選択中)</value>
+  </data>
+  <data name="Drawable_FlagsNone" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="Texture_ResolutionExceedsLimit" xml:space="preserve">
+    <value>テクスチャ解像度: {0}x{1}。設定した上限 ({2}) を超えています。最適化してサイズを削減してください。
+</value>
+  </data>
+  <data name="Texture_NotPowerOfTwo" xml:space="preserve">
+    <value>テクスチャの幅または高さが 2 のべき乗ではありません。最適化して修正してください。
+</value>
+  </data>
+  <data name="Texture_MipMapMismatch" xml:space="preserve">
+    <value>テクスチャのミップマップ数は {0} ですが、{1} である必要があります。最適化して正しい数を生成してください。
+</value>
+  </data>
+  <data name="Texture_EncryptedDrawableTooltip" xml:space="preserve">
+    <value>暗号化されたドロウアブル</value>
+  </data>
+  <data name="Texture_MissingTexture" xml:space="preserve">
+    <value>テクスチャなし</value>
+  </data>
+  <data name="Dup_DuplicateShort" xml:space="preserve">
+    <value>重複 (全 {0} 件)</value>
+  </data>
+  <data name="Dup_DuplicatedItemHeader" xml:space="preserve">
+    <value>重複しているアイテム:</value>
+  </data>
+  <data name="Dup_ThisMarker" xml:space="preserve">
+    <value> (これ)</value>
+  </data>
+  <data name="Dup_UnknownSex" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="Dup_UnknownLocation" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="Dup_AddonLocation" xml:space="preserve">
+    <value>アドオン {0}: {1}</value>
+  </data>
+  <data name="Dup_AddonTextureLocation" xml:space="preserve">
+    <value>アドオン {0}: {1} → {2}</value>
+  </data>
+  <data name="Addon_NoYddForMeta" xml:space="preserve">
+    <value>選択した .meta ファイル ({0}) に対応する .ydd ファイルが見つかりません</value>
+  </data>
+  <data name="Addon_NoYmtForMeta" xml:space="preserve">
+    <value>選択した .meta ファイル ({0}) に対応する .ymt ファイルが見つかりません</value>
+  </data>
+  <data name="Addon_DuplicateDetectedMessage" xml:space="preserve">
+    <value>重複するドロウアブルを検出しました。
+
+追加しようとしているドロウアブルは、次のものと同一のようです:
+{0}
+
+この新しいドロウアブルは追加されますが、重複としてマークされます。
+
+続行しますか?</value>
+  </data>
+  <data name="Addon_DuplicateDetectedCaption" xml:space="preserve">
+    <value>重複ドロウアブルを検出</value>
+  </data>
+  <data name="Addon_DuplicateListItem" xml:space="preserve">
+    <value>  • {0} (アドオン: {1})</value>
+  </data>
+  <data name="Addon_UnknownAddon" xml:space="preserve">
+    <value>不明</value>
+  </data>
 </root>

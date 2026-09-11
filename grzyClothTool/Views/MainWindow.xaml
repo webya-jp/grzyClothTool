@@ -8,6 +8,7 @@
         xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
         xmlns:constants="clr-namespace:grzyClothTool.Constants"
         xmlns:controls="clr-namespace:grzyClothTool.Controls"
+        xmlns:loc="clr-namespace:grzyClothTool.Localization"
         xmlns:ad="https://github.com/Dirkster99/AvalonDock"
         xmlns:themes="clr-namespace:AvalonDock.Themes;assembly=AvalonDock.Themes.VS2013"
         d:DataContext="{d:DesignInstance Type=helpers:NavigationHelper, IsDesignTimeCreatable=True}"
@@ -28,23 +29,23 @@
             </Menu.ItemsPanel>
 
 
-            <MenuItem Header="_Project">
-                <MenuItem Header="_Back to home screen" Click="HomeScreen_Click" />
+            <MenuItem Header="{loc:Loc Main_MenuProject}">
+                <MenuItem Header="{loc:Loc Main_MenuBackToHome}" Click="HomeScreen_Click" />
                 <Separator />
-                <MenuItem Header="_Save" Click="Save_Click" InputGestureText="Ctrl+S" />
+                <MenuItem Header="{loc:Loc Main_MenuSave}" Click="Save_Click" InputGestureText="Ctrl+S" />
                 <Separator />
-                <MenuItem Header="_Open Addon" Click="OpenAddon_Click" 
-                          ToolTip="Open addon files (replaces current project)" />
-                <MenuItem Header="_Add Addon" Click="AddAddon_Click" 
-                          ToolTip="Add addon files to current project" />
+                <MenuItem Header="{loc:Loc Main_MenuOpenAddon}" Click="OpenAddon_Click"
+                          ToolTip="{loc:Loc Main_MenuOpenAddonTooltip}" />
+                <MenuItem Header="{loc:Loc Main_MenuAddAddon}" Click="AddAddon_Click"
+                          ToolTip="{loc:Loc Main_MenuAddAddonTooltip}" />
                 <Separator />
-                <MenuItem Header="_Import Project" Click="ImportProject_Click" />
-                <MenuItem Header="_Export Project" Click="ExportProject_Click" />
+                <MenuItem Header="{loc:Loc Main_MenuImportProject}" Click="ImportProject_Click" />
+                <MenuItem Header="{loc:Loc Main_MenuExportProject}" Click="ExportProject_Click" />
             </MenuItem>
-            <MenuItem Header="_Settings" Tag="Settings" Click="Navigation_Click" />
-            <MenuItem Header="_View" Tag="View">
-                <MenuItem Header="_Logs" Tag="Logs" Click="LogsOpen_Click" />
-                <MenuItem Header="_Duplicate Inspector" Tag="DuplicateInspector" Click="DuplicateInspector_Click" />
+            <MenuItem Header="{loc:Loc Main_MenuSettings}" Tag="Settings" Click="Navigation_Click" />
+            <MenuItem Header="{loc:Loc Main_MenuView}" Tag="View">
+                <MenuItem Header="{loc:Loc Main_MenuLogs}" Tag="Logs" Click="LogsOpen_Click" />
+                <MenuItem Header="{loc:Loc Main_MenuDuplicateInspector}" Tag="DuplicateInspector" Click="DuplicateInspector_Click" />
             </MenuItem>
 
             <MenuItem Header="" IsEnabled="False">
@@ -82,10 +83,10 @@
                 <Hyperlink NavigateUri="{x:Static constants:GlobalConstants.DISCORD_INVITE_URL}" RequestNavigate="Hyperlink_RequestNavigate">Discord</Hyperlink>
             </StatusBarItem>
             <StatusBarItem Grid.Column="2" HorizontalAlignment="Right" Padding="5,0,10,2">
-                <Hyperlink NavigateUri="https://github.com/grzybeek/grzyClothTool" RequestNavigate="Hyperlink_RequestNavigate">Source code</Hyperlink>
+                <Hyperlink NavigateUri="https://github.com/grzybeek/grzyClothTool" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="{loc:Loc Main_LinkSourceCode}" /></Hyperlink>
             </StatusBarItem>
             <StatusBarItem Grid.Column="3" HorizontalAlignment="Right" Padding="5,0,10,2">
-                <Hyperlink NavigateUri="https://patreon.com/grzybeek" RequestNavigate="Hyperlink_RequestNavigate">Support me!</Hyperlink>
+                <Hyperlink NavigateUri="https://patreon.com/grzybeek" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="{loc:Loc Main_LinkSupportMe}" /></Hyperlink>
             </StatusBarItem>
 
             <StatusBarItem Grid.ColumnSpan="4" Padding="0" VerticalAlignment="Bottom">
@@ -110,7 +111,7 @@
                         <ad:LayoutAnchorable
                             x:Name="PreviewAnchorable"
                             ContentId="PreviewAnchorable"
-                            Title="3D Preview"
+                            Title="{loc:Loc Main_Preview3DTitle}"
                             CanClose="True"
                             CanHide="True"
                             CanFloat="True"

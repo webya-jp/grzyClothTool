@@ -3,6 +3,7 @@ using System;
 using System.Text;
 using System.Windows.Controls;
 using System.Windows.Input;
+using grzyClothTool.Localization;
 
 namespace grzyClothTool.Controls
 {
@@ -142,7 +143,7 @@ namespace grzyClothTool.Controls
                 var dialog = new Microsoft.Win32.OpenFileDialog
                 {
                     DefaultExt = FileExtension,
-                    Filter = $"{FileExtension} files (*{FileExtension})|*{FileExtension}"
+                    Filter = Loc.T("ModernLabel_FileFilter", FileExtension)
                 };
                 dialog.ShowDialog();
 

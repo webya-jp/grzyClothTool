@@ -18,6 +18,7 @@ using Sentry;
 using System.Windows.Threading;
 using Sentry.Profiling;
 using grzyClothTool.Constants;
+using grzyClothTool.Localization;
 
 namespace grzyClothTool
 {
@@ -219,7 +220,7 @@ namespace grzyClothTool
         {
             Exception ex = (Exception)e.ExceptionObject;
 
-            Show($"An error occurred: {ex.Message}", "Error", CustomMessageBoxButtons.OKOnly);
+            Show(Loc.T("App_UnhandledError", ex.Message), Loc.T("Common_Error"), CustomMessageBoxButtons.OKOnly);
             var date = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
             var path = Path.Combine(AppContext.BaseDirectory, $"error-{date}.log");
             File.WriteAllText(path, ex.ToString());

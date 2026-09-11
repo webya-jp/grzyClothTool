@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using grzyClothTool.Localization;
 using static grzyClothTool.Controls.CustomMessageBox;
 
 namespace grzyClothTool.Controls
@@ -97,7 +98,7 @@ namespace grzyClothTool.Controls
 
             if (isChecked && !string.IsNullOrEmpty(DisplayWarning))
             {
-                CustomMessageBoxResult result = Show(DisplayWarning, "Warning", CustomMessageBoxButtons.OKCancel, CustomMessageBoxIcon.Warning);
+                CustomMessageBoxResult result = Show(DisplayWarning, Loc.T("Common_Warning"), CustomMessageBoxButtons.OKCancel, CustomMessageBoxIcon.Warning);
                 if (result == CustomMessageBoxResult.OK)
                 {
                     checkBox.IsChecked = true;

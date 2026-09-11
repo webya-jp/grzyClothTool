@@ -1,5 +1,6 @@
 ﻿using grzyClothTool.Controls;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models;
 using System;
 using System.ComponentModel;
@@ -171,7 +172,7 @@ namespace grzyClothTool.Views
             if (string.IsNullOrEmpty(BuildPath))
             {
                 IsWarningVisible = true;
-                WarningMessage = "Build path could not be determined. Please check your project settings.";
+                WarningMessage = Loc.T("Build_PathNotDetermined");
                 CanBuild = false;
                 return;
             }
@@ -180,7 +181,7 @@ namespace grzyClothTool.Views
             if (allDrawablesCount == 0)
             {
                 IsWarningVisible = true;
-                WarningMessage = "No drawables found. Add drawables to be able to build resource.";
+                WarningMessage = Loc.T("Build_NoDrawables");
                 CanBuild = false;
                 return;
             }
@@ -228,7 +229,7 @@ namespace grzyClothTool.Views
 
             if (string.IsNullOrEmpty(ProjectName) || string.IsNullOrEmpty(BuildPath))
             {
-                CustomMessageBox.Show("Please fill in all fields. Make sure a project is loaded.", "Error", CustomMessageBoxButtons.OKOnly);
+                CustomMessageBox.Show(Loc.T("Build_FillAllFields"), Loc.T("Common_Error"), CustomMessageBoxButtons.OKOnly);
                 return;
             }
 
@@ -258,13 +259,13 @@ namespace grzyClothTool.Views
                 await Task.Run(() => BuildResource(buildHelper)); // moved out of ui thread, so users don't think tool stopped responding
 
                 timer.Stop();
-                CustomMessageBox.Show($"Build done, elapsed time: {timer.Elapsed}", "Build done", CustomMessageBoxButtons.OpenFolder, BuildPath);
+                CustomMessageBox.Show(Loc.T("Build_Done", timer.Elapsed), Loc.T("Build_DoneCaption"), CustomMessageBoxButtons.OpenFolder, BuildPath);
                 LogHelper.Log($"Build done, elapsed time: {timer.Elapsed}");
             }
             catch (Exception ex)
             {
                 LogHelper.Log($"Build failed: {ex}", LogType.Error);
-                CustomMessageBox.Show($"Build failed:\n\n{ex}", "Error", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
+                CustomMessageBox.Show(Loc.T("Build_Failed", ex), Loc.T("Common_Error"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
             }
             finally
             {
@@ -312,19 +313,19 @@ namespace grzyClothTool.Views
 
             if (string.IsNullOrEmpty(ProjectName))
             {
-                result = "Project name cannot be empty";
+                result = Loc.T("Build_ProjectNameEmpty");
             }
             else if (ProjectName.Length < 3)
             {
-                result = "Project name must be at least 3 characters long";
+                result = Loc.T("Build_ProjectNameTooShort");
             }
             else if (ProjectName.Length > 50)
             {
-                result = "Project name cannot be longer than 50 characters";
+                result = Loc.T("Build_ProjectNameTooLong");
             }
             else if (!Regex.IsMatch(ProjectName, @"^[a-z0-9_]+$"))
             {
-                result = "Project name can only contain lowercase letters, numbers, and underscores";
+                result = Loc.T("Build_ProjectNameInvalidChars");
             }
 
             return result;

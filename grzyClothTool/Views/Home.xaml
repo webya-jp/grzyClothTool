@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:grzyClothTool.Views"
              xmlns:c="clr-namespace:grzyClothTool.Controls"
              xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+             xmlns:loc="clr-namespace:grzyClothTool.Localization"
 
              mc:Ignorable="d" 
              d:Background="white"
@@ -53,18 +54,18 @@
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
 
-        <GroupBox Style="{StaticResource FixedGroupBox}" Header="Start your journey" Grid.Column="0" Margin="2">
+        <GroupBox Style="{StaticResource FixedGroupBox}" Header="{loc:Loc Home_StartYourJourney}" Grid.Column="0" Margin="2">
             <DockPanel>
-                <c:CustomButton Label="Close" Height="60" DockPanel.Dock="Bottom" Padding="5" CornerRadius="5" MyBtnClickEvent="Close_Click" />
+                <c:CustomButton Label="{loc:Loc Common_Close}" Height="60" DockPanel.Dock="Bottom" Padding="5" CornerRadius="5" MyBtnClickEvent="Close_Click" />
 
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel>
-                        <c:CustomButton Label="Create new project" AutomationProperties.AutomationId="Create new project" Height="100" FontSize="20" Padding="5" CornerRadius="5" MyBtnClickEvent="CreateNew_Click" />
-                        <c:CustomButton Label="Import project" Height="60" Padding="5" CornerRadius="5" MyBtnClickEvent="ImportProject_Click" />
-                        <c:CustomButton Label="Open addon" Height="60" Padding="5" CornerRadius="5" MyBtnClickEvent="OpenAddon_Click" />
-                        <c:CustomButton Label="Open save" Height="60" Padding="5" CornerRadius="5" MyBtnClickEvent="OpenSave_Click" />
+                        <c:CustomButton Label="{loc:Loc Home_CreateNewProject}" AutomationProperties.AutomationId="Create new project" Height="100" FontSize="20" Padding="5" CornerRadius="5" MyBtnClickEvent="CreateNew_Click" />
+                        <c:CustomButton Label="{loc:Loc Home_ImportProject}" Height="60" Padding="5" CornerRadius="5" MyBtnClickEvent="ImportProject_Click" />
+                        <c:CustomButton Label="{loc:Loc Home_OpenAddon}" Height="60" Padding="5" CornerRadius="5" MyBtnClickEvent="OpenAddon_Click" />
+                        <c:CustomButton Label="{loc:Loc Home_OpenSave}" Height="60" Padding="5" CornerRadius="5" MyBtnClickEvent="OpenSave_Click" />
 
-                        <TextBlock Text="Recently opened" 
+                        <TextBlock Text="{loc:Loc Home_RecentlyOpened}" 
                                    FontSize="14" 
                                    FontWeight="SemiBold" 
                                    Margin="5,20,5,8" 
@@ -140,10 +141,10 @@
                                                                                    Foreground="{DynamicResource Brush800}">
                                                                             <TextBlock.Style>
                                                                                 <Style TargetType="TextBlock">
-                                                                                    <Setter Property="Text" Value="SELF-CONTAINED"/>
+                                                                                    <Setter Property="Text" Value="{loc:Loc Home_BadgeSelfContained}"/>
                                                                                     <Style.Triggers>
                                                                                         <DataTrigger Binding="{Binding IsExternal}" Value="True">
-                                                                                            <Setter Property="Text" Value="EXTERNAL"/>
+                                                                                            <Setter Property="Text" Value="{loc:Loc Home_BadgeExternal}"/>
                                                                                         </DataTrigger>
                                                                                     </Style.Triggers>
                                                                                 </Style>
@@ -162,7 +163,7 @@
                                                                         <TextBlock FontSize="10" 
                                                                             Foreground="{DynamicResource Brush800}">
                                                                             <Run Text="{Binding AddonCount, Mode=OneWay}"/>
-                                                                            <Run Text=" addons"/>
+                                                                            <Run Text="{loc:Loc Home_RecentAddonsSuffix}"/>
                                                                         </TextBlock>
                                                                     </Border>
                                                                     <Border Background="{DynamicResource Brush200}"
@@ -172,7 +173,7 @@
                                                                         <TextBlock FontSize="10" 
                                                                             Foreground="{DynamicResource Brush800}">
                                                                             <Run Text="{Binding DrawableCount, Mode=OneWay}"/>
-                                                                            <Run Text=" drawables"/>
+                                                                            <Run Text="{loc:Loc Home_RecentDrawablesSuffix}"/>
                                                                         </TextBlock>
                                                                     </Border>
                                                                 </StackPanel>
@@ -189,7 +190,11 @@
                                                                                         Margin="0,0,4,0"/>
                                                                     <TextBlock FontSize="10" 
                                                                                Foreground="{DynamicResource Brush600}">
-                                                                        <Run Text="{Binding LastModified, StringFormat='{}Last modified: {0:yyyy-MM-dd HH:mm}'}"/>
+                                                                        <Run>
+                                                                            <Run.Text>
+                                                                                <Binding Path="LastModified" StringFormat="{loc:Loc Home_LastModifiedFormat}" />
+                                                                            </Run.Text>
+                                                                        </Run>
                                                                     </TextBlock>
                                                                 </StackPanel>
 
@@ -257,7 +262,7 @@
                                                 Foreground="{DynamicResource Brush400}"
                                                 HorizontalAlignment="Center"
                                                 Margin="0,0,0,10"/>
-                            <TextBlock Text="No recent projects" 
+                            <TextBlock Text="{loc:Loc Home_NoRecentProjects}" 
                                        FontSize="12" 
                                        FontStyle="Italic" 
                                        Foreground="{DynamicResource Brush600}"
@@ -280,7 +285,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <GroupBox Style="{StaticResource FixedGroupBox}" Header="Explore my other tools" Grid.Column="0" Grid.Row="1" Margin="2">
+            <GroupBox Style="{StaticResource FixedGroupBox}" Header="{loc:Loc Home_ExploreOtherTools}" Grid.Column="0" Grid.Row="1" Margin="2">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <ItemsControl ItemsSource="{Binding OtherTools}" Padding="4">
                         <ItemsControl.ItemTemplate>
@@ -337,7 +342,7 @@
                                                                                VerticalAlignment="Center"
                                                                                Margin="0,0,5,0"
                                                                                UseLayoutRounding="True"/>
-                                                    <TextBlock Text="Click to learn more" 
+                                                    <TextBlock Text="{loc:Loc Home_ClickToLearnMore}" 
                                                                       FontSize="12" 
                                                                       FontWeight="Medium"
                                                                       Foreground="{DynamicResource Brush950}"
@@ -355,20 +360,20 @@
                 </ScrollViewer>
             </GroupBox>
 
-            <GroupBox Style="{StaticResource FixedGroupBox}" Header="Did you know?" Grid.Column="0" Grid.Row="0" Margin="2">
+            <GroupBox Style="{StaticResource FixedGroupBox}" Header="{loc:Loc Home_DidYouKnowHeader}" Grid.Column="0" Grid.Row="0" Margin="2">
                 <TextBlock Text="{Binding RandomDidYouKnow}" FontSize="14" FontStyle="Italic" Padding="5" Margin="5" TextWrapping="WrapWithOverflow"  />
             </GroupBox>
 
-            <GroupBox Style="{StaticResource FixedGroupBox}" Header="Latest changes" Grid.Column="0" Grid.Row="2" Margin="2">
+            <GroupBox Style="{StaticResource FixedGroupBox}" Header="{loc:Loc Home_LatestChanges}" Grid.Column="0" Grid.Row="2" Margin="2">
                 <DockPanel Margin="5">
                     <StackPanel DockPanel.Dock="Top" Margin="0,0,0,8">
                         <TextBlock FontSize="13" FontWeight="Bold" Margin="0,0,0,3">
-                            <Run Text="Version: " />
+                            <Run Text="{loc:Loc Home_VersionLabel}" />
                             <Run Text="{Binding LatestVersion, Mode=OneWay}" />
                         </TextBlock>
                     </StackPanel>
 
-                    <c:CustomButton Label="View Full Changelog on GitHub" Height="35" DockPanel.Dock="Bottom" Margin="0,5,0,0" Padding="5" CornerRadius="5" MyBtnClickEvent="ViewChangelog_Click" />
+                    <c:CustomButton Label="{loc:Loc Home_ViewFullChangelog}" Height="35" DockPanel.Dock="Bottom" Margin="0,5,0,0" Padding="5" CornerRadius="5" MyBtnClickEvent="ViewChangelog_Click" />
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
                         <ItemsControl ItemsSource="{Binding ChangelogHighlights}">
@@ -390,7 +395,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <GroupBox Style="{StaticResource FixedGroupBox}" Header="Supporters" Margin="2" Padding="5" Grid.Row="0">
+                <GroupBox Style="{StaticResource FixedGroupBox}" Header="{loc:Loc Home_Supporters}" Margin="2" Padding="5" Grid.Row="0">
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
                         <ItemsControl ItemsSource="{Binding PatreonList}">
                             <ItemsControl.ItemTemplate>

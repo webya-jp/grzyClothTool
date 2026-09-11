@@ -121,8 +121,8 @@ namespace grzyClothTool.Views
                 else
                 {
                     CustomMessageBox.Show(
-                        "That folder doesn't look like a valid GTA V installation (GTA5.exe was not found in it).\n\nPlease select the folder that contains GTA5.exe.",
-                        "Invalid GTA V folder",
+                        Loc.T("Settings_InvalidGtavFolderMessage"),
+                        Loc.T("Settings_InvalidGtavFolderTitle"),
                         CustomMessageBox.CustomMessageBoxButtons.OKOnly,
                         CustomMessageBox.CustomMessageBoxIcon.Warning);
                 }
@@ -131,7 +131,7 @@ namespace grzyClothTool.Views
 
         private void MainProjectsFolder_Click(object sender, RoutedEventArgs e)
         {
-            var title = e.Source.GetType().GetProperty("Title")?.GetValue(e.Source)?.ToString() ?? "Select Main Projects Folder";
+            var title = e.Source.GetType().GetProperty("Title")?.GetValue(e.Source)?.ToString() ?? Loc.T("Settings_SelectMainProjectsFolderFallbackTitle");
 
             OpenFolderDialog selectedFolder = new()
             {
@@ -152,8 +152,8 @@ namespace grzyClothTool.Views
                     if (PersistentSettingsHelper.IsRootDrive(selectedFolder.FolderName))
                     {
                         CustomMessageBox.Show(
-                            "You cannot use a root drive (e.g., C:\\) as the main folder.\n\nPlease select or create a subfolder.",
-                            "Invalid Folder",
+                            Loc.T("Settings_RootDriveNotAllowedMessage"),
+                            Loc.T("Settings_InvalidFolderTitle"),
                             CustomMessageBox.CustomMessageBoxButtons.OKOnly,
                             CustomMessageBox.CustomMessageBoxIcon.Warning);
                         return;
@@ -174,16 +174,16 @@ namespace grzyClothTool.Views
                 catch (UnauthorizedAccessException)
                 {
                     CustomMessageBox.Show(
-                        "Access denied. Please select a folder where you have write permissions.",
-                        "Error",
+                        Loc.T("Settings_AccessDeniedMessage"),
+                        Loc.T("Common_Error"),
                         CustomMessageBox.CustomMessageBoxButtons.OKOnly,
                         CustomMessageBox.CustomMessageBoxIcon.Error);
                 }
                 catch (Exception ex)
                 {
                     CustomMessageBox.Show(
-                        $"Error setting main projects folder: {ex.Message}",
-                        "Error",
+                        Loc.T("Settings_SetMainProjectsFolderErrorMessage", ex.Message),
+                        Loc.T("Common_Error"),
                         CustomMessageBox.CustomMessageBoxButtons.OKOnly,
                         CustomMessageBox.CustomMessageBoxIcon.Error);
                 }

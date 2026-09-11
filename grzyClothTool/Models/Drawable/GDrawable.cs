@@ -3,6 +3,7 @@ using grzyClothTool.Constants;
 using grzyClothTool.Controls;
 using grzyClothTool.Extensions;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models.Duplicate;
 using grzyClothTool.Models.Texture;
 using System;
@@ -402,7 +403,7 @@ public class GDrawable : INotifyPropertyChanged
         {
             var count = SelectedFlags.Count(i => i.IsSelected && i.Value != (int)Enums.DrawableFlags.NONE);
 
-            return count > 0 ? $"{Flags} ({count} selected)" : "NONE";
+            return count > 0 ? Loc.T("Drawable_FlagsSelected", Flags, count) : Loc.T("Drawable_FlagsNone");
         } 
     }
 

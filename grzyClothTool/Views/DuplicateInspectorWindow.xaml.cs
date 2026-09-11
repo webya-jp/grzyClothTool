@@ -1,4 +1,5 @@
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models.Drawable;
 using Material.Icons;
 using System.Collections.Generic;
@@ -68,9 +69,9 @@ namespace grzyClothTool.Views
 
             DuplicateGroupsControl.ItemsSource = null;
             DuplicateGroupsControl.ItemsSource = _groups;
-            SubtitleText.Text = _groups.Count == 0 
-                ? "No duplicates found" 
-                : $"Found {_groups.Count} duplicate group{(_groups.Count > 1 ? "s" : "")}";
+            SubtitleText.Text = _groups.Count == 0
+                ? Loc.T("DupInspector_NoDuplicatesFound")
+                : Loc.T(_groups.Count > 1 ? "DupInspector_FoundGroupsMany" : "DupInspector_FoundGroupsOne", _groups.Count);
             DeleteAllDuplicatesButton.IsEnabled = _groups.Any(g => g.Items.Count > 1);
         }
 
@@ -84,8 +85,8 @@ namespace grzyClothTool.Views
             var group = new DuplicateGroupViewModel
             {
                 GroupId = hash,
-                GroupTitle = $"Drawable: {firstDrawable.Name}",
-                GroupDescription = $"{duplicates.Count} identical drawables",
+                GroupTitle = Loc.T("DupInspector_GroupTitle", firstDrawable.Name),
+                GroupDescription = Loc.T("DupInspector_GroupDescription", duplicates.Count),
                 GroupColor = new SolidColorBrush((Color)ColorConverter.ConvertFromString(firstDrawable.DuplicateInfo.DuplicateColor)),
                 Count = duplicates.Count,
                 Items = []
@@ -125,17 +126,17 @@ namespace grzyClothTool.Views
         private static string GetDrawableLocation(GDrawable drawable)
         {
             if (MainWindow.AddonManager?.Addons == null)
-                return "Unknown";
+                return Loc.T("DupInspector_LocationUnknown");
 
             for (int i = 0; i < MainWindow.AddonManager.Addons.Count; i++)
             {
                 if (MainWindow.AddonManager.Addons[i].Drawables.Contains(drawable))
                 {
-                    return $"Addon {i + 1}";
+                    return Loc.T("DupInspector_LocationAddon", i + 1);
                 }
             }
 
-            return "Unknown";
+            return Loc.T("DupInspector_LocationUnknown");
         }
 
         private void OpenItem_Click(object sender, RoutedEventArgs e)
@@ -216,8 +217,8 @@ namespace grzyClothTool.Views
             if (sender is System.Windows.Controls.Button button && button.Tag is DuplicateItemViewModel vm)
             {
                 var result = Controls.CustomMessageBox.Show(
-                    $"Are you sure you want to delete '{vm.Name}'?",
-                    "Confirm Delete",
+                    Loc.T("DupInspector_ConfirmDeleteMessage", vm.Name),
+                    Loc.T("DupInspector_ConfirmDeleteCaption"),
                     Controls.CustomMessageBox.CustomMessageBoxButtons.OKCancel,
                     Controls.CustomMessageBox.CustomMessageBoxIcon.Warning);
 
@@ -229,8 +230,8 @@ namespace grzyClothTool.Views
                     if (_groups.Count == 0)
                     {
                         Controls.CustomMessageBox.Show(
-                            "All duplicates have been resolved!",
-                            "Success",
+                            Loc.T("DupInspector_AllResolved"),
+                            Loc.T("Common_Success"),
                             Controls.CustomMessageBox.CustomMessageBoxButtons.OKOnly,
                             Controls.CustomMessageBox.CustomMessageBoxIcon.Information);
                         Close();
@@ -247,8 +248,8 @@ namespace grzyClothTool.Views
                     return;
 
                 var result = Controls.CustomMessageBox.Show(
-                    $"This will delete {group.Items.Count - 1} duplicate items from this group, keeping only the first one.\n\nAre you sure?",
-                    "Confirm Bulk Delete",
+                    Loc.T("DupInspector_ConfirmGroupDeleteMessage", group.Items.Count - 1),
+                    Loc.T("DupInspector_ConfirmBulkDeleteCaption"),
                     Controls.CustomMessageBox.CustomMessageBoxButtons.OKCancel,
                     Controls.CustomMessageBox.CustomMessageBoxIcon.Warning);
 
@@ -267,8 +268,8 @@ namespace grzyClothTool.Views
                     if (_groups.Count == 0)
                     {
                         Controls.CustomMessageBox.Show(
-                            $"Deleted {itemsToDelete.Count} duplicate items!\n\nAll duplicates have been resolved!",
-                            "Success",
+                            Loc.T("DupInspector_DeletedItemsAllResolved", itemsToDelete.Count),
+                            Loc.T("Common_Success"),
                             Controls.CustomMessageBox.CustomMessageBoxButtons.OKOnly,
                             Controls.CustomMessageBox.CustomMessageBoxIcon.Information);
                         Close();
@@ -276,8 +277,8 @@ namespace grzyClothTool.Views
                     else
                     {
                         Controls.CustomMessageBox.Show(
-                            $"Deleted {itemsToDelete.Count} duplicate items!",
-                            "Success",
+                            Loc.T("DupInspector_DeletedItems", itemsToDelete.Count),
+                            Loc.T("Common_Success"),
                             Controls.CustomMessageBox.CustomMessageBoxButtons.OKOnly,
                             Controls.CustomMessageBox.CustomMessageBoxIcon.Information);
                     }
@@ -298,8 +299,8 @@ namespace grzyClothTool.Views
             }
 
             var result = Controls.CustomMessageBox.Show(
-                $"This will delete {itemsToDelete.Count} duplicate item{(itemsToDelete.Count == 1 ? "" : "s")} across {_groups.Count} duplicate group{(_groups.Count == 1 ? "" : "s")}, keeping the first item in each group.\n\nAre you sure?",
-                "Confirm Delete All Duplicates",
+                Loc.T(itemsToDelete.Count == 1 ? "DupInspector_ConfirmDeleteAllOne" : "DupInspector_ConfirmDeleteAllMany", itemsToDelete.Count, _groups.Count),
+                Loc.T("DupInspector_ConfirmDeleteAllCaption"),
                 Controls.CustomMessageBox.CustomMessageBoxButtons.OKCancel,
                 Controls.CustomMessageBox.CustomMessageBoxIcon.Warning);
 
@@ -315,8 +316,8 @@ namespace grzyClothTool.Views
             if (_groups.Count == 0)
             {
                 Controls.CustomMessageBox.Show(
-                    $"Deleted {itemsToDelete.Count} duplicate item{(itemsToDelete.Count == 1 ? "" : "s")}!\n\nAll duplicates have been resolved!",
-                    "Success",
+                    Loc.T(itemsToDelete.Count == 1 ? "DupInspector_DeletedOneItemAllResolved" : "DupInspector_DeletedItemsAllResolved", itemsToDelete.Count),
+                    Loc.T("Common_Success"),
                     Controls.CustomMessageBox.CustomMessageBoxButtons.OKOnly,
                     Controls.CustomMessageBox.CustomMessageBoxIcon.Information);
                 Close();
@@ -324,8 +325,8 @@ namespace grzyClothTool.Views
             else
             {
                 Controls.CustomMessageBox.Show(
-                    $"Deleted {itemsToDelete.Count} duplicate item{(itemsToDelete.Count == 1 ? "" : "s")}!",
-                    "Success",
+                    Loc.T(itemsToDelete.Count == 1 ? "DupInspector_DeletedOneItem" : "DupInspector_DeletedItems", itemsToDelete.Count),
+                    Loc.T("Common_Success"),
                     Controls.CustomMessageBox.CustomMessageBoxButtons.OKOnly,
                     Controls.CustomMessageBox.CustomMessageBoxIcon.Information);
             }

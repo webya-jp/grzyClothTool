@@ -3,6 +3,7 @@ using CodeWalker.GameFiles;
 using grzyClothTool.Controls;
 using grzyClothTool.Extensions;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models;
 using Microsoft.Win32;
 using System;
@@ -99,8 +100,8 @@ namespace grzyClothTool.Views
 
             OpenFileDialog files = new()
             {
-                Title = $"Select drawable files ({btn.Label})",
-                Filter = "Drawable files (*.ydd)|*.ydd",
+                Title = Loc.T("Project_SelectDrawableFilesFor", btn.Label),
+                Filter = Loc.T("Project_DrawableFilesFilter"),
                 Multiselect = true
             };
 
@@ -133,7 +134,7 @@ namespace grzyClothTool.Views
 
             OpenFolderDialog folder = new()
             {
-                Title = $"Select a folder containing drawable files ({btn.Tag})",
+                Title = Loc.T("Project_SelectDrawableFolderFor", btn.Tag),
                 Multiselect = true
             };
 
@@ -208,9 +209,9 @@ namespace grzyClothTool.Views
             OpenFileDialog files = new()
             {
                 Title = forcedGender.HasValue
-                    ? $"Select drawable files ({GetGenderDisplayName(forcedGender.Value)})"
-                    : "Select drawable files",
-                Filter = "Drawable files (*.ydd)|*.ydd",
+                    ? Loc.T("Project_SelectDrawableFilesFor", GetGenderDisplayName(forcedGender.Value))
+                    : Loc.T("Project_SelectDrawableFiles"),
+                Filter = Loc.T("Project_DrawableFilesFilter"),
                 Multiselect = true
             };
 
@@ -245,8 +246,8 @@ namespace grzyClothTool.Views
             OpenFolderDialog folder = new()
             {
                 Title = forcedGender.HasValue
-                    ? $"Select folder(s) containing drawable files ({GetGenderDisplayName(forcedGender.Value)})"
-                    : "Select folder(s) containing drawable files",
+                    ? Loc.T("Project_SelectDrawableFoldersFor", GetGenderDisplayName(forcedGender.Value))
+                    : Loc.T("Project_SelectDrawableFolders"),
                 Multiselect = true
             };
 
@@ -361,7 +362,7 @@ namespace grzyClothTool.Views
 
         private static string GetGenderDisplayName(Enums.SexType gender)
         {
-            return gender == Enums.SexType.male ? "Male" : "Female";
+            return gender == Enums.SexType.male ? Loc.T("Common_Male") : Loc.T("Common_Female");
         }
 
         private static DrawableImportResolution ResolveDrawableImport(IEnumerable<string> files, Enums.SexType? forcedGender)
@@ -448,17 +449,17 @@ namespace grzyClothTool.Views
 
             if (count == 0)
             {
-                CustomMessageBox.Show("No drawable(s) selected", "Delete drawable", CustomMessageBox.CustomMessageBoxButtons.OKOnly);
+                CustomMessageBox.Show(Loc.T("Project_NoDrawablesSelected"), Loc.T("Project_DeleteDrawableTitle"), CustomMessageBox.CustomMessageBoxButtons.OKOnly);
                 return;
             }
 
             var message = count == 1
-                ? $"Are you sure you want to delete this drawable? ({Addon.SelectedDrawable.Name})"
-                : $"Are you sure you want to delete these {count} selected drawables?";
+                ? Loc.T("Project_DeleteConfirmOne", Addon.SelectedDrawable.Name)
+                : Loc.T("Project_DeleteConfirmMany", count);
 
-            message += "\nThis will CHANGE NUMBERS of everything after this drawable!\n\nDo you want to replace with reserved slot instead?";
+            message += Loc.T("Project_DeleteConfirmSuffix");
 
-            var result = CustomMessageBox.Show(message, "Delete drawable", CustomMessageBox.CustomMessageBoxButtons.DeleteReplaceCancel);
+            var result = CustomMessageBox.Show(message, Loc.T("Project_DeleteDrawableTitle"), CustomMessageBox.CustomMessageBoxButtons.DeleteReplaceCancel);
             if (result == CustomMessageBox.CustomMessageBoxResult.Delete)
             {
                 MainWindow.AddonManager.DeleteDrawables([.. Addon.SelectedDrawables]);
@@ -507,8 +508,8 @@ namespace grzyClothTool.Views
         {
             if (string.IsNullOrEmpty(MainWindow.AddonManager.ProjectName))
             {
-                CustomMessageBox.Show("No project is currently loaded. Please create or open a project first.", 
-                    "No Project", 
+                CustomMessageBox.Show(Loc.T("Project_NoProjectLoadedMessage"),
+                    Loc.T("Project_NoProjectLoadedTitle"),
                     CustomMessageBox.CustomMessageBoxButtons.OKOnly, 
                     CustomMessageBox.CustomMessageBoxIcon.Warning);
                 return;
@@ -726,11 +727,10 @@ namespace grzyClothTool.Views
 
                 if (inaccessibleFiles.Count > 0)
                 {
-                    var message = $"The following file(s) could not be accessed:\n\n" +
-                                  string.Join("\n", inaccessibleFiles.Select(Path.GetFileName)) +
-                                  "\n\nThey may be virtual paths. Please extract them to a folder first and drag from there.";
-                    
-                    CustomMessageBox.Show(message, "Files Not Accessible", 
+                    var message = Loc.T("Project_FilesNotAccessibleMessage",
+                        string.Join("\n", inaccessibleFiles.Select(Path.GetFileName)));
+
+                    CustomMessageBox.Show(message, Loc.T("Project_FilesNotAccessibleTitle"),
                         CustomMessageBox.CustomMessageBoxButtons.OKOnly, 
                         CustomMessageBox.CustomMessageBoxIcon.Warning);
                 }
@@ -748,8 +748,8 @@ namespace grzyClothTool.Views
                 LogHelper.Log($"Error in Drop event: {ex.Message}", LogType.Error);
                 
                 CustomMessageBox.Show(
-                    $"An error occurred while processing dropped files:\n\n{ex.Message}",
-                    "Drag & Drop Error",
+                    Loc.T("Project_DropErrorMessage", ex.Message),
+                    Loc.T("Project_DropErrorTitle"),
                     CustomMessageBox.CustomMessageBoxButtons.OKOnly,
                     CustomMessageBox.CustomMessageBoxIcon.Error);
             }

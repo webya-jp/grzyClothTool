@@ -1,5 +1,6 @@
 ﻿using grzyClothTool.Constants;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -81,19 +82,19 @@ namespace grzyClothTool.Views
 
         public bool ShowNoRecentProjects => RecentlyOpened == null || RecentlyOpened.Count == 0;
 
-        private readonly List<string> didYouKnowStrings = [
-            "You can open any existing addon and it will load all properties such as heels or hats.",
-            "You can export an existing project when you are not finished and later import it to continue working on it.",
-            "There is switch to enable dark theme in the settings.",
-            "There is 'live texture' feature in 3d preview? It allows you to see how your texture looks on the model in real time, even after changes.",
-            "You can click SHIFT + DEL to instantly delete a selected drawable, without popup.",
-            "You can click CTRL + DEL to instantly replace a selected drawable with reserved drawable.",
-            "You can reserve your drawables and later change it to real model.",
-            "Supporting me with monthly patreon will speed up the development of the tool!",
-            "You can hover over warning icon to see what is wrong with your drawable or texture.",
+        private static readonly string[] didYouKnowKeys = [
+            "Home_DidYouKnow1",
+            "Home_DidYouKnow2",
+            "Home_DidYouKnow3",
+            "Home_DidYouKnow4",
+            "Home_DidYouKnow5",
+            "Home_DidYouKnow6",
+            "Home_DidYouKnow7",
+            "Home_DidYouKnow8",
+            "Home_DidYouKnow9",
         ];
 
-        public string RandomDidYouKnow => didYouKnowStrings[new Random().Next(0, didYouKnowStrings.Count)];
+        public string RandomDidYouKnow => Loc.T(didYouKnowKeys[new Random().Next(0, didYouKnowKeys.Length)]);
 
         public Home()
         {
@@ -104,13 +105,13 @@ namespace grzyClothTool.Views
                 new ToolInfo
                 {
                     Name = "grzyOptimizer",
-                    Description = "Optimize YDD models, reduce polygon and vertex count while maintaining visual quality.",
+                    Description = Loc.T("Home_ToolOptimizerDesc"),
                     Url = GlobalConstants.GRZY_TOOLS_URL
                 },
                 new ToolInfo
                 {
                     Name = "grzyTattooTool",
-                    Description = "Create and edit tattoos with preview and quick addon resource generation for FiveM.",
+                    Description = Loc.T("Home_ToolTattooDesc"),
                     Url = GlobalConstants.GRZY_TOOLS_URL
                 }
             ];
@@ -141,7 +142,7 @@ namespace grzyClothTool.Views
             } 
             catch
             {
-                PatreonList = ["Failed to fetch patreons"];
+                PatreonList = [Loc.T("Home_FailedFetchPatreons")];
             }
 
             try
@@ -150,8 +151,8 @@ namespace grzyClothTool.Views
             }
             catch
             {
-                LatestVersion = "Unable to fetch version";
-                ChangelogHighlights = ["Failed to load changelog highlights"];
+                LatestVersion = Loc.T("Home_UnableFetchVersion");
+                ChangelogHighlights = [Loc.T("Home_FailedLoadChangelog")];
             }
         }
 
@@ -198,7 +199,7 @@ namespace grzyClothTool.Views
         private static List<string> ParseChangelogHighlights(string changelogBody)
         {
             if (string.IsNullOrWhiteSpace(changelogBody))
-                return ["No changelog available"];
+                return [Loc.T("Home_NoChangelogAvailable")];
 
             var highlights = new List<string>();
             var lines = changelogBody.Split(['\r', '\n'], StringSplitOptions.None);
@@ -238,7 +239,7 @@ namespace grzyClothTool.Views
                 }
             }
 
-            return highlights.Count > 0 ? highlights : ["See full changelog for details"];
+            return highlights.Count > 0 ? highlights : [Loc.T("Home_SeeFullChangelog")];
         }
 
         private void ViewChangelog_Click(object sender, RoutedEventArgs e)
@@ -253,7 +254,7 @@ namespace grzyClothTool.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to open changelog: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Loc.T("Home_FailedOpenChangelog", ex.Message), Loc.T("Common_Error"), MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -269,7 +270,7 @@ namespace grzyClothTool.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to open website: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Loc.T("Home_FailedOpenWebsite", ex.Message), Loc.T("Common_Error"), MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -287,7 +288,7 @@ namespace grzyClothTool.Views
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Failed to open URL: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(Loc.T("Home_FailedOpenUrl", ex.Message), Loc.T("Common_Error"), MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
@@ -299,8 +300,8 @@ namespace grzyClothTool.Views
                 var mainProjectsFolder = PersistentSettingsHelper.Instance.MainProjectsFolder;
                 if (string.IsNullOrEmpty(mainProjectsFolder))
                 {
-                    Show("Please configure the main projects folder in settings first.", 
-                         "Configuration Required", 
+                    Show(Loc.T("Home_ConfigureMainFolderMsg"), 
+                         Loc.T("Home_ConfigurationRequiredTitle"), 
                          CustomMessageBoxButtons.OKOnly, 
                          CustomMessageBoxIcon.Warning);
                     return;
@@ -308,8 +309,8 @@ namespace grzyClothTool.Views
 
                 if (!Directory.Exists(mainProjectsFolder))
                 {
-                    Show($"Main projects folder does not exist: {mainProjectsFolder}\n\nPlease update it in settings.", 
-                         "Folder Not Found", 
+                    Show(Loc.T("Home_MainFolderNotExistMsg", mainProjectsFolder), 
+                         Loc.T("Home_FolderNotFoundTitle"), 
                          CustomMessageBoxButtons.OKOnly, 
                          CustomMessageBoxIcon.Warning);
                     return;
@@ -326,8 +327,8 @@ namespace grzyClothTool.Views
 
                 if (projectName.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
                 {
-                    Show("Project name contains invalid characters. Please choose a different name.", 
-                         "Invalid Name", 
+                    Show(Loc.T("Home_InvalidProjectNameMsg"), 
+                         Loc.T("Home_InvalidNameTitle"), 
                          CustomMessageBoxButtons.OKOnly, 
                          CustomMessageBoxIcon.Warning);
                     return;
@@ -377,8 +378,8 @@ namespace grzyClothTool.Views
             catch (Exception ex)
             {
                 LogHelper.Log($"Failed to create new project: {ex.Message}", Views.LogType.Error);
-                Show($"Failed to create new project: {ex.Message}", 
-                     "Error", 
+                Show(Loc.T("Home_FailedCreateProject", ex.Message), 
+                     Loc.T("Common_Error"), 
                      CustomMessageBoxButtons.OKOnly, 
                      CustomMessageBoxIcon.Error);
             }
@@ -408,8 +409,8 @@ namespace grzyClothTool.Views
             {
                 OpenFileDialog openFileDialog = new()
                 {
-                    Title = "Open Save File",
-                    Filter = "Save files (*.json)|*.json|All files (*.*)|*.*",
+                    Title = Loc.T("Home_OpenSaveDialogTitle"),
+                    Filter = Loc.T("Home_OpenSaveDialogFilter"),
                     Multiselect = false
                 };
 
@@ -427,8 +428,8 @@ namespace grzyClothTool.Views
             }
             catch (Exception ex)
             {
-                Show($"Failed to load save: {ex.Message}", 
-                     "Error", 
+                Show(Loc.T("Home_FailedLoadSave", ex.Message), 
+                     Loc.T("Common_Error"), 
                      CustomMessageBoxButtons.OKOnly, 
                      CustomMessageBoxIcon.Error);
             }
@@ -442,8 +443,8 @@ namespace grzyClothTool.Views
                 {
                     if (!File.Exists(filePath))
                     {
-                        Show("This save file no longer exists.", 
-                             "File Not Found", 
+                        Show(Loc.T("Home_SaveFileGoneMsg"), 
+                             Loc.T("Home_FileNotFoundTitle"), 
                              CustomMessageBoxButtons.OKOnly, 
                              CustomMessageBoxIcon.Warning);
                         
@@ -465,8 +466,8 @@ namespace grzyClothTool.Views
                 }
                 catch (Exception ex)
                 {
-                    Show($"Failed to load save: {ex.Message}", 
-                         "Error", 
+                    Show(Loc.T("Home_FailedLoadSave", ex.Message), 
+                         Loc.T("Common_Error"), 
                          CustomMessageBoxButtons.OKOnly, 
                          CustomMessageBoxIcon.Error);
                 }

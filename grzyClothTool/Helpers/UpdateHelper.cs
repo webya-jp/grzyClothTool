@@ -1,4 +1,5 @@
-﻿using System;
+﻿using grzyClothTool.Localization;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -195,7 +196,7 @@ public static class UpdateHelper
             var removeTempFilesArg = args.FirstOrDefault(arg => arg.StartsWith("--removeTempFiles"));
             if (removeTempFilesArg != null)
             {
-                App.splashScreen.AddMessage("Completing update...");
+                App.splashScreen.AddMessage(Loc.T("Update_CompletingUpdate"));
                 
                 var oldExePath = removeTempFilesArg.Split('=')[1].Trim('"');
                 
@@ -214,35 +215,35 @@ public static class UpdateHelper
             
             string currentVersion = GetCurrentVersion();
                 
-            App.splashScreen.AddMessage("Checking for updates...");
+            App.splashScreen.AddMessage(Loc.T("Update_CheckingForUpdates"));
             var latestVersion = await RetryOperation(async () => await GetLatestVersion(), maxAttempts: 2, cts.Token);
 
             if (latestVersion is null)
             {
-                App.splashScreen.AddMessage("Could not check for updates.");
+                App.splashScreen.AddMessage(Loc.T("Update_CouldNotCheck"));
                 await Task.Delay(500, cts.Token);
                 return;
             }
 
             if(latestVersion == currentVersion)
             {
-                App.splashScreen.AddMessage("You're up to date!");
+                App.splashScreen.AddMessage(Loc.T("Update_UpToDate"));
                 await Task.Delay(500, cts.Token);
                 return;
             }
 
-            App.splashScreen.AddMessage($"Downloading v{latestVersion}...");
+            App.splashScreen.AddMessage(Loc.T("Update_Downloading", latestVersion));
             
             await DownloadUpdate(latestVersion, cts.Token);
         }
         catch (OperationCanceledException)
         {
-            App.splashScreen.AddMessage("Update check timed out.");
+            App.splashScreen.AddMessage(Loc.T("Update_CheckTimedOut"));
             await Task.Delay(1000);
         }
         catch (Exception ex)
         {
-            App.splashScreen.AddMessage("Update check failed.");
+            App.splashScreen.AddMessage(Loc.T("Update_CheckFailed"));
             try
             {
                 await File.WriteAllTextAsync("update_check_failed.log", $"[{DateTime.Now}]\n{ex}");
@@ -304,14 +305,14 @@ public static class UpdateHelper
                 return true;
             }, maxAttempts: 3, cancellationToken);
             
-            App.splashScreen.AddMessage("Download complete. Installing...");
+            App.splashScreen.AddMessage(Loc.T("Update_DownloadCompleteInstalling"));
             await Task.Delay(500, cancellationToken);
             
             ExtractAndRunUpdatedApp();
         }
         catch (OperationCanceledException)
         {
-            App.splashScreen.AddMessage("Download cancelled.");
+            App.splashScreen.AddMessage(Loc.T("Update_DownloadCancelled"));
             await Task.Delay(1500);
         }
         catch(Exception ex)
@@ -322,7 +323,7 @@ public static class UpdateHelper
             }
             catch { }
 
-            App.splashScreen.AddMessage("Download failed. Please try again later.");
+            App.splashScreen.AddMessage(Loc.T("Update_DownloadFailed"));
             await Task.Delay(2000);
         }
     }
@@ -397,7 +398,7 @@ public static class UpdateHelper
             }
             catch { }
             
-            App.splashScreen?.AddMessage("Installation failed. Please update manually.");
+            App.splashScreen?.AddMessage(Loc.T("Update_InstallFailed"));
             Task.Delay(2500).Wait();
         }
     }

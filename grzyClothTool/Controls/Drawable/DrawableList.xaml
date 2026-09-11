@@ -8,6 +8,7 @@
          xmlns:helpers="clr-namespace:grzyClothTool.Helpers"
          xmlns:converters="clr-namespace:grzyClothTool.Converters"
          xmlns:local="clr-namespace:grzyClothTool.Controls"
+         xmlns:loc="clr-namespace:grzyClothTool.Localization"
          d:DataContext="{d:DesignInstance Type=models:AddonManagerDesign, IsDesignTimeCreatable=True}"
          x:Name="MyDrawableList"
          mc:Ignorable="d">
@@ -15,9 +16,10 @@
 <UserControl.Resources>
 <local:GroupExpandedStateConverter x:Key="GroupExpandedStateConverter" />
     <converters:HexColorToBrushConverter x:Key="HexColorToBrushConverter" />
+    <converters:ComponentDisplayNameConverter x:Key="ComponentDisplayNameConverter" />
 
         <ContextMenu x:Key="SingleSelectionContextMenu">
-            <MenuItem Header="Show in duplicate inspector" Click="ShowDuplicateInspector_Click" x:Name="ShowDuplicateInspectorMenuItem">
+            <MenuItem Header="{loc:Loc DrawList_ShowInDuplicateInspector}" Click="ShowDuplicateInspector_Click" x:Name="ShowDuplicateInspectorMenuItem">
                 <MenuItem.Style>
                     <Style TargetType="MenuItem">
                         <Setter Property="Visibility" Value="Collapsed" />
@@ -41,10 +43,10 @@
                     </Style>
                 </Separator.Style>
             </Separator>
-            <MenuItem Header="Delete" Click="DeleteDrawable_Click" />
-            <MenuItem Header="Replace" Click="ReplaceDrawable_Click" />
-            <MenuItem Header="Duplicate to opposite gender" Click="DuplicateToOppositeGender_Click" />
-            <MenuItem Header="Move to another addon" ItemsSource="{Binding AddonManager.MoveMenuItems, RelativeSource={RelativeSource AncestorType=Window}}">
+            <MenuItem Header="{loc:Loc Common_Delete}" Click="DeleteDrawable_Click" />
+            <MenuItem Header="{loc:Loc DrawList_Replace}" Click="ReplaceDrawable_Click" />
+            <MenuItem Header="{loc:Loc DrawList_DuplicateToOppositeGender}" Click="DuplicateToOppositeGender_Click" />
+            <MenuItem Header="{loc:Loc DrawList_MoveToAnotherAddon}" ItemsSource="{Binding AddonManager.MoveMenuItems, RelativeSource={RelativeSource AncestorType=Window}}">
                 <MenuItem.ItemContainerStyle>
                     <Style TargetType="MenuItem">
                         <Setter Property="Header" Value="{Binding Header}" />
@@ -53,20 +55,20 @@
                     </Style>
                 </MenuItem.ItemContainerStyle>
             </MenuItem>
-            <MenuItem Header="Open file location" Click="OpenFileLocation_Click" />
-            <MenuItem Header="Export as YDD" Click="ExportDrawable_Click" />
-            <MenuItem Header="Export as YDD with textures" Click="ExportDrawable_Click" Tag="YTD" />
-            <MenuItem Header="Export only textures as DDS" Click="ExportDrawable_Click" Tag="DDS" />
-            <MenuItem Header="Export only textures as PNG" Click="ExportDrawable_Click" Tag="PNG" />
+            <MenuItem Header="{loc:Loc DrawList_OpenFileLocation}" Click="OpenFileLocation_Click" />
+            <MenuItem Header="{loc:Loc DrawList_ExportAsYdd}" Click="ExportDrawable_Click" />
+            <MenuItem Header="{loc:Loc DrawList_ExportAsYddWithTextures}" Click="ExportDrawable_Click" Tag="YTD" />
+            <MenuItem Header="{loc:Loc DrawList_ExportTexturesAsDds}" Click="ExportDrawable_Click" Tag="DDS" />
+            <MenuItem Header="{loc:Loc DrawList_ExportTexturesAsPng}" Click="ExportDrawable_Click" Tag="PNG" />
             <Separator />
-            <MenuItem Header="Ignore warnings"
+            <MenuItem Header="{loc:Loc DrawList_IgnoreWarnings}"
                       IsCheckable="True"
                       IsChecked="{Binding PlacementTarget.SelectedItem.IgnoreWarnings, RelativeSource={RelativeSource AncestorType=ContextMenu}, Mode=OneWay}"
                       Click="IgnoreWarnings_Click" />
         </ContextMenu>
         <ContextMenu x:Key="MultipleSelectionContextMenu">
-            <MenuItem Header="Delete" Click="DeleteDrawable_Click" />
-            <MenuItem Header="Move" ItemsSource="{Binding AddonManager.MoveMenuItems, RelativeSource={RelativeSource AncestorType=Window}}">
+            <MenuItem Header="{loc:Loc Common_Delete}" Click="DeleteDrawable_Click" />
+            <MenuItem Header="{loc:Loc DrawList_Move}" ItemsSource="{Binding AddonManager.MoveMenuItems, RelativeSource={RelativeSource AncestorType=Window}}">
                 <MenuItem.ItemContainerStyle>
                     <Style TargetType="MenuItem">
                         <Setter Property="Header" Value="{Binding Header}" />
@@ -75,10 +77,10 @@
                     </Style>
                 </MenuItem.ItemContainerStyle>
             </MenuItem>
-            <MenuItem Header="Export as YDD" Click="ExportDrawable_Click" />
-            <MenuItem Header="Export as YDD with textures" Click="ExportDrawable_Click" Tag="YTD" />
-            <MenuItem Header="Export only textures as DDS" Click="ExportDrawable_Click" Tag="DDS" />
-            <MenuItem Header="Export only textures as PNG" Click="ExportDrawable_Click" Tag="PNG" />
+            <MenuItem Header="{loc:Loc DrawList_ExportAsYdd}" Click="ExportDrawable_Click" />
+            <MenuItem Header="{loc:Loc DrawList_ExportAsYddWithTextures}" Click="ExportDrawable_Click" Tag="YTD" />
+            <MenuItem Header="{loc:Loc DrawList_ExportTexturesAsDds}" Click="ExportDrawable_Click" Tag="DDS" />
+            <MenuItem Header="{loc:Loc DrawList_ExportTexturesAsPng}" Click="ExportDrawable_Click" Tag="PNG" />
         </ContextMenu>
 
         <Style TargetType="ListBox" x:Key="ListBoxStyleWithContextMenu">
@@ -237,7 +239,7 @@
                                                Padding="4,1"
                                                Margin="0,0,2,0"
                                                Visibility="Collapsed"
-                                               ToolTip="Reserved"
+                                               ToolTip="{loc:Loc DrawList_ReservedTooltip}"
                                                ToolTipService.InitialShowDelay="0">
                                             <TextBlock Text="RSV" 
                                                       FontSize="8" 
@@ -252,7 +254,7 @@
                                                Padding="4,1"
                                                Margin="0,0,2,0"
                                                Visibility="Collapsed"
-                                               ToolTip="New"
+                                               ToolTip="{loc:Loc DrawList_NewTooltip}"
                                                ToolTipService.InitialShowDelay="0">
                                             <TextBlock Text="NEW" 
                                                       FontSize="8" 
@@ -288,7 +290,7 @@
                                             Fill="#10b981"
                                             Margin="2,0,0,0"
                                             Visibility="Collapsed"
-                                            ToolTip="Selected"
+                                            ToolTip="{loc:Loc DrawList_SelectedTooltip}"
                                             ToolTipService.InitialShowDelay="0" />
                                         </StackPanel>
                                     
@@ -374,7 +376,7 @@
                             
                             <DataTrigger Binding="{Binding IsEncrypted}" Value="True">
                                 <Setter Property="Visibility" Value="Visible" TargetName="LockIcon" />
-                                <Setter Property="ToolTip" Value="Encrypted - Cannot preview" TargetName="LockIcon" />
+                                <Setter Property="ToolTip" Value="{loc:Loc DrawList_EncryptedCannotPreview}" TargetName="LockIcon" />
                             </DataTrigger>
                             
                             <DataTrigger Binding="{Binding IsLoading}" Value="True">
@@ -599,10 +601,10 @@
                                                                 
                                                                 <TextBlock Grid.Column="2"
                                                                          x:Name="GroupNameText"
-                                                                         FontWeight="SemiBold" 
+                                                                         FontWeight="SemiBold"
                                                                          FontSize="12"
                                                                          Foreground="{DynamicResource Brush900}"
-                                                                         Text="{Binding Name}"
+                                                                         Text="{Binding Name, Converter={StaticResource ComponentDisplayNameConverter}}"
                                                                          VerticalAlignment="Center" />
                                                                 
                                                                 <Border Grid.Column="3"
@@ -868,7 +870,7 @@
                                                                          FontWeight="Medium"
                                                                          FontSize="11"
                                                                          Foreground="{DynamicResource Brush700}"
-                                                                         Text="{Binding Name}"
+                                                                         Text="{Binding Name, Converter={StaticResource ComponentDisplayNameConverter}}"
                                                                          VerticalAlignment="Center" />
 
                                                                 <Border Grid.Column="3"

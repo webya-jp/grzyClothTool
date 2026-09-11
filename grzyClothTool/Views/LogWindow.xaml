@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+        xmlns:loc="clr-namespace:grzyClothTool.Localization"
         Background="{DynamicResource Brush50}"
         mc:Ignorable="d"
-        Title="Logs" Height="300" MinHeight="300" Width="500" MinWidth="400">
+        Title="{loc:Loc Log_Title}" Height="300" MinHeight="300" Width="500" MinWidth="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -22,8 +23,8 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Column="0" Text="" FontWeight="Bold" />
-            <TextBlock Grid.Column="1" Foreground="{DynamicResource Brush950}" Text="Timestamp" FontWeight="Bold" Margin="5,2" />
-            <TextBlock Grid.Column="2" Foreground="{DynamicResource Brush950}" Text="Message" FontWeight="Bold" Margin="5,2" />
+            <TextBlock Grid.Column="1" Foreground="{DynamicResource Brush950}" Text="{loc:Loc Log_ColumnTimestamp}" FontWeight="Bold" Margin="5,2" />
+            <TextBlock Grid.Column="2" Foreground="{DynamicResource Brush950}" Text="{loc:Loc Log_ColumnMessage}" FontWeight="Bold" Margin="5,2" />
         </Grid>
 
         <!-- Logs -->

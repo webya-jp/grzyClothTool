@@ -43,7 +43,7 @@
                                 </Path.Data>
                             </Path>
                         </Grid>
-                        <TextBlock Foreground="{DynamicResource Brush950}" Margin="5,0,5,2" VerticalAlignment="Center" FontSize="16" FontWeight="Normal">Back</TextBlock>
+                        <TextBlock Foreground="{DynamicResource Brush950}" Margin="5,0,5,2" VerticalAlignment="Center" FontSize="16" FontWeight="Normal" Text="{loc:Loc Common_Back}" />
                     </StackPanel>
                 </Button>
 
@@ -100,7 +100,7 @@
 
 
         <Grid Grid.Row="1">
-            <GroupBox Grid.ColumnSpan="2" Style="{DynamicResource FixedGroupBox}" Header="Settings">
+            <GroupBox Grid.ColumnSpan="2" Style="{DynamicResource FixedGroupBox}" Header="{loc:Loc Common_Settings}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -111,7 +111,7 @@
 
                             <GroupBox Margin="0,5" Height="120" Style="{DynamicResource FixedGroupBox}">
                                 <GroupBox.Header>
-                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="Drawable polygon count limit" />
+                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="{loc:Loc Settings_PolygonLimitHeader}" />
                                 </GroupBox.Header>
                                 <Grid Margin="2">
                                     <Grid.RowDefinitions>
@@ -124,16 +124,16 @@
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
 
-                                    <TextBlock Padding="5,2,5,5" FontStyle="Italic" FontWeight="Normal" Foreground="{DynamicResource Brush500}" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap">Sets limit for drawable polygon count, if it exceeds this number it will display warning</TextBlock>
-                                    <c:SettingsLabelTextBox Grid.Row="1" Grid.Column="0" Label="High LOD" LabelFontSize="12" Text="{Binding Path=Instance.PolygonLimitHigh, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" ButtonVisible="False" />
-                                    <c:SettingsLabelTextBox Grid.Row="1" Grid.Column="1" Label="Medium LOD" LabelFontSize="12" Text="{Binding Path=Instance.PolygonLimitMed, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" ButtonVisible="False" />
-                                    <c:SettingsLabelTextBox Grid.Row="1" Grid.Column="2" Label="Low LOD" LabelFontSize="12" Text="{Binding Path=Instance.PolygonLimitLow, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" ButtonVisible="False" />
+                                    <TextBlock Padding="5,2,5,5" FontStyle="Italic" FontWeight="Normal" Foreground="{DynamicResource Brush500}" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="{loc:Loc Settings_PolygonLimitDescription}" />
+                                    <c:SettingsLabelTextBox Grid.Row="1" Grid.Column="0" Label="{loc:Loc Settings_PolygonLimitHigh}" LabelFontSize="12" Text="{Binding Path=Instance.PolygonLimitHigh, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" ButtonVisible="False" />
+                                    <c:SettingsLabelTextBox Grid.Row="1" Grid.Column="1" Label="{loc:Loc Settings_PolygonLimitMedium}" LabelFontSize="12" Text="{Binding Path=Instance.PolygonLimitMed, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" ButtonVisible="False" />
+                                    <c:SettingsLabelTextBox Grid.Row="1" Grid.Column="2" Label="{loc:Loc Settings_PolygonLimitLow}" LabelFontSize="12" Text="{Binding Path=Instance.PolygonLimitLow, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" ButtonVisible="False" />
                                 </Grid>
                             </GroupBox>
 
                             <GroupBox Margin="0,5" Height="140" Style="{DynamicResource FixedGroupBox}">
                                 <GroupBox.Header>
-                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="Texture resolution limits" />
+                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="{loc:Loc Settings_TextureResolutionHeader}" />
                                 </GroupBox.Header>
                                 <Grid Margin="2">
                                     <Grid.RowDefinitions>
@@ -146,29 +146,29 @@
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
 
-                                    <TextBlock Padding="5,2,5,5" FontStyle="Italic" FontWeight="Normal" Foreground="{DynamicResource Brush500}" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap">Sets maximum resolution for each texture type. If width or height exceeds the limit, a warning will be displayed</TextBlock>
-                                    <c:SettingsLabelComboBox Grid.Row="1" Grid.Column="0" Label="Diffuse" LabelFontSize="12" ItemsSource="{Binding TextureResolutionOptions}" SelectedItem="{Binding Path=Instance.TextureResolutionLimitDiffuse, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" />
-                                    <c:SettingsLabelComboBox Grid.Row="1" Grid.Column="1" Label="Normal" LabelFontSize="12" ItemsSource="{Binding TextureResolutionOptions}" SelectedItem="{Binding Path=Instance.TextureResolutionLimitNormal, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" />
-                                    <c:SettingsLabelComboBox Grid.Row="1" Grid.Column="2" Label="Specular" LabelFontSize="12" ItemsSource="{Binding TextureResolutionOptions}" SelectedItem="{Binding Path=Instance.TextureResolutionLimitSpecular, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" />
+                                    <TextBlock Padding="5,2,5,5" FontStyle="Italic" FontWeight="Normal" Foreground="{DynamicResource Brush500}" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="{loc:Loc Settings_TextureResolutionDescription}" />
+                                    <c:SettingsLabelComboBox Grid.Row="1" Grid.Column="0" Label="{loc:Loc Settings_TextureDiffuse}" LabelFontSize="12" ItemsSource="{Binding TextureResolutionOptions}" SelectedItem="{Binding Path=Instance.TextureResolutionLimitDiffuse, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" />
+                                    <c:SettingsLabelComboBox Grid.Row="1" Grid.Column="1" Label="{loc:Loc Settings_TextureNormal}" LabelFontSize="12" ItemsSource="{Binding TextureResolutionOptions}" SelectedItem="{Binding Path=Instance.TextureResolutionLimitNormal, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" />
+                                    <c:SettingsLabelComboBox Grid.Row="1" Grid.Column="2" Label="{loc:Loc Settings_TextureSpecular}" LabelFontSize="12" ItemsSource="{Binding TextureResolutionOptions}" SelectedItem="{Binding Path=Instance.TextureResolutionLimitSpecular, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" />
                                 </Grid>
                             </GroupBox>
 
                             <GroupBox Margin="0,5" Style="{DynamicResource FixedGroupBox}">
                                 <GroupBox.Header>
-                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="Drawable list grouping" />
+                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="{loc:Loc Settings_GroupingHeader}" />
                                 </GroupBox.Header>
                                 <StackPanel Margin="5">
-                                    <TextBlock Padding="5,2,5,5" FontStyle="Italic" FontWeight="Normal" Foreground="{DynamicResource Brush500}" TextWrapping="Wrap">Controls the section headers shown in the drawable list.</TextBlock>
-                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="None - one flat list, no sections"
+                                    <TextBlock Padding="5,2,5,5" FontStyle="Italic" FontWeight="Normal" Foreground="{DynamicResource Brush500}" TextWrapping="Wrap" Text="{loc:Loc Settings_GroupingDescription}" />
+                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="{loc:Loc Settings_GroupingNone}"
                                         GroupName="GroupingMode"
                                         IsChecked="{Binding Path=Instance.DrawableGroupingMode, Source={x:Static helpers:SettingsHelper.Instance}, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=None, Mode=TwoWay}" />
-                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="By Type - sections for clothing or prop type"
+                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="{loc:Loc Settings_GroupingByType}"
                                         GroupName="GroupingMode"
                                         IsChecked="{Binding Path=Instance.DrawableGroupingMode, Source={x:Static helpers:SettingsHelper.Instance}, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=ByType, Mode=TwoWay}" />
-                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="By Group - sections for your custom groups"
+                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="{loc:Loc Settings_GroupingByGroup}"
                                         GroupName="GroupingMode"
                                         IsChecked="{Binding Path=Instance.DrawableGroupingMode, Source={x:Static helpers:SettingsHelper.Instance}, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=GroupDefined, Mode=TwoWay}" />
-                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="Both - custom groups first, types inside"
+                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="{loc:Loc Settings_GroupingBoth}"
                                         GroupName="GroupingMode"
                                         IsChecked="{Binding Path=Instance.DrawableGroupingMode, Source={x:Static helpers:SettingsHelper.Instance}, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Both, Mode=TwoWay}" />
                                 </StackPanel>
@@ -176,11 +176,11 @@
 
                             <GroupBox Margin="0,5" Height="150" Style="{DynamicResource FixedGroupBox}">
                                 <GroupBox.Header>
-                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="Drawables per addon" />
+                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="{loc:Loc Settings_DrawablesPerAddonHeader}" />
                                 </GroupBox.Header>
                                 <StackPanel Margin="5">
-                                    <TextBlock Padding="5,2,5,5" FontStyle="Italic" FontWeight="Normal" Foreground="{DynamicResource Brush500}" TextWrapping="Wrap">Maximum number of drawables of each type kept in a single addon before a new one is created. Changing this reorganizes existing addons.</TextBlock>
-                                    <c:SettingsLabelTextBox Margin="5" Label="Max drawable number per addon (0-255)" LabelFontSize="12" Text="{Binding Path=Instance.MaxDrawableNumber, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ButtonVisible="False" />
+                                    <TextBlock Padding="5,2,5,5" FontStyle="Italic" FontWeight="Normal" Foreground="{DynamicResource Brush500}" TextWrapping="Wrap" Text="{loc:Loc Settings_DrawablesPerAddonDescription}" />
+                                    <c:SettingsLabelTextBox Margin="5" Label="{loc:Loc Settings_MaxDrawableNumberLabel}" LabelFontSize="12" Text="{Binding Path=Instance.MaxDrawableNumber, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ButtonVisible="False" />
                                 </StackPanel>
                             </GroupBox>
                         </StackPanel>
@@ -202,44 +202,44 @@
 
                             <GroupBox Margin="0,5" Height="380" Style="{DynamicResource FixedGroupBox}">
                                 <GroupBox.Header>
-                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="General settings" />
+                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="{loc:Loc Settings_GeneralHeader}" />
                                 </GroupBox.Header>
 
                                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                                     <StackPanel Margin="0">
                                         <c:SettingsLabelTextBox
                                             Margin="5"
-                                            Label="Main Projects Folder"
+                                            Label="{loc:Loc Settings_MainProjectsFolderLabel}"
                                             Text="{Binding MainProjectsFolder, Mode=TwoWay}"
-                                            Description="Main folder where all your clothing projects are stored"
-                                            Title="Select your Main Projects Folder"
+                                            Description="{loc:Loc Settings_MainProjectsFolderDescription}"
+                                            Title="{loc:Loc Settings_MainProjectsFolderTitle}"
                                             ButtonClick="MainProjectsFolder_Click" />
 
                                         <c:SettingsLabelTextBox
                                             Margin="5"
-                                            Label="Current GTAV Path"
+                                            Label="{loc:Loc Settings_GtavPathLabel}"
                                             Text="{Binding GTAVPath, Mode=OneWay}"
-                                            Description="GTAV path is required for 3D preview to work"
-                                            Title="Select your GTA V Path"
+                                            Description="{loc:Loc Settings_GtavPathDescription}"
+                                            Title="{loc:Loc Settings_GtavPathTitle}"
                                             ButtonClick="GTAVPath_Click" />
 
                                         <c:SettingsLabelCheckBox
                                             Margin="5"
-                                            Label="Display drawable path"
-                                            Text="Enabled will display used path for selected drawable"
+                                            Label="{loc:Loc Settings_DisplayDrawablePathLabel}"
+                                            Text="{loc:Loc Settings_DisplayDrawablePathText}"
                                             IsChecked="{Binding Path=Instance.DisplaySelectedDrawablePath, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" />
 
                                         <c:SettingsLabelCheckBox
                                             Margin="5"
-                                            Label="Delete drawable files automatically"
-                                            Text="When enabled, it will automatically remove the associated files from your system when you delete a drawable from the addon"
-                                            DisplayWarning="WARNING: This function will modify and remove files from your PC. Any removed files cannot be recovered.&#x0a;&#x0a;Are you sure you want to enable it?"
+                                            Label="{loc:Loc Settings_AutoDeleteFilesLabel}"
+                                            Text="{loc:Loc Settings_AutoDeleteFilesText}"
+                                            DisplayWarning="{loc:Loc Settings_AutoDeleteFilesWarning}"
                                             IsChecked="{Binding Path=Instance.AutoDeleteFiles, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" />
 
                                         <c:SettingsLabelCheckBox
                                             Margin="5"
-                                            Label="Mark new drawables"
-                                            Text="When enabled, new drawables will be marked with a yellow dot"
+                                            Label="{loc:Loc Settings_MarkNewDrawablesLabel}"
+                                            Text="{loc:Loc Settings_MarkNewDrawablesText}"
                                             IsChecked="{Binding Path=Instance.MarkNewDrawables, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay}" />
                                     </StackPanel>
                                 </ScrollViewer>

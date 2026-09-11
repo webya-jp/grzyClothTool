@@ -1,4 +1,5 @@
-﻿using System;
+﻿using grzyClothTool.Localization;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
@@ -14,7 +15,7 @@ namespace grzyClothTool.Views
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string IsLoggedInText => IsPatreonLoggedIn ? "Yes" : "No";
+        public string IsLoggedInText => IsPatreonLoggedIn ? Loc.T("Common_Yes") : Loc.T("Common_No");
 
         private bool _isPatreonLoggedIn;
         public bool IsPatreonLoggedIn
@@ -114,7 +115,7 @@ namespace grzyClothTool.Views
                     PatreonUsername = App.patreonAuthPlugin?.Username;
                     PatreonImg = App.patreonAuthPlugin?.ImageUrl;
 
-                    PatreonStatus = App.patreonAuthPlugin?.Status == null ? "NOT ACTIVE" : "ACTIVE";
+                    PatreonStatus = App.patreonAuthPlugin?.Status == null ? Loc.T("Accounts_StatusNotActive") : Loc.T("Accounts_StatusActive");
                     PatreonLastChargeDate = (App.patreonAuthPlugin?.LastChargeDate) ?? "-";
                     PatreonNextChargeDate = (App.patreonAuthPlugin?.NextChargeDate) ?? "-";
                 }
@@ -139,14 +140,14 @@ namespace grzyClothTool.Views
                     PatreonUsername = App.patreonAuthPlugin.Username;
                     PatreonImg = App.patreonAuthPlugin.ImageUrl;
 
-                    PatreonStatus = App.patreonAuthPlugin.Status == null ? "NOT ACTIVE" : "ACTIVE";
+                    PatreonStatus = App.patreonAuthPlugin.Status == null ? Loc.T("Accounts_StatusNotActive") : Loc.T("Accounts_StatusActive");
                     PatreonLastChargeDate = (App.patreonAuthPlugin.LastChargeDate) ?? "-";
                     PatreonNextChargeDate = (App.patreonAuthPlugin.NextChargeDate) ?? "-";
                 }
             }
             catch
             {
-                MessageBox.Show("Failed to login");
+                MessageBox.Show(Loc.T("Accounts_LoginFailed"));
             }
         }
 

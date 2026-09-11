@@ -2,6 +2,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using grzyClothTool.Localization;
 
 namespace grzyClothTool.Controls
 {
@@ -31,8 +32,8 @@ namespace grzyClothTool.Controls
             {
                 int seconds = (int)e.NewValue;
                 indicator.TooltipBorder.ToolTip = seconds > 0 
-                    ? $"Auto-saving in {seconds} seconds" 
-                    : "Save in progress";
+                    ? Loc.T("AutoSave_AutoSavingIn", seconds) 
+                    : Loc.T("AutoSave_SaveInProgress");
             }
         }
 

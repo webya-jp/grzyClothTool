@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+        xmlns:loc="clr-namespace:grzyClothTool.Localization"
         mc:Ignorable="d"
-        Title="Welcome to grzyClothTool - First Time Setup"
+        Title="{loc:Loc FirstRun_Title}"
         Height="350" Width="600"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
@@ -20,12 +21,12 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="0,0,0,20">
-            <TextBlock Text="Welcome to grzyClothTool!"
+            <TextBlock Text="{loc:Loc FirstRun_Welcome}"
                        FontSize="24"
                        FontWeight="Bold"
                        Foreground="{DynamicResource Brush950}"
                        HorizontalAlignment="Center"/>
-            <TextBlock Text="First Time Setup"
+            <TextBlock Text="{loc:Loc FirstRun_Subtitle}"
                        FontSize="16"
                        Foreground="{DynamicResource Brush700}"
                        HorizontalAlignment="Center"
@@ -33,7 +34,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Margin="0,0,0,20">
-            <TextBlock Text="Select Main Projects Folder"
+            <TextBlock Text="{loc:Loc FirstRun_SelectFolderHeader}"
                        FontSize="14"
                        FontWeight="SemiBold"
                        Foreground="{DynamicResource Brush950}"
@@ -43,13 +44,13 @@
                        FontSize="12"
                        Foreground="{DynamicResource Brush700}"
                        Margin="0,0,0,5">
-                <Run Text="Choose a MAIN folder where ALL self-contained projects will be stored."/>
+                <Run Text="{loc:Loc FirstRun_FolderDescription}"/>
                 <LineBreak/>
-                <Run Text="Example: " FontWeight="SemiBold"/>
+                <Run Text="{loc:Loc FirstRun_ExampleLabel}" FontWeight="SemiBold"/>
                 <Run Text="C:\grzyClothTool Projects"/>
             </TextBlock>
             
-            <TextBlock Text="(Do NOT select a specific project folder - select the parent folder that will contain multiple projects)"
+            <TextBlock Text="{loc:Loc FirstRun_FolderHint}"
                        TextWrapping="Wrap"
                        FontSize="11"
                        FontStyle="Italic"
@@ -75,7 +76,7 @@
 
                 <Button x:Name="BrowseButton"
                         Grid.Column="1"
-                        Content="Browse..."
+                        Content="{loc:Loc FirstRun_Browse}"
                         Click="BrowseButton_Click"
                         Padding="15,10"
                         Margin="10,0,0,0"
@@ -103,7 +104,7 @@
                 CornerRadius="5"
                 Margin="0,0,0,20">
             <StackPanel>
-                <TextBlock Text="[i] Important Information"
+                <TextBlock Text="{loc:Loc FirstRun_ImportantInfo}"
                            FontSize="13"
                            FontWeight="SemiBold"
                            Foreground="{DynamicResource Brush950}"
@@ -113,9 +114,9 @@
                            FontSize="11"
                            Foreground="{DynamicResource Brush700}"
                            LineHeight="18">
-                    <Run Text="* This setting is stored in your user profile and will persist across application updates."/>
+                    <Run Text="{loc:Loc FirstRun_InfoPersist}"/>
                     <LineBreak/>
-                    <Run Text="* You can change this folder later in the Settings menu."/>
+                    <Run Text="{loc:Loc FirstRun_InfoChangeLater}"/>
                 </TextBlock>
             </StackPanel>
         </Border>
@@ -124,7 +125,7 @@
                     Orientation="Horizontal" 
                     HorizontalAlignment="Right">
             <Button x:Name="ContinueButton"
-                    Content="Continue"
+                    Content="{loc:Loc Common_Continue}"
                     Click="ContinueButton_Click"
                     Padding="30,10"
                     Background="{DynamicResource Brush950}"

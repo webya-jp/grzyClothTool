@@ -4,8 +4,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+    xmlns:loc="clr-namespace:grzyClothTool.Localization"
+    xmlns:converters="clr-namespace:grzyClothTool.Converters"
     mc:Ignorable="d"
-    Title="Duplicate Inspector" 
+    Title="{loc:Loc DupInspector_Title}"
     Height="700" 
     Width="900"
     WindowStartupLocation="CenterOwner"
@@ -13,6 +15,7 @@
     Foreground="{DynamicResource Brush900}">
     
 <Window.Resources>
+    <converters:SexDisplayNameConverter x:Key="SexDisplayNameConverter"/>
     <Style TargetType="Button" x:Key="ActionButton">
         <Setter Property="Padding" Value="12,6"/>
         <Setter Property="Margin" Value="0,0,8,0"/>
@@ -54,8 +57,8 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="0,0,0,20">
-            <TextBlock Text="Duplicate Inspector" 
-                      FontSize="24" 
+            <TextBlock Text="{loc:Loc DupInspector_Title}"
+                      FontSize="24"
                       FontWeight="Bold"
                       Foreground="{DynamicResource Brush900}"/>
             <TextBlock x:Name="SubtitleText"
@@ -98,7 +101,7 @@
                                             <TextBlock FontSize="11"
                                                       FontWeight="Bold"
                                                       Foreground="White">
-                                                <Run Text="DUP" />
+                                                <Run Text="{loc:Loc DupInspector_DupBadge}" />
                                                 <Run Text="{Binding Count, Mode=OneWay}" />
                                             </TextBlock>
                                         </Border>
@@ -115,7 +118,7 @@
                                         </StackPanel>
                                         
                                         <Button Grid.Column="2"
-                                               Content="Delete All Except First"
+                                               Content="{loc:Loc DupInspector_DeleteAllExceptFirst}"
                                                Tag="{Binding}"
                                                Click="DeleteGroupExceptFirst_Click"
                                                Style="{StaticResource ActionButton}"
@@ -154,7 +157,7 @@
                                                                     Padding="6,1"
                                                                     Margin="8,0,0,0"
                                                                     VerticalAlignment="Center">
-                                                                <TextBlock Text="{Binding Sex}"
+                                                                <TextBlock Text="{Binding Sex, Converter={StaticResource SexDisplayNameConverter}}"
                                                                           FontSize="9"
                                                                           FontWeight="SemiBold"
                                                                           Foreground="White"/>
@@ -169,13 +172,13 @@
                                                     <StackPanel Grid.Column="1" 
                                                               Orientation="Horizontal"
                                                               VerticalAlignment="Center">
-                                                        <Button Content="Open"
+                                                        <Button Content="{loc:Loc Common_Open}"
                                                                Tag="{Binding}"
                                                                Click="OpenItem_Click"
                                                                Style="{StaticResource ActionButton}"
                                                                Padding="8,4"
                                                                FontSize="10"/>
-                                                        <Button Content="Delete"
+                                                        <Button Content="{loc:Loc Common_Delete}"
                                                                Tag="{Binding}"
                                                                Click="DeleteItem_Click"
                                                                Style="{StaticResource ActionButton}"
@@ -211,17 +214,17 @@
         <Grid Grid.Row="2"
               Margin="0,16,0,0">
                 <Button x:Name="DeleteAllDuplicatesButton"
-                        Content="Delete All Duplicates"
+                        Content="{loc:Loc DupInspector_DeleteAllDuplicates}"
                         Click="DeleteAllDuplicates_Click"
                         Style="{StaticResource ActionButton}"
                         HorizontalAlignment="Left"/>
 
             <StackPanel Orientation="Horizontal" 
                         HorizontalAlignment="Right">
-                <Button Content="Refresh"
+                <Button Content="{loc:Loc Common_Refresh}"
                         Click="Refresh_Click"
                         Style="{StaticResource ActionButton}"/>
-                <Button Content="Close"
+                <Button Content="{loc:Loc Common_Close}"
                         Click="Close_Click"
                         Style="{StaticResource ActionButton}"
                         Margin="0"/>

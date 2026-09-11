@@ -1,4 +1,5 @@
 ﻿using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models;
 using grzyClothTool.Views;
 using Material.Icons;
@@ -24,7 +25,7 @@ namespace grzyClothTool
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string AppVersion => "Version: " + UpdateHelper.GetCurrentVersion();
+        public static string AppVersion => Loc.T("Main_VersionLabel") + UpdateHelper.GetCurrentVersion();
         private static MainWindow _instance;
         public static MainWindow Instance => _instance;
         private static NavigationHelper _navigationHelper;
@@ -77,10 +78,10 @@ namespace grzyClothTool
             Dispatcher.BeginInvoke((Action)(async () =>
             {
 #if !DEBUG
-                App.splashScreen.AddMessage("Checking for updates...");
+                App.splashScreen.AddMessage(Loc.T("Main_SplashCheckingUpdates"));
                 await UpdateHelper.CheckForUpdates();
 #endif
-                App.splashScreen.AddMessage("Starting app");
+                App.splashScreen.AddMessage(Loc.T("Main_SplashStartingApp"));
 
                 while (App.splashScreen.MessageQueueCount > 0)
                 {
@@ -295,9 +296,9 @@ namespace grzyClothTool
 
             OpenFileDialog metaFiles = new()
             {
-                Title = "Select .meta file(s)",
+                Title = Loc.T("Main_SelectMetaFilesTitle"),
                 Multiselect = true,
-                Filter = "Meta files (*.meta)|*.meta"
+                Filter = Loc.T("Main_MetaFilesFilter")
             };
 
             if (metaFiles.ShowDialog() != true)
@@ -373,7 +374,7 @@ namespace grzyClothTool
 
             if (validMetaFiles.Count == 0)
             {
-                Controls.CustomMessageBox.Show("No valid .meta files were selected.", "Error", Controls.CustomMessageBox.CustomMessageBoxButtons.OKOnly, Controls.CustomMessageBox.CustomMessageBoxIcon.Error);
+                Controls.CustomMessageBox.Show(Loc.T("Main_NoValidMetaFilesMsg"), Loc.T("Common_Error"), Controls.CustomMessageBox.CustomMessageBoxButtons.OKOnly, Controls.CustomMessageBox.CustomMessageBoxIcon.Error);
                 return false;
             }
 
@@ -399,9 +400,8 @@ namespace grzyClothTool
             if (totalDrawableCount == 0)
             {
                 Controls.CustomMessageBox.Show(
-                    "No drawable files (.ydd) were found for the selected .meta file(s).\n\n" +
-                    "Please make sure the .ydd files are in the same directory or subdirectories as the .meta file.",
-                    "No Drawables Found", 
+                    Loc.T("Main_NoDrawablesFoundMsg"),
+                    Loc.T("Main_NoDrawablesFoundTitle"),
                     Controls.CustomMessageBox.CustomMessageBoxButtons.OKOnly, 
                     Controls.CustomMessageBox.CustomMessageBoxIcon.Warning);
                 return false;
@@ -445,9 +445,9 @@ namespace grzyClothTool
         {
             OpenFileDialog metaFiles = new()
             {
-                Title = "Select .meta file(s) to add",
+                Title = Loc.T("Main_SelectMetaFilesToAddTitle"),
                 Multiselect = true,
-                Filter = "Meta files (*.meta)|*.meta"
+                Filter = Loc.T("Main_MetaFilesFilter")
             };
 
             if (metaFiles.ShowDialog() == true)
@@ -498,8 +498,8 @@ namespace grzyClothTool
             // open file dialog to select project file
             OpenFileDialog openFileDialog = new()
             {
-                Title = "Import project",
-                Filter = "grzyClothTool project (*.gctproject)|*.gctproject"
+                Title = Loc.T("Main_ImportProjectDialogTitle"),
+                Filter = Loc.T("Main_GctProjectFilter")
             };
 
             if (openFileDialog.ShowDialog() == true)
@@ -571,8 +571,8 @@ namespace grzyClothTool
             var savedProjectName = string.IsNullOrWhiteSpace(AddonManager.ProjectName) ? "project" : AddonManager.ProjectName;
             SaveFileDialog saveFileDialog = new()
             {
-                Title = "Export project",
-                Filter = "grzyClothTool project (*.gctproject)|*.gctproject",
+                Title = Loc.T("Main_ExportProjectDialogTitle"),
+                Filter = Loc.T("Main_GctProjectFilter"),
                 FileName = $"{savedProjectName}.gctproject"
             };
 

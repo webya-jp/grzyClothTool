@@ -61,6 +61,23 @@ namespace grzyClothTool.Controls
                 typeof(ModernLabelComboBox),
                 new FrameworkPropertyMetadata(""));
 
+        /// <summary>
+        /// Optional template used to render each item (and the closed-box selection).
+        /// It allows a caller to display a localized label for a value that must stay
+        /// untranslated, such as a component slot code or "male"/"female".
+        /// </summary>
+        public static readonly DependencyProperty ItemDisplayTemplateProperty = DependencyProperty
+            .Register("ItemDisplayTemplate",
+                    typeof(DataTemplate),
+                    typeof(ModernLabelComboBox),
+                    new FrameworkPropertyMetadata(null));
+
+        public DataTemplate ItemDisplayTemplate
+        {
+            get { return (DataTemplate)GetValue(ItemDisplayTemplateProperty); }
+            set { SetValue(ItemDisplayTemplateProperty, value); }
+        }
+
         public static readonly DependencyProperty SelectedItemProperty = DependencyProperty
             .Register("SelectedItem",
                     typeof(object),

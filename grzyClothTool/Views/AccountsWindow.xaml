@@ -6,6 +6,7 @@
         xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
         xmlns:local="clr-namespace:grzyClothTool.Views"
         xmlns:c="clr-namespace:grzyClothTool.Controls"
+        xmlns:loc="clr-namespace:grzyClothTool.Localization"
         Background="{DynamicResource Brush50}"
         mc:Ignorable="d"
         Title="Patreon" MinHeight="320" MaxHeight="320" MinWidth="300" MaxWidth="300">
@@ -19,7 +20,7 @@
         <Grid Grid.Row="0">
             <Grid>
                 <StackPanel Orientation="Vertical" Margin="5">
-                    <TextBlock Text="Patreon information" Foreground="{DynamicResource Brush950}" Padding="5"></TextBlock>
+                    <TextBlock Text="{loc:Loc Accounts_PatreonInformation}" Foreground="{DynamicResource Brush950}" Padding="5"></TextBlock>
                     <Border Visibility="{Binding IsPatreonLoggedIn, Converter={StaticResource BooleanToVisibilityConverter}}" BorderBrush="{DynamicResource Brush600}" BorderThickness="1" CornerRadius="5" Margin="5">
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -31,24 +32,24 @@
                                 <TextBlock Text="{Binding PatreonUsername}" Foreground="{DynamicResource Brush950}" FontWeight="Bold"/>
                                 <TextBlock Foreground="{DynamicResource Brush950}">
                                     <TextBlock.Text>
-                                        <Binding Path="PatreonStatus" StringFormat="Status: {0}" />
+                                        <Binding Path="PatreonStatus" StringFormat="{loc:Loc Accounts_StatusFormat}" />
                                     </TextBlock.Text>
                                 </TextBlock>
                                 <TextBlock Foreground="{DynamicResource Brush950}">
                                     <TextBlock.Text>
-                                        <Binding Path="PatreonLastChargeDate" StringFormat="Last Payment: {0}" />
+                                        <Binding Path="PatreonLastChargeDate" StringFormat="{loc:Loc Accounts_LastPaymentFormat}" />
                                     </TextBlock.Text>
                                 </TextBlock>
                                 <TextBlock Foreground="{DynamicResource Brush950}">
                                     <TextBlock.Text>
-                                        <Binding Path="PatreonNextChargeDate" StringFormat="Next Payment: {0}" />
+                                        <Binding Path="PatreonNextChargeDate" StringFormat="{loc:Loc Accounts_NextPaymentFormat}" />
                                     </TextBlock.Text>
                                 </TextBlock>
                             </StackPanel>
                         </Grid>
                     </Border>
 
-                    <c:CustomButton Label="LOGIN" Padding="5" Height="50" CornerRadius="5" MyBtnClickEvent="LoginPatreon_Click">
+                    <c:CustomButton Label="{loc:Loc Accounts_Login}" Padding="5" Height="50" CornerRadius="5" MyBtnClickEvent="LoginPatreon_Click">
                         <c:CustomButton.Style>
                             <Style TargetType="{x:Type c:CustomButton}">
                                 <Setter Property="Visibility" Value="Collapsed"/>
@@ -60,7 +61,7 @@
                             </Style>
                         </c:CustomButton.Style>
                     </c:CustomButton>
-                    <c:CustomButton Label="LOGOUT" Padding="5" Height="50" CornerRadius="5" MyBtnClickEvent="LogoutPatreon_Click">
+                    <c:CustomButton Label="{loc:Loc Accounts_Logout}" Padding="5" Height="50" CornerRadius="5" MyBtnClickEvent="LogoutPatreon_Click">
                         <c:CustomButton.Style>
                             <Style TargetType="{x:Type c:CustomButton}">
                                 <Setter Property="Visibility" Value="Visible"/>
@@ -84,7 +85,7 @@
                     Padding="5"
                     CornerRadius="5"
                     Height="50"
-                    Label="Close"
+                    Label="{loc:Loc Common_Close}"
                     MyBtnClickEvent="CloseBtn_Click"
                 />
         </Grid>

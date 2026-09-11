@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:grzyClothTool.Controls"
              xmlns:helpers="clr-namespace:grzyClothTool.Helpers"
              xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+             xmlns:loc="clr-namespace:grzyClothTool.Localization"
              x:Name="MyTagsEditor"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="400">
@@ -46,7 +47,7 @@
                              VerticalContentAlignment="Center"/>
 
                     <Button Grid.Column="1"
-                            Content="Add"
+                            Content="{loc:Loc Common_Add}"
                             Margin="4"
                             Padding="12,4"
                             Background="{DynamicResource Brush300}"

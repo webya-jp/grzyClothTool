@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:loc="clr-namespace:grzyClothTool.Localization"
         mc:Ignorable="d"
         AllowsTransparency="True"
         WindowStyle="None"
@@ -14,7 +15,7 @@
         SizeToContent="Height"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
-        Title="Duplicate Drawables Detected">
+        Title="{loc:Loc DupBatch_Title}">
     <Grid Margin="5" Background="{DynamicResource Brush50}">
         <Grid.RowDefinitions>
             <RowDefinition Height="28"/>
@@ -41,7 +42,7 @@
         <TextBlock x:Name="DialogCaption" 
                    HorizontalAlignment="Stretch" 
                    Grid.Row="0" 
-                   Text="Duplicate Drawables Detected"
+                   Text="{loc:Loc DupBatch_Title}"
                    Background="Gainsboro"
                    Foreground="Black"
                    FontWeight="SemiBold"
@@ -53,7 +54,7 @@
                    Margin="12,12,12,8"
                    TextWrapping="Wrap"
                    Foreground="{DynamicResource Brush950}"
-                   Text="The following drawables appear to be duplicates of existing items. Select which ones you want to add:"/>
+                   Text="{loc:Loc DupBatch_Description}"/>
 
         <Border Grid.Row="2" 
                 Margin="12,4,12,8" 
@@ -113,7 +114,7 @@
                     VerticalAlignment="Center" 
                     Margin="0,0,12,0">
             <Button x:Name="BtnSelectAll" 
-                    Content="Select All" 
+                    Content="{loc:Loc DupBatch_SelectAll}" 
                     Width="80" Height="28" 
                     Margin="4,0"
                     Background="White"
@@ -121,7 +122,7 @@
                     Foreground="Black"
                     Click="BtnSelectAll_Click"/>
             <Button x:Name="BtnSelectNone" 
-                    Content="Select None" 
+                    Content="{loc:Loc DupBatch_SelectNone}" 
                     Width="80" Height="28" 
                     Margin="4,0"
                     Background="White"
@@ -129,7 +130,7 @@
                     Foreground="Black"
                     Click="BtnSelectNone_Click"/>
             <Button x:Name="BtnCancel" 
-                    Content="Cancel All" 
+                    Content="{loc:Loc DupBatch_CancelAll}" 
                     Width="80" Height="28" 
                     Margin="4,0"
                     Background="White"
@@ -137,7 +138,7 @@
                     Foreground="Black"
                     Click="BtnCancel_Click"/>
             <Button x:Name="BtnConfirm" 
-                    Content="Confirm" 
+                    Content="{loc:Loc Common_Confirm}" 
                     Width="80" Height="28" 
                     Margin="4,0"
                     Background="#4CAF50"

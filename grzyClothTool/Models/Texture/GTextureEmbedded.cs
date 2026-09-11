@@ -1,6 +1,7 @@
 using CodeWalker.GameFiles;
 using CodeWalker.Utils;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Views;
 using ImageMagick;
 using System;
@@ -114,7 +115,7 @@ public class GTextureEmbedded : INotifyPropertyChanged
     public bool IsPreviewDisabled => DisplayTextureData?.Data?.FullData == null || DisplayTextureData.Data.FullData.Length == 0;
 
     [JsonIgnore]
-    public string PreviewDisabledTooltip => IsPreviewDisabled ? "Encrypted drawable" : string.Empty;
+    public string PreviewDisabledTooltip => IsPreviewDisabled ? Loc.T("Texture_EncryptedDrawableTooltip") : string.Empty;
 
     // Parameterless constructor for JSON deserialization
     public GTextureEmbedded()
@@ -132,7 +133,7 @@ public class GTextureEmbedded : INotifyPropertyChanged
         if (textureData == null)
         {
             OriginalName = "Missing texture";
-            Details.Name = "Missing texture";
+            Details.Name = Loc.T("Texture_MissingTexture");
             Details.Type = type;
             Details.Width = 0;
             Details.Height = 0;

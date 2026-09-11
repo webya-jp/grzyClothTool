@@ -1,4 +1,5 @@
-﻿using System;
+﻿using grzyClothTool.Localization;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -57,11 +58,11 @@ public class DuplicateInfo : INotifyPropertyChanged
         get
         {
             if (!IsDuplicate || _ownerItem == null)
-                return $"Duplicate ({DuplicateCount} total)";
+                return Loc.T("Dup_DuplicateShort", DuplicateCount);
 
             var duplicates = GetAllDuplicatesForOwner();
             if (duplicates == null || duplicates.Count <= 1)
-                return $"Duplicate ({DuplicateCount} total)";
+                return Loc.T("Dup_DuplicateShort", DuplicateCount);
 
             return GenerateDuplicateTooltip(duplicates);
         }
@@ -79,14 +80,14 @@ public class DuplicateInfo : INotifyPropertyChanged
 
     private string GenerateDuplicateTooltip(List<object> duplicates)
     {
-        var lines = new List<string> { "Duplicated item:" };
+        var lines = new List<string> { Loc.T("Dup_DuplicatedItemHeader") };
 
         foreach (var duplicate in duplicates)
         {
             var isCurrent = ReferenceEquals(duplicate, _ownerItem);
             var location = GetItemLocation(duplicate);
             var sex = GetItemSex(duplicate);
-            var marker = isCurrent ? " (this)" : "";
+            var marker = isCurrent ? Loc.T("Dup_ThisMarker") : "";
             lines.Add($"  [{sex}] {location}{marker}");
         }
 
@@ -97,9 +98,9 @@ public class DuplicateInfo : INotifyPropertyChanged
     {
         if (item is Drawable.GDrawable drawable)
         {
-            return drawable.SexName ?? "Unknown";
+            return drawable.SexName ?? Loc.T("Dup_UnknownSex");
         }
-        return "Unknown";
+        return Loc.T("Dup_UnknownSex");
     }
 
     public string DuplicateColor
@@ -124,7 +125,7 @@ public class DuplicateInfo : INotifyPropertyChanged
     private static string GetItemLocation(object item)
     {
         if (MainWindow.AddonManager?.Addons == null)
-            return "Unknown";
+            return Loc.T("Dup_UnknownLocation");
 
         var addons = MainWindow.AddonManager.Addons;
         
@@ -136,7 +137,7 @@ public class DuplicateInfo : INotifyPropertyChanged
             {
                 if (addon.Drawables.Contains(drawable))
                 {
-                    return $"Addon {i + 1}: {drawable.Name}";
+                    return Loc.T("Dup_AddonLocation", i + 1, drawable.Name);
                 }
             }
             else if (item is Texture.GTexture texture)
@@ -145,13 +146,13 @@ public class DuplicateInfo : INotifyPropertyChanged
                 {
                     if (draw.Textures.Contains(texture))
                     {
-                        return $"Addon {i + 1}: {draw.Name} → {texture.DisplayName}";
+                        return Loc.T("Dup_AddonTextureLocation", i + 1, draw.Name, texture.DisplayName);
                     }
                 }
             }
         }
 
-        return "Unknown";
+        return Loc.T("Dup_UnknownLocation");
     }
 
     protected void OnPropertyChanged([CallerMemberName] string name = null)

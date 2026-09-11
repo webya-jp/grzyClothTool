@@ -2,7 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
-        Title="Project Setup"
+        xmlns:loc="clr-namespace:grzyClothTool.Localization"
+        Title="{loc:Loc ProjectSetup_WindowTitle}"
         Width="500"
         SizeToContent="Height"
         WindowStartupLocation="CenterOwner"
@@ -111,7 +112,7 @@
                    Margin="0,0,0,20"/>
         
         <StackPanel Grid.Row="1" Margin="0,0,0,20">
-            <TextBlock Text="Project Name"
+            <TextBlock Text="{loc:Loc ProjectSetup_ProjectNameLabel}"
                        FontSize="13"
                        FontWeight="SemiBold"
                        Foreground="{DynamicResource Brush700}"
@@ -167,7 +168,7 @@
         </Border>
         
         <StackPanel Grid.Row="3">
-            <TextBlock Text="Project Type"
+            <TextBlock Text="{loc:Loc ProjectSetup_ProjectTypeLabel}"
                        FontSize="13"
                        FontWeight="SemiBold"
                        Foreground="{DynamicResource Brush700}"
@@ -179,11 +180,11 @@
                          GroupName="ProjectType"
                          AutomationProperties.Name="Self-contained">
                 <StackPanel>
-                    <TextBlock Text="Self-contained"
+                    <TextBlock Text="{loc:Loc ProjectSetup_SelfContainedTitle}"
                                FontSize="14"
                                FontWeight="SemiBold"
                                Foreground="{DynamicResource Brush950}"/>
-                    <TextBlock Text="Files are copied to project folder. Project can be moved or shared easily."
+                    <TextBlock Text="{loc:Loc ProjectSetup_SelfContainedDescription}"
                                FontSize="12"
                                Foreground="{DynamicResource Brush600}"
                                TextWrapping="Wrap"
@@ -197,11 +198,11 @@
                          GroupName="ProjectType"
                          AutomationProperties.Name="External">
                 <StackPanel>
-                    <TextBlock Text="External"
+                    <TextBlock Text="{loc:Loc ProjectSetup_ExternalTitle}"
                                FontSize="14"
                                FontWeight="SemiBold"
                                Foreground="{DynamicResource Brush950}"/>
-                    <TextBlock Text="Files stay in original locations. Uses less disk space but not portable."
+                    <TextBlock Text="{loc:Loc ProjectSetup_ExternalDescription}"
                                FontSize="12"
                                Foreground="{DynamicResource Brush600}"
                                TextWrapping="Wrap"
@@ -225,7 +226,7 @@
                                    Foreground="#d97706"
                                    Margin="0,0,8,0"
                                    VerticalAlignment="Top"/>
-                <TextBlock Text="Moving or deleting original files will break the project."
+                <TextBlock Text="{loc:Loc ProjectSetup_ExternalWarning}"
                            FontSize="12"
                            Foreground="#92400e"
                            TextWrapping="Wrap"
@@ -237,7 +238,7 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Right"
                     Margin="0,20,0,0">
-            <Button Content="Cancel"
+            <Button Content="{loc:Loc Common_Cancel}"
                     Width="100"
                     Height="36"
                     Margin="0,0,12,0"

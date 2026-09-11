@@ -2,6 +2,7 @@
 using grzyClothTool.Constants;
 using grzyClothTool.Extensions;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models.Drawable;
 using grzyClothTool.Models.Texture;
 using grzyClothTool.Views;
@@ -293,7 +294,7 @@ namespace grzyClothTool.Controls
 
                 imageControl.Source = bitmapSource;
 
-                var statusText = embeddedTexture.HasReplacement ? " - REPLACEMENT" : " - Embedded";
+                var statusText = " - " + (embeddedTexture.HasReplacement ? Loc.T("SelDraw_TxtStatusReplacement") : Loc.T("SelDraw_TxtStatusEmbedded"));
                 TextBlock textBlock = new()
                 {
                     Text = $"({embeddedTexture.Details.Type}) {embeddedTexture.Details.Name} ({w}x{h}){statusText}",
@@ -632,14 +633,14 @@ namespace grzyClothTool.Controls
             int remainingTextures = GlobalConstants.MAX_DRAWABLE_TEXTURES - SelectedDraw.Textures.Count;
             if (remainingTextures <= 0)
             {
-                Show($"You can't have more than {GlobalConstants.MAX_DRAWABLE_TEXTURES} textures per drawable!", "Error", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
+                Show(Loc.T("SelDraw_MaxTexturesReached", GlobalConstants.MAX_DRAWABLE_TEXTURES), Loc.T("Common_Error"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
                 return;
             }
 
             OpenFileDialog files = new()
             {
-                Title = $"Select textures",
-                Filter = "Texture files (*.ytd)|*.ytd|Image files (*.jpg;*.png;*.dds)|*.jpg;*.png;*.dds",
+                Title = Loc.T("SelDraw_SelectTexturesTitle"),
+                Filter = Loc.T("SelDraw_TextureFileFilter"),
                 Multiselect = true
             };
 
@@ -654,7 +655,7 @@ namespace grzyClothTool.Controls
                     if (remainingTextures <= 0)
                     {
                         // break the loop and show which texture was the last one
-                        Show($"Reached the limit of {GlobalConstants.MAX_DRAWABLE_TEXTURES} textures. Last added texture: {Path.GetFileName(file)}.", "Info", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Warning);
+                        Show(Loc.T("SelDraw_TextureLimitReached", GlobalConstants.MAX_DRAWABLE_TEXTURES, Path.GetFileName(file)), Loc.T("SelDraw_InfoCaption"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Warning);
                         LogHelper.Log($"Reached the limit of {GlobalConstants.MAX_DRAWABLE_TEXTURES} textures. Last added texture: {Path.GetFileName(file)}.", LogType.Warning);
                         break;
                     }
@@ -700,7 +701,7 @@ namespace grzyClothTool.Controls
 
             if (!allOptimized && !noneOptimized)
             {
-                Show("Some textures are already optimized while others are not. Please select textures with the same state.", "Warning", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Warning);
+                Show(Loc.T("SelDraw_MixedOptimizeState"), Loc.T("Common_Warning"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Warning);
                 return;
             }
 
@@ -904,11 +905,9 @@ namespace grzyClothTool.Controls
 
                 if (inaccessibleFiles.Count > 0)
                 {
-                    var message = $"The following texture file(s) could not be accessed:\n\n" +
-                                  string.Join("\n", inaccessibleFiles.Select(Path.GetFileName)) +
-                                  "\n\nThey may be virtual paths. Please extract them to a folder first and drag from there.";
+                    var message = Loc.T("SelDraw_FilesNotAccessibleMessage", string.Join("\n", inaccessibleFiles.Select(Path.GetFileName)));
                     
-                    Show(message, "Files Not Accessible", 
+                    Show(message, Loc.T("SelDraw_FilesNotAccessibleCaption"), 
                         CustomMessageBoxButtons.OKOnly, 
                         CustomMessageBoxIcon.Warning);
                 }
@@ -922,7 +921,7 @@ namespace grzyClothTool.Controls
                 int remainingTextures = GlobalConstants.MAX_DRAWABLE_TEXTURES - SelectedDraw.Textures.Count;
                 if (remainingTextures <= 0)
                 {
-                    Show($"You can't have more than {GlobalConstants.MAX_DRAWABLE_TEXTURES} textures per drawable!", "Error", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
+                    Show(Loc.T("SelDraw_MaxTexturesReached", GlobalConstants.MAX_DRAWABLE_TEXTURES), Loc.T("Common_Error"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
                     return;
                 }
 
@@ -934,7 +933,7 @@ namespace grzyClothTool.Controls
                 {
                     if (remainingTextures <= 0)
                     {
-                        Show($"Reached the limit of {GlobalConstants.MAX_DRAWABLE_TEXTURES} textures. Last added texture: {Path.GetFileName(file)}.", "Info", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Warning);
+                        Show(Loc.T("SelDraw_TextureLimitReached", GlobalConstants.MAX_DRAWABLE_TEXTURES, Path.GetFileName(file)), Loc.T("SelDraw_InfoCaption"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Warning);
                         break;
                     }
 
@@ -976,8 +975,8 @@ namespace grzyClothTool.Controls
                 LogHelper.Log($"Error: {ex.Message}", LogType.Error);
                 
                 Show(
-                    $"An error occurred while processing dropped texture files:\n\n{ex.Message}",
-                    "Drag & Drop Error",
+                    Loc.T("SelDraw_DropErrorMessage", ex.Message),
+                    Loc.T("SelDraw_DropErrorCaption"),
                     CustomMessageBoxButtons.OKOnly,
                     CustomMessageBoxIcon.Error);
             }
@@ -998,7 +997,7 @@ namespace grzyClothTool.Controls
             var wrongTextureName = OptimizeWindow.CheckTexturesHaveSameSize(SelectedTextures);
             if (wrongTextureName != null)
             {
-                Show($"Texture {wrongTextureName} does not have the same size as the others!", "Error", CustomMessageBoxButtons.OKCancel, CustomMessageBoxIcon.Error);
+                Show(Loc.T("SelDraw_TextureSizeMismatch", wrongTextureName), Loc.T("Common_Error"), CustomMessageBoxButtons.OKCancel, CustomMessageBoxIcon.Error);
                 LogHelper.Log($"Texture {wrongTextureName} does not have the same size as the others!", LogType.Error);
                 return;
             }
@@ -1079,8 +1078,8 @@ namespace grzyClothTool.Controls
         {
             OpenFileDialog file = new()
             {
-                Title = $"Select drawable file to replace reserved",
-                Filter = "Drawable file (*.ydd)|*.ydd"
+                Title = Loc.T("SelDraw_SelectReservedReplacementTitle"),
+                Filter = Loc.T("SelDraw_DrawableFileFilter")
             };
 
             if (file.ShowDialog() == true)
@@ -1115,7 +1114,7 @@ namespace grzyClothTool.Controls
 
             OpenFolderDialog folder = new()
             {
-                Title = $"Select the folder to export textures as {format.ToUpper()}",
+                Title = Loc.T("SelDraw_ExportTexturesFolderTitle", format.ToUpper()),
                 Multiselect = false // Single folder selection
             };
 
@@ -1132,7 +1131,7 @@ namespace grzyClothTool.Controls
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred during export: {ex.Message}", "Export Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(Loc.T("SelDraw_ExportErrorMessage", ex.Message), Loc.T("SelDraw_ExportErrorCaption"), MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
@@ -1149,8 +1148,8 @@ namespace grzyClothTool.Controls
 
             OpenFileDialog file = new()
             {
-                Title = $"Select texture file to replace {selectedTexture.DisplayName}",
-                Filter = "Texture files (*.ytd)|*.ytd|Image files (*.jpg;*.png;*.dds)|*.jpg;*.png;*.dds" // we could store all available formats somewhere
+                Title = Loc.T("SelDraw_SelectReplaceTextureTitle", selectedTexture.DisplayName),
+                Filter = Loc.T("SelDraw_TextureFileFilter") // we could store all available formats somewhere
             };
 
             if (file.ShowDialog() == false)
@@ -1183,7 +1182,7 @@ namespace grzyClothTool.Controls
             catch (Exception ex)
             {
                 LogHelper.Log($"Failed to replace texture: {ex.Message}", Views.LogType.Error);
-                Show($"Failed to replace texture: {ex.Message}", "Error", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
+                Show(Loc.T("SelDraw_ReplaceTextureFailed", ex.Message), Loc.T("Common_Error"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
             }
         }
 
@@ -1255,13 +1254,13 @@ namespace grzyClothTool.Controls
             // Missing embedded textures (no original data and no replacement) have nothing to export
             if (!embeddedTexture.HasOriginalTexture && !embeddedTexture.HasReplacement)
             {
-                Show("This embedded texture is missing, so there is no image data to export.", "Nothing to export", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Warning);
+                Show(Loc.T("SelDraw_EmbeddedMissingNothingToExport"), Loc.T("SelDraw_NothingToExportCaption"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Warning);
                 return;
             }
 
             OpenFolderDialog folder = new()
             {
-                Title = $"Select the folder to export embedded texture as {format.ToUpperInvariant()}",
+                Title = Loc.T("SelDraw_ExportEmbeddedFolderTitle", format.ToUpperInvariant()),
                 Multiselect = false
             };
 
@@ -1277,7 +1276,7 @@ namespace grzyClothTool.Controls
             catch (Exception ex)
             {
                 LogHelper.Log($"Failed to export embedded texture: {ex.Message}", LogType.Error);
-                Show($"An error occurred during export: {ex.Message}", "Export Error", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
+                Show(Loc.T("SelDraw_ExportErrorMessage", ex.Message), Loc.T("SelDraw_ExportErrorCaption"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
             }
         }
 
@@ -1337,7 +1336,7 @@ namespace grzyClothTool.Controls
                 if (embeddedTexture?.HasOriginalTexture != true)
                     return;
 
-                var (result, textBoxValue) = Show("Rename Embedded Texture", "Enter new name:", CustomMessageBoxButtons.OKCancel, CustomMessageBoxIcon.None, true);
+                var (result, textBoxValue) = Show(Loc.T("SelDraw_RenameEmbeddedTextureTitle"), Loc.T("SelDraw_EnterNewName"), CustomMessageBoxButtons.OKCancel, CustomMessageBoxIcon.None, true);
                 if (result == CustomMessageBoxResult.OK)
                 {
                     embeddedTexture.RenameTexture(textBoxValue);
@@ -1351,7 +1350,7 @@ namespace grzyClothTool.Controls
                 return;
 
             var texture = embeddedTextureEntry.Value.Value;
-            var (res, txtValue) = Show("Rename Embedded Texture", "Enter new name:", CustomMessageBoxButtons.OKCancel, CustomMessageBoxIcon.None, true);
+            var (res, txtValue) = Show(Loc.T("SelDraw_RenameEmbeddedTextureTitle"), Loc.T("SelDraw_EnterNewName"), CustomMessageBoxButtons.OKCancel, CustomMessageBoxIcon.None, true);
             if (res == CustomMessageBoxResult.OK)
             {
                 texture.RenameTexture(txtValue);
@@ -1389,8 +1388,8 @@ namespace grzyClothTool.Controls
             
             OpenFileDialog file = new()
             {
-                Title = $"Select texture file to replace embedded {textureType}",
-                Filter = "Image files (*.jpg;*.png;*.dds)|*.jpg;*.png;*.dds"
+                Title = Loc.T("SelDraw_SelectReplaceEmbeddedTitle", textureType),
+                Filter = Loc.T("SelDraw_ImageFileFilter")
             };
 
             if (file.ShowDialog() == true)
@@ -1411,7 +1410,7 @@ namespace grzyClothTool.Controls
                 catch (Exception ex)
                 {
                     LogHelper.Log($"Failed to replace embedded texture: {ex.Message}", LogType.Error);
-                    CustomMessageBox.Show($"Failed to replace embedded texture: {ex.Message}", "Error", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
+                    CustomMessageBox.Show(Loc.T("SelDraw_ReplaceEmbeddedFailed", ex.Message), Loc.T("Common_Error"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
                 }
             }
         }
@@ -1428,7 +1427,7 @@ namespace grzyClothTool.Controls
             var img = ImgHelper.GetImage(filePath);
             if (img == null)
             {
-                throw new Exception("Failed to load image from the specified file.");
+                throw new Exception(Loc.T("SelDraw_LoadImageFailed"));
             }
 
             img.Format = MagickFormat.Dds;

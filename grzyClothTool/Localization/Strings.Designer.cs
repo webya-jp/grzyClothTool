@@ -431,5 +431,4253 @@ namespace grzyClothTool.Localization {
                 return ResourceManager.GetString("Settings_LanguageDescription", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to head.
+        /// </summary>
+        public static string Slot_head {
+            get {
+                return ResourceManager.GetString("Slot_head", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to berd.
+        /// </summary>
+        public static string Slot_berd {
+            get {
+                return ResourceManager.GetString("Slot_berd", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to hair.
+        /// </summary>
+        public static string Slot_hair {
+            get {
+                return ResourceManager.GetString("Slot_hair", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to uppr.
+        /// </summary>
+        public static string Slot_uppr {
+            get {
+                return ResourceManager.GetString("Slot_uppr", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to lowr.
+        /// </summary>
+        public static string Slot_lowr {
+            get {
+                return ResourceManager.GetString("Slot_lowr", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to hand.
+        /// </summary>
+        public static string Slot_hand {
+            get {
+                return ResourceManager.GetString("Slot_hand", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to feet.
+        /// </summary>
+        public static string Slot_feet {
+            get {
+                return ResourceManager.GetString("Slot_feet", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to teef.
+        /// </summary>
+        public static string Slot_teef {
+            get {
+                return ResourceManager.GetString("Slot_teef", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to accs.
+        /// </summary>
+        public static string Slot_accs {
+            get {
+                return ResourceManager.GetString("Slot_accs", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to task.
+        /// </summary>
+        public static string Slot_task {
+            get {
+                return ResourceManager.GetString("Slot_task", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to decl.
+        /// </summary>
+        public static string Slot_decl {
+            get {
+                return ResourceManager.GetString("Slot_decl", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to jbib.
+        /// </summary>
+        public static string Slot_jbib {
+            get {
+                return ResourceManager.GetString("Slot_jbib", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_head.
+        /// </summary>
+        public static string Slot_p_head {
+            get {
+                return ResourceManager.GetString("Slot_p_head", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_eyes.
+        /// </summary>
+        public static string Slot_p_eyes {
+            get {
+                return ResourceManager.GetString("Slot_p_eyes", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_ears.
+        /// </summary>
+        public static string Slot_p_ears {
+            get {
+                return ResourceManager.GetString("Slot_p_ears", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_mouth.
+        /// </summary>
+        public static string Slot_p_mouth {
+            get {
+                return ResourceManager.GetString("Slot_p_mouth", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_lhand.
+        /// </summary>
+        public static string Slot_p_lhand {
+            get {
+                return ResourceManager.GetString("Slot_p_lhand", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_rhand.
+        /// </summary>
+        public static string Slot_p_rhand {
+            get {
+                return ResourceManager.GetString("Slot_p_rhand", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_lwrist.
+        /// </summary>
+        public static string Slot_p_lwrist {
+            get {
+                return ResourceManager.GetString("Slot_p_lwrist", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_rwrist.
+        /// </summary>
+        public static string Slot_p_rwrist {
+            get {
+                return ResourceManager.GetString("Slot_p_rwrist", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_hip.
+        /// </summary>
+        public static string Slot_p_hip {
+            get {
+                return ResourceManager.GetString("Slot_p_hip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_lfoot.
+        /// </summary>
+        public static string Slot_p_lfoot {
+            get {
+                return ResourceManager.GetString("Slot_p_lfoot", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_rfoot.
+        /// </summary>
+        public static string Slot_p_rfoot {
+            get {
+                return ResourceManager.GetString("Slot_p_rfoot", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_ph_l_hand.
+        /// </summary>
+        public static string Slot_p_ph_l_hand {
+            get {
+                return ResourceManager.GetString("Slot_p_ph_l_hand", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to p_ph_r_hand.
+        /// </summary>
+        public static string Slot_p_ph_r_hand {
+            get {
+                return ResourceManager.GetString("Slot_p_ph_r_hand", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No drawable selected.
+        /// </summary>
+        public static string SelDraw_NoDrawableSelected {
+            get {
+                return ResourceManager.GetString("SelDraw_NoDrawableSelected", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select a drawable from the list to view and edit its properties.
+        /// </summary>
+        public static string SelDraw_NoDrawableHint {
+            get {
+                return ResourceManager.GetString("SelDraw_NoDrawableHint", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Reserved Drawable.
+        /// </summary>
+        public static string SelDraw_ReservedTitle {
+            get {
+                return ResourceManager.GetString("SelDraw_ReservedTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to This is a reserved drawable slot and cannot be edited..
+        /// </summary>
+        public static string SelDraw_ReservedDescription {
+            get {
+                return ResourceManager.GetString("SelDraw_ReservedDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to REPLACE RESERVED DRAWABLE.
+        /// </summary>
+        public static string SelDraw_ReplaceReservedButton {
+            get {
+                return ResourceManager.GetString("SelDraw_ReplaceReservedButton", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Options Disabled.
+        /// </summary>
+        public static string SelDraw_OptionsDisabled {
+            get {
+                return ResourceManager.GetString("SelDraw_OptionsDisabled", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Selected {0} drawable(s).
+        /// </summary>
+        public static string SelDraw_SelectedDrawablesCount {
+            get {
+                return ResourceManager.GetString("SelDraw_SelectedDrawablesCount", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to WARNING.
+        /// </summary>
+        public static string SelDraw_WarningLabel {
+            get {
+                return ResourceManager.GetString("SelDraw_WarningLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The selected drawables are not exactly the same. To edit drawable options, select the same or click button below to forc [rest of string was truncated].
+        /// </summary>
+        public static string SelDraw_MultipleNotSameWarning {
+            get {
+                return ResourceManager.GetString("SelDraw_MultipleNotSameWarning", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Force Override.
+        /// </summary>
+        public static string SelDraw_ForceOverride {
+            get {
+                return ResourceManager.GetString("SelDraw_ForceOverride", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Override Disabled.
+        /// </summary>
+        public static string SelDraw_OverrideDisabled {
+            get {
+                return ResourceManager.GetString("SelDraw_OverrideDisabled", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to OVERRIDE ENABLED.
+        /// </summary>
+        public static string SelDraw_OverrideEnabled {
+            get {
+                return ResourceManager.GetString("SelDraw_OverrideEnabled", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Override cannot be enabled for drawables of different type. Select only one type of drawables.
+        /// </summary>
+        public static string SelDraw_OverrideDifferentTypeInfo {
+            get {
+                return ResourceManager.GetString("SelDraw_OverrideDifferentTypeInfo", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawable Options.
+        /// </summary>
+        public static string SelDraw_DrawableOptions {
+            get {
+                return ResourceManager.GetString("SelDraw_DrawableOptions", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Audio.
+        /// </summary>
+        public static string SelDraw_LabelAudio {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelAudio", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to RenderFlag.
+        /// </summary>
+        public static string SelDraw_LabelRenderFlag {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelRenderFlag", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Has Skin.
+        /// </summary>
+        public static string SelDraw_LabelHasSkin {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelHasSkin", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Flags.
+        /// </summary>
+        public static string SelDraw_LabelFlags {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelFlags", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Hides Hair.
+        /// </summary>
+        public static string SelDraw_LabelHidesHair {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelHidesHair", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Enable Hair scale.
+        /// </summary>
+        public static string SelDraw_LabelEnableHairScale {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelEnableHairScale", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Hair scale.
+        /// </summary>
+        public static string SelDraw_LabelHairScale {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelHairScale", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Enable High heels.
+        /// </summary>
+        public static string SelDraw_LabelEnableHighHeels {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelEnableHighHeels", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to High heels amount.
+        /// </summary>
+        public static string SelDraw_LabelHighHeelsAmount {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelHighHeelsAmount", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Preview Options.
+        /// </summary>
+        public static string SelDraw_PreviewOptions {
+            get {
+                return ResourceManager.GetString("SelDraw_PreviewOptions", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Run 3D Preview to enable options.
+        /// </summary>
+        public static string SelDraw_RunPreviewToEnable {
+            get {
+                return ResourceManager.GetString("SelDraw_RunPreviewToEnable", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Keep preview.
+        /// </summary>
+        public static string SelDraw_LabelKeepPreview {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelKeepPreview", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Organization.
+        /// </summary>
+        public static string SelDraw_Organization {
+            get {
+                return ResourceManager.GetString("SelDraw_Organization", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Group.
+        /// </summary>
+        public static string SelDraw_Group {
+            get {
+                return ResourceManager.GetString("SelDraw_Group", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to (Multiple groups).
+        /// </summary>
+        public static string SelDraw_MultipleGroups {
+            get {
+                return ResourceManager.GetString("SelDraw_MultipleGroups", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Tags.
+        /// </summary>
+        public static string SelDraw_Tags {
+            get {
+                return ResourceManager.GetString("SelDraw_Tags", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Display Name.
+        /// </summary>
+        public static string SelDraw_LabelDisplayName {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelDisplayName", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawable Type.
+        /// </summary>
+        public static string SelDraw_LabelDrawableType {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelDrawableType", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Sex.
+        /// </summary>
+        public static string SelDraw_LabelSex {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelSex", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to First person file.
+        /// </summary>
+        public static string SelDraw_LabelFirstPersonFile {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelFirstPersonFile", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Cloth physics file (.yld).
+        /// </summary>
+        public static string SelDraw_LabelClothPhysicsFile {
+            get {
+                return ResourceManager.GetString("SelDraw_LabelClothPhysicsFile", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Textures.
+        /// </summary>
+        public static string SelDraw_TabTextures {
+            get {
+                return ResourceManager.GetString("SelDraw_TabTextures", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to At least one texture has warning.
+        /// </summary>
+        public static string SelDraw_TexturesWarningTooltip {
+            get {
+                return ResourceManager.GetString("SelDraw_TexturesWarningTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Embedded.
+        /// </summary>
+        public static string SelDraw_TabEmbedded {
+            get {
+                return ResourceManager.GetString("SelDraw_TabEmbedded", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to At least one embedded texture has warning.
+        /// </summary>
+        public static string SelDraw_EmbeddedWarningTooltip {
+            get {
+                return ResourceManager.GetString("SelDraw_EmbeddedWarningTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to This texture will be optimized on resource build.
+        /// </summary>
+        public static string SelDraw_WillBeOptimizedTooltip {
+            get {
+                return ResourceManager.GetString("SelDraw_WillBeOptimizedTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Texture not found. Most likely this .ytd is empty.
+        /// </summary>
+        public static string SelDraw_TextureNotFoundTooltip {
+            get {
+                return ResourceManager.GetString("SelDraw_TextureNotFoundTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Preview.
+        /// </summary>
+        public static string SelDraw_Preview {
+            get {
+                return ResourceManager.GetString("SelDraw_Preview", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Optimize texture.
+        /// </summary>
+        public static string SelDraw_OptimizeTexture {
+            get {
+                return ResourceManager.GetString("SelDraw_OptimizeTexture", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Undo optimize.
+        /// </summary>
+        public static string SelDraw_UndoOptimize {
+            get {
+                return ResourceManager.GetString("SelDraw_UndoOptimize", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Replace.
+        /// </summary>
+        public static string SelDraw_Replace {
+            get {
+                return ResourceManager.GetString("SelDraw_Replace", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Open file location.
+        /// </summary>
+        public static string SelDraw_OpenFileLocation {
+            get {
+                return ResourceManager.GetString("SelDraw_OpenFileLocation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export as YTD.
+        /// </summary>
+        public static string SelDraw_ExportAsYtd {
+            get {
+                return ResourceManager.GetString("SelDraw_ExportAsYtd", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export texture as DDS.
+        /// </summary>
+        public static string SelDraw_ExportTextureAsDds {
+            get {
+                return ResourceManager.GetString("SelDraw_ExportTextureAsDds", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export texture as PNG.
+        /// </summary>
+        public static string SelDraw_ExportTextureAsPng {
+            get {
+                return ResourceManager.GetString("SelDraw_ExportTextureAsPng", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to This is a replacement texture.
+        /// </summary>
+        public static string SelDraw_ReplacementTextureTooltip {
+            get {
+                return ResourceManager.GetString("SelDraw_ReplacementTextureTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export as DDS.
+        /// </summary>
+        public static string SelDraw_ExportAsDds {
+            get {
+                return ResourceManager.GetString("SelDraw_ExportAsDds", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export as PNG.
+        /// </summary>
+        public static string SelDraw_ExportAsPng {
+            get {
+                return ResourceManager.GetString("SelDraw_ExportAsPng", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to ADD TEXTURES.
+        /// </summary>
+        public static string SelDraw_AddTextures {
+            get {
+                return ResourceManager.GetString("SelDraw_AddTextures", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Selected.
+        /// </summary>
+        public static string SelDraw_DeleteSelectedTooltip {
+            get {
+                return ResourceManager.GetString("SelDraw_DeleteSelectedTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to REPLACEMENT.
+        /// </summary>
+        public static string SelDraw_TxtStatusReplacement {
+            get {
+                return ResourceManager.GetString("SelDraw_TxtStatusReplacement", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Embedded.
+        /// </summary>
+        public static string SelDraw_TxtStatusEmbedded {
+            get {
+                return ResourceManager.GetString("SelDraw_TxtStatusEmbedded", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You can't have more than {0} textures per drawable!.
+        /// </summary>
+        public static string SelDraw_MaxTexturesReached {
+            get {
+                return ResourceManager.GetString("SelDraw_MaxTexturesReached", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select textures.
+        /// </summary>
+        public static string SelDraw_SelectTexturesTitle {
+            get {
+                return ResourceManager.GetString("SelDraw_SelectTexturesTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Texture files (*.ytd)|*.ytd|Image files (*.jpg;*.png;*.dds)|*.jpg;*.png;*.dds.
+        /// </summary>
+        public static string SelDraw_TextureFileFilter {
+            get {
+                return ResourceManager.GetString("SelDraw_TextureFileFilter", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Image files (*.jpg;*.png;*.dds)|*.jpg;*.png;*.dds.
+        /// </summary>
+        public static string SelDraw_ImageFileFilter {
+            get {
+                return ResourceManager.GetString("SelDraw_ImageFileFilter", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawable file (*.ydd)|*.ydd.
+        /// </summary>
+        public static string SelDraw_DrawableFileFilter {
+            get {
+                return ResourceManager.GetString("SelDraw_DrawableFileFilter", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Reached the limit of {0} textures. Last added texture: {1}..
+        /// </summary>
+        public static string SelDraw_TextureLimitReached {
+            get {
+                return ResourceManager.GetString("SelDraw_TextureLimitReached", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Info.
+        /// </summary>
+        public static string SelDraw_InfoCaption {
+            get {
+                return ResourceManager.GetString("SelDraw_InfoCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Some textures are already optimized while others are not. Please select textures with the same state..
+        /// </summary>
+        public static string SelDraw_MixedOptimizeState {
+            get {
+                return ResourceManager.GetString("SelDraw_MixedOptimizeState", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The following texture file(s) could not be accessed:  {0}  They may be virtual paths. Please extract them to a folder fi [rest of string was truncated].
+        /// </summary>
+        public static string SelDraw_FilesNotAccessibleMessage {
+            get {
+                return ResourceManager.GetString("SelDraw_FilesNotAccessibleMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Files Not Accessible.
+        /// </summary>
+        public static string SelDraw_FilesNotAccessibleCaption {
+            get {
+                return ResourceManager.GetString("SelDraw_FilesNotAccessibleCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while processing dropped texture files:  {0}.
+        /// </summary>
+        public static string SelDraw_DropErrorMessage {
+            get {
+                return ResourceManager.GetString("SelDraw_DropErrorMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drag &amp; Drop Error.
+        /// </summary>
+        public static string SelDraw_DropErrorCaption {
+            get {
+                return ResourceManager.GetString("SelDraw_DropErrorCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Texture {0} does not have the same size as the others!.
+        /// </summary>
+        public static string SelDraw_TextureSizeMismatch {
+            get {
+                return ResourceManager.GetString("SelDraw_TextureSizeMismatch", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select drawable file to replace reserved.
+        /// </summary>
+        public static string SelDraw_SelectReservedReplacementTitle {
+            get {
+                return ResourceManager.GetString("SelDraw_SelectReservedReplacementTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select the folder to export textures as {0}.
+        /// </summary>
+        public static string SelDraw_ExportTexturesFolderTitle {
+            get {
+                return ResourceManager.GetString("SelDraw_ExportTexturesFolderTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred during export: {0}.
+        /// </summary>
+        public static string SelDraw_ExportErrorMessage {
+            get {
+                return ResourceManager.GetString("SelDraw_ExportErrorMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export Error.
+        /// </summary>
+        public static string SelDraw_ExportErrorCaption {
+            get {
+                return ResourceManager.GetString("SelDraw_ExportErrorCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select texture file to replace {0}.
+        /// </summary>
+        public static string SelDraw_SelectReplaceTextureTitle {
+            get {
+                return ResourceManager.GetString("SelDraw_SelectReplaceTextureTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to replace texture: {0}.
+        /// </summary>
+        public static string SelDraw_ReplaceTextureFailed {
+            get {
+                return ResourceManager.GetString("SelDraw_ReplaceTextureFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to This embedded texture is missing, so there is no image data to export..
+        /// </summary>
+        public static string SelDraw_EmbeddedMissingNothingToExport {
+            get {
+                return ResourceManager.GetString("SelDraw_EmbeddedMissingNothingToExport", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Nothing to export.
+        /// </summary>
+        public static string SelDraw_NothingToExportCaption {
+            get {
+                return ResourceManager.GetString("SelDraw_NothingToExportCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select the folder to export embedded texture as {0}.
+        /// </summary>
+        public static string SelDraw_ExportEmbeddedFolderTitle {
+            get {
+                return ResourceManager.GetString("SelDraw_ExportEmbeddedFolderTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Rename Embedded Texture.
+        /// </summary>
+        public static string SelDraw_RenameEmbeddedTextureTitle {
+            get {
+                return ResourceManager.GetString("SelDraw_RenameEmbeddedTextureTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Enter new name:.
+        /// </summary>
+        public static string SelDraw_EnterNewName {
+            get {
+                return ResourceManager.GetString("SelDraw_EnterNewName", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select texture file to replace embedded {0}.
+        /// </summary>
+        public static string SelDraw_SelectReplaceEmbeddedTitle {
+            get {
+                return ResourceManager.GetString("SelDraw_SelectReplaceEmbeddedTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to replace embedded texture: {0}.
+        /// </summary>
+        public static string SelDraw_ReplaceEmbeddedFailed {
+            get {
+                return ResourceManager.GetString("SelDraw_ReplaceEmbeddedFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to load image from the specified file..
+        /// </summary>
+        public static string SelDraw_LoadImageFailed {
+            get {
+                return ResourceManager.GetString("SelDraw_LoadImageFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Show in duplicate inspector.
+        /// </summary>
+        public static string DrawList_ShowInDuplicateInspector {
+            get {
+                return ResourceManager.GetString("DrawList_ShowInDuplicateInspector", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Replace.
+        /// </summary>
+        public static string DrawList_Replace {
+            get {
+                return ResourceManager.GetString("DrawList_Replace", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate to opposite gender.
+        /// </summary>
+        public static string DrawList_DuplicateToOppositeGender {
+            get {
+                return ResourceManager.GetString("DrawList_DuplicateToOppositeGender", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Move to another addon.
+        /// </summary>
+        public static string DrawList_MoveToAnotherAddon {
+            get {
+                return ResourceManager.GetString("DrawList_MoveToAnotherAddon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Move.
+        /// </summary>
+        public static string DrawList_Move {
+            get {
+                return ResourceManager.GetString("DrawList_Move", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Open file location.
+        /// </summary>
+        public static string DrawList_OpenFileLocation {
+            get {
+                return ResourceManager.GetString("DrawList_OpenFileLocation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export as YDD.
+        /// </summary>
+        public static string DrawList_ExportAsYdd {
+            get {
+                return ResourceManager.GetString("DrawList_ExportAsYdd", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export as YDD with textures.
+        /// </summary>
+        public static string DrawList_ExportAsYddWithTextures {
+            get {
+                return ResourceManager.GetString("DrawList_ExportAsYddWithTextures", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export only textures as DDS.
+        /// </summary>
+        public static string DrawList_ExportTexturesAsDds {
+            get {
+                return ResourceManager.GetString("DrawList_ExportTexturesAsDds", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export only textures as PNG.
+        /// </summary>
+        public static string DrawList_ExportTexturesAsPng {
+            get {
+                return ResourceManager.GetString("DrawList_ExportTexturesAsPng", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Ignore warnings.
+        /// </summary>
+        public static string DrawList_IgnoreWarnings {
+            get {
+                return ResourceManager.GetString("DrawList_IgnoreWarnings", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Ignoring warnings only hides warning indicators for this drawable. The asset may still need fixing, and warnings will sh [rest of string was truncated].
+        /// </summary>
+        public static string DrawList_IgnoreWarningsMessage {
+            get {
+                return ResourceManager.GetString("DrawList_IgnoreWarningsMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Reserved.
+        /// </summary>
+        public static string DrawList_ReservedTooltip {
+            get {
+                return ResourceManager.GetString("DrawList_ReservedTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to New.
+        /// </summary>
+        public static string DrawList_NewTooltip {
+            get {
+                return ResourceManager.GetString("DrawList_NewTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Selected.
+        /// </summary>
+        public static string DrawList_SelectedTooltip {
+            get {
+                return ResourceManager.GetString("DrawList_SelectedTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Encrypted - Cannot preview.
+        /// </summary>
+        public static string DrawList_EncryptedCannotPreview {
+            get {
+                return ResourceManager.GetString("DrawList_EncryptedCannotPreview", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The selected addon cannot fit the selected drawables..
+        /// </summary>
+        public static string DrawList_AddonFullMessage {
+            get {
+                return ResourceManager.GetString("DrawList_AddonFullMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Addon full.
+        /// </summary>
+        public static string DrawList_AddonFullTitle {
+            get {
+                return ResourceManager.GetString("DrawList_AddonFullTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to duplicate drawable: {0}.
+        /// </summary>
+        public static string DrawList_DuplicateFailed {
+            get {
+                return ResourceManager.GetString("DrawList_DuplicateFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select drawable file to replace '{0}'.
+        /// </summary>
+        public static string DrawList_ReplaceDialogTitle {
+            get {
+                return ResourceManager.GetString("DrawList_ReplaceDialogTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawable files (*.ydd)|*.ydd.
+        /// </summary>
+        public static string DrawList_DrawableFilesFilter {
+            get {
+                return ResourceManager.GetString("DrawList_DrawableFilesFilter", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to replace drawable: {0}.
+        /// </summary>
+        public static string DrawList_ReplaceFailed {
+            get {
+                return ResourceManager.GetString("DrawList_ReplaceFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select the folder to export textures as {0}.
+        /// </summary>
+        public static string DrawList_ExportTexturesFolderTitle {
+            get {
+                return ResourceManager.GetString("DrawList_ExportTexturesFolderTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select the folder to export drawable with textures.
+        /// </summary>
+        public static string DrawList_ExportDrawableWithTexturesFolderTitle {
+            get {
+                return ResourceManager.GetString("DrawList_ExportDrawableWithTexturesFolderTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select the folder to export drawable.
+        /// </summary>
+        public static string DrawList_ExportDrawableFolderTitle {
+            get {
+                return ResourceManager.GetString("DrawList_ExportDrawableFolderTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred during export: {0}.
+        /// </summary>
+        public static string DrawList_ExportError {
+            get {
+                return ResourceManager.GetString("DrawList_ExportError", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export Error.
+        /// </summary>
+        public static string DrawList_ExportErrorTitle {
+            get {
+                return ResourceManager.GetString("DrawList_ExportErrorTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Version: .
+        /// </summary>
+        public static string Main_VersionLabel {
+            get {
+                return ResourceManager.GetString("Main_VersionLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _Project.
+        /// </summary>
+        public static string Main_MenuProject {
+            get {
+                return ResourceManager.GetString("Main_MenuProject", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _Back to home screen.
+        /// </summary>
+        public static string Main_MenuBackToHome {
+            get {
+                return ResourceManager.GetString("Main_MenuBackToHome", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _Save.
+        /// </summary>
+        public static string Main_MenuSave {
+            get {
+                return ResourceManager.GetString("Main_MenuSave", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _Open Addon.
+        /// </summary>
+        public static string Main_MenuOpenAddon {
+            get {
+                return ResourceManager.GetString("Main_MenuOpenAddon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Open addon files (replaces current project).
+        /// </summary>
+        public static string Main_MenuOpenAddonTooltip {
+            get {
+                return ResourceManager.GetString("Main_MenuOpenAddonTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _Add Addon.
+        /// </summary>
+        public static string Main_MenuAddAddon {
+            get {
+                return ResourceManager.GetString("Main_MenuAddAddon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Add addon files to current project.
+        /// </summary>
+        public static string Main_MenuAddAddonTooltip {
+            get {
+                return ResourceManager.GetString("Main_MenuAddAddonTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _Import Project.
+        /// </summary>
+        public static string Main_MenuImportProject {
+            get {
+                return ResourceManager.GetString("Main_MenuImportProject", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _Export Project.
+        /// </summary>
+        public static string Main_MenuExportProject {
+            get {
+                return ResourceManager.GetString("Main_MenuExportProject", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _Settings.
+        /// </summary>
+        public static string Main_MenuSettings {
+            get {
+                return ResourceManager.GetString("Main_MenuSettings", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _View.
+        /// </summary>
+        public static string Main_MenuView {
+            get {
+                return ResourceManager.GetString("Main_MenuView", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _Logs.
+        /// </summary>
+        public static string Main_MenuLogs {
+            get {
+                return ResourceManager.GetString("Main_MenuLogs", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to _Duplicate Inspector.
+        /// </summary>
+        public static string Main_MenuDuplicateInspector {
+            get {
+                return ResourceManager.GetString("Main_MenuDuplicateInspector", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Source code.
+        /// </summary>
+        public static string Main_LinkSourceCode {
+            get {
+                return ResourceManager.GetString("Main_LinkSourceCode", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Support me!.
+        /// </summary>
+        public static string Main_LinkSupportMe {
+            get {
+                return ResourceManager.GetString("Main_LinkSupportMe", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to 3D Preview.
+        /// </summary>
+        public static string Main_Preview3DTitle {
+            get {
+                return ResourceManager.GetString("Main_Preview3DTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Checking for updates....
+        /// </summary>
+        public static string Main_SplashCheckingUpdates {
+            get {
+                return ResourceManager.GetString("Main_SplashCheckingUpdates", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Starting app.
+        /// </summary>
+        public static string Main_SplashStartingApp {
+            get {
+                return ResourceManager.GetString("Main_SplashStartingApp", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select .meta file(s).
+        /// </summary>
+        public static string Main_SelectMetaFilesTitle {
+            get {
+                return ResourceManager.GetString("Main_SelectMetaFilesTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select .meta file(s) to add.
+        /// </summary>
+        public static string Main_SelectMetaFilesToAddTitle {
+            get {
+                return ResourceManager.GetString("Main_SelectMetaFilesToAddTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Meta files (*.meta)|*.meta.
+        /// </summary>
+        public static string Main_MetaFilesFilter {
+            get {
+                return ResourceManager.GetString("Main_MetaFilesFilter", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No valid .meta files were selected..
+        /// </summary>
+        public static string Main_NoValidMetaFilesMsg {
+            get {
+                return ResourceManager.GetString("Main_NoValidMetaFilesMsg", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No drawable files (.ydd) were found for the selected .meta file(s).  Please make sure the .ydd files are in the same dir [rest of string was truncated].
+        /// </summary>
+        public static string Main_NoDrawablesFoundMsg {
+            get {
+                return ResourceManager.GetString("Main_NoDrawablesFoundMsg", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No Drawables Found.
+        /// </summary>
+        public static string Main_NoDrawablesFoundTitle {
+            get {
+                return ResourceManager.GetString("Main_NoDrawablesFoundTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Import project.
+        /// </summary>
+        public static string Main_ImportProjectDialogTitle {
+            get {
+                return ResourceManager.GetString("Main_ImportProjectDialogTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Export project.
+        /// </summary>
+        public static string Main_ExportProjectDialogTitle {
+            get {
+                return ResourceManager.GetString("Main_ExportProjectDialogTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to grzyClothTool project (*.gctproject)|*.gctproject.
+        /// </summary>
+        public static string Main_GctProjectFilter {
+            get {
+                return ResourceManager.GetString("Main_GctProjectFilter", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Start your journey.
+        /// </summary>
+        public static string Home_StartYourJourney {
+            get {
+                return ResourceManager.GetString("Home_StartYourJourney", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Create new project.
+        /// </summary>
+        public static string Home_CreateNewProject {
+            get {
+                return ResourceManager.GetString("Home_CreateNewProject", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Import project.
+        /// </summary>
+        public static string Home_ImportProject {
+            get {
+                return ResourceManager.GetString("Home_ImportProject", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Open addon.
+        /// </summary>
+        public static string Home_OpenAddon {
+            get {
+                return ResourceManager.GetString("Home_OpenAddon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Open save.
+        /// </summary>
+        public static string Home_OpenSave {
+            get {
+                return ResourceManager.GetString("Home_OpenSave", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Recently opened.
+        /// </summary>
+        public static string Home_RecentlyOpened {
+            get {
+                return ResourceManager.GetString("Home_RecentlyOpened", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to SELF-CONTAINED.
+        /// </summary>
+        public static string Home_BadgeSelfContained {
+            get {
+                return ResourceManager.GetString("Home_BadgeSelfContained", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to EXTERNAL.
+        /// </summary>
+        public static string Home_BadgeExternal {
+            get {
+                return ResourceManager.GetString("Home_BadgeExternal", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to  addons.
+        /// </summary>
+        public static string Home_RecentAddonsSuffix {
+            get {
+                return ResourceManager.GetString("Home_RecentAddonsSuffix", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to  drawables.
+        /// </summary>
+        public static string Home_RecentDrawablesSuffix {
+            get {
+                return ResourceManager.GetString("Home_RecentDrawablesSuffix", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Last modified: {0:yyyy-MM-dd HH:mm}.
+        /// </summary>
+        public static string Home_LastModifiedFormat {
+            get {
+                return ResourceManager.GetString("Home_LastModifiedFormat", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No recent projects.
+        /// </summary>
+        public static string Home_NoRecentProjects {
+            get {
+                return ResourceManager.GetString("Home_NoRecentProjects", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Explore my other tools.
+        /// </summary>
+        public static string Home_ExploreOtherTools {
+            get {
+                return ResourceManager.GetString("Home_ExploreOtherTools", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Click to learn more.
+        /// </summary>
+        public static string Home_ClickToLearnMore {
+            get {
+                return ResourceManager.GetString("Home_ClickToLearnMore", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Did you know?.
+        /// </summary>
+        public static string Home_DidYouKnowHeader {
+            get {
+                return ResourceManager.GetString("Home_DidYouKnowHeader", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Latest changes.
+        /// </summary>
+        public static string Home_LatestChanges {
+            get {
+                return ResourceManager.GetString("Home_LatestChanges", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Version: .
+        /// </summary>
+        public static string Home_VersionLabel {
+            get {
+                return ResourceManager.GetString("Home_VersionLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to View Full Changelog on GitHub.
+        /// </summary>
+        public static string Home_ViewFullChangelog {
+            get {
+                return ResourceManager.GetString("Home_ViewFullChangelog", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Supporters.
+        /// </summary>
+        public static string Home_Supporters {
+            get {
+                return ResourceManager.GetString("Home_Supporters", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You can open any existing addon and it will load all properties such as heels or hats..
+        /// </summary>
+        public static string Home_DidYouKnow1 {
+            get {
+                return ResourceManager.GetString("Home_DidYouKnow1", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You can export an existing project when you are not finished and later import it to continue working on it..
+        /// </summary>
+        public static string Home_DidYouKnow2 {
+            get {
+                return ResourceManager.GetString("Home_DidYouKnow2", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to There is switch to enable dark theme in the settings..
+        /// </summary>
+        public static string Home_DidYouKnow3 {
+            get {
+                return ResourceManager.GetString("Home_DidYouKnow3", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to There is 'live texture' feature in 3d preview? It allows you to see how your texture looks on the model in real time, ev [rest of string was truncated].
+        /// </summary>
+        public static string Home_DidYouKnow4 {
+            get {
+                return ResourceManager.GetString("Home_DidYouKnow4", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You can click SHIFT + DEL to instantly delete a selected drawable, without popup..
+        /// </summary>
+        public static string Home_DidYouKnow5 {
+            get {
+                return ResourceManager.GetString("Home_DidYouKnow5", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You can click CTRL + DEL to instantly replace a selected drawable with reserved drawable..
+        /// </summary>
+        public static string Home_DidYouKnow6 {
+            get {
+                return ResourceManager.GetString("Home_DidYouKnow6", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You can reserve your drawables and later change it to real model..
+        /// </summary>
+        public static string Home_DidYouKnow7 {
+            get {
+                return ResourceManager.GetString("Home_DidYouKnow7", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Supporting me with monthly patreon will speed up the development of the tool!.
+        /// </summary>
+        public static string Home_DidYouKnow8 {
+            get {
+                return ResourceManager.GetString("Home_DidYouKnow8", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You can hover over warning icon to see what is wrong with your drawable or texture..
+        /// </summary>
+        public static string Home_DidYouKnow9 {
+            get {
+                return ResourceManager.GetString("Home_DidYouKnow9", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Optimize YDD models, reduce polygon and vertex count while maintaining visual quality..
+        /// </summary>
+        public static string Home_ToolOptimizerDesc {
+            get {
+                return ResourceManager.GetString("Home_ToolOptimizerDesc", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Create and edit tattoos with preview and quick addon resource generation for FiveM..
+        /// </summary>
+        public static string Home_ToolTattooDesc {
+            get {
+                return ResourceManager.GetString("Home_ToolTattooDesc", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to fetch patreons.
+        /// </summary>
+        public static string Home_FailedFetchPatreons {
+            get {
+                return ResourceManager.GetString("Home_FailedFetchPatreons", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to fetch version.
+        /// </summary>
+        public static string Home_UnableFetchVersion {
+            get {
+                return ResourceManager.GetString("Home_UnableFetchVersion", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to load changelog highlights.
+        /// </summary>
+        public static string Home_FailedLoadChangelog {
+            get {
+                return ResourceManager.GetString("Home_FailedLoadChangelog", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No changelog available.
+        /// </summary>
+        public static string Home_NoChangelogAvailable {
+            get {
+                return ResourceManager.GetString("Home_NoChangelogAvailable", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to See full changelog for details.
+        /// </summary>
+        public static string Home_SeeFullChangelog {
+            get {
+                return ResourceManager.GetString("Home_SeeFullChangelog", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to open changelog: {0}.
+        /// </summary>
+        public static string Home_FailedOpenChangelog {
+            get {
+                return ResourceManager.GetString("Home_FailedOpenChangelog", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to open website: {0}.
+        /// </summary>
+        public static string Home_FailedOpenWebsite {
+            get {
+                return ResourceManager.GetString("Home_FailedOpenWebsite", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to open URL: {0}.
+        /// </summary>
+        public static string Home_FailedOpenUrl {
+            get {
+                return ResourceManager.GetString("Home_FailedOpenUrl", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Please configure the main projects folder in settings first..
+        /// </summary>
+        public static string Home_ConfigureMainFolderMsg {
+            get {
+                return ResourceManager.GetString("Home_ConfigureMainFolderMsg", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Configuration Required.
+        /// </summary>
+        public static string Home_ConfigurationRequiredTitle {
+            get {
+                return ResourceManager.GetString("Home_ConfigurationRequiredTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Main projects folder does not exist: {0}  Please update it in settings..
+        /// </summary>
+        public static string Home_MainFolderNotExistMsg {
+            get {
+                return ResourceManager.GetString("Home_MainFolderNotExistMsg", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Folder Not Found.
+        /// </summary>
+        public static string Home_FolderNotFoundTitle {
+            get {
+                return ResourceManager.GetString("Home_FolderNotFoundTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Project name contains invalid characters. Please choose a different name..
+        /// </summary>
+        public static string Home_InvalidProjectNameMsg {
+            get {
+                return ResourceManager.GetString("Home_InvalidProjectNameMsg", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Name.
+        /// </summary>
+        public static string Home_InvalidNameTitle {
+            get {
+                return ResourceManager.GetString("Home_InvalidNameTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to create new project: {0}.
+        /// </summary>
+        public static string Home_FailedCreateProject {
+            get {
+                return ResourceManager.GetString("Home_FailedCreateProject", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Open Save File.
+        /// </summary>
+        public static string Home_OpenSaveDialogTitle {
+            get {
+                return ResourceManager.GetString("Home_OpenSaveDialogTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Save files (*.json)|*.json|All files (*.*)|*.*.
+        /// </summary>
+        public static string Home_OpenSaveDialogFilter {
+            get {
+                return ResourceManager.GetString("Home_OpenSaveDialogFilter", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to load save: {0}.
+        /// </summary>
+        public static string Home_FailedLoadSave {
+            get {
+                return ResourceManager.GetString("Home_FailedLoadSave", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to This save file no longer exists..
+        /// </summary>
+        public static string Home_SaveFileGoneMsg {
+            get {
+                return ResourceManager.GetString("Home_SaveFileGoneMsg", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to File Not Found.
+        /// </summary>
+        public static string Home_FileNotFoundTitle {
+            get {
+                return ResourceManager.GetString("Home_FileNotFoundTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Logs.
+        /// </summary>
+        public static string Log_Title {
+            get {
+                return ResourceManager.GetString("Log_Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Timestamp.
+        /// </summary>
+        public static string Log_ColumnTimestamp {
+            get {
+                return ResourceManager.GetString("Log_ColumnTimestamp", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        public static string Log_ColumnMessage {
+            get {
+                return ResourceManager.GetString("Log_ColumnMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Patreon information.
+        /// </summary>
+        public static string Accounts_PatreonInformation {
+            get {
+                return ResourceManager.GetString("Accounts_PatreonInformation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Status: {0}.
+        /// </summary>
+        public static string Accounts_StatusFormat {
+            get {
+                return ResourceManager.GetString("Accounts_StatusFormat", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Last Payment: {0}.
+        /// </summary>
+        public static string Accounts_LastPaymentFormat {
+            get {
+                return ResourceManager.GetString("Accounts_LastPaymentFormat", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Next Payment: {0}.
+        /// </summary>
+        public static string Accounts_NextPaymentFormat {
+            get {
+                return ResourceManager.GetString("Accounts_NextPaymentFormat", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to LOGIN.
+        /// </summary>
+        public static string Accounts_Login {
+            get {
+                return ResourceManager.GetString("Accounts_Login", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to LOGOUT.
+        /// </summary>
+        public static string Accounts_Logout {
+            get {
+                return ResourceManager.GetString("Accounts_Logout", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to ACTIVE.
+        /// </summary>
+        public static string Accounts_StatusActive {
+            get {
+                return ResourceManager.GetString("Accounts_StatusActive", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to NOT ACTIVE.
+        /// </summary>
+        public static string Accounts_StatusNotActive {
+            get {
+                return ResourceManager.GetString("Accounts_StatusNotActive", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to login.
+        /// </summary>
+        public static string Accounts_LoginFailed {
+            get {
+                return ResourceManager.GetString("Accounts_LoginFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawables.
+        /// </summary>
+        public static string Project_DrawablesHeader {
+            get {
+                return ResourceManager.GetString("Project_DrawablesHeader", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Search....
+        /// </summary>
+        public static string Project_SearchPlaceholder {
+            get {
+                return ResourceManager.GetString("Project_SearchPlaceholder", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to ADD DRAWABLES.
+        /// </summary>
+        public static string Project_AddDrawables {
+            get {
+                return ResourceManager.GetString("Project_AddDrawables", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select Folder (auto).
+        /// </summary>
+        public static string Project_SelectFolderAuto {
+            get {
+                return ResourceManager.GetString("Project_SelectFolderAuto", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select Files as Female.
+        /// </summary>
+        public static string Project_SelectFilesAsFemale {
+            get {
+                return ResourceManager.GetString("Project_SelectFilesAsFemale", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select Folder as Female.
+        /// </summary>
+        public static string Project_SelectFolderAsFemale {
+            get {
+                return ResourceManager.GetString("Project_SelectFolderAsFemale", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select Files as Male.
+        /// </summary>
+        public static string Project_SelectFilesAsMale {
+            get {
+                return ResourceManager.GetString("Project_SelectFilesAsMale", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select Folder as Male.
+        /// </summary>
+        public static string Project_SelectFolderAsMale {
+            get {
+                return ResourceManager.GetString("Project_SelectFolderAsMale", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Delete selected drawable.
+        /// </summary>
+        public static string Project_DeleteSelectedDrawableTooltip {
+            get {
+                return ResourceManager.GetString("Project_DeleteSelectedDrawableTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to 3D PREVIEW.
+        /// </summary>
+        public static string Project_Preview3D {
+            get {
+                return ResourceManager.GetString("Project_Preview3D", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to BUILD.
+        /// </summary>
+        public static string Project_Build {
+            get {
+                return ResourceManager.GetString("Project_Build", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select drawable files.
+        /// </summary>
+        public static string Project_SelectDrawableFiles {
+            get {
+                return ResourceManager.GetString("Project_SelectDrawableFiles", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select drawable files ({0}).
+        /// </summary>
+        public static string Project_SelectDrawableFilesFor {
+            get {
+                return ResourceManager.GetString("Project_SelectDrawableFilesFor", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select a folder containing drawable files ({0}).
+        /// </summary>
+        public static string Project_SelectDrawableFolderFor {
+            get {
+                return ResourceManager.GetString("Project_SelectDrawableFolderFor", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select folder(s) containing drawable files.
+        /// </summary>
+        public static string Project_SelectDrawableFolders {
+            get {
+                return ResourceManager.GetString("Project_SelectDrawableFolders", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select folder(s) containing drawable files ({0}).
+        /// </summary>
+        public static string Project_SelectDrawableFoldersFor {
+            get {
+                return ResourceManager.GetString("Project_SelectDrawableFoldersFor", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawable files (*.ydd)|*.ydd.
+        /// </summary>
+        public static string Project_DrawableFilesFilter {
+            get {
+                return ResourceManager.GetString("Project_DrawableFilesFilter", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No drawable(s) selected.
+        /// </summary>
+        public static string Project_NoDrawablesSelected {
+            get {
+                return ResourceManager.GetString("Project_NoDrawablesSelected", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Delete drawable.
+        /// </summary>
+        public static string Project_DeleteDrawableTitle {
+            get {
+                return ResourceManager.GetString("Project_DeleteDrawableTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this drawable? ({0}).
+        /// </summary>
+        public static string Project_DeleteConfirmOne {
+            get {
+                return ResourceManager.GetString("Project_DeleteConfirmOne", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete these {0} selected drawables?.
+        /// </summary>
+        public static string Project_DeleteConfirmMany {
+            get {
+                return ResourceManager.GetString("Project_DeleteConfirmMany", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to  This will CHANGE NUMBERS of everything after this drawable!  Do you want to replace with reserved slot instead?.
+        /// </summary>
+        public static string Project_DeleteConfirmSuffix {
+            get {
+                return ResourceManager.GetString("Project_DeleteConfirmSuffix", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No project is currently loaded. Please create or open a project first..
+        /// </summary>
+        public static string Project_NoProjectLoadedMessage {
+            get {
+                return ResourceManager.GetString("Project_NoProjectLoadedMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No Project.
+        /// </summary>
+        public static string Project_NoProjectLoadedTitle {
+            get {
+                return ResourceManager.GetString("Project_NoProjectLoadedTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The following file(s) could not be accessed:  {0}  They may be virtual paths. Please extract them to a folder first and  [rest of string was truncated].
+        /// </summary>
+        public static string Project_FilesNotAccessibleMessage {
+            get {
+                return ResourceManager.GetString("Project_FilesNotAccessibleMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Files Not Accessible.
+        /// </summary>
+        public static string Project_FilesNotAccessibleTitle {
+            get {
+                return ResourceManager.GetString("Project_FilesNotAccessibleTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while processing dropped files:  {0}.
+        /// </summary>
+        public static string Project_DropErrorMessage {
+            get {
+                return ResourceManager.GetString("Project_DropErrorMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drag &amp; Drop Error.
+        /// </summary>
+        public static string Project_DropErrorTitle {
+            get {
+                return ResourceManager.GetString("Project_DropErrorTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Project Setup.
+        /// </summary>
+        public static string ProjectSetup_WindowTitle {
+            get {
+                return ResourceManager.GetString("ProjectSetup_WindowTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Project Name.
+        /// </summary>
+        public static string ProjectSetup_ProjectNameLabel {
+            get {
+                return ResourceManager.GetString("ProjectSetup_ProjectNameLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Project Type.
+        /// </summary>
+        public static string ProjectSetup_ProjectTypeLabel {
+            get {
+                return ResourceManager.GetString("ProjectSetup_ProjectTypeLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Self-contained.
+        /// </summary>
+        public static string ProjectSetup_SelfContainedTitle {
+            get {
+                return ResourceManager.GetString("ProjectSetup_SelfContainedTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Files are copied to project folder. Project can be moved or shared easily..
+        /// </summary>
+        public static string ProjectSetup_SelfContainedDescription {
+            get {
+                return ResourceManager.GetString("ProjectSetup_SelfContainedDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to External.
+        /// </summary>
+        public static string ProjectSetup_ExternalTitle {
+            get {
+                return ResourceManager.GetString("ProjectSetup_ExternalTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Files stay in original locations. Uses less disk space but not portable..
+        /// </summary>
+        public static string ProjectSetup_ExternalDescription {
+            get {
+                return ResourceManager.GetString("ProjectSetup_ExternalDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Moving or deleting original files will break the project..
+        /// </summary>
+        public static string ProjectSetup_ExternalWarning {
+            get {
+                return ResourceManager.GetString("ProjectSetup_ExternalWarning", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Create New Project.
+        /// </summary>
+        public static string ProjectSetup_CreateNewProject {
+            get {
+                return ResourceManager.GetString("ProjectSetup_CreateNewProject", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string ProjectSetup_Create {
+            get {
+                return ResourceManager.GetString("ProjectSetup_Create", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Open Existing Addon.
+        /// </summary>
+        public static string ProjectSetup_OpenExistingAddon {
+            get {
+                return ResourceManager.GetString("ProjectSetup_OpenExistingAddon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to A project named "{0}" already exists. Continuing will overwrite it..
+        /// </summary>
+        public static string ProjectSetup_ProjectExistsWarning {
+            get {
+                return ResourceManager.GetString("ProjectSetup_ProjectExistsWarning", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Found {0} drawable(s).
+        /// </summary>
+        public static string ProjectSetup_FoundDrawables {
+            get {
+                return ResourceManager.GetString("ProjectSetup_FoundDrawables", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Found {0} drawable(s) in {1} .meta files.
+        /// </summary>
+        public static string ProjectSetup_FoundDrawablesInMetaFiles {
+            get {
+                return ResourceManager.GetString("ProjectSetup_FoundDrawablesInMetaFiles", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to A project named "{0}" already exists.  Do you want to overwrite it? This cannot be undone..
+        /// </summary>
+        public static string ProjectSetup_OverwriteConfirmMessage {
+            get {
+                return ResourceManager.GetString("ProjectSetup_OverwriteConfirmMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Project Already Exists.
+        /// </summary>
+        public static string ProjectSetup_ProjectExistsTitle {
+            get {
+                return ResourceManager.GetString("ProjectSetup_ProjectExistsTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawable polygon count limit.
+        /// </summary>
+        public static string Settings_PolygonLimitHeader {
+            get {
+                return ResourceManager.GetString("Settings_PolygonLimitHeader", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Sets limit for drawable polygon count, if it exceeds this number it will display warning.
+        /// </summary>
+        public static string Settings_PolygonLimitDescription {
+            get {
+                return ResourceManager.GetString("Settings_PolygonLimitDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to High LOD.
+        /// </summary>
+        public static string Settings_PolygonLimitHigh {
+            get {
+                return ResourceManager.GetString("Settings_PolygonLimitHigh", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Medium LOD.
+        /// </summary>
+        public static string Settings_PolygonLimitMedium {
+            get {
+                return ResourceManager.GetString("Settings_PolygonLimitMedium", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Low LOD.
+        /// </summary>
+        public static string Settings_PolygonLimitLow {
+            get {
+                return ResourceManager.GetString("Settings_PolygonLimitLow", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Texture resolution limits.
+        /// </summary>
+        public static string Settings_TextureResolutionHeader {
+            get {
+                return ResourceManager.GetString("Settings_TextureResolutionHeader", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Sets maximum resolution for each texture type. If width or height exceeds the limit, a warning will be displayed.
+        /// </summary>
+        public static string Settings_TextureResolutionDescription {
+            get {
+                return ResourceManager.GetString("Settings_TextureResolutionDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Diffuse.
+        /// </summary>
+        public static string Settings_TextureDiffuse {
+            get {
+                return ResourceManager.GetString("Settings_TextureDiffuse", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Normal.
+        /// </summary>
+        public static string Settings_TextureNormal {
+            get {
+                return ResourceManager.GetString("Settings_TextureNormal", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Specular.
+        /// </summary>
+        public static string Settings_TextureSpecular {
+            get {
+                return ResourceManager.GetString("Settings_TextureSpecular", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawable list grouping.
+        /// </summary>
+        public static string Settings_GroupingHeader {
+            get {
+                return ResourceManager.GetString("Settings_GroupingHeader", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Controls the section headers shown in the drawable list..
+        /// </summary>
+        public static string Settings_GroupingDescription {
+            get {
+                return ResourceManager.GetString("Settings_GroupingDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to None - one flat list, no sections.
+        /// </summary>
+        public static string Settings_GroupingNone {
+            get {
+                return ResourceManager.GetString("Settings_GroupingNone", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to By Type - sections for clothing or prop type.
+        /// </summary>
+        public static string Settings_GroupingByType {
+            get {
+                return ResourceManager.GetString("Settings_GroupingByType", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to By Group - sections for your custom groups.
+        /// </summary>
+        public static string Settings_GroupingByGroup {
+            get {
+                return ResourceManager.GetString("Settings_GroupingByGroup", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Both - custom groups first, types inside.
+        /// </summary>
+        public static string Settings_GroupingBoth {
+            get {
+                return ResourceManager.GetString("Settings_GroupingBoth", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawables per addon.
+        /// </summary>
+        public static string Settings_DrawablesPerAddonHeader {
+            get {
+                return ResourceManager.GetString("Settings_DrawablesPerAddonHeader", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum number of drawables of each type kept in a single addon before a new one is created. Changing this reorganizes e [rest of string was truncated].
+        /// </summary>
+        public static string Settings_DrawablesPerAddonDescription {
+            get {
+                return ResourceManager.GetString("Settings_DrawablesPerAddonDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Max drawable number per addon (0-255).
+        /// </summary>
+        public static string Settings_MaxDrawableNumberLabel {
+            get {
+                return ResourceManager.GetString("Settings_MaxDrawableNumberLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to General settings.
+        /// </summary>
+        public static string Settings_GeneralHeader {
+            get {
+                return ResourceManager.GetString("Settings_GeneralHeader", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Main Projects Folder.
+        /// </summary>
+        public static string Settings_MainProjectsFolderLabel {
+            get {
+                return ResourceManager.GetString("Settings_MainProjectsFolderLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Main folder where all your clothing projects are stored.
+        /// </summary>
+        public static string Settings_MainProjectsFolderDescription {
+            get {
+                return ResourceManager.GetString("Settings_MainProjectsFolderDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select your Main Projects Folder.
+        /// </summary>
+        public static string Settings_MainProjectsFolderTitle {
+            get {
+                return ResourceManager.GetString("Settings_MainProjectsFolderTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Current GTAV Path.
+        /// </summary>
+        public static string Settings_GtavPathLabel {
+            get {
+                return ResourceManager.GetString("Settings_GtavPathLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to GTAV path is required for 3D preview to work.
+        /// </summary>
+        public static string Settings_GtavPathDescription {
+            get {
+                return ResourceManager.GetString("Settings_GtavPathDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select your GTA V Path.
+        /// </summary>
+        public static string Settings_GtavPathTitle {
+            get {
+                return ResourceManager.GetString("Settings_GtavPathTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Display drawable path.
+        /// </summary>
+        public static string Settings_DisplayDrawablePathLabel {
+            get {
+                return ResourceManager.GetString("Settings_DisplayDrawablePathLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Enabled will display used path for selected drawable.
+        /// </summary>
+        public static string Settings_DisplayDrawablePathText {
+            get {
+                return ResourceManager.GetString("Settings_DisplayDrawablePathText", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Delete drawable files automatically.
+        /// </summary>
+        public static string Settings_AutoDeleteFilesLabel {
+            get {
+                return ResourceManager.GetString("Settings_AutoDeleteFilesLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to When enabled, it will automatically remove the associated files from your system when you delete a drawable from the add [rest of string was truncated].
+        /// </summary>
+        public static string Settings_AutoDeleteFilesText {
+            get {
+                return ResourceManager.GetString("Settings_AutoDeleteFilesText", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to WARNING: This function will modify and remove files from your PC. Any removed files cannot be recovered.  Are you sure y [rest of string was truncated].
+        /// </summary>
+        public static string Settings_AutoDeleteFilesWarning {
+            get {
+                return ResourceManager.GetString("Settings_AutoDeleteFilesWarning", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Mark new drawables.
+        /// </summary>
+        public static string Settings_MarkNewDrawablesLabel {
+            get {
+                return ResourceManager.GetString("Settings_MarkNewDrawablesLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to When enabled, new drawables will be marked with a yellow dot.
+        /// </summary>
+        public static string Settings_MarkNewDrawablesText {
+            get {
+                return ResourceManager.GetString("Settings_MarkNewDrawablesText", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to That folder doesn't look like a valid GTA V installation (GTA5.exe was not found in it).  Please select the folder that  [rest of string was truncated].
+        /// </summary>
+        public static string Settings_InvalidGtavFolderMessage {
+            get {
+                return ResourceManager.GetString("Settings_InvalidGtavFolderMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid GTA V folder.
+        /// </summary>
+        public static string Settings_InvalidGtavFolderTitle {
+            get {
+                return ResourceManager.GetString("Settings_InvalidGtavFolderTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select Main Projects Folder.
+        /// </summary>
+        public static string Settings_SelectMainProjectsFolderFallbackTitle {
+            get {
+                return ResourceManager.GetString("Settings_SelectMainProjectsFolderFallbackTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You cannot use a root drive (e.g., C:\) as the main folder.  Please select or create a subfolder..
+        /// </summary>
+        public static string Settings_RootDriveNotAllowedMessage {
+            get {
+                return ResourceManager.GetString("Settings_RootDriveNotAllowedMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Folder.
+        /// </summary>
+        public static string Settings_InvalidFolderTitle {
+            get {
+                return ResourceManager.GetString("Settings_InvalidFolderTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Access denied. Please select a folder where you have write permissions..
+        /// </summary>
+        public static string Settings_AccessDeniedMessage {
+            get {
+                return ResourceManager.GetString("Settings_AccessDeniedMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Error setting main projects folder: {0}.
+        /// </summary>
+        public static string Settings_SetMainProjectsFolderErrorMessage {
+            get {
+                return ResourceManager.GetString("Settings_SetMainProjectsFolderErrorMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to grzyClothTool - Build resource.
+        /// </summary>
+        public static string Build_Title {
+            get {
+                return ResourceManager.GetString("Build_Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select resource type.
+        /// </summary>
+        public static string Build_SelectResourceType {
+            get {
+                return ResourceManager.GetString("Build_SelectResourceType", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Project name.
+        /// </summary>
+        public static string Build_ProjectName {
+            get {
+                return ResourceManager.GetString("Build_ProjectName", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Output folder.
+        /// </summary>
+        public static string Build_OutputFolder {
+            get {
+                return ResourceManager.GetString("Build_OutputFolder", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Build addons as separate resources.
+        /// </summary>
+        public static string Build_SplitAddons {
+            get {
+                return ResourceManager.GetString("Build_SplitAddons", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Build resource.
+        /// </summary>
+        public static string Build_BuildResource {
+            get {
+                return ResourceManager.GetString("Build_BuildResource", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Build path could not be determined. Please check your project settings..
+        /// </summary>
+        public static string Build_PathNotDetermined {
+            get {
+                return ResourceManager.GetString("Build_PathNotDetermined", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No drawables found. Add drawables to be able to build resource..
+        /// </summary>
+        public static string Build_NoDrawables {
+            get {
+                return ResourceManager.GetString("Build_NoDrawables", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Please fill in all fields. Make sure a project is loaded..
+        /// </summary>
+        public static string Build_FillAllFields {
+            get {
+                return ResourceManager.GetString("Build_FillAllFields", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Build done, elapsed time: {0}.
+        /// </summary>
+        public static string Build_Done {
+            get {
+                return ResourceManager.GetString("Build_Done", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Build done.
+        /// </summary>
+        public static string Build_DoneCaption {
+            get {
+                return ResourceManager.GetString("Build_DoneCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Build failed:  {0}.
+        /// </summary>
+        public static string Build_Failed {
+            get {
+                return ResourceManager.GetString("Build_Failed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Project name cannot be empty.
+        /// </summary>
+        public static string Build_ProjectNameEmpty {
+            get {
+                return ResourceManager.GetString("Build_ProjectNameEmpty", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Project name must be at least 3 characters long.
+        /// </summary>
+        public static string Build_ProjectNameTooShort {
+            get {
+                return ResourceManager.GetString("Build_ProjectNameTooShort", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Project name cannot be longer than 50 characters.
+        /// </summary>
+        public static string Build_ProjectNameTooLong {
+            get {
+                return ResourceManager.GetString("Build_ProjectNameTooLong", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Project name can only contain lowercase letters, numbers, and underscores.
+        /// </summary>
+        public static string Build_ProjectNameInvalidChars {
+            get {
+                return ResourceManager.GetString("Build_ProjectNameInvalidChars", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Optimize textures.
+        /// </summary>
+        public static string Optimize_Title {
+            get {
+                return ResourceManager.GetString("Optimize_Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Current texture.
+        /// </summary>
+        public static string Optimize_CurrentTexture {
+            get {
+                return ResourceManager.GetString("Optimize_CurrentTexture", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Output texture.
+        /// </summary>
+        public static string Optimize_OutputTexture {
+            get {
+                return ResourceManager.GetString("Optimize_OutputTexture", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Name: .
+        /// </summary>
+        public static string Optimize_NameLabel {
+            get {
+                return ResourceManager.GetString("Optimize_NameLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Compression: .
+        /// </summary>
+        public static string Optimize_CompressionLabel {
+            get {
+                return ResourceManager.GetString("Optimize_CompressionLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Width: .
+        /// </summary>
+        public static string Optimize_WidthLabel {
+            get {
+                return ResourceManager.GetString("Optimize_WidthLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Height: .
+        /// </summary>
+        public static string Optimize_HeightLabel {
+            get {
+                return ResourceManager.GetString("Optimize_HeightLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Mipmap amount: .
+        /// </summary>
+        public static string Optimize_MipmapLabel {
+            get {
+                return ResourceManager.GetString("Optimize_MipmapLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Selected {0} textures.
+        /// </summary>
+        public static string Optimize_SelectedTextures {
+            get {
+                return ResourceManager.GetString("Optimize_SelectedTextures", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Downscale texture size.
+        /// </summary>
+        public static string Optimize_DownscaleTextureSize {
+            get {
+                return ResourceManager.GetString("Optimize_DownscaleTextureSize", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select texture size.
+        /// </summary>
+        public static string Optimize_SelectTextureSize {
+            get {
+                return ResourceManager.GetString("Optimize_SelectTextureSize", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Changing texture size here will make quality worse. To preserve texture quality this should be done with 3d programs and [rest of string was truncated].
+        /// </summary>
+        public static string Optimize_QualityWarning {
+            get {
+                return ResourceManager.GetString("Optimize_QualityWarning", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Change texture compression.
+        /// </summary>
+        public static string Optimize_ChangeTextureCompression {
+            get {
+                return ResourceManager.GetString("Optimize_ChangeTextureCompression", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select compression.
+        /// </summary>
+        public static string Optimize_SelectCompression {
+            get {
+                return ResourceManager.GetString("Optimize_SelectCompression", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Optimize.
+        /// </summary>
+        public static string Optimize_Optimize {
+            get {
+                return ResourceManager.GetString("Optimize_Optimize", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No optimization options selected.
+        /// </summary>
+        public static string Optimize_NoOptionsSelected {
+            get {
+                return ResourceManager.GetString("Optimize_NoOptionsSelected", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Resolve drawable import.
+        /// </summary>
+        public static string ImportResolve_Title {
+            get {
+                return ResourceManager.GetString("ImportResolve_Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Show resolved.
+        /// </summary>
+        public static string ImportResolve_ShowResolved {
+            get {
+                return ResourceManager.GetString("ImportResolve_ShowResolved", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select All.
+        /// </summary>
+        public static string ImportResolve_SelectAll {
+            get {
+                return ResourceManager.GetString("ImportResolve_SelectAll", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select None.
+        /// </summary>
+        public static string ImportResolve_SelectNone {
+            get {
+                return ResourceManager.GetString("ImportResolve_SelectNone", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Gender.
+        /// </summary>
+        public static string ImportResolve_Gender {
+            get {
+                return ResourceManager.GetString("ImportResolve_Gender", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Apply gender.
+        /// </summary>
+        public static string ImportResolve_ApplyGender {
+            get {
+                return ResourceManager.GetString("ImportResolve_ApplyGender", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Asset type.
+        /// </summary>
+        public static string ImportResolve_AssetType {
+            get {
+                return ResourceManager.GetString("ImportResolve_AssetType", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawable type.
+        /// </summary>
+        public static string ImportResolve_DrawableType {
+            get {
+                return ResourceManager.GetString("ImportResolve_DrawableType", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Apply properties.
+        /// </summary>
+        public static string ImportResolve_ApplyProperties {
+            get {
+                return ResourceManager.GetString("ImportResolve_ApplyProperties", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Gender not set.
+        /// </summary>
+        public static string ImportResolve_GenderNotSet {
+            get {
+                return ResourceManager.GetString("ImportResolve_GenderNotSet", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Properties not set.
+        /// </summary>
+        public static string ImportResolve_PropertiesNotSet {
+            get {
+                return ResourceManager.GetString("ImportResolve_PropertiesNotSet", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Prop.
+        /// </summary>
+        public static string ImportResolve_Prop {
+            get {
+                return ResourceManager.GetString("ImportResolve_Prop", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Component.
+        /// </summary>
+        public static string ImportResolve_Component {
+            get {
+                return ResourceManager.GetString("ImportResolve_Component", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Resolve 1 drawable before import.
+        /// </summary>
+        public static string ImportResolve_HeaderOne {
+            get {
+                return ResourceManager.GetString("ImportResolve_HeaderOne", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Resolve {0} drawables before import.
+        /// </summary>
+        public static string ImportResolve_HeaderMany {
+            get {
+                return ResourceManager.GetString("ImportResolve_HeaderMany", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Click rows to check them, then apply {0} to checked files. Resolved files are hidden unless Show resolved is enabled..
+        /// </summary>
+        public static string ImportResolve_HelpText {
+            get {
+                return ResourceManager.GetString("ImportResolve_HelpText", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to  and .
+        /// </summary>
+        public static string ImportResolve_HelpTextJoiner {
+            get {
+                return ResourceManager.GetString("ImportResolve_HelpTextJoiner", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to gender.
+        /// </summary>
+        public static string ImportResolve_HelpPartGender {
+            get {
+                return ResourceManager.GetString("ImportResolve_HelpPartGender", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to drawable properties.
+        /// </summary>
+        public static string ImportResolve_HelpPartDrawableProperties {
+            get {
+                return ResourceManager.GetString("ImportResolve_HelpPartDrawableProperties", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to {0} checked, {1} of {2} resolved.
+        /// </summary>
+        public static string ImportResolve_SelectionSummary {
+            get {
+                return ResourceManager.GetString("ImportResolve_SelectionSummary", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate Inspector.
+        /// </summary>
+        public static string DupInspector_Title {
+            get {
+                return ResourceManager.GetString("DupInspector_Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to DUP.
+        /// </summary>
+        public static string DupInspector_DupBadge {
+            get {
+                return ResourceManager.GetString("DupInspector_DupBadge", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Delete All Except First.
+        /// </summary>
+        public static string DupInspector_DeleteAllExceptFirst {
+            get {
+                return ResourceManager.GetString("DupInspector_DeleteAllExceptFirst", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Delete All Duplicates.
+        /// </summary>
+        public static string DupInspector_DeleteAllDuplicates {
+            get {
+                return ResourceManager.GetString("DupInspector_DeleteAllDuplicates", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No duplicates found.
+        /// </summary>
+        public static string DupInspector_NoDuplicatesFound {
+            get {
+                return ResourceManager.GetString("DupInspector_NoDuplicatesFound", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Found {0} duplicate group.
+        /// </summary>
+        public static string DupInspector_FoundGroupsOne {
+            get {
+                return ResourceManager.GetString("DupInspector_FoundGroupsOne", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Found {0} duplicate groups.
+        /// </summary>
+        public static string DupInspector_FoundGroupsMany {
+            get {
+                return ResourceManager.GetString("DupInspector_FoundGroupsMany", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawable: {0}.
+        /// </summary>
+        public static string DupInspector_GroupTitle {
+            get {
+                return ResourceManager.GetString("DupInspector_GroupTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to {0} identical drawables.
+        /// </summary>
+        public static string DupInspector_GroupDescription {
+            get {
+                return ResourceManager.GetString("DupInspector_GroupDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        public static string DupInspector_LocationUnknown {
+            get {
+                return ResourceManager.GetString("DupInspector_LocationUnknown", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Addon {0}.
+        /// </summary>
+        public static string DupInspector_LocationAddon {
+            get {
+                return ResourceManager.GetString("DupInspector_LocationAddon", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete '{0}'?.
+        /// </summary>
+        public static string DupInspector_ConfirmDeleteMessage {
+            get {
+                return ResourceManager.GetString("DupInspector_ConfirmDeleteMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Delete.
+        /// </summary>
+        public static string DupInspector_ConfirmDeleteCaption {
+            get {
+                return ResourceManager.GetString("DupInspector_ConfirmDeleteCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to All duplicates have been resolved!.
+        /// </summary>
+        public static string DupInspector_AllResolved {
+            get {
+                return ResourceManager.GetString("DupInspector_AllResolved", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to This will delete {0} duplicate items from this group, keeping only the first one.\n\nAre you sure?.
+        /// </summary>
+        public static string DupInspector_ConfirmGroupDeleteMessage {
+            get {
+                return ResourceManager.GetString("DupInspector_ConfirmGroupDeleteMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Bulk Delete.
+        /// </summary>
+        public static string DupInspector_ConfirmBulkDeleteCaption {
+            get {
+                return ResourceManager.GetString("DupInspector_ConfirmBulkDeleteCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Deleted {0} duplicate items!\n\nAll duplicates have been resolved!.
+        /// </summary>
+        public static string DupInspector_DeletedItemsAllResolved {
+            get {
+                return ResourceManager.GetString("DupInspector_DeletedItemsAllResolved", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Deleted {0} duplicate items!.
+        /// </summary>
+        public static string DupInspector_DeletedItems {
+            get {
+                return ResourceManager.GetString("DupInspector_DeletedItems", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Deleted {0} duplicate item!\n\nAll duplicates have been resolved!.
+        /// </summary>
+        public static string DupInspector_DeletedOneItemAllResolved {
+            get {
+                return ResourceManager.GetString("DupInspector_DeletedOneItemAllResolved", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Deleted {0} duplicate item!.
+        /// </summary>
+        public static string DupInspector_DeletedOneItem {
+            get {
+                return ResourceManager.GetString("DupInspector_DeletedOneItem", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to This will delete {0} duplicate item across {1} duplicate group, keeping the first item in each group.\n\nAre you sure?.
+        /// </summary>
+        public static string DupInspector_ConfirmDeleteAllOne {
+            get {
+                return ResourceManager.GetString("DupInspector_ConfirmDeleteAllOne", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to This will delete {0} duplicate items across {1} duplicate groups, keeping the first item in each group.\n\nAre you sure?.
+        /// </summary>
+        public static string DupInspector_ConfirmDeleteAllMany {
+            get {
+                return ResourceManager.GetString("DupInspector_ConfirmDeleteAllMany", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Delete All Duplicates.
+        /// </summary>
+        public static string DupInspector_ConfirmDeleteAllCaption {
+            get {
+                return ResourceManager.GetString("DupInspector_ConfirmDeleteAllCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to grzyClothTool - First Time Setup.
+        /// </summary>
+        public static string FirstRun_Title {
+            get {
+                return ResourceManager.GetString("FirstRun_Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to grzyClothTool!.
+        /// </summary>
+        public static string FirstRun_Welcome {
+            get {
+                return ResourceManager.GetString("FirstRun_Welcome", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to First Time Setup.
+        /// </summary>
+        public static string FirstRun_Subtitle {
+            get {
+                return ResourceManager.GetString("FirstRun_Subtitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select Main Projects Folder.
+        /// </summary>
+        public static string FirstRun_SelectFolderHeader {
+            get {
+                return ResourceManager.GetString("FirstRun_SelectFolderHeader", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a MAIN folder where ALL self-contained projects will be stored..
+        /// </summary>
+        public static string FirstRun_FolderDescription {
+            get {
+                return ResourceManager.GetString("FirstRun_FolderDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Example: .
+        /// </summary>
+        public static string FirstRun_ExampleLabel {
+            get {
+                return ResourceManager.GetString("FirstRun_ExampleLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to (Do NOT select a specific project folder - select the parent folder that will contain multiple projects).
+        /// </summary>
+        public static string FirstRun_FolderHint {
+            get {
+                return ResourceManager.GetString("FirstRun_FolderHint", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Browse....
+        /// </summary>
+        public static string FirstRun_Browse {
+            get {
+                return ResourceManager.GetString("FirstRun_Browse", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to [i] Important Information.
+        /// </summary>
+        public static string FirstRun_ImportantInfo {
+            get {
+                return ResourceManager.GetString("FirstRun_ImportantInfo", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to * This setting is stored in your user profile and will persist across application updates..
+        /// </summary>
+        public static string FirstRun_InfoPersist {
+            get {
+                return ResourceManager.GetString("FirstRun_InfoPersist", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to * You can change this folder later in the Settings menu..
+        /// </summary>
+        public static string FirstRun_InfoChangeLater {
+            get {
+                return ResourceManager.GetString("FirstRun_InfoChangeLater", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You must select a main folder to continue using the application.\n\nThis will close the application. Are you sure?.
+        /// </summary>
+        public static string FirstRun_ExitConfirmMessage {
+            get {
+                return ResourceManager.GetString("FirstRun_ExitConfirmMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Setup Required.
+        /// </summary>
+        public static string FirstRun_ExitConfirmCaption {
+            get {
+                return ResourceManager.GetString("FirstRun_ExitConfirmCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select the MAIN folder where ALL your projects will be stored (not a specific project folder).
+        /// </summary>
+        public static string FirstRun_BrowseDialogDescription {
+            get {
+                return ResourceManager.GetString("FirstRun_BrowseDialogDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Please select a main folder before continuing..
+        /// </summary>
+        public static string FirstRun_ValidationNoFolder {
+            get {
+                return ResourceManager.GetString("FirstRun_ValidationNoFolder", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You cannot use a root drive (e.g., C:\) as the main folder. Please select or create a subfolder..
+        /// </summary>
+        public static string FirstRun_ValidationRootDrive {
+            get {
+                return ResourceManager.GetString("FirstRun_ValidationRootDrive", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Access denied. Please select a folder where you have write permissions..
+        /// </summary>
+        public static string FirstRun_ValidationAccessDenied {
+            get {
+                return ResourceManager.GetString("FirstRun_ValidationAccessDenied", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Error: {0}.
+        /// </summary>
+        public static string FirstRun_ValidationError {
+            get {
+                return ResourceManager.GetString("FirstRun_ValidationError", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Open Folder.
+        /// </summary>
+        public static string MsgBox_OpenFolder {
+            get {
+                return ResourceManager.GetString("MsgBox_OpenFolder", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Replace.
+        /// </summary>
+        public static string MsgBox_Replace {
+            get {
+                return ResourceManager.GetString("MsgBox_Replace", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate Drawables Detected.
+        /// </summary>
+        public static string DupBatch_Title {
+            get {
+                return ResourceManager.GetString("DupBatch_Title", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The following drawables appear to be duplicates of existing items. Select which ones you want to add:.
+        /// </summary>
+        public static string DupBatch_Description {
+            get {
+                return ResourceManager.GetString("DupBatch_Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select All.
+        /// </summary>
+        public static string DupBatch_SelectAll {
+            get {
+                return ResourceManager.GetString("DupBatch_SelectAll", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Select None.
+        /// </summary>
+        public static string DupBatch_SelectNone {
+            get {
+                return ResourceManager.GetString("DupBatch_SelectNone", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel All.
+        /// </summary>
+        public static string DupBatch_CancelAll {
+            get {
+                return ResourceManager.GetString("DupBatch_CancelAll", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        public static string DupBatch_UnknownName {
+            get {
+                return ResourceManager.GetString("DupBatch_UnknownName", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No existing duplicates found.
+        /// </summary>
+        public static string DupBatch_NoExistingDuplicates {
+            get {
+                return ResourceManager.GetString("DupBatch_NoExistingDuplicates", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate of: {0}.
+        /// </summary>
+        public static string DupBatch_DuplicateOf {
+            get {
+                return ResourceManager.GetString("DupBatch_DuplicateOf", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to  (+{0} more).
+        /// </summary>
+        public static string DupBatch_MoreCount {
+            get {
+                return ResourceManager.GetString("DupBatch_MoreCount", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Prop.
+        /// </summary>
+        public static string DupBatch_TypeProp {
+            get {
+                return ResourceManager.GetString("DupBatch_TypeProp", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Component.
+        /// </summary>
+        public static string DupBatch_TypeComponent {
+            get {
+                return ResourceManager.GetString("DupBatch_TypeComponent", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to {0} of {1} duplicate(s) will be added.
+        /// </summary>
+        public static string DupBatch_Summary {
+            get {
+                return ResourceManager.GetString("DupBatch_Summary", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Auto-saving in {0} seconds.
+        /// </summary>
+        public static string AutoSave_AutoSavingIn {
+            get {
+                return ResourceManager.GetString("AutoSave_AutoSavingIn", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Save in progress.
+        /// </summary>
+        public static string AutoSave_SaveInProgress {
+            get {
+                return ResourceManager.GetString("AutoSave_SaveInProgress", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to 3D Preview unavailable - set a valid GTA V path in Settings.
+        /// </summary>
+        public static string Preview_UnavailableSetGtaPath {
+            get {
+                return ResourceManager.GetString("Preview_UnavailableSetGtaPath", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to 3D Preview unavailable (GTA V installation issue - see log).
+        /// </summary>
+        public static string Preview_UnavailableGtaInstallIssue {
+            get {
+                return ResourceManager.GetString("Preview_UnavailableGtaInstallIssue", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to 3D Preview unavailable (GPU/Graphics error - see log).
+        /// </summary>
+        public static string Preview_UnavailableGpuError {
+            get {
+                return ResourceManager.GetString("Preview_UnavailableGpuError", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to 3D Preview disabled due to errors (see log).
+        /// </summary>
+        public static string Preview_DisabledDueToErrors {
+            get {
+                return ResourceManager.GetString("Preview_DisabledDueToErrors", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Clear Group.
+        /// </summary>
+        public static string ModernLabel_ClearGroup {
+            get {
+                return ResourceManager.GetString("ModernLabel_ClearGroup", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to {0} files (*{0})|*{0}.
+        /// </summary>
+        public static string ModernLabel_FileFilter {
+            get {
+                return ResourceManager.GetString("ModernLabel_FileFilter", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to  (Unsaved changes).
+        /// </summary>
+        public static string Save_UnsavedChangesTitleSuffix {
+            get {
+                return ResourceManager.GetString("Save_UnsavedChangesTitleSuffix", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You have unsaved changes. Do you want to continue with this action?.
+        /// </summary>
+        public static string Save_UnsavedChangesMessage {
+            get {
+                return ResourceManager.GetString("Save_UnsavedChangesMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Unsaved changes.
+        /// </summary>
+        public static string Save_UnsavedChangesCaption {
+            get {
+                return ResourceManager.GetString("Save_UnsavedChangesCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to This save file could not be loaded and is probably broken.  Save file: {0}  Error: {1}  Found {2} backup save(s). The ne [rest of string was truncated].
+        /// </summary>
+        public static string Save_BrokenSaveMessage {
+            get {
+                return ResourceManager.GetString("Save_BrokenSaveMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Broken Save File.
+        /// </summary>
+        public static string Save_BrokenSaveCaption {
+            get {
+                return ResourceManager.GetString("Save_BrokenSaveCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Loaded backup save: {0}.
+        /// </summary>
+        public static string Save_BackupLoadedMessage {
+            get {
+                return ResourceManager.GetString("Save_BackupLoadedMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Backup Loaded.
+        /// </summary>
+        public static string Save_BackupLoadedCaption {
+            get {
+                return ResourceManager.GetString("Save_BackupLoadedCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to The original save file and all available backups failed to load..
+        /// </summary>
+        public static string Save_AllBackupsFailed {
+            get {
+                return ResourceManager.GetString("Save_AllBackupsFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to deserialize save file..
+        /// </summary>
+        public static string Save_DeserializeFailed {
+            get {
+                return ResourceManager.GetString("Save_DeserializeFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to open the file location: {0}.
+        /// </summary>
+        public static string File_OpenLocationError {
+            get {
+                return ResourceManager.GetString("File_OpenLocationError", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred: {0}.
+        /// </summary>
+        public static string App_UnhandledError {
+            get {
+                return ResourceManager.GetString("App_UnhandledError", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Completing update....
+        /// </summary>
+        public static string Update_CompletingUpdate {
+            get {
+                return ResourceManager.GetString("Update_CompletingUpdate", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Checking for updates....
+        /// </summary>
+        public static string Update_CheckingForUpdates {
+            get {
+                return ResourceManager.GetString("Update_CheckingForUpdates", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Could not check for updates..
+        /// </summary>
+        public static string Update_CouldNotCheck {
+            get {
+                return ResourceManager.GetString("Update_CouldNotCheck", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to You're up to date!.
+        /// </summary>
+        public static string Update_UpToDate {
+            get {
+                return ResourceManager.GetString("Update_UpToDate", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading v{0}....
+        /// </summary>
+        public static string Update_Downloading {
+            get {
+                return ResourceManager.GetString("Update_Downloading", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Update check timed out..
+        /// </summary>
+        public static string Update_CheckTimedOut {
+            get {
+                return ResourceManager.GetString("Update_CheckTimedOut", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Update check failed..
+        /// </summary>
+        public static string Update_CheckFailed {
+            get {
+                return ResourceManager.GetString("Update_CheckFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Download complete. Installing....
+        /// </summary>
+        public static string Update_DownloadCompleteInstalling {
+            get {
+                return ResourceManager.GetString("Update_DownloadCompleteInstalling", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Download cancelled..
+        /// </summary>
+        public static string Update_DownloadCancelled {
+            get {
+                return ResourceManager.GetString("Update_DownloadCancelled", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Download failed. Please try again later..
+        /// </summary>
+        public static string Update_DownloadFailed {
+            get {
+                return ResourceManager.GetString("Update_DownloadFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Installation failed. Please update manually..
+        /// </summary>
+        public static string Update_InstallFailed {
+            get {
+                return ResourceManager.GetString("Update_InstallFailed", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to [{0}] Missing LOD model. .
+        /// </summary>
+        public static string Drawable_MissingLodModel {
+            get {
+                return ResourceManager.GetString("Drawable_MissingLodModel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to [{0}] Polygon count of {1} exceeds the limit of {2}. .
+        /// </summary>
+        public static string Drawable_PolygonLimitExceeded {
+            get {
+                return ResourceManager.GetString("Drawable_PolygonLimitExceeded", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Missing {0} texture. .
+        /// </summary>
+        public static string Drawable_MissingEmbeddedTexture {
+            get {
+                return ResourceManager.GetString("Drawable_MissingEmbeddedTexture", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Drawable has no textures. .
+        /// </summary>
+        public static string Drawable_NoTextures {
+            get {
+                return ResourceManager.GetString("Drawable_NoTextures", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Some textures have warnings. Check texture details. .
+        /// </summary>
+        public static string Drawable_TextureWarnings {
+            get {
+                return ResourceManager.GetString("Drawable_TextureWarnings", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Shoes might be under floor. Consider enabling High heels and validating manually in the 3D preview. .
+        /// </summary>
+        public static string Drawable_HighHeelsWarning {
+            get {
+                return ResourceManager.GetString("Drawable_HighHeelsWarning", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to {0} ({1} selected).
+        /// </summary>
+        public static string Drawable_FlagsSelected {
+            get {
+                return ResourceManager.GetString("Drawable_FlagsSelected", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to NONE.
+        /// </summary>
+        public static string Drawable_FlagsNone {
+            get {
+                return ResourceManager.GetString("Drawable_FlagsNone", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Texture resolution: {0}x{1}. This exceeds your set limit ({2}). Optimize it to reduce size. .
+        /// </summary>
+        public static string Texture_ResolutionExceedsLimit {
+            get {
+                return ResourceManager.GetString("Texture_ResolutionExceedsLimit", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Texture height or width is not power of 2. Optimize it to fix the issue. .
+        /// </summary>
+        public static string Texture_NotPowerOfTwo {
+            get {
+                return ResourceManager.GetString("Texture_NotPowerOfTwo", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Texture has {0} mip maps but should have {1}. Optimize it to generate the correct amount. .
+        /// </summary>
+        public static string Texture_MipMapMismatch {
+            get {
+                return ResourceManager.GetString("Texture_MipMapMismatch", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Encrypted drawable.
+        /// </summary>
+        public static string Texture_EncryptedDrawableTooltip {
+            get {
+                return ResourceManager.GetString("Texture_EncryptedDrawableTooltip", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Missing texture.
+        /// </summary>
+        public static string Texture_MissingTexture {
+            get {
+                return ResourceManager.GetString("Texture_MissingTexture", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate ({0} total).
+        /// </summary>
+        public static string Dup_DuplicateShort {
+            get {
+                return ResourceManager.GetString("Dup_DuplicateShort", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicated item:.
+        /// </summary>
+        public static string Dup_DuplicatedItemHeader {
+            get {
+                return ResourceManager.GetString("Dup_DuplicatedItemHeader", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to  (this).
+        /// </summary>
+        public static string Dup_ThisMarker {
+            get {
+                return ResourceManager.GetString("Dup_ThisMarker", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        public static string Dup_UnknownSex {
+            get {
+                return ResourceManager.GetString("Dup_UnknownSex", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        public static string Dup_UnknownLocation {
+            get {
+                return ResourceManager.GetString("Dup_UnknownLocation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Addon {0}: {1}.
+        /// </summary>
+        public static string Dup_AddonLocation {
+            get {
+                return ResourceManager.GetString("Dup_AddonLocation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Addon {0}: {1} → {2}.
+        /// </summary>
+        public static string Dup_AddonTextureLocation {
+            get {
+                return ResourceManager.GetString("Dup_AddonTextureLocation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No .ydd files found for selected .meta file ({0}).
+        /// </summary>
+        public static string Addon_NoYddForMeta {
+            get {
+                return ResourceManager.GetString("Addon_NoYddForMeta", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No .ymt file found for selected .meta file ({0}).
+        /// </summary>
+        public static string Addon_NoYmtForMeta {
+            get {
+                return ResourceManager.GetString("Addon_NoYmtForMeta", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to A duplicate drawable has been detected!  The drawable you're trying to add appears to be identical to: {0}  This new dra [rest of string was truncated].
+        /// </summary>
+        public static string Addon_DuplicateDetectedMessage {
+            get {
+                return ResourceManager.GetString("Addon_DuplicateDetectedMessage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Duplicate Drawable Detected.
+        /// </summary>
+        public static string Addon_DuplicateDetectedCaption {
+            get {
+                return ResourceManager.GetString("Addon_DuplicateDetectedCaption", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to   • {0} (Addon: {1}).
+        /// </summary>
+        public static string Addon_DuplicateListItem {
+            get {
+                return ResourceManager.GetString("Addon_DuplicateListItem", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        public static string Addon_UnknownAddon {
+            get {
+                return ResourceManager.GetString("Addon_UnknownAddon", resourceCulture);
+            }
+        }
     }
 }

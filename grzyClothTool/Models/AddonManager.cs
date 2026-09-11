@@ -3,6 +3,7 @@ using grzyClothTool.Constants;
 using grzyClothTool.Controls;
 using grzyClothTool.Extensions;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models.Drawable;
 using grzyClothTool.Models.Other;
 using System;
@@ -247,13 +248,13 @@ namespace grzyClothTool.Models
 
             if (yddFiles.Length == 0)
             {
-                CustomMessageBox.Show($"No .ydd files found for selected .meta file ({Path.GetFileName(path)})", "Error");
+                CustomMessageBox.Show(Loc.T("Addon_NoYddForMeta", Path.GetFileName(path)), Loc.T("Common_Error"));
                 return;
             }
 
             if (ymtFile == null)
             {
-                CustomMessageBox.Show($"No .ymt file found for selected .meta file ({Path.GetFileName(path)})", "Error");
+                CustomMessageBox.Show(Loc.T("Addon_NoYmtForMeta", Path.GetFileName(path)), Loc.T("Common_Error"));
                 return;
             }
 
@@ -805,11 +806,11 @@ namespace grzyClothTool.Models
                 var existingDuplicates = DuplicateDetector.CheckDrawableDuplicate(drawable);
                 if (existingDuplicates != null && existingDuplicates.Count > 0)
                 {
-                    var duplicateNames = string.Join("\n", existingDuplicates.Select(d => $"  • {d.Name} (Addon: {Addons.FirstOrDefault(a => a.Drawables.Contains(d))?.Name ?? "Unknown"})"));
-                    var message = $"A duplicate drawable has been detected!\n\nThe drawable you're trying to add appears to be identical to:\n{duplicateNames}\n\nThis new drawable will be added but marked as a duplicate.\n\nDo you want to continue?";
+                    var duplicateNames = string.Join("\n", existingDuplicates.Select(d => Loc.T("Addon_DuplicateListItem", d.Name, Addons.FirstOrDefault(a => a.Drawables.Contains(d))?.Name ?? Loc.T("Addon_UnknownAddon"))));
+                    var message = Loc.T("Addon_DuplicateDetectedMessage", duplicateNames);
                     
                     var result = System.Windows.Application.Current.Dispatcher.Invoke(() =>
-                        Controls.CustomMessageBox.Show(message, "Duplicate Drawable Detected", 
+                        Controls.CustomMessageBox.Show(message, Loc.T("Addon_DuplicateDetectedCaption"), 
                             Controls.CustomMessageBox.CustomMessageBoxButtons.OKCancel, 
                             Controls.CustomMessageBox.CustomMessageBoxIcon.Warning));
                     

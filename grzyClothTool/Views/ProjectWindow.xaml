@@ -7,6 +7,7 @@ xmlns:local="clr-namespace:grzyClothTool.Views"
 xmlns:c="clr-namespace:grzyClothTool.Controls"
 xmlns:m="clr-namespace:grzyClothTool.Models"
 xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+xmlns:loc="clr-namespace:grzyClothTool.Localization"
 d:DataContext="{d:DesignInstance Type=m:AddonManagerDesign, IsDesignTimeCreatable=True}"
 Background="{DynamicResource Brush50}"
 d:Width="1200"
@@ -164,7 +165,7 @@ mc:Ignorable="d">
                                                                Height="16"
                                                                Foreground="{DynamicResource Brush700}"
                                                                Margin="0,0,6,0" />
-                                            <TextBlock Text="Drawables"
+                                            <TextBlock Text="{loc:Loc Project_DrawablesHeader}"
                                                       FontSize="12"
                                                       FontWeight="SemiBold"
                                                       Foreground="{DynamicResource Brush900}"
@@ -200,7 +201,7 @@ mc:Ignorable="d">
                                                         Padding="0,2"
                                                         VerticalAlignment="Center" />
                                                 <TextBlock Grid.Column="1"
-                                                          Text="Search..."
+                                                          Text="{loc:Loc Project_SearchPlaceholder}"
                                                           Foreground="{DynamicResource Brush400}"
                                                           FontSize="11"
                                                           VerticalAlignment="Center"
@@ -269,7 +270,7 @@ mc:Ignorable="d">
                     </Grid.ColumnDefinitions>
 
                     <c:CustomButton Grid.Column="0" 
-                                   Label="ADD DRAWABLES" AutomationProperties.AutomationId="ADD DRAWABLES" 
+                                   Label="{loc:Loc Project_AddDrawables}" AutomationProperties.AutomationId="ADD DRAWABLES"
                                    MyBtnClickEvent="Add_DrawableAutoFile" 
                                    Padding="2,8" 
                                    CornerRadius="5" 
@@ -277,18 +278,18 @@ mc:Ignorable="d">
                                    DropdownEnabled="True">
                         <c:CustomButton.DropdownContent>
                             <StackPanel>
-                                <c:CustomButton Label="Select Folder (auto)" Height="32" FontSize="13" CornerRadius="5" Margin="0,0,0,2" MyBtnClickEvent="Add_DrawableAutoFolder" />
-                                <c:CustomButton Label="Select Files as Female" Height="32" FontSize="13" CornerRadius="5" Margin="0,2,0,0" MyBtnClickEvent="Add_DrawableFemaleFile" />
-                                <c:CustomButton Label="Select Folder as Female" Height="32" FontSize="13" CornerRadius="5" Margin="0,0,0,2" MyBtnClickEvent="Add_DrawableFemaleFolder" />
-                                <c:CustomButton Label="Select Files as Male" Height="32" FontSize="13" CornerRadius="5" Margin="0,2,0,0" MyBtnClickEvent="Add_DrawableMaleFile" />
-                                <c:CustomButton Label="Select Folder as Male" Height="32" FontSize="13" CornerRadius="5" Margin="0,0,0,0" MyBtnClickEvent="Add_DrawableMaleFolder" />
+                                <c:CustomButton Label="{loc:Loc Project_SelectFolderAuto}" Height="32" FontSize="13" CornerRadius="5" Margin="0,0,0,2" MyBtnClickEvent="Add_DrawableAutoFolder" />
+                                <c:CustomButton Label="{loc:Loc Project_SelectFilesAsFemale}" Height="32" FontSize="13" CornerRadius="5" Margin="0,2,0,0" MyBtnClickEvent="Add_DrawableFemaleFile" />
+                                <c:CustomButton Label="{loc:Loc Project_SelectFolderAsFemale}" Height="32" FontSize="13" CornerRadius="5" Margin="0,0,0,2" MyBtnClickEvent="Add_DrawableFemaleFolder" />
+                                <c:CustomButton Label="{loc:Loc Project_SelectFilesAsMale}" Height="32" FontSize="13" CornerRadius="5" Margin="0,2,0,0" MyBtnClickEvent="Add_DrawableMaleFile" />
+                                <c:CustomButton Label="{loc:Loc Project_SelectFolderAsMale}" Height="32" FontSize="13" CornerRadius="5" Margin="0,0,0,0" MyBtnClickEvent="Add_DrawableMaleFolder" />
                             </StackPanel>
                         </c:CustomButton.DropdownContent>
                     </c:CustomButton>
 
                     <c:CustomButton Grid.Column="1" 
                                    Image="TrashCanOutline" 
-                                   Tooltip="Delete selected drawable" 
+                                   Tooltip="{loc:Loc Project_DeleteSelectedDrawableTooltip}"
                                    ToolTipService.InitialShowDelay="0" 
                                    MyBtnClickEvent="Delete_SelectedDrawable" 
                                    Padding="2,8" 
@@ -313,13 +314,13 @@ mc:Ignorable="d">
                Padding="2,2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <c:CustomButton x:Name="PreviewButton"
-                               Label="3D PREVIEW" 
+                               Label="{loc:Loc Project_Preview3D}"
                                Width="150" 
                                MyBtnClickEvent="Preview_Btn" 
                                Padding="2,8" 
                                Margin="0,0,8,0"
                                CornerRadius="5" />
-                <c:CustomButton Label="BUILD" 
+                <c:CustomButton Label="{loc:Loc Project_Build}"
                                Width="150" 
                                MyBtnClickEvent="BuildResource_Btn" 
                                Padding="2,8"  

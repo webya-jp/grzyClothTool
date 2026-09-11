@@ -1,5 +1,6 @@
 using CodeWalker;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models.Drawable;
 using grzyClothTool.Models.Texture;
 using System;
@@ -68,7 +69,7 @@ namespace grzyClothTool.Controls
             LogHelper.Log($"3D Preview unavailable: {CWHelper.GetGTAFolderInvalidReason()}. Set your GTA V folder in Settings to enable the preview.", Views.LogType.Warning);
             if (PlaceholderText != null)
             {
-                PlaceholderText.Text = "3D Preview unavailable - set a valid GTA V path in Settings";
+                PlaceholderText.Text = Loc.T("Preview_UnavailableSetGtaPath");
                 PlaceholderText.Visibility = Visibility.Visible;
             }
 
@@ -124,8 +125,8 @@ namespace grzyClothTool.Controls
                 
                 bool isGtaError = ex.Message.Contains("GTA") || ex.Message.Contains("DLC") || ex.Message.Contains("corrupted");
                 PlaceholderText.Text = isGtaError 
-                    ? "3D Preview unavailable (GTA V installation issue - see log)" 
-                    : "3D Preview unavailable (GPU/Graphics error - see log)";
+                    ? Loc.T("Preview_UnavailableGtaInstallIssue") 
+                    : Loc.T("Preview_UnavailableGpuError");
                 
                 SettingsHelper.Preview3DAvailable = false;
                 Preview3DAvailabilityChanged?.Invoke(this, EventArgs.Empty);
@@ -480,7 +481,7 @@ namespace grzyClothTool.Controls
                 {
                     System.Windows.Application.Current.Dispatcher.Invoke(() =>
                     {
-                        PlaceholderText.Text = "3D Preview disabled due to errors (see log)";
+                        PlaceholderText.Text = Loc.T("Preview_DisabledDueToErrors");
                         PlaceholderText.Visibility = Visibility.Visible;
                     });
                 }

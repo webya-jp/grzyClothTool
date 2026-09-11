@@ -1,4 +1,5 @@
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -44,10 +45,12 @@ namespace grzyClothTool.Views
             (!RequiresGender || HasGender) &&
             (!RequiresDrawableType || HasDrawableType);
 
-        public string GenderText => HasGender ? GetGenderDisplayName(Gender.Value) : "Gender not set";
+        public string GenderText => HasGender
+            ? Loc.T(Gender.Value == Enums.SexType.male ? "Common_Male" : "Common_Female")
+            : Loc.T("ImportResolve_GenderNotSet");
         public string DrawableText => HasDrawableType
-            ? $"{(IsProp == true ? "Prop" : "Component")} / {DrawableTypeName}"
-            : "Properties not set";
+            ? $"{Loc.T(IsProp == true ? "ImportResolve_Prop" : "ImportResolve_Component")} / {DrawableTypeName}"
+            : Loc.T("ImportResolve_PropertiesNotSet");
 
         public DrawableImportResolveItem(
             string filePath,
@@ -136,8 +139,8 @@ namespace grzyClothTool.Views
             {
                 var unresolvedCount = Items.Count(x => !x.IsResolved);
                 return unresolvedCount == 1
-                    ? "Resolve 1 drawable before import"
-                    : $"Resolve {unresolvedCount} drawables before import";
+                    ? Loc.T("ImportResolve_HeaderOne")
+                    : Loc.T("ImportResolve_HeaderMany", unresolvedCount);
             }
         }
         public string HelpText
@@ -147,18 +150,18 @@ namespace grzyClothTool.Views
                 var parts = new List<string>();
                 if (_showGender)
                 {
-                    parts.Add("gender");
+                    parts.Add(Loc.T("ImportResolve_HelpPartGender"));
                 }
 
                 if (_showDrawableProperties)
                 {
-                    parts.Add("drawable properties");
+                    parts.Add(Loc.T("ImportResolve_HelpPartDrawableProperties"));
                 }
 
-                return $"Click rows to check them, then apply {string.Join(" and ", parts)} to checked files. Resolved files are hidden unless Show resolved is enabled.";
+                return Loc.T("ImportResolve_HelpText", string.Join(Loc.T("ImportResolve_HelpTextJoiner"), parts));
             }
         }
-        public string SelectionSummary => $"{Items.Count(x => x.IsSelected)} checked, {Items.Count(x => x.IsResolved)} of {Items.Count} resolved";
+        public string SelectionSummary => Loc.T("ImportResolve_SelectionSummary", Items.Count(x => x.IsSelected), Items.Count(x => x.IsResolved), Items.Count);
 
         private bool _showResolvedItems;
         public bool ShowResolvedItems

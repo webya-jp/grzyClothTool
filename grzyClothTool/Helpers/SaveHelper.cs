@@ -1,4 +1,5 @@
-﻿using grzyClothTool.Models;
+﻿using grzyClothTool.Localization;
+using grzyClothTool.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -194,7 +195,7 @@ public class SaveBackupFile
 
         MainWindow.Instance.Dispatcher.Invoke(() =>
         {
-            string unsavedText = " (Unsaved changes)";
+            string unsavedText = Loc.T("Save_UnsavedChangesTitleSuffix");
             bool titleContainsUnsaved = MainWindow.Instance.Title.Contains(unsavedText);
 
             if (status && !titleContainsUnsaved)
@@ -216,7 +217,7 @@ public class SaveBackupFile
 
         MainWindow.Instance.Dispatcher.Invoke(() =>
         {
-            var clickResult = Show("You have unsaved changes. Do you want to continue with this action?", "Unsaved changes", CustomMessageBoxButtons.OKCancel, CustomMessageBoxIcon.Warning);
+            var clickResult = Show(Loc.T("Save_UnsavedChangesMessage"), Loc.T("Save_UnsavedChangesCaption"), CustomMessageBoxButtons.OKCancel, CustomMessageBoxIcon.Warning);
 
             result = clickResult == CustomMessageBoxResult.OK;
         });
@@ -245,14 +246,14 @@ public class SaveBackupFile
             MainWindow.Instance.Dispatcher.Invoke(() =>
             {
                 var newestBackup = backupFiles[0];
-                var message =
-                    $"This save file could not be loaded and is probably broken.\n\n" +
-                    $"Save file:\n{filePath}\n\n" +
-                    $"Error:\n{ex.Message}\n\n" +
-                    $"Found {backupFiles.Count} backup save(s). The newest backup was created on {newestBackup.CreatedAt:g}.\n\n" +
-                    "Do you want to load the newest working backup instead?";
+                var message = Loc.T(
+                    "Save_BrokenSaveMessage",
+                    filePath,
+                    ex.Message,
+                    backupFiles.Count,
+                    newestBackup.CreatedAt.ToString("g"));
 
-                var result = Show(message, "Broken Save File", CustomMessageBoxButtons.YesNo, CustomMessageBoxIcon.Warning);
+                var result = Show(message, Loc.T("Save_BrokenSaveCaption"), CustomMessageBoxButtons.YesNo, CustomMessageBoxIcon.Warning);
                 useBackup = result == CustomMessageBoxResult.Yes;
             });
 
@@ -271,7 +272,7 @@ public class SaveBackupFile
 
                     MainWindow.Instance.Dispatcher.Invoke(() =>
                     {
-                        Show($"Loaded backup save:\n{backupFile.FilePath}", "Backup Loaded", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Information);
+                        Show(Loc.T("Save_BackupLoadedMessage", backupFile.FilePath), Loc.T("Save_BackupLoadedCaption"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Information);
                     });
 
                     return;
@@ -283,7 +284,7 @@ public class SaveBackupFile
                 }
             }
 
-            throw new InvalidOperationException("The original save file and all available backups failed to load.", lastBackupException ?? ex);
+            throw new InvalidOperationException(Loc.T("Save_AllBackupsFailed"), lastBackupException ?? ex);
         }
     }
 
@@ -298,7 +299,7 @@ public class SaveBackupFile
             {
                 addonManager = await Task.Run(async () =>
                     await JsonSerializer.DeserializeAsync<AddonManager>(stream, SerializerOptions))
-                    ?? throw new InvalidOperationException("Failed to deserialize save file.");
+                    ?? throw new InvalidOperationException(Loc.T("Save_DeserializeFailed"));
             }
 
             var fileName = Path.GetFileName(filePath);

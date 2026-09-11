@@ -184,4 +184,1478 @@
   <data name="Settings_LanguageDescription" xml:space="preserve">
     <value>Auto follows the language of Windows. Changes apply immediately; a few texts only update after a restart.</value>
   </data>
+  <data name="Slot_head" xml:space="preserve">
+    <value>head</value>
+  </data>
+  <data name="Slot_berd" xml:space="preserve">
+    <value>berd</value>
+  </data>
+  <data name="Slot_hair" xml:space="preserve">
+    <value>hair</value>
+  </data>
+  <data name="Slot_uppr" xml:space="preserve">
+    <value>uppr</value>
+  </data>
+  <data name="Slot_lowr" xml:space="preserve">
+    <value>lowr</value>
+  </data>
+  <data name="Slot_hand" xml:space="preserve">
+    <value>hand</value>
+  </data>
+  <data name="Slot_feet" xml:space="preserve">
+    <value>feet</value>
+  </data>
+  <data name="Slot_teef" xml:space="preserve">
+    <value>teef</value>
+  </data>
+  <data name="Slot_accs" xml:space="preserve">
+    <value>accs</value>
+  </data>
+  <data name="Slot_task" xml:space="preserve">
+    <value>task</value>
+  </data>
+  <data name="Slot_decl" xml:space="preserve">
+    <value>decl</value>
+  </data>
+  <data name="Slot_jbib" xml:space="preserve">
+    <value>jbib</value>
+  </data>
+  <data name="Slot_p_head" xml:space="preserve">
+    <value>p_head</value>
+  </data>
+  <data name="Slot_p_eyes" xml:space="preserve">
+    <value>p_eyes</value>
+  </data>
+  <data name="Slot_p_ears" xml:space="preserve">
+    <value>p_ears</value>
+  </data>
+  <data name="Slot_p_mouth" xml:space="preserve">
+    <value>p_mouth</value>
+  </data>
+  <data name="Slot_p_lhand" xml:space="preserve">
+    <value>p_lhand</value>
+  </data>
+  <data name="Slot_p_rhand" xml:space="preserve">
+    <value>p_rhand</value>
+  </data>
+  <data name="Slot_p_lwrist" xml:space="preserve">
+    <value>p_lwrist</value>
+  </data>
+  <data name="Slot_p_rwrist" xml:space="preserve">
+    <value>p_rwrist</value>
+  </data>
+  <data name="Slot_p_hip" xml:space="preserve">
+    <value>p_hip</value>
+  </data>
+  <data name="Slot_p_lfoot" xml:space="preserve">
+    <value>p_lfoot</value>
+  </data>
+  <data name="Slot_p_rfoot" xml:space="preserve">
+    <value>p_rfoot</value>
+  </data>
+  <data name="Slot_p_ph_l_hand" xml:space="preserve">
+    <value>p_ph_l_hand</value>
+  </data>
+  <data name="Slot_p_ph_r_hand" xml:space="preserve">
+    <value>p_ph_r_hand</value>
+  </data>
+  <data name="SelDraw_NoDrawableSelected" xml:space="preserve">
+    <value>No drawable selected</value>
+  </data>
+  <data name="SelDraw_NoDrawableHint" xml:space="preserve">
+    <value>Select a drawable from the list to view and edit its properties</value>
+  </data>
+  <data name="SelDraw_ReservedTitle" xml:space="preserve">
+    <value>Reserved Drawable</value>
+  </data>
+  <data name="SelDraw_ReservedDescription" xml:space="preserve">
+    <value>This is a reserved drawable slot and cannot be edited.</value>
+  </data>
+  <data name="SelDraw_ReplaceReservedButton" xml:space="preserve">
+    <value>REPLACE RESERVED DRAWABLE</value>
+  </data>
+  <data name="SelDraw_OptionsDisabled" xml:space="preserve">
+    <value>Options Disabled</value>
+  </data>
+  <data name="SelDraw_SelectedDrawablesCount" xml:space="preserve">
+    <value>Selected {0} drawable(s)</value>
+  </data>
+  <data name="SelDraw_WarningLabel" xml:space="preserve">
+    <value>WARNING</value>
+  </data>
+  <data name="SelDraw_MultipleNotSameWarning" xml:space="preserve">
+    <value>The selected drawables are not exactly the same. To edit drawable options, select the same or click button below to force override.</value>
+  </data>
+  <data name="SelDraw_ForceOverride" xml:space="preserve">
+    <value>Force Override</value>
+  </data>
+  <data name="SelDraw_OverrideDisabled" xml:space="preserve">
+    <value>Override Disabled</value>
+  </data>
+  <data name="SelDraw_OverrideEnabled" xml:space="preserve">
+    <value>OVERRIDE ENABLED</value>
+  </data>
+  <data name="SelDraw_OverrideDifferentTypeInfo" xml:space="preserve">
+    <value>Override cannot be enabled for drawables of different type. Select only one type of drawables</value>
+  </data>
+  <data name="SelDraw_DrawableOptions" xml:space="preserve">
+    <value>Drawable Options</value>
+  </data>
+  <data name="SelDraw_LabelAudio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="SelDraw_LabelRenderFlag" xml:space="preserve">
+    <value>RenderFlag</value>
+  </data>
+  <data name="SelDraw_LabelHasSkin" xml:space="preserve">
+    <value>Has Skin</value>
+  </data>
+  <data name="SelDraw_LabelFlags" xml:space="preserve">
+    <value>Flags</value>
+  </data>
+  <data name="SelDraw_LabelHidesHair" xml:space="preserve">
+    <value>Hides Hair</value>
+  </data>
+  <data name="SelDraw_LabelEnableHairScale" xml:space="preserve">
+    <value>Enable Hair scale</value>
+  </data>
+  <data name="SelDraw_LabelHairScale" xml:space="preserve">
+    <value>Hair scale</value>
+  </data>
+  <data name="SelDraw_LabelEnableHighHeels" xml:space="preserve">
+    <value>Enable High heels</value>
+  </data>
+  <data name="SelDraw_LabelHighHeelsAmount" xml:space="preserve">
+    <value>High heels amount</value>
+  </data>
+  <data name="SelDraw_PreviewOptions" xml:space="preserve">
+    <value>Preview Options</value>
+  </data>
+  <data name="SelDraw_RunPreviewToEnable" xml:space="preserve">
+    <value>Run 3D Preview to enable options</value>
+  </data>
+  <data name="SelDraw_LabelKeepPreview" xml:space="preserve">
+    <value>Keep preview</value>
+  </data>
+  <data name="SelDraw_Organization" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="SelDraw_Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="SelDraw_MultipleGroups" xml:space="preserve">
+    <value>(Multiple groups)</value>
+  </data>
+  <data name="SelDraw_Tags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="SelDraw_LabelDisplayName" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="SelDraw_LabelDrawableType" xml:space="preserve">
+    <value>Drawable Type</value>
+  </data>
+  <data name="SelDraw_LabelSex" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="SelDraw_LabelFirstPersonFile" xml:space="preserve">
+    <value>First person file</value>
+  </data>
+  <data name="SelDraw_LabelClothPhysicsFile" xml:space="preserve">
+    <value>Cloth physics file (.yld)</value>
+  </data>
+  <data name="SelDraw_TabTextures" xml:space="preserve">
+    <value>Textures</value>
+  </data>
+  <data name="SelDraw_TexturesWarningTooltip" xml:space="preserve">
+    <value>At least one texture has warning</value>
+  </data>
+  <data name="SelDraw_TabEmbedded" xml:space="preserve">
+    <value>Embedded</value>
+  </data>
+  <data name="SelDraw_EmbeddedWarningTooltip" xml:space="preserve">
+    <value>At least one embedded texture has warning</value>
+  </data>
+  <data name="SelDraw_WillBeOptimizedTooltip" xml:space="preserve">
+    <value>This texture will be optimized on resource build</value>
+  </data>
+  <data name="SelDraw_TextureNotFoundTooltip" xml:space="preserve">
+    <value>Texture not found. Most likely this .ytd is empty</value>
+  </data>
+  <data name="SelDraw_Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="SelDraw_OptimizeTexture" xml:space="preserve">
+    <value>Optimize texture</value>
+  </data>
+  <data name="SelDraw_UndoOptimize" xml:space="preserve">
+    <value>Undo optimize</value>
+  </data>
+  <data name="SelDraw_Replace" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="SelDraw_OpenFileLocation" xml:space="preserve">
+    <value>Open file location</value>
+  </data>
+  <data name="SelDraw_ExportAsYtd" xml:space="preserve">
+    <value>Export as YTD</value>
+  </data>
+  <data name="SelDraw_ExportTextureAsDds" xml:space="preserve">
+    <value>Export texture as DDS</value>
+  </data>
+  <data name="SelDraw_ExportTextureAsPng" xml:space="preserve">
+    <value>Export texture as PNG</value>
+  </data>
+  <data name="SelDraw_ReplacementTextureTooltip" xml:space="preserve">
+    <value>This is a replacement texture</value>
+  </data>
+  <data name="SelDraw_ExportAsDds" xml:space="preserve">
+    <value>Export as DDS</value>
+  </data>
+  <data name="SelDraw_ExportAsPng" xml:space="preserve">
+    <value>Export as PNG</value>
+  </data>
+  <data name="SelDraw_AddTextures" xml:space="preserve">
+    <value>ADD TEXTURES</value>
+  </data>
+  <data name="SelDraw_DeleteSelectedTooltip" xml:space="preserve">
+    <value>Delete Selected</value>
+  </data>
+  <data name="SelDraw_TxtStatusReplacement" xml:space="preserve">
+    <value>REPLACEMENT</value>
+  </data>
+  <data name="SelDraw_TxtStatusEmbedded" xml:space="preserve">
+    <value>Embedded</value>
+  </data>
+  <data name="SelDraw_MaxTexturesReached" xml:space="preserve">
+    <value>You can't have more than {0} textures per drawable!</value>
+  </data>
+  <data name="SelDraw_SelectTexturesTitle" xml:space="preserve">
+    <value>Select textures</value>
+  </data>
+  <data name="SelDraw_TextureFileFilter" xml:space="preserve">
+    <value>Texture files (*.ytd)|*.ytd|Image files (*.jpg;*.png;*.dds)|*.jpg;*.png;*.dds</value>
+  </data>
+  <data name="SelDraw_ImageFileFilter" xml:space="preserve">
+    <value>Image files (*.jpg;*.png;*.dds)|*.jpg;*.png;*.dds</value>
+  </data>
+  <data name="SelDraw_DrawableFileFilter" xml:space="preserve">
+    <value>Drawable file (*.ydd)|*.ydd</value>
+  </data>
+  <data name="SelDraw_TextureLimitReached" xml:space="preserve">
+    <value>Reached the limit of {0} textures. Last added texture: {1}.</value>
+  </data>
+  <data name="SelDraw_InfoCaption" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="SelDraw_MixedOptimizeState" xml:space="preserve">
+    <value>Some textures are already optimized while others are not. Please select textures with the same state.</value>
+  </data>
+  <data name="SelDraw_FilesNotAccessibleMessage" xml:space="preserve">
+    <value>The following texture file(s) could not be accessed:
+
+{0}
+
+They may be virtual paths. Please extract them to a folder first and drag from there.</value>
+  </data>
+  <data name="SelDraw_FilesNotAccessibleCaption" xml:space="preserve">
+    <value>Files Not Accessible</value>
+  </data>
+  <data name="SelDraw_DropErrorMessage" xml:space="preserve">
+    <value>An error occurred while processing dropped texture files:
+
+{0}</value>
+  </data>
+  <data name="SelDraw_DropErrorCaption" xml:space="preserve">
+    <value>Drag &amp; Drop Error</value>
+  </data>
+  <data name="SelDraw_TextureSizeMismatch" xml:space="preserve">
+    <value>Texture {0} does not have the same size as the others!</value>
+  </data>
+  <data name="SelDraw_SelectReservedReplacementTitle" xml:space="preserve">
+    <value>Select drawable file to replace reserved</value>
+  </data>
+  <data name="SelDraw_ExportTexturesFolderTitle" xml:space="preserve">
+    <value>Select the folder to export textures as {0}</value>
+  </data>
+  <data name="SelDraw_ExportErrorMessage" xml:space="preserve">
+    <value>An error occurred during export: {0}</value>
+  </data>
+  <data name="SelDraw_ExportErrorCaption" xml:space="preserve">
+    <value>Export Error</value>
+  </data>
+  <data name="SelDraw_SelectReplaceTextureTitle" xml:space="preserve">
+    <value>Select texture file to replace {0}</value>
+  </data>
+  <data name="SelDraw_ReplaceTextureFailed" xml:space="preserve">
+    <value>Failed to replace texture: {0}</value>
+  </data>
+  <data name="SelDraw_EmbeddedMissingNothingToExport" xml:space="preserve">
+    <value>This embedded texture is missing, so there is no image data to export.</value>
+  </data>
+  <data name="SelDraw_NothingToExportCaption" xml:space="preserve">
+    <value>Nothing to export</value>
+  </data>
+  <data name="SelDraw_ExportEmbeddedFolderTitle" xml:space="preserve">
+    <value>Select the folder to export embedded texture as {0}</value>
+  </data>
+  <data name="SelDraw_RenameEmbeddedTextureTitle" xml:space="preserve">
+    <value>Rename Embedded Texture</value>
+  </data>
+  <data name="SelDraw_EnterNewName" xml:space="preserve">
+    <value>Enter new name:</value>
+  </data>
+  <data name="SelDraw_SelectReplaceEmbeddedTitle" xml:space="preserve">
+    <value>Select texture file to replace embedded {0}</value>
+  </data>
+  <data name="SelDraw_ReplaceEmbeddedFailed" xml:space="preserve">
+    <value>Failed to replace embedded texture: {0}</value>
+  </data>
+  <data name="SelDraw_LoadImageFailed" xml:space="preserve">
+    <value>Failed to load image from the specified file.</value>
+  </data>
+  <data name="DrawList_ShowInDuplicateInspector" xml:space="preserve">
+    <value>Show in duplicate inspector</value>
+  </data>
+  <data name="DrawList_Replace" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="DrawList_DuplicateToOppositeGender" xml:space="preserve">
+    <value>Duplicate to opposite gender</value>
+  </data>
+  <data name="DrawList_MoveToAnotherAddon" xml:space="preserve">
+    <value>Move to another addon</value>
+  </data>
+  <data name="DrawList_Move" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="DrawList_OpenFileLocation" xml:space="preserve">
+    <value>Open file location</value>
+  </data>
+  <data name="DrawList_ExportAsYdd" xml:space="preserve">
+    <value>Export as YDD</value>
+  </data>
+  <data name="DrawList_ExportAsYddWithTextures" xml:space="preserve">
+    <value>Export as YDD with textures</value>
+  </data>
+  <data name="DrawList_ExportTexturesAsDds" xml:space="preserve">
+    <value>Export only textures as DDS</value>
+  </data>
+  <data name="DrawList_ExportTexturesAsPng" xml:space="preserve">
+    <value>Export only textures as PNG</value>
+  </data>
+  <data name="DrawList_IgnoreWarnings" xml:space="preserve">
+    <value>Ignore warnings</value>
+  </data>
+  <data name="DrawList_IgnoreWarningsMessage" xml:space="preserve">
+    <value>Ignoring warnings only hides warning indicators for this drawable. The asset may still need fixing, and warnings will show again if you disable this option.
+
+Do you want to ignore warnings for this drawable?</value>
+  </data>
+  <data name="DrawList_ReservedTooltip" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="DrawList_NewTooltip" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="DrawList_SelectedTooltip" xml:space="preserve">
+    <value>Selected</value>
+  </data>
+  <data name="DrawList_EncryptedCannotPreview" xml:space="preserve">
+    <value>Encrypted - Cannot preview</value>
+  </data>
+  <data name="DrawList_AddonFullMessage" xml:space="preserve">
+    <value>The selected addon cannot fit the selected drawables.</value>
+  </data>
+  <data name="DrawList_AddonFullTitle" xml:space="preserve">
+    <value>Addon full</value>
+  </data>
+  <data name="DrawList_DuplicateFailed" xml:space="preserve">
+    <value>Failed to duplicate drawable: {0}</value>
+  </data>
+  <data name="DrawList_ReplaceDialogTitle" xml:space="preserve">
+    <value>Select drawable file to replace '{0}'</value>
+  </data>
+  <data name="DrawList_DrawableFilesFilter" xml:space="preserve">
+    <value>Drawable files (*.ydd)|*.ydd</value>
+  </data>
+  <data name="DrawList_ReplaceFailed" xml:space="preserve">
+    <value>Failed to replace drawable: {0}</value>
+  </data>
+  <data name="DrawList_ExportTexturesFolderTitle" xml:space="preserve">
+    <value>Select the folder to export textures as {0}</value>
+  </data>
+  <data name="DrawList_ExportDrawableWithTexturesFolderTitle" xml:space="preserve">
+    <value>Select the folder to export drawable with textures</value>
+  </data>
+  <data name="DrawList_ExportDrawableFolderTitle" xml:space="preserve">
+    <value>Select the folder to export drawable</value>
+  </data>
+  <data name="DrawList_ExportError" xml:space="preserve">
+    <value>An error occurred during export: {0}</value>
+  </data>
+  <data name="DrawList_ExportErrorTitle" xml:space="preserve">
+    <value>Export Error</value>
+  </data>
+  <data name="Main_VersionLabel" xml:space="preserve">
+    <value>Version: </value>
+  </data>
+  <data name="Main_MenuProject" xml:space="preserve">
+    <value>_Project</value>
+  </data>
+  <data name="Main_MenuBackToHome" xml:space="preserve">
+    <value>_Back to home screen</value>
+  </data>
+  <data name="Main_MenuSave" xml:space="preserve">
+    <value>_Save</value>
+  </data>
+  <data name="Main_MenuOpenAddon" xml:space="preserve">
+    <value>_Open Addon</value>
+  </data>
+  <data name="Main_MenuOpenAddonTooltip" xml:space="preserve">
+    <value>Open addon files (replaces current project)</value>
+  </data>
+  <data name="Main_MenuAddAddon" xml:space="preserve">
+    <value>_Add Addon</value>
+  </data>
+  <data name="Main_MenuAddAddonTooltip" xml:space="preserve">
+    <value>Add addon files to current project</value>
+  </data>
+  <data name="Main_MenuImportProject" xml:space="preserve">
+    <value>_Import Project</value>
+  </data>
+  <data name="Main_MenuExportProject" xml:space="preserve">
+    <value>_Export Project</value>
+  </data>
+  <data name="Main_MenuSettings" xml:space="preserve">
+    <value>_Settings</value>
+  </data>
+  <data name="Main_MenuView" xml:space="preserve">
+    <value>_View</value>
+  </data>
+  <data name="Main_MenuLogs" xml:space="preserve">
+    <value>_Logs</value>
+  </data>
+  <data name="Main_MenuDuplicateInspector" xml:space="preserve">
+    <value>_Duplicate Inspector</value>
+  </data>
+  <data name="Main_LinkSourceCode" xml:space="preserve">
+    <value>Source code</value>
+  </data>
+  <data name="Main_LinkSupportMe" xml:space="preserve">
+    <value>Support me!</value>
+  </data>
+  <data name="Main_Preview3DTitle" xml:space="preserve">
+    <value>3D Preview</value>
+  </data>
+  <data name="Main_SplashCheckingUpdates" xml:space="preserve">
+    <value>Checking for updates...</value>
+  </data>
+  <data name="Main_SplashStartingApp" xml:space="preserve">
+    <value>Starting app</value>
+  </data>
+  <data name="Main_SelectMetaFilesTitle" xml:space="preserve">
+    <value>Select .meta file(s)</value>
+  </data>
+  <data name="Main_SelectMetaFilesToAddTitle" xml:space="preserve">
+    <value>Select .meta file(s) to add</value>
+  </data>
+  <data name="Main_MetaFilesFilter" xml:space="preserve">
+    <value>Meta files (*.meta)|*.meta</value>
+  </data>
+  <data name="Main_NoValidMetaFilesMsg" xml:space="preserve">
+    <value>No valid .meta files were selected.</value>
+  </data>
+  <data name="Main_NoDrawablesFoundMsg" xml:space="preserve">
+    <value>No drawable files (.ydd) were found for the selected .meta file(s).
+
+Please make sure the .ydd files are in the same directory or subdirectories as the .meta file.</value>
+  </data>
+  <data name="Main_NoDrawablesFoundTitle" xml:space="preserve">
+    <value>No Drawables Found</value>
+  </data>
+  <data name="Main_ImportProjectDialogTitle" xml:space="preserve">
+    <value>Import project</value>
+  </data>
+  <data name="Main_ExportProjectDialogTitle" xml:space="preserve">
+    <value>Export project</value>
+  </data>
+  <data name="Main_GctProjectFilter" xml:space="preserve">
+    <value>grzyClothTool project (*.gctproject)|*.gctproject</value>
+  </data>
+  <data name="Home_StartYourJourney" xml:space="preserve">
+    <value>Start your journey</value>
+  </data>
+  <data name="Home_CreateNewProject" xml:space="preserve">
+    <value>Create new project</value>
+  </data>
+  <data name="Home_ImportProject" xml:space="preserve">
+    <value>Import project</value>
+  </data>
+  <data name="Home_OpenAddon" xml:space="preserve">
+    <value>Open addon</value>
+  </data>
+  <data name="Home_OpenSave" xml:space="preserve">
+    <value>Open save</value>
+  </data>
+  <data name="Home_RecentlyOpened" xml:space="preserve">
+    <value>Recently opened</value>
+  </data>
+  <data name="Home_BadgeSelfContained" xml:space="preserve">
+    <value>SELF-CONTAINED</value>
+  </data>
+  <data name="Home_BadgeExternal" xml:space="preserve">
+    <value>EXTERNAL</value>
+  </data>
+  <data name="Home_RecentAddonsSuffix" xml:space="preserve">
+    <value> addons</value>
+  </data>
+  <data name="Home_RecentDrawablesSuffix" xml:space="preserve">
+    <value> drawables</value>
+  </data>
+  <data name="Home_LastModifiedFormat" xml:space="preserve">
+    <value>Last modified: {0:yyyy-MM-dd HH:mm}</value>
+  </data>
+  <data name="Home_NoRecentProjects" xml:space="preserve">
+    <value>No recent projects</value>
+  </data>
+  <data name="Home_ExploreOtherTools" xml:space="preserve">
+    <value>Explore my other tools</value>
+  </data>
+  <data name="Home_ClickToLearnMore" xml:space="preserve">
+    <value>Click to learn more</value>
+  </data>
+  <data name="Home_DidYouKnowHeader" xml:space="preserve">
+    <value>Did you know?</value>
+  </data>
+  <data name="Home_LatestChanges" xml:space="preserve">
+    <value>Latest changes</value>
+  </data>
+  <data name="Home_VersionLabel" xml:space="preserve">
+    <value>Version: </value>
+  </data>
+  <data name="Home_ViewFullChangelog" xml:space="preserve">
+    <value>View Full Changelog on GitHub</value>
+  </data>
+  <data name="Home_Supporters" xml:space="preserve">
+    <value>Supporters</value>
+  </data>
+  <data name="Home_DidYouKnow1" xml:space="preserve">
+    <value>You can open any existing addon and it will load all properties such as heels or hats.</value>
+  </data>
+  <data name="Home_DidYouKnow2" xml:space="preserve">
+    <value>You can export an existing project when you are not finished and later import it to continue working on it.</value>
+  </data>
+  <data name="Home_DidYouKnow3" xml:space="preserve">
+    <value>There is switch to enable dark theme in the settings.</value>
+  </data>
+  <data name="Home_DidYouKnow4" xml:space="preserve">
+    <value>There is 'live texture' feature in 3d preview? It allows you to see how your texture looks on the model in real time, even after changes.</value>
+  </data>
+  <data name="Home_DidYouKnow5" xml:space="preserve">
+    <value>You can click SHIFT + DEL to instantly delete a selected drawable, without popup.</value>
+  </data>
+  <data name="Home_DidYouKnow6" xml:space="preserve">
+    <value>You can click CTRL + DEL to instantly replace a selected drawable with reserved drawable.</value>
+  </data>
+  <data name="Home_DidYouKnow7" xml:space="preserve">
+    <value>You can reserve your drawables and later change it to real model.</value>
+  </data>
+  <data name="Home_DidYouKnow8" xml:space="preserve">
+    <value>Supporting me with monthly patreon will speed up the development of the tool!</value>
+  </data>
+  <data name="Home_DidYouKnow9" xml:space="preserve">
+    <value>You can hover over warning icon to see what is wrong with your drawable or texture.</value>
+  </data>
+  <data name="Home_ToolOptimizerDesc" xml:space="preserve">
+    <value>Optimize YDD models, reduce polygon and vertex count while maintaining visual quality.</value>
+  </data>
+  <data name="Home_ToolTattooDesc" xml:space="preserve">
+    <value>Create and edit tattoos with preview and quick addon resource generation for FiveM.</value>
+  </data>
+  <data name="Home_FailedFetchPatreons" xml:space="preserve">
+    <value>Failed to fetch patreons</value>
+  </data>
+  <data name="Home_UnableFetchVersion" xml:space="preserve">
+    <value>Unable to fetch version</value>
+  </data>
+  <data name="Home_FailedLoadChangelog" xml:space="preserve">
+    <value>Failed to load changelog highlights</value>
+  </data>
+  <data name="Home_NoChangelogAvailable" xml:space="preserve">
+    <value>No changelog available</value>
+  </data>
+  <data name="Home_SeeFullChangelog" xml:space="preserve">
+    <value>See full changelog for details</value>
+  </data>
+  <data name="Home_FailedOpenChangelog" xml:space="preserve">
+    <value>Failed to open changelog: {0}</value>
+  </data>
+  <data name="Home_FailedOpenWebsite" xml:space="preserve">
+    <value>Failed to open website: {0}</value>
+  </data>
+  <data name="Home_FailedOpenUrl" xml:space="preserve">
+    <value>Failed to open URL: {0}</value>
+  </data>
+  <data name="Home_ConfigureMainFolderMsg" xml:space="preserve">
+    <value>Please configure the main projects folder in settings first.</value>
+  </data>
+  <data name="Home_ConfigurationRequiredTitle" xml:space="preserve">
+    <value>Configuration Required</value>
+  </data>
+  <data name="Home_MainFolderNotExistMsg" xml:space="preserve">
+    <value>Main projects folder does not exist: {0}
+
+Please update it in settings.</value>
+  </data>
+  <data name="Home_FolderNotFoundTitle" xml:space="preserve">
+    <value>Folder Not Found</value>
+  </data>
+  <data name="Home_InvalidProjectNameMsg" xml:space="preserve">
+    <value>Project name contains invalid characters. Please choose a different name.</value>
+  </data>
+  <data name="Home_InvalidNameTitle" xml:space="preserve">
+    <value>Invalid Name</value>
+  </data>
+  <data name="Home_FailedCreateProject" xml:space="preserve">
+    <value>Failed to create new project: {0}</value>
+  </data>
+  <data name="Home_OpenSaveDialogTitle" xml:space="preserve">
+    <value>Open Save File</value>
+  </data>
+  <data name="Home_OpenSaveDialogFilter" xml:space="preserve">
+    <value>Save files (*.json)|*.json|All files (*.*)|*.*</value>
+  </data>
+  <data name="Home_FailedLoadSave" xml:space="preserve">
+    <value>Failed to load save: {0}</value>
+  </data>
+  <data name="Home_SaveFileGoneMsg" xml:space="preserve">
+    <value>This save file no longer exists.</value>
+  </data>
+  <data name="Home_FileNotFoundTitle" xml:space="preserve">
+    <value>File Not Found</value>
+  </data>
+  <data name="Log_Title" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="Log_ColumnTimestamp" xml:space="preserve">
+    <value>Timestamp</value>
+  </data>
+  <data name="Log_ColumnMessage" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Accounts_PatreonInformation" xml:space="preserve">
+    <value>Patreon information</value>
+  </data>
+  <data name="Accounts_StatusFormat" xml:space="preserve">
+    <value>Status: {0}</value>
+  </data>
+  <data name="Accounts_LastPaymentFormat" xml:space="preserve">
+    <value>Last Payment: {0}</value>
+  </data>
+  <data name="Accounts_NextPaymentFormat" xml:space="preserve">
+    <value>Next Payment: {0}</value>
+  </data>
+  <data name="Accounts_Login" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="Accounts_Logout" xml:space="preserve">
+    <value>LOGOUT</value>
+  </data>
+  <data name="Accounts_StatusActive" xml:space="preserve">
+    <value>ACTIVE</value>
+  </data>
+  <data name="Accounts_StatusNotActive" xml:space="preserve">
+    <value>NOT ACTIVE</value>
+  </data>
+  <data name="Accounts_LoginFailed" xml:space="preserve">
+    <value>Failed to login</value>
+  </data>
+  <data name="Project_DrawablesHeader" xml:space="preserve">
+    <value>Drawables</value>
+  </data>
+  <data name="Project_SearchPlaceholder" xml:space="preserve">
+    <value>Search...</value>
+  </data>
+  <data name="Project_AddDrawables" xml:space="preserve">
+    <value>ADD DRAWABLES</value>
+  </data>
+  <data name="Project_SelectFolderAuto" xml:space="preserve">
+    <value>Select Folder (auto)</value>
+  </data>
+  <data name="Project_SelectFilesAsFemale" xml:space="preserve">
+    <value>Select Files as Female</value>
+  </data>
+  <data name="Project_SelectFolderAsFemale" xml:space="preserve">
+    <value>Select Folder as Female</value>
+  </data>
+  <data name="Project_SelectFilesAsMale" xml:space="preserve">
+    <value>Select Files as Male</value>
+  </data>
+  <data name="Project_SelectFolderAsMale" xml:space="preserve">
+    <value>Select Folder as Male</value>
+  </data>
+  <data name="Project_DeleteSelectedDrawableTooltip" xml:space="preserve">
+    <value>Delete selected drawable</value>
+  </data>
+  <data name="Project_Preview3D" xml:space="preserve">
+    <value>3D PREVIEW</value>
+  </data>
+  <data name="Project_Build" xml:space="preserve">
+    <value>BUILD</value>
+  </data>
+  <data name="Project_SelectDrawableFiles" xml:space="preserve">
+    <value>Select drawable files</value>
+  </data>
+  <data name="Project_SelectDrawableFilesFor" xml:space="preserve">
+    <value>Select drawable files ({0})</value>
+  </data>
+  <data name="Project_SelectDrawableFolderFor" xml:space="preserve">
+    <value>Select a folder containing drawable files ({0})</value>
+  </data>
+  <data name="Project_SelectDrawableFolders" xml:space="preserve">
+    <value>Select folder(s) containing drawable files</value>
+  </data>
+  <data name="Project_SelectDrawableFoldersFor" xml:space="preserve">
+    <value>Select folder(s) containing drawable files ({0})</value>
+  </data>
+  <data name="Project_DrawableFilesFilter" xml:space="preserve">
+    <value>Drawable files (*.ydd)|*.ydd</value>
+  </data>
+  <data name="Project_NoDrawablesSelected" xml:space="preserve">
+    <value>No drawable(s) selected</value>
+  </data>
+  <data name="Project_DeleteDrawableTitle" xml:space="preserve">
+    <value>Delete drawable</value>
+  </data>
+  <data name="Project_DeleteConfirmOne" xml:space="preserve">
+    <value>Are you sure you want to delete this drawable? ({0})</value>
+  </data>
+  <data name="Project_DeleteConfirmMany" xml:space="preserve">
+    <value>Are you sure you want to delete these {0} selected drawables?</value>
+  </data>
+  <data name="Project_DeleteConfirmSuffix" xml:space="preserve">
+    <value>
+This will CHANGE NUMBERS of everything after this drawable!
+
+Do you want to replace with reserved slot instead?</value>
+  </data>
+  <data name="Project_NoProjectLoadedMessage" xml:space="preserve">
+    <value>No project is currently loaded. Please create or open a project first.</value>
+  </data>
+  <data name="Project_NoProjectLoadedTitle" xml:space="preserve">
+    <value>No Project</value>
+  </data>
+  <data name="Project_FilesNotAccessibleMessage" xml:space="preserve">
+    <value>The following file(s) could not be accessed:
+
+{0}
+
+They may be virtual paths. Please extract them to a folder first and drag from there.</value>
+  </data>
+  <data name="Project_FilesNotAccessibleTitle" xml:space="preserve">
+    <value>Files Not Accessible</value>
+  </data>
+  <data name="Project_DropErrorMessage" xml:space="preserve">
+    <value>An error occurred while processing dropped files:
+
+{0}</value>
+  </data>
+  <data name="Project_DropErrorTitle" xml:space="preserve">
+    <value>Drag &amp; Drop Error</value>
+  </data>
+  <data name="ProjectSetup_WindowTitle" xml:space="preserve">
+    <value>Project Setup</value>
+  </data>
+  <data name="ProjectSetup_ProjectNameLabel" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="ProjectSetup_ProjectTypeLabel" xml:space="preserve">
+    <value>Project Type</value>
+  </data>
+  <data name="ProjectSetup_SelfContainedTitle" xml:space="preserve">
+    <value>Self-contained</value>
+  </data>
+  <data name="ProjectSetup_SelfContainedDescription" xml:space="preserve">
+    <value>Files are copied to project folder. Project can be moved or shared easily.</value>
+  </data>
+  <data name="ProjectSetup_ExternalTitle" xml:space="preserve">
+    <value>External</value>
+  </data>
+  <data name="ProjectSetup_ExternalDescription" xml:space="preserve">
+    <value>Files stay in original locations. Uses less disk space but not portable.</value>
+  </data>
+  <data name="ProjectSetup_ExternalWarning" xml:space="preserve">
+    <value>Moving or deleting original files will break the project.</value>
+  </data>
+  <data name="ProjectSetup_CreateNewProject" xml:space="preserve">
+    <value>Create New Project</value>
+  </data>
+  <data name="ProjectSetup_Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="ProjectSetup_OpenExistingAddon" xml:space="preserve">
+    <value>Open Existing Addon</value>
+  </data>
+  <data name="ProjectSetup_ProjectExistsWarning" xml:space="preserve">
+    <value>A project named "{0}" already exists. Continuing will overwrite it.</value>
+  </data>
+  <data name="ProjectSetup_FoundDrawables" xml:space="preserve">
+    <value>Found {0} drawable(s)</value>
+  </data>
+  <data name="ProjectSetup_FoundDrawablesInMetaFiles" xml:space="preserve">
+    <value>Found {0} drawable(s) in {1} .meta files</value>
+  </data>
+  <data name="ProjectSetup_OverwriteConfirmMessage" xml:space="preserve">
+    <value>A project named "{0}" already exists.
+
+Do you want to overwrite it? This cannot be undone.</value>
+  </data>
+  <data name="ProjectSetup_ProjectExistsTitle" xml:space="preserve">
+    <value>Project Already Exists</value>
+  </data>
+  <data name="Settings_PolygonLimitHeader" xml:space="preserve">
+    <value>Drawable polygon count limit</value>
+  </data>
+  <data name="Settings_PolygonLimitDescription" xml:space="preserve">
+    <value>Sets limit for drawable polygon count, if it exceeds this number it will display warning</value>
+  </data>
+  <data name="Settings_PolygonLimitHigh" xml:space="preserve">
+    <value>High LOD</value>
+  </data>
+  <data name="Settings_PolygonLimitMedium" xml:space="preserve">
+    <value>Medium LOD</value>
+  </data>
+  <data name="Settings_PolygonLimitLow" xml:space="preserve">
+    <value>Low LOD</value>
+  </data>
+  <data name="Settings_TextureResolutionHeader" xml:space="preserve">
+    <value>Texture resolution limits</value>
+  </data>
+  <data name="Settings_TextureResolutionDescription" xml:space="preserve">
+    <value>Sets maximum resolution for each texture type. If width or height exceeds the limit, a warning will be displayed</value>
+  </data>
+  <data name="Settings_TextureDiffuse" xml:space="preserve">
+    <value>Diffuse</value>
+  </data>
+  <data name="Settings_TextureNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Settings_TextureSpecular" xml:space="preserve">
+    <value>Specular</value>
+  </data>
+  <data name="Settings_GroupingHeader" xml:space="preserve">
+    <value>Drawable list grouping</value>
+  </data>
+  <data name="Settings_GroupingDescription" xml:space="preserve">
+    <value>Controls the section headers shown in the drawable list.</value>
+  </data>
+  <data name="Settings_GroupingNone" xml:space="preserve">
+    <value>None - one flat list, no sections</value>
+  </data>
+  <data name="Settings_GroupingByType" xml:space="preserve">
+    <value>By Type - sections for clothing or prop type</value>
+  </data>
+  <data name="Settings_GroupingByGroup" xml:space="preserve">
+    <value>By Group - sections for your custom groups</value>
+  </data>
+  <data name="Settings_GroupingBoth" xml:space="preserve">
+    <value>Both - custom groups first, types inside</value>
+  </data>
+  <data name="Settings_DrawablesPerAddonHeader" xml:space="preserve">
+    <value>Drawables per addon</value>
+  </data>
+  <data name="Settings_DrawablesPerAddonDescription" xml:space="preserve">
+    <value>Maximum number of drawables of each type kept in a single addon before a new one is created. Changing this reorganizes existing addons.</value>
+  </data>
+  <data name="Settings_MaxDrawableNumberLabel" xml:space="preserve">
+    <value>Max drawable number per addon (0-255)</value>
+  </data>
+  <data name="Settings_GeneralHeader" xml:space="preserve">
+    <value>General settings</value>
+  </data>
+  <data name="Settings_MainProjectsFolderLabel" xml:space="preserve">
+    <value>Main Projects Folder</value>
+  </data>
+  <data name="Settings_MainProjectsFolderDescription" xml:space="preserve">
+    <value>Main folder where all your clothing projects are stored</value>
+  </data>
+  <data name="Settings_MainProjectsFolderTitle" xml:space="preserve">
+    <value>Select your Main Projects Folder</value>
+  </data>
+  <data name="Settings_GtavPathLabel" xml:space="preserve">
+    <value>Current GTAV Path</value>
+  </data>
+  <data name="Settings_GtavPathDescription" xml:space="preserve">
+    <value>GTAV path is required for 3D preview to work</value>
+  </data>
+  <data name="Settings_GtavPathTitle" xml:space="preserve">
+    <value>Select your GTA V Path</value>
+  </data>
+  <data name="Settings_DisplayDrawablePathLabel" xml:space="preserve">
+    <value>Display drawable path</value>
+  </data>
+  <data name="Settings_DisplayDrawablePathText" xml:space="preserve">
+    <value>Enabled will display used path for selected drawable</value>
+  </data>
+  <data name="Settings_AutoDeleteFilesLabel" xml:space="preserve">
+    <value>Delete drawable files automatically</value>
+  </data>
+  <data name="Settings_AutoDeleteFilesText" xml:space="preserve">
+    <value>When enabled, it will automatically remove the associated files from your system when you delete a drawable from the addon</value>
+  </data>
+  <data name="Settings_AutoDeleteFilesWarning" xml:space="preserve">
+    <value>WARNING: This function will modify and remove files from your PC. Any removed files cannot be recovered.
+
+Are you sure you want to enable it?</value>
+  </data>
+  <data name="Settings_MarkNewDrawablesLabel" xml:space="preserve">
+    <value>Mark new drawables</value>
+  </data>
+  <data name="Settings_MarkNewDrawablesText" xml:space="preserve">
+    <value>When enabled, new drawables will be marked with a yellow dot</value>
+  </data>
+  <data name="Settings_InvalidGtavFolderMessage" xml:space="preserve">
+    <value>That folder doesn't look like a valid GTA V installation (GTA5.exe was not found in it).
+
+Please select the folder that contains GTA5.exe.</value>
+  </data>
+  <data name="Settings_InvalidGtavFolderTitle" xml:space="preserve">
+    <value>Invalid GTA V folder</value>
+  </data>
+  <data name="Settings_SelectMainProjectsFolderFallbackTitle" xml:space="preserve">
+    <value>Select Main Projects Folder</value>
+  </data>
+  <data name="Settings_RootDriveNotAllowedMessage" xml:space="preserve">
+    <value>You cannot use a root drive (e.g., C:\) as the main folder.
+
+Please select or create a subfolder.</value>
+  </data>
+  <data name="Settings_InvalidFolderTitle" xml:space="preserve">
+    <value>Invalid Folder</value>
+  </data>
+  <data name="Settings_AccessDeniedMessage" xml:space="preserve">
+    <value>Access denied. Please select a folder where you have write permissions.</value>
+  </data>
+  <data name="Settings_SetMainProjectsFolderErrorMessage" xml:space="preserve">
+    <value>Error setting main projects folder: {0}</value>
+  </data>
+  <data name="Build_Title" xml:space="preserve">
+    <value>grzyClothTool - Build resource</value>
+  </data>
+  <data name="Build_SelectResourceType" xml:space="preserve">
+    <value>Select resource type</value>
+  </data>
+  <data name="Build_ProjectName" xml:space="preserve">
+    <value>Project name</value>
+  </data>
+  <data name="Build_OutputFolder" xml:space="preserve">
+    <value>Output folder</value>
+  </data>
+  <data name="Build_SplitAddons" xml:space="preserve">
+    <value>Build addons as separate resources</value>
+  </data>
+  <data name="Build_BuildResource" xml:space="preserve">
+    <value>Build resource</value>
+  </data>
+  <data name="Build_PathNotDetermined" xml:space="preserve">
+    <value>Build path could not be determined. Please check your project settings.</value>
+  </data>
+  <data name="Build_NoDrawables" xml:space="preserve">
+    <value>No drawables found. Add drawables to be able to build resource.</value>
+  </data>
+  <data name="Build_FillAllFields" xml:space="preserve">
+    <value>Please fill in all fields. Make sure a project is loaded.</value>
+  </data>
+  <data name="Build_Done" xml:space="preserve">
+    <value>Build done, elapsed time: {0}</value>
+  </data>
+  <data name="Build_DoneCaption" xml:space="preserve">
+    <value>Build done</value>
+  </data>
+  <data name="Build_Failed" xml:space="preserve">
+    <value>Build failed:
+
+{0}</value>
+  </data>
+  <data name="Build_ProjectNameEmpty" xml:space="preserve">
+    <value>Project name cannot be empty</value>
+  </data>
+  <data name="Build_ProjectNameTooShort" xml:space="preserve">
+    <value>Project name must be at least 3 characters long</value>
+  </data>
+  <data name="Build_ProjectNameTooLong" xml:space="preserve">
+    <value>Project name cannot be longer than 50 characters</value>
+  </data>
+  <data name="Build_ProjectNameInvalidChars" xml:space="preserve">
+    <value>Project name can only contain lowercase letters, numbers, and underscores</value>
+  </data>
+  <data name="Optimize_Title" xml:space="preserve">
+    <value>Optimize textures</value>
+  </data>
+  <data name="Optimize_CurrentTexture" xml:space="preserve">
+    <value>Current texture</value>
+  </data>
+  <data name="Optimize_OutputTexture" xml:space="preserve">
+    <value>Output texture</value>
+  </data>
+  <data name="Optimize_NameLabel" xml:space="preserve">
+    <value>Name: </value>
+  </data>
+  <data name="Optimize_CompressionLabel" xml:space="preserve">
+    <value>Compression: </value>
+  </data>
+  <data name="Optimize_WidthLabel" xml:space="preserve">
+    <value>Width: </value>
+  </data>
+  <data name="Optimize_HeightLabel" xml:space="preserve">
+    <value>Height: </value>
+  </data>
+  <data name="Optimize_MipmapLabel" xml:space="preserve">
+    <value>Mipmap amount: </value>
+  </data>
+  <data name="Optimize_SelectedTextures" xml:space="preserve">
+    <value>Selected {0} textures</value>
+  </data>
+  <data name="Optimize_DownscaleTextureSize" xml:space="preserve">
+    <value>Downscale texture size</value>
+  </data>
+  <data name="Optimize_SelectTextureSize" xml:space="preserve">
+    <value>Select texture size</value>
+  </data>
+  <data name="Optimize_QualityWarning" xml:space="preserve">
+    <value>Changing texture size here will make quality worse. To preserve texture quality this should be done with 3d programs and texture baking.</value>
+  </data>
+  <data name="Optimize_ChangeTextureCompression" xml:space="preserve">
+    <value>Change texture compression</value>
+  </data>
+  <data name="Optimize_SelectCompression" xml:space="preserve">
+    <value>Select compression</value>
+  </data>
+  <data name="Optimize_Optimize" xml:space="preserve">
+    <value>Optimize</value>
+  </data>
+  <data name="Optimize_NoOptionsSelected" xml:space="preserve">
+    <value>No optimization options selected</value>
+  </data>
+  <data name="ImportResolve_Title" xml:space="preserve">
+    <value>Resolve drawable import</value>
+  </data>
+  <data name="ImportResolve_ShowResolved" xml:space="preserve">
+    <value>Show resolved</value>
+  </data>
+  <data name="ImportResolve_SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="ImportResolve_SelectNone" xml:space="preserve">
+    <value>Select None</value>
+  </data>
+  <data name="ImportResolve_Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="ImportResolve_ApplyGender" xml:space="preserve">
+    <value>Apply gender</value>
+  </data>
+  <data name="ImportResolve_AssetType" xml:space="preserve">
+    <value>Asset type</value>
+  </data>
+  <data name="ImportResolve_DrawableType" xml:space="preserve">
+    <value>Drawable type</value>
+  </data>
+  <data name="ImportResolve_ApplyProperties" xml:space="preserve">
+    <value>Apply properties</value>
+  </data>
+  <data name="ImportResolve_GenderNotSet" xml:space="preserve">
+    <value>Gender not set</value>
+  </data>
+  <data name="ImportResolve_PropertiesNotSet" xml:space="preserve">
+    <value>Properties not set</value>
+  </data>
+  <data name="ImportResolve_Prop" xml:space="preserve">
+    <value>Prop</value>
+  </data>
+  <data name="ImportResolve_Component" xml:space="preserve">
+    <value>Component</value>
+  </data>
+  <data name="ImportResolve_HeaderOne" xml:space="preserve">
+    <value>Resolve 1 drawable before import</value>
+  </data>
+  <data name="ImportResolve_HeaderMany" xml:space="preserve">
+    <value>Resolve {0} drawables before import</value>
+  </data>
+  <data name="ImportResolve_HelpText" xml:space="preserve">
+    <value>Click rows to check them, then apply {0} to checked files. Resolved files are hidden unless Show resolved is enabled.</value>
+  </data>
+  <data name="ImportResolve_HelpTextJoiner" xml:space="preserve">
+    <value> and </value>
+  </data>
+  <data name="ImportResolve_HelpPartGender" xml:space="preserve">
+    <value>gender</value>
+  </data>
+  <data name="ImportResolve_HelpPartDrawableProperties" xml:space="preserve">
+    <value>drawable properties</value>
+  </data>
+  <data name="ImportResolve_SelectionSummary" xml:space="preserve">
+    <value>{0} checked, {1} of {2} resolved</value>
+  </data>
+  <data name="DupInspector_Title" xml:space="preserve">
+    <value>Duplicate Inspector</value>
+  </data>
+  <data name="DupInspector_DupBadge" xml:space="preserve">
+    <value>DUP</value>
+  </data>
+  <data name="DupInspector_DeleteAllExceptFirst" xml:space="preserve">
+    <value>Delete All Except First</value>
+  </data>
+  <data name="DupInspector_DeleteAllDuplicates" xml:space="preserve">
+    <value>Delete All Duplicates</value>
+  </data>
+  <data name="DupInspector_NoDuplicatesFound" xml:space="preserve">
+    <value>No duplicates found</value>
+  </data>
+  <data name="DupInspector_FoundGroupsOne" xml:space="preserve">
+    <value>Found {0} duplicate group</value>
+  </data>
+  <data name="DupInspector_FoundGroupsMany" xml:space="preserve">
+    <value>Found {0} duplicate groups</value>
+  </data>
+  <data name="DupInspector_GroupTitle" xml:space="preserve">
+    <value>Drawable: {0}</value>
+  </data>
+  <data name="DupInspector_GroupDescription" xml:space="preserve">
+    <value>{0} identical drawables</value>
+  </data>
+  <data name="DupInspector_LocationUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="DupInspector_LocationAddon" xml:space="preserve">
+    <value>Addon {0}</value>
+  </data>
+  <data name="DupInspector_ConfirmDeleteMessage" xml:space="preserve">
+    <value>Are you sure you want to delete '{0}'?</value>
+  </data>
+  <data name="DupInspector_ConfirmDeleteCaption" xml:space="preserve">
+    <value>Confirm Delete</value>
+  </data>
+  <data name="DupInspector_AllResolved" xml:space="preserve">
+    <value>All duplicates have been resolved!</value>
+  </data>
+  <data name="DupInspector_ConfirmGroupDeleteMessage" xml:space="preserve">
+    <value>This will delete {0} duplicate items from this group, keeping only the first one.\n\nAre you sure?</value>
+  </data>
+  <data name="DupInspector_ConfirmBulkDeleteCaption" xml:space="preserve">
+    <value>Confirm Bulk Delete</value>
+  </data>
+  <data name="DupInspector_DeletedItemsAllResolved" xml:space="preserve">
+    <value>Deleted {0} duplicate items!\n\nAll duplicates have been resolved!</value>
+  </data>
+  <data name="DupInspector_DeletedItems" xml:space="preserve">
+    <value>Deleted {0} duplicate items!</value>
+  </data>
+  <data name="DupInspector_DeletedOneItemAllResolved" xml:space="preserve">
+    <value>Deleted {0} duplicate item!\n\nAll duplicates have been resolved!</value>
+  </data>
+  <data name="DupInspector_DeletedOneItem" xml:space="preserve">
+    <value>Deleted {0} duplicate item!</value>
+  </data>
+  <data name="DupInspector_ConfirmDeleteAllOne" xml:space="preserve">
+    <value>This will delete {0} duplicate item across {1} duplicate group, keeping the first item in each group.\n\nAre you sure?</value>
+  </data>
+  <data name="DupInspector_ConfirmDeleteAllMany" xml:space="preserve">
+    <value>This will delete {0} duplicate items across {1} duplicate groups, keeping the first item in each group.\n\nAre you sure?</value>
+  </data>
+  <data name="DupInspector_ConfirmDeleteAllCaption" xml:space="preserve">
+    <value>Confirm Delete All Duplicates</value>
+  </data>
+  <data name="FirstRun_Title" xml:space="preserve">
+    <value>Welcome to grzyClothTool - First Time Setup</value>
+  </data>
+  <data name="FirstRun_Welcome" xml:space="preserve">
+    <value>Welcome to grzyClothTool!</value>
+  </data>
+  <data name="FirstRun_Subtitle" xml:space="preserve">
+    <value>First Time Setup</value>
+  </data>
+  <data name="FirstRun_SelectFolderHeader" xml:space="preserve">
+    <value>Select Main Projects Folder</value>
+  </data>
+  <data name="FirstRun_FolderDescription" xml:space="preserve">
+    <value>Choose a MAIN folder where ALL self-contained projects will be stored.</value>
+  </data>
+  <data name="FirstRun_ExampleLabel" xml:space="preserve">
+    <value>Example: </value>
+  </data>
+  <data name="FirstRun_FolderHint" xml:space="preserve">
+    <value>(Do NOT select a specific project folder - select the parent folder that will contain multiple projects)</value>
+  </data>
+  <data name="FirstRun_Browse" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="FirstRun_ImportantInfo" xml:space="preserve">
+    <value>[i] Important Information</value>
+  </data>
+  <data name="FirstRun_InfoPersist" xml:space="preserve">
+    <value>* This setting is stored in your user profile and will persist across application updates.</value>
+  </data>
+  <data name="FirstRun_InfoChangeLater" xml:space="preserve">
+    <value>* You can change this folder later in the Settings menu.</value>
+  </data>
+  <data name="FirstRun_ExitConfirmMessage" xml:space="preserve">
+    <value>You must select a main folder to continue using the application.\n\nThis will close the application. Are you sure?</value>
+  </data>
+  <data name="FirstRun_ExitConfirmCaption" xml:space="preserve">
+    <value>Setup Required</value>
+  </data>
+  <data name="FirstRun_BrowseDialogDescription" xml:space="preserve">
+    <value>Select the MAIN folder where ALL your projects will be stored (not a specific project folder)</value>
+  </data>
+  <data name="FirstRun_ValidationNoFolder" xml:space="preserve">
+    <value>Please select a main folder before continuing.</value>
+  </data>
+  <data name="FirstRun_ValidationRootDrive" xml:space="preserve">
+    <value>You cannot use a root drive (e.g., C:\) as the main folder. Please select or create a subfolder.</value>
+  </data>
+  <data name="FirstRun_ValidationAccessDenied" xml:space="preserve">
+    <value>Access denied. Please select a folder where you have write permissions.</value>
+  </data>
+  <data name="FirstRun_ValidationError" xml:space="preserve">
+    <value>Error: {0}</value>
+  </data>
+  <data name="MsgBox_OpenFolder" xml:space="preserve">
+    <value>Open Folder</value>
+  </data>
+  <data name="MsgBox_Replace" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="DupBatch_Title" xml:space="preserve">
+    <value>Duplicate Drawables Detected</value>
+  </data>
+  <data name="DupBatch_Description" xml:space="preserve">
+    <value>The following drawables appear to be duplicates of existing items. Select which ones you want to add:</value>
+  </data>
+  <data name="DupBatch_SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="DupBatch_SelectNone" xml:space="preserve">
+    <value>Select None</value>
+  </data>
+  <data name="DupBatch_CancelAll" xml:space="preserve">
+    <value>Cancel All</value>
+  </data>
+  <data name="DupBatch_UnknownName" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="DupBatch_NoExistingDuplicates" xml:space="preserve">
+    <value>No existing duplicates found</value>
+  </data>
+  <data name="DupBatch_DuplicateOf" xml:space="preserve">
+    <value>Duplicate of: {0}</value>
+  </data>
+  <data name="DupBatch_MoreCount" xml:space="preserve">
+    <value> (+{0} more)</value>
+  </data>
+  <data name="DupBatch_TypeProp" xml:space="preserve">
+    <value>Prop</value>
+  </data>
+  <data name="DupBatch_TypeComponent" xml:space="preserve">
+    <value>Component</value>
+  </data>
+  <data name="DupBatch_Summary" xml:space="preserve">
+    <value>{0} of {1} duplicate(s) will be added</value>
+  </data>
+  <data name="AutoSave_AutoSavingIn" xml:space="preserve">
+    <value>Auto-saving in {0} seconds</value>
+  </data>
+  <data name="AutoSave_SaveInProgress" xml:space="preserve">
+    <value>Save in progress</value>
+  </data>
+  <data name="Preview_UnavailableSetGtaPath" xml:space="preserve">
+    <value>3D Preview unavailable - set a valid GTA V path in Settings</value>
+  </data>
+  <data name="Preview_UnavailableGtaInstallIssue" xml:space="preserve">
+    <value>3D Preview unavailable (GTA V installation issue - see log)</value>
+  </data>
+  <data name="Preview_UnavailableGpuError" xml:space="preserve">
+    <value>3D Preview unavailable (GPU/Graphics error - see log)</value>
+  </data>
+  <data name="Preview_DisabledDueToErrors" xml:space="preserve">
+    <value>3D Preview disabled due to errors (see log)</value>
+  </data>
+  <data name="ModernLabel_ClearGroup" xml:space="preserve">
+    <value>Clear Group</value>
+  </data>
+  <data name="ModernLabel_FileFilter" xml:space="preserve">
+    <value>{0} files (*{0})|*{0}</value>
+  </data>
+  <data name="Save_UnsavedChangesTitleSuffix" xml:space="preserve">
+    <value> (Unsaved changes)</value>
+  </data>
+  <data name="Save_UnsavedChangesMessage" xml:space="preserve">
+    <value>You have unsaved changes. Do you want to continue with this action?</value>
+  </data>
+  <data name="Save_UnsavedChangesCaption" xml:space="preserve">
+    <value>Unsaved changes</value>
+  </data>
+  <data name="Save_BrokenSaveMessage" xml:space="preserve">
+    <value>This save file could not be loaded and is probably broken.
+
+Save file:
+{0}
+
+Error:
+{1}
+
+Found {2} backup save(s). The newest backup was created on {3}.
+
+Do you want to load the newest working backup instead?</value>
+  </data>
+  <data name="Save_BrokenSaveCaption" xml:space="preserve">
+    <value>Broken Save File</value>
+  </data>
+  <data name="Save_BackupLoadedMessage" xml:space="preserve">
+    <value>Loaded backup save:
+{0}</value>
+  </data>
+  <data name="Save_BackupLoadedCaption" xml:space="preserve">
+    <value>Backup Loaded</value>
+  </data>
+  <data name="Save_AllBackupsFailed" xml:space="preserve">
+    <value>The original save file and all available backups failed to load.</value>
+  </data>
+  <data name="Save_DeserializeFailed" xml:space="preserve">
+    <value>Failed to deserialize save file.</value>
+  </data>
+  <data name="File_OpenLocationError" xml:space="preserve">
+    <value>An error occurred while trying to open the file location: {0}</value>
+  </data>
+  <data name="App_UnhandledError" xml:space="preserve">
+    <value>An error occurred: {0}</value>
+  </data>
+  <data name="Update_CompletingUpdate" xml:space="preserve">
+    <value>Completing update...</value>
+  </data>
+  <data name="Update_CheckingForUpdates" xml:space="preserve">
+    <value>Checking for updates...</value>
+  </data>
+  <data name="Update_CouldNotCheck" xml:space="preserve">
+    <value>Could not check for updates.</value>
+  </data>
+  <data name="Update_UpToDate" xml:space="preserve">
+    <value>You're up to date!</value>
+  </data>
+  <data name="Update_Downloading" xml:space="preserve">
+    <value>Downloading v{0}...</value>
+  </data>
+  <data name="Update_CheckTimedOut" xml:space="preserve">
+    <value>Update check timed out.</value>
+  </data>
+  <data name="Update_CheckFailed" xml:space="preserve">
+    <value>Update check failed.</value>
+  </data>
+  <data name="Update_DownloadCompleteInstalling" xml:space="preserve">
+    <value>Download complete. Installing...</value>
+  </data>
+  <data name="Update_DownloadCancelled" xml:space="preserve">
+    <value>Download cancelled.</value>
+  </data>
+  <data name="Update_DownloadFailed" xml:space="preserve">
+    <value>Download failed. Please try again later.</value>
+  </data>
+  <data name="Update_InstallFailed" xml:space="preserve">
+    <value>Installation failed. Please update manually.</value>
+  </data>
+  <data name="Drawable_MissingLodModel" xml:space="preserve">
+    <value>[{0}] Missing LOD model.
+</value>
+  </data>
+  <data name="Drawable_PolygonLimitExceeded" xml:space="preserve">
+    <value>[{0}] Polygon count of {1} exceeds the limit of {2}.
+</value>
+  </data>
+  <data name="Drawable_MissingEmbeddedTexture" xml:space="preserve">
+    <value>Missing {0} texture.
+</value>
+  </data>
+  <data name="Drawable_NoTextures" xml:space="preserve">
+    <value>Drawable has no textures.
+</value>
+  </data>
+  <data name="Drawable_TextureWarnings" xml:space="preserve">
+    <value>Some textures have warnings. Check texture details.
+</value>
+  </data>
+  <data name="Drawable_HighHeelsWarning" xml:space="preserve">
+    <value>Shoes might be under floor. Consider enabling High heels and validating manually in the 3D preview.
+</value>
+  </data>
+  <data name="Drawable_FlagsSelected" xml:space="preserve">
+    <value>{0} ({1} selected)</value>
+  </data>
+  <data name="Drawable_FlagsNone" xml:space="preserve">
+    <value>NONE</value>
+  </data>
+  <data name="Texture_ResolutionExceedsLimit" xml:space="preserve">
+    <value>Texture resolution: {0}x{1}. This exceeds your set limit ({2}). Optimize it to reduce size.
+</value>
+  </data>
+  <data name="Texture_NotPowerOfTwo" xml:space="preserve">
+    <value>Texture height or width is not power of 2. Optimize it to fix the issue.
+</value>
+  </data>
+  <data name="Texture_MipMapMismatch" xml:space="preserve">
+    <value>Texture has {0} mip maps but should have {1}. Optimize it to generate the correct amount.
+</value>
+  </data>
+  <data name="Texture_EncryptedDrawableTooltip" xml:space="preserve">
+    <value>Encrypted drawable</value>
+  </data>
+  <data name="Texture_MissingTexture" xml:space="preserve">
+    <value>Missing texture</value>
+  </data>
+  <data name="Dup_DuplicateShort" xml:space="preserve">
+    <value>Duplicate ({0} total)</value>
+  </data>
+  <data name="Dup_DuplicatedItemHeader" xml:space="preserve">
+    <value>Duplicated item:</value>
+  </data>
+  <data name="Dup_ThisMarker" xml:space="preserve">
+    <value> (this)</value>
+  </data>
+  <data name="Dup_UnknownSex" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Dup_UnknownLocation" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Dup_AddonLocation" xml:space="preserve">
+    <value>Addon {0}: {1}</value>
+  </data>
+  <data name="Dup_AddonTextureLocation" xml:space="preserve">
+    <value>Addon {0}: {1} → {2}</value>
+  </data>
+  <data name="Addon_NoYddForMeta" xml:space="preserve">
+    <value>No .ydd files found for selected .meta file ({0})</value>
+  </data>
+  <data name="Addon_NoYmtForMeta" xml:space="preserve">
+    <value>No .ymt file found for selected .meta file ({0})</value>
+  </data>
+  <data name="Addon_DuplicateDetectedMessage" xml:space="preserve">
+    <value>A duplicate drawable has been detected!
+
+The drawable you're trying to add appears to be identical to:
+{0}
+
+This new drawable will be added but marked as a duplicate.
+
+Do you want to continue?</value>
+  </data>
+  <data name="Addon_DuplicateDetectedCaption" xml:space="preserve">
+    <value>Duplicate Drawable Detected</value>
+  </data>
+  <data name="Addon_DuplicateListItem" xml:space="preserve">
+    <value>  • {0} (Addon: {1})</value>
+  </data>
+  <data name="Addon_UnknownAddon" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
 </root>

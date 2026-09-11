@@ -1,6 +1,7 @@
 ﻿using CodeWalker.GameFiles;
 using grzyClothTool.Controls;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models.Texture;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -224,7 +225,7 @@ namespace grzyClothTool.Views
             if (!IsTextureDownsizeEnabled && !IsTextureCompressionEnabled)
             {
                 Close();
-                CustomMessageBox.Show("No optimization options selected");
+                CustomMessageBox.Show(Loc.T("Optimize_NoOptionsSelected"));
                 return;
             }
 

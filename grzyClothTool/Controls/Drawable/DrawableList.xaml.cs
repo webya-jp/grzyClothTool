@@ -1,5 +1,6 @@
 ﻿using grzyClothTool.Extensions;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using grzyClothTool.Models.Drawable;
 using grzyClothTool.Models.Texture;
 using grzyClothTool.Views;
@@ -450,7 +451,7 @@ namespace grzyClothTool.Controls
 
                 if (!addon.CanFitDrawables(selectedDrawables))
                 {
-                    Show("The selected addon cannot fit the selected drawables.", "Addon full", CustomMessageBoxButtons.OKOnly);
+                    Show(Loc.T("DrawList_AddonFullMessage"), Loc.T("DrawList_AddonFullTitle"), CustomMessageBoxButtons.OKOnly);
                     return;
                 }
 
@@ -490,8 +491,8 @@ namespace grzyClothTool.Controls
             if (shouldIgnoreWarnings)
             {
                 var result = Show(
-                    "Ignoring warnings only hides warning indicators for this drawable. The asset may still need fixing, and warnings will show again if you disable this option.\n\nDo you want to ignore warnings for this drawable?",
-                    "Ignore warnings",
+                    Loc.T("DrawList_IgnoreWarningsMessage"),
+                    Loc.T("DrawList_IgnoreWarnings"),
                     CustomMessageBoxButtons.OKCancel,
                     CustomMessageBoxIcon.Warning);
 
@@ -601,7 +602,7 @@ namespace grzyClothTool.Controls
             catch (Exception ex)
             {
                 LogHelper.Log($"Error duplicating drawable to opposite gender: {ex.Message}", Views.LogType.Error);
-                Show($"Failed to duplicate drawable: {ex.Message}", "Error", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
+                Show(Loc.T("DrawList_DuplicateFailed", ex.Message), Loc.T("Common_Error"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
             }
         }
 
@@ -612,8 +613,8 @@ namespace grzyClothTool.Controls
 
             OpenFileDialog files = new()
             {
-                Title = $"Select drawable file to replace '{drawable.Name}'",
-                Filter = "Drawable files (*.ydd)|*.ydd",
+                Title = Loc.T("DrawList_ReplaceDialogTitle", drawable.Name),
+                Filter = Loc.T("DrawList_DrawableFilesFilter"),
                 Multiselect = false
             };
 
@@ -632,7 +633,7 @@ namespace grzyClothTool.Controls
                 catch (Exception ex)
                 {
                     LogHelper.Log($"Failed to replace drawable: {ex.Message}", Views.LogType.Error);
-                    Show($"Failed to replace drawable: {ex.Message}", "Error", CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
+                    Show(Loc.T("DrawList_ReplaceFailed", ex.Message), Loc.T("Common_Error"), CustomMessageBoxButtons.OKOnly, CustomMessageBoxIcon.Error);
                 }
             }
         }
@@ -649,9 +650,9 @@ namespace grzyClothTool.Controls
             {
                 Title = tag switch
                 {
-                    "DDS" or "PNG" => $"Select the folder to export textures as {tag}",
-                    "YTD" => "Select the folder to export drawable with textures",
-                    _ => "Select the folder to export drawable"
+                    "DDS" or "PNG" => Loc.T("DrawList_ExportTexturesFolderTitle", tag),
+                    "YTD" => Loc.T("DrawList_ExportDrawableWithTexturesFolderTitle"),
+                    _ => Loc.T("DrawList_ExportDrawableFolderTitle")
                 },
                 Multiselect = false
             };
@@ -682,7 +683,7 @@ namespace grzyClothTool.Controls
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred during export: {ex.Message}", "Export Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Loc.T("DrawList_ExportError", ex.Message), Loc.T("DrawList_ExportErrorTitle"), MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

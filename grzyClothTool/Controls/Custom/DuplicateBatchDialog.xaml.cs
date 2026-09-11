@@ -1,3 +1,4 @@
+using grzyClothTool.Localization;
 using grzyClothTool.Models.Drawable;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,24 +30,24 @@ namespace grzyClothTool.Controls
             }
         }
 
-        public string NewDrawableName => System.IO.Path.GetFileName(Drawable?.FilePath) ?? "Unknown";
+        public string NewDrawableName => System.IO.Path.GetFileName(Drawable?.FilePath) ?? Loc.T("DupBatch_UnknownName");
 
         public string DuplicateOfText
         {
             get
             {
                 if (ExistingDuplicates == null || ExistingDuplicates.Count == 0)
-                    return "No existing duplicates found";
+                    return Loc.T("DupBatch_NoExistingDuplicates");
 
                 var names = ExistingDuplicates.Select(d => d.Name).Take(3);
-                var text = "Duplicate of: " + string.Join(", ", names);
+                var text = Loc.T("DupBatch_DuplicateOf", string.Join(", ", names));
                 if (ExistingDuplicates.Count > 3)
-                    text += $" (+{ExistingDuplicates.Count - 3} more)";
+                    text += Loc.T("DupBatch_MoreCount", ExistingDuplicates.Count - 3);
                 return text;
             }
         }
 
-        public string TypeDisplay => Drawable?.IsProp == true ? "Prop" : "Component";
+        public string TypeDisplay => Drawable?.IsProp == true ? Loc.T("DupBatch_TypeProp") : Loc.T("DupBatch_TypeComponent");
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
@@ -89,7 +90,7 @@ namespace grzyClothTool.Controls
         private void UpdateSummary()
         {
             var selectedCount = _items.Count(x => x.ShouldAdd);
-            SummaryText.Text = $"{selectedCount} of {_items.Count} duplicate(s) will be added";
+            SummaryText.Text = Loc.T("DupBatch_Summary", selectedCount, _items.Count);
         }
 
         public static DuplicateBatchResult Show(List<DuplicateBatchItem> duplicateItems)

@@ -1,5 +1,6 @@
 ﻿using System;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 
 namespace grzyClothTool.Models.Texture;
 #nullable enable
@@ -42,20 +43,20 @@ public class GTextureDetails
         if (Width > resolutionLimit || Height > resolutionLimit)
         {
             IsOptimizeNeeded = true;
-            IsOptimizeNeededTooltip += $"Texture resolution: {Width}x{Height}. This exceeds your set limit ({resolutionLimit}). Optimize it to reduce size.\n";
+            IsOptimizeNeededTooltip += Loc.T("Texture_ResolutionExceedsLimit", Width, Height, resolutionLimit);
         }
 
         if ((Height & Height - 1) != 0 || (Width & Width - 1) != 0)
         {
             IsOptimizeNeeded = true;
-            IsOptimizeNeededTooltip += "Texture height or width is not power of 2. Optimize it to fix the issue.\n";
+            IsOptimizeNeededTooltip += Loc.T("Texture_NotPowerOfTwo");
         }
 
         var expectedMipMapCount = ImgHelper.GetCorrectMipMapAmount(Width, Height);
         if (MipMapCount == 1 && MipMapCount != expectedMipMapCount)
         {
             IsOptimizeNeeded = true;
-            IsOptimizeNeededTooltip += $"Texture has {MipMapCount} mip maps but should have {expectedMipMapCount}. Optimize it to generate the correct amount.\n";
+            IsOptimizeNeededTooltip += Loc.T("Texture_MipMapMismatch", MipMapCount, expectedMipMapCount);
         }
     }
 }
