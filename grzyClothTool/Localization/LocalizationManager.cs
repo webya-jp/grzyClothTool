@@ -52,6 +52,17 @@ public class LocalizationManager : INotifyPropertyChanged
     public CultureInfo CurrentCulture => _currentCulture;
 
     /// <summary>
+    /// True when the language came from the command line or the environment rather than from the
+    /// saved setting. Used by automated UI tests, which need a predictable language.
+    /// </summary>
+    public bool IsLanguageOverridden { get; private set; }
+
+    /// <summary>
+    /// Name of the environment variable that forces a UI language, e.g. GRZYCLOTHTOOL_LANG=en.
+    /// </summary>
+    public const string LanguageEnvironmentVariable = "GRZYCLOTHTOOL_LANG";
+
+    /// <summary>
     /// Indexer used by XAML bindings: {loc:Loc Some_Key}
     /// </summary>
     public string this[string key] => GetString(key);
@@ -120,6 +131,60 @@ public class LocalizationManager : INotifyPropertyChanged
     public static AppLanguage ParseLanguage(string value)
     {
         return Enum.TryParse<AppLanguage>(value, true, out var parsed) ? parsed : AppLanguage.Auto;
+    }
+
+    /// <summary>
+    /// Applies the language to use at startup. A "--lang" argument wins over the
+    /// <see cref="LanguageEnvironmentVariable"/> environment variable, which in turn wins over the
+    /// saved setting. An override is never written back, so it does not change the user's settings.
+    /// </summary>
+    public void ApplyStartupLanguage(string savedLanguageSetting)
+    {
+        var overridden = GetLanguageOverride();
+
+        IsLanguageOverridden = overridden.HasValue;
+        SetLanguage(overridden ?? ParseLanguage(savedLanguageSetting));
+    }
+
+    /// <summary>
+    /// Returns the language forced through "--lang en" / "--lang=en" or through the
+    /// <see cref="LanguageEnvironmentVariable"/> environment variable, or null when neither is set.
+    /// </summary>
+    public static AppLanguage? GetLanguageOverride()
+    {
+        try
+        {
+            var args = Environment.GetCommandLineArgs();
+            for (var i = 1; i < args.Length; i++)
+            {
+                if (args[i].StartsWith("--lang=", StringComparison.OrdinalIgnoreCase))
+                {
+                    return ParseLanguageCode(args[i]["--lang=".Length..]);
+                }
+
+                if (string.Equals(args[i], "--lang", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+                {
+                    return ParseLanguageCode(args[i + 1]);
+                }
+            }
+
+            return ParseLanguageCode(Environment.GetEnvironmentVariable(LanguageEnvironmentVariable));
+        }
+        catch (Exception)
+        {
+            return null;
+        }
+    }
+
+    private static AppLanguage? ParseLanguageCode(string value)
+    {
+        return value?.Trim().ToLowerInvariant() switch
+        {
+            "en" or "en-us" or "english" => AppLanguage.English,
+            "ja" or "ja-jp" or "japanese" => AppLanguage.Japanese,
+            "auto" => AppLanguage.Auto,
+            _ => null
+        };
     }
 
     /// <summary>

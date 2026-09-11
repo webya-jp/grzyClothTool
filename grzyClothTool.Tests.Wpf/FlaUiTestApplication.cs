@@ -37,6 +37,11 @@ public sealed class FlaUiTestApplication : IDisposable
 
         startInfo.Environment["GRZYCLOTHTOOL_LOCALAPPDATA"] = localAppDataRoot;
 
+        // These tests look elements up by their English names, so pin the UI language.
+        // Without this the app follows the Windows language and the lookups fail on a
+        // non-English machine.
+        startInfo.Environment["GRZYCLOTHTOOL_LANG"] = "en";
+
         var app = FlaUI.Core.Application.Launch(startInfo);
 
         var automation = new UIA3Automation();
