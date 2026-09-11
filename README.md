@@ -1,6 +1,48 @@
 # grzyClothTool (WIP)
 
+> **This is a fork.** It adds a fully localized Japanese UI on top of the original tool.
+> See [日本語 UI について](#日本語-ui-について) below. Upstream: [grzybeek/grzyClothTool](https://github.com/grzybeek/grzyClothTool).
+
 **_Please be aware that this tool is still in a "WORK IN PROGRESS" state. It is likely that you will encounter bugs, missing features or functionality issues._**
+
+##
+
+# 日本語 UI について
+
+このリポジトリは [grzybeek/grzyClothTool](https://github.com/grzybeek/grzyClothTool) のフォークで、
+**UI の日本語化**を追加したものです。本家の機能はそのまま利用できます。
+
+## 言語の切り替え方
+
+1. アプリを起動します。
+2. 右上の歯車アイコンから **設定** 画面を開きます。
+3. **言語 / Language** の項目で、次のいずれかを選びます。
+   - **Auto / 自動 (OS)** — Windows の表示言語に従います (既定)。日本語版 Windows なら日本語になります。
+   - **English**
+   - **日本語**
+4. 選んだ内容はすぐに画面へ反映され、次回以降も保持されます。
+   一部のテキストは再起動後に反映されます。
+
+設定は `%LocalAppData%\grzyClothTool\settings.json` に保存されます。
+
+## 翻訳について
+
+- ドロウアブル、テクスチャ、アドオン、プロップ、コンポーネントなど、GTA V 衣装 MOD で
+  一般的に使われている用語に合わせています。
+- コンポーネント/プロップのスロットは、コード名を残したまま日本語を併記します
+  (例: `トップス (jbib)`、`下半身 (ズボン) (lowr)`)。スロットコード自体はファイル名や
+  内部処理で使われるため変更していません。
+- 開発者向けのログ (ログウィンドウに出力される内容) は英語のままです。
+
+## 翻訳に問題を見つけたら
+
+このフォークの [Issues](https://github.com/webya-jp/grzyClothTool/issues) へご報告ください。
+本家の不具合・機能要望は [本家リポジトリ](https://github.com/grzybeek/grzyClothTool/issues) へお願いします。
+
+## ライセンス
+
+本家と同じく **GPLv3** です。詳細は [LICENSE](LICENSE) を参照してください。
+このフォークの変更点も GPLv3 で配布されます。
 
 <p align="center">
   <img src="https://github.com/grzybeek/grzyClothTool/assets/40837847/30c72912-8828-4fa8-a84f-6f27a1f8eb5f">
