@@ -1,4 +1,5 @@
-﻿using grzyClothTool.Controls;
+﻿using grzyClothTool.Constants;
+using grzyClothTool.Controls;
 using grzyClothTool.Helpers;
 using grzyClothTool.Localization;
 using Microsoft.Win32;
@@ -44,6 +45,65 @@ namespace grzyClothTool.Views
         }
 
 
+        /// <summary>
+        /// Presets for the per-addon component limit. Props are not covered by FiveM's
+        /// component sync patch, so their limit stays at 128 and is not part of this choice.
+        /// </summary>
+        public enum DrawableLimitPresetOption
+        {
+            Compatible128,
+            Extended255,
+            Custom
+        }
+
+        // Remembers an explicit Custom choice. Without it, picking Custom while the number
+        // happens to equal a preset value would immediately snap back to that preset.
+        private bool _customLimitChosen;
+
+        public DrawableLimitPresetOption DrawableLimitPreset
+        {
+            get => _customLimitChosen
+                ? DrawableLimitPresetOption.Custom
+                : SettingsHelper.Instance.MaxDrawableNumber switch
+                {
+                    127 => DrawableLimitPresetOption.Compatible128,
+                    GlobalConstants.MAX_DRAWABLE_NUMBER_LIMIT => DrawableLimitPresetOption.Extended255,
+                    _ => DrawableLimitPresetOption.Custom
+                };
+            set
+            {
+                _customLimitChosen = value == DrawableLimitPresetOption.Custom;
+
+                switch (value)
+                {
+                    case DrawableLimitPresetOption.Compatible128:
+                        SettingsHelper.Instance.MaxDrawableNumber = 127;
+                        break;
+                    case DrawableLimitPresetOption.Extended255:
+                        SettingsHelper.Instance.MaxDrawableNumber = GlobalConstants.MAX_DRAWABLE_NUMBER_LIMIT;
+                        break;
+                    case DrawableLimitPresetOption.Custom:
+                        // keep whatever number is configured; the text box becomes editable
+                        break;
+                }
+
+                RefreshDrawableLimitState();
+            }
+        }
+
+        /// <summary>Shows the free-form number box only while the Custom preset is selected.</summary>
+        public bool IsCustomDrawableLimit => DrawableLimitPreset == DrawableLimitPresetOption.Custom;
+
+        /// <summary>Warns as soon as the limit goes past what an unpatched client can sync.</summary>
+        public bool ShowExtendedLimitWarning => SettingsHelper.Instance.MaxDrawableNumber > 127;
+
+        private void RefreshDrawableLimitState()
+        {
+            OnPropertyChanged(nameof(DrawableLimitPreset));
+            OnPropertyChanged(nameof(IsCustomDrawableLimit));
+            OnPropertyChanged(nameof(ShowExtendedLimitWarning));
+        }
+
         public static IReadOnlyList<LanguageOption> LanguageOptions => LocalizationManager.LanguageOptions;
 
         private LanguageOption _selectedLanguage;
@@ -79,8 +139,20 @@ namespace grzyClothTool.Views
             InitializeComponent();
             
             _mainProjectsFolder = PersistentSettingsHelper.Instance.MainProjectsFolder;
-            
+
+            // keep the preset radio buttons and the warning in sync when the number is edited directly
+            SettingsHelper.Instance.PropertyChanged += SettingsHelper_PropertyChanged;
+            Unloaded += (_, _) => SettingsHelper.Instance.PropertyChanged -= SettingsHelper_PropertyChanged;
+
             DataContext = this;
+        }
+
+        private void SettingsHelper_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(SettingsHelper.MaxDrawableNumber))
+            {
+                RefreshDrawableLimitState();
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

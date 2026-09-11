@@ -844,8 +844,9 @@ namespace grzyClothTool.Models
                     currentAddon = Addons[currentAddonIndex];
                     int countOfType = currentAddon.Drawables.Count(x => x.TypeNumeric == drawable.TypeNumeric && x.IsProp == drawable.IsProp && x.Sex == drawable.Sex);
 
-                    // If the number of drawables of this type has reached 128, move to the next addon
-                    if (countOfType >= GlobalConstants.MAX_DRAWABLES_IN_ADDON)
+                    // If the number of drawables of this type has reached the per-kind limit
+                    // (256 for components, 128 for props), move to the next addon
+                    if (countOfType >= GlobalConstants.GetMaxDrawablesInAddon(drawable.IsProp))
                     {
                         currentAddonIndex++;
                         continue;
@@ -977,8 +978,6 @@ namespace grzyClothTool.Models
                     return;
                 }
 
-                var max = GlobalConstants.MAX_DRAWABLES_IN_ADDON;
-
                 // Build the global per-type order: addon order first, then drawable order within each addon.
                 var grouped = new Dictionary<(int TypeNumeric, Enums.SexType Sex, bool IsProp), List<GDrawable>>();
                 foreach (var addon in Addons)
@@ -996,10 +995,12 @@ namespace grzyClothTool.Models
                 }
 
                 // How many addons we need is driven by the largest type group.
+                // Each group uses its own limit: props are capped lower than components.
                 int neededAddons = 1;
-                foreach (var list in grouped.Values)
+                foreach (var entry in grouped)
                 {
-                    neededAddons = Math.Max(neededAddons, (int)Math.Ceiling(list.Count / (double)max));
+                    var groupMax = GlobalConstants.GetMaxDrawablesInAddon(entry.Key.IsProp);
+                    neededAddons = Math.Max(neededAddons, (int)Math.Ceiling(entry.Value.Count / (double)groupMax));
                 }
 
                 // Nothing to reflow when everything already fits in the addons we have and no merge is possible.
@@ -1013,13 +1014,15 @@ namespace grzyClothTool.Models
                     addon.Drawables.Clear();
                 }
 
-                foreach (var list in grouped.Values)
+                foreach (var entry in grouped)
                 {
+                    var list = entry.Value;
+                    var groupMax = GlobalConstants.GetMaxDrawablesInAddon(entry.Key.IsProp);
                     for (int i = 0; i < list.Count; i++)
                     {
                         var drawable = list[i];
-                        Addons[i / max].Drawables.Add(drawable);
-                        drawable.Number = i % max; // setter refreshes DisplayNumber and Name
+                        Addons[i / groupMax].Drawables.Add(drawable);
+                        drawable.Number = i % groupMax; // setter refreshes DisplayNumber and Name
                         drawable.SetDrawableName(); // ensure name refresh even if the number was unchanged
                     }
                 }

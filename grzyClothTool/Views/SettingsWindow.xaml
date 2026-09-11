@@ -16,6 +16,7 @@
     <Grid>
         <Grid.Resources>
             <converters:EnumToBoolConverter x:Key="EnumToBoolConverter" />
+            <converters:BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
@@ -174,13 +175,35 @@
                                 </StackPanel>
                             </GroupBox>
 
-                            <GroupBox Margin="0,5" Height="150" Style="{DynamicResource FixedGroupBox}">
+                            <GroupBox Margin="0,5" Style="{DynamicResource FixedGroupBox}">
                                 <GroupBox.Header>
                                     <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="{loc:Loc Settings_DrawablesPerAddonHeader}" />
                                 </GroupBox.Header>
                                 <StackPanel Margin="5">
                                     <TextBlock Padding="5,2,5,5" FontStyle="Italic" FontWeight="Normal" Foreground="{DynamicResource Brush500}" TextWrapping="Wrap" Text="{loc:Loc Settings_DrawablesPerAddonDescription}" />
-                                    <c:SettingsLabelTextBox Margin="5" Label="{loc:Loc Settings_MaxDrawableNumberLabel}" LabelFontSize="12" Text="{Binding Path=Instance.MaxDrawableNumber, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" ButtonVisible="False" />
+
+                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="{loc:Loc Settings_LimitPreset128}"
+                                        GroupName="DrawableLimitPreset"
+                                        IsChecked="{Binding DrawableLimitPreset, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Compatible128, Mode=TwoWay}" />
+                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="{loc:Loc Settings_LimitPreset255}"
+                                        GroupName="DrawableLimitPreset"
+                                        IsChecked="{Binding DrawableLimitPreset, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Extended255, Mode=TwoWay}" />
+                                    <RadioButton Margin="5,3" Foreground="{DynamicResource Brush950}" Content="{loc:Loc Settings_LimitPresetCustom}"
+                                        GroupName="DrawableLimitPreset"
+                                        IsChecked="{Binding DrawableLimitPreset, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Custom, Mode=TwoWay}" />
+
+                                    <c:SettingsLabelTextBox Margin="5"
+                                        Visibility="{Binding IsCustomDrawableLimit, Converter={StaticResource BoolToVisibilityConverter}}"
+                                        Label="{loc:Loc Settings_MaxDrawableNumberLabel}" LabelFontSize="12"
+                                        Text="{Binding Path=Instance.MaxDrawableNumber, Source={x:Static helpers:SettingsHelper.Instance}, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"
+                                        ButtonVisible="False" />
+
+                                    <TextBlock Padding="5,5,5,0" TextWrapping="Wrap" FontWeight="Normal" Foreground="#C77700"
+                                        Visibility="{Binding ShowExtendedLimitWarning, Converter={StaticResource BoolToVisibilityConverter}}"
+                                        Text="{loc:Loc Settings_LimitExtendedWarning}" />
+
+                                    <TextBlock Padding="5,5,5,0" TextWrapping="Wrap" FontStyle="Italic" FontWeight="Normal" Foreground="{DynamicResource Brush500}"
+                                        Text="{loc:Loc Settings_PropLimitNote}" />
                                 </StackPanel>
                             </GroupBox>
                         </StackPanel>

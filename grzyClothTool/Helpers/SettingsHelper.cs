@@ -97,6 +97,35 @@ public class SettingsHelper : INotifyPropertyChanged
         }
     }
 
+    private int _maxPropDrawableNumber;
+
+    public int MaxPropDrawableNumber
+    {
+        get => _maxPropDrawableNumber;
+        set
+        {
+            var clamped = Math.Clamp(value, 0, GlobalConstants.MAX_PROP_DRAWABLE_NUMBER_LIMIT);
+            if (_maxPropDrawableNumber != clamped)
+            {
+                _maxPropDrawableNumber = clamped;
+                Properties.Settings.Default.MaxPropDrawablesPerAddon = clamped;
+                Properties.Settings.Default.Save();
+                OnPropertyChanged(nameof(MaxPropDrawableNumber));
+
+                System.Windows.Application.Current?.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    MainWindow.AddonManager?.RedistributeDrawables();
+                }));
+            }
+            else if (!Equals(value, clamped))
+            {
+                // Value was out of range and got clamped to the current value;
+                // still notify so the UI snaps back to the clamped number.
+                OnPropertyChanged(nameof(MaxPropDrawableNumber));
+            }
+        }
+    }
+
     public static bool Preview3DAvailable { get; set; } = true;
 
     private SettingsHelper()
@@ -112,6 +141,7 @@ public class SettingsHelper : INotifyPropertyChanged
         _textureResolutionLimitNormal = Properties.Settings.Default.TextureResolutionLimitNormal;
         _textureResolutionLimitSpecular = Properties.Settings.Default.TextureResolutionLimitSpecular;
         _maxDrawableNumber = Math.Clamp(Properties.Settings.Default.MaxDrawablesPerAddon, 0, GlobalConstants.MAX_DRAWABLE_NUMBER_LIMIT);
+        _maxPropDrawableNumber = Math.Clamp(Properties.Settings.Default.MaxPropDrawablesPerAddon, 0, GlobalConstants.MAX_PROP_DRAWABLE_NUMBER_LIMIT);
     }
 
     private void SetProperty<T>(ref T field, T value, string propertyName, bool revalidateDrawables = false)

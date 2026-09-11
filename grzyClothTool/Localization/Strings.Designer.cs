@@ -4679,5 +4679,50 @@ namespace grzyClothTool.Localization {
                 return ResourceManager.GetString("Addon_UnknownAddon", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to 128 (compatible: numbers 0-127).
+        /// </summary>
+        public static string Settings_LimitPreset128 {
+            get {
+                return ResourceManager.GetString("Settings_LimitPreset128", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to 255 (FiveM extended: numbers 0-255, needs a client and server with the component sync patch).
+        /// </summary>
+        public static string Settings_LimitPreset255 {
+            get {
+                return ResourceManager.GetString("Settings_LimitPreset255", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Custom.
+        /// </summary>
+        public static string Settings_LimitPresetCustom {
+            get {
+                return ResourceManager.GetString("Settings_LimitPresetCustom", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Warning: numbers above 127 need a patched environment. On unpatched clients the extra components are not synced and othe [rest of string was truncated].
+        /// </summary>
+        public static string Settings_LimitExtendedWarning {
+            get {
+                return ResourceManager.GetString("Settings_LimitExtendedWarning", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Props (p_head, p_eyes, ...) are always limited to 128 (numbers 0-127). FiveM's extended range covers components only, so [rest of string was truncated].
+        /// </summary>
+        public static string Settings_PropLimitNote {
+            get {
+                return ResourceManager.GetString("Settings_PropLimitNote", resourceCulture);
+            }
+        }
     }
 }

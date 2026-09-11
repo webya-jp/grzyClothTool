@@ -38,5 +38,8 @@
     <Setting Name="MaxDrawablesPerAddon" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">255</Value>
     </Setting>
+    <Setting Name="MaxPropDrawablesPerAddon" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">127</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

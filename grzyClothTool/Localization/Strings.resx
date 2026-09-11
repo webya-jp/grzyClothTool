@@ -1658,4 +1658,19 @@ Do you want to continue?</value>
   <data name="Addon_UnknownAddon" xml:space="preserve">
     <value>Unknown</value>
   </data>
+  <data name="Settings_LimitPreset128" xml:space="preserve">
+    <value>128 (compatible: numbers 0-127)</value>
+  </data>
+  <data name="Settings_LimitPreset255" xml:space="preserve">
+    <value>255 (FiveM extended: numbers 0-255, needs a client and server with the component sync patch)</value>
+  </data>
+  <data name="Settings_LimitPresetCustom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Settings_LimitExtendedWarning" xml:space="preserve">
+    <value>Warning: numbers above 127 need a patched environment. On unpatched clients the extra components are not synced and other players will not see them.</value>
+  </data>
+  <data name="Settings_PropLimitNote" xml:space="preserve">
+    <value>Props (p_head, p_eyes, ...) are always limited to 128 (numbers 0-127). FiveM's extended range covers components only, so this cannot be raised.</value>
+  </data>
 </root>

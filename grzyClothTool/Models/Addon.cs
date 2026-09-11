@@ -314,8 +314,9 @@ public class Addon : INotifyPropertyChanged
             var currentAddon = MainWindow.AddonManager.Addons[currentAddonIndex];
             var countOfType = currentAddon.Drawables.Count(x => x.TypeNumeric == typeNumeric && x.IsProp == isProp && x.Sex == sex);
 
-            // If the number of drawables of this type has reached 128, move to the next addon
-            if (countOfType >= GlobalConstants.MAX_DRAWABLES_IN_ADDON)
+            // If the number of drawables of this type has reached the per-kind limit
+            // (256 for components, 128 for props), move to the next addon
+            if (countOfType >= GlobalConstants.GetMaxDrawablesInAddon(isProp))
             {
                 currentAddonIndex++;
                 continue;
@@ -353,7 +354,7 @@ public class Addon : INotifyPropertyChanged
                 groupedDrawables[key] = newCount;
             }
 
-            if (groupedDrawables[key] > GlobalConstants.MAX_DRAWABLES_IN_ADDON)
+            if (groupedDrawables[key] > GlobalConstants.GetMaxDrawablesInAddon(key.IsProp))
             {
                 return false;
             }

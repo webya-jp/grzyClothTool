@@ -1658,4 +1658,19 @@ GTA5.exe があるフォルダーを選択してください。</value>
   <data name="Addon_UnknownAddon" xml:space="preserve">
     <value>不明</value>
   </data>
+  <data name="Settings_LimitPreset128" xml:space="preserve">
+    <value>128 (互換: 番号 0〜127)</value>
+  </data>
+  <data name="Settings_LimitPreset255" xml:space="preserve">
+    <value>255 (FiveM 拡張: 番号 0〜255、component sync パッチ済みのクライアント/サーバーが必要)</value>
+  </data>
+  <data name="Settings_LimitPresetCustom" xml:space="preserve">
+    <value>カスタム</value>
+  </data>
+  <data name="Settings_LimitExtendedWarning" xml:space="preserve">
+    <value>警告: 128 以上の番号はパッチ済みの環境が必要です。未対応のクライアントでは超過分のコンポーネントが同期されず、他プレイヤーには表示されません。</value>
+  </data>
+  <data name="Settings_PropLimitNote" xml:space="preserve">
+    <value>プロップ (p_head、p_eyes など) は常に 128 (番号 0〜127) に固定されます。FiveM の拡張はコンポーネントのみが対象のため、この上限は変更できません。</value>
+  </data>
 </root>
