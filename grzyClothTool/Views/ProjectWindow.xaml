@@ -313,6 +313,14 @@ mc:Ignorable="d">
                BorderThickness="0,1,0,0"
                Padding="2,2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <c:CustomButton x:Name="BulkOptimizeButton"
+                               AutomationProperties.AutomationId="BULK OPTIMIZE TEXTURES"
+                               Label="{loc:Loc Project_BulkOptimize}"
+                               Width="190"
+                               MyBtnClickEvent="BulkOptimize_Btn"
+                               Padding="2,8"
+                               Margin="0,0,8,0"
+                               CornerRadius="5" />
                 <c:CustomButton x:Name="PreviewButton"
                                Label="{loc:Loc Project_Preview3D}"
                                Width="150" 

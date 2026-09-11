@@ -68,6 +68,17 @@ public class SettingsHelper : INotifyPropertyChanged
         set => SetProperty(ref _textureResolutionLimitSpecular, value, nameof(TextureResolutionLimitSpecular), revalidateDrawables: true);
     }
 
+    private int _maxTextureMemoryMB;
+    /// <summary>
+    /// Memory budget of a single texture (mip levels included), in megabytes.
+    /// FiveM warns about oversized assets above 16 MB, which is the default here.
+    /// </summary>
+    public int MaxTextureMemoryMB
+    {
+        get => _maxTextureMemoryMB;
+        set => SetProperty(ref _maxTextureMemoryMB, Math.Clamp(value, 1, 512), nameof(MaxTextureMemoryMB), revalidateDrawables: true);
+    }
+
     private int _maxDrawableNumber;
 
     public int MaxDrawableNumber
@@ -140,6 +151,7 @@ public class SettingsHelper : INotifyPropertyChanged
         _textureResolutionLimitDiffuse = Properties.Settings.Default.TextureResolutionLimitDiffuse;
         _textureResolutionLimitNormal = Properties.Settings.Default.TextureResolutionLimitNormal;
         _textureResolutionLimitSpecular = Properties.Settings.Default.TextureResolutionLimitSpecular;
+        _maxTextureMemoryMB = Math.Clamp(Properties.Settings.Default.MaxTextureMemoryMB, 1, 512);
         _maxDrawableNumber = Math.Clamp(Properties.Settings.Default.MaxDrawablesPerAddon, 0, GlobalConstants.MAX_DRAWABLE_NUMBER_LIMIT);
         _maxPropDrawableNumber = Math.Clamp(Properties.Settings.Default.MaxPropDrawablesPerAddon, 0, GlobalConstants.MAX_PROP_DRAWABLE_NUMBER_LIMIT);
     }

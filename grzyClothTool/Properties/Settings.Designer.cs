@@ -178,5 +178,17 @@ namespace grzyClothTool.Properties {
                 this["MaxPropDrawablesPerAddon"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("16")]
+        public int MaxTextureMemoryMB {
+            get {
+                return ((int)(this["MaxTextureMemoryMB"]));
+            }
+            set {
+                this["MaxTextureMemoryMB"] = value;
+            }
+        }
     }
 }

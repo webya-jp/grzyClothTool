@@ -52,11 +52,27 @@ public class GTextureDetails
             IsOptimizeNeededTooltip += Loc.T("Texture_NotPowerOfTwo");
         }
 
-        var expectedMipMapCount = ImgHelper.GetCorrectMipMapAmount(Width, Height);
-        if (MipMapCount == 1 && MipMapCount != expectedMipMapCount)
+        var expectedMipMapCount = BulkOptimizeHelper.GetExpectedMipMapCount(Width, Height);
+        if (MipMapCount < expectedMipMapCount)
         {
             IsOptimizeNeeded = true;
             IsOptimizeNeededTooltip += Loc.T("Texture_MipMapMismatch", MipMapCount, expectedMipMapCount);
         }
+
+        var memoryLimitMB = SettingsHelper.Instance.MaxTextureMemoryMB;
+        if (memoryLimitMB > 0)
+        {
+            var sizeInMB = TextureSizeHelper.GetTextureSizeInMegabytes(Width, Height, MipMapCount, Compression);
+            if (sizeInMB > memoryLimitMB)
+            {
+                IsOptimizeNeeded = true;
+                IsOptimizeNeededTooltip += Loc.T("Texture_MemoryExceedsLimit", TextureSizeHelper.FormatMegabytes(sizeInMB), memoryLimitMB);
+            }
+        }
     }
+
+    /// <summary>
+    /// Estimated video memory used by this texture once loaded, mip levels included.
+    /// </summary>
+    public long EstimatedMemoryBytes => TextureSizeHelper.GetTextureSizeInBytes(Width, Height, MipMapCount, Compression);
 }

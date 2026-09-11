@@ -95,7 +95,7 @@ public static class ImgHelper
 
             var newDds = stream.ToArray();
             var newTxt = CodeWalker.Utils.DDSIO.GetTexture(newDds);
-            newTxt.Name = gtxt.DisplayName;
+            newTxt.Name = GetOutputTextureName(gtxt);
             ytd.TextureDict.BuildFromTextureList([newTxt]);
 
             var bytes = ytd.Save();
@@ -194,6 +194,23 @@ public static class ImgHelper
         }
 
         throw new NotSupportedException($"Unsupported file extension: {gtxt.Extension}");
+    }
+
+    /// <summary>
+    /// Name to store inside the generated .ytd.
+    /// When the source already is a .ytd, its original texture name is kept: the drawable's shader
+    /// references the texture by that name, and a texture that is copied without being optimized
+    /// keeps it too, so renaming only the optimized ones would make the two paths disagree.
+    /// </summary>
+    internal static string GetOutputTextureName(GTexture gtxt)
+    {
+        if (gtxt.Extension?.Equals(".ytd", StringComparison.OrdinalIgnoreCase) == true
+            && !string.IsNullOrWhiteSpace(gtxt.TxtDetails?.Name))
+        {
+            return gtxt.TxtDetails.Name;
+        }
+
+        return gtxt.DisplayName;
     }
 
     private static string GetCompressionString(string cwCompression)

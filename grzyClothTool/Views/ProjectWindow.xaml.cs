@@ -522,6 +522,24 @@ namespace grzyClothTool.Views
             buildWindow.ShowDialog();
         }
 
+        private void BulkOptimize_Btn(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(MainWindow.AddonManager.ProjectName))
+            {
+                CustomMessageBox.Show(Loc.T("Project_NoProjectLoadedMessage"),
+                    Loc.T("Project_NoProjectLoadedTitle"),
+                    CustomMessageBox.CustomMessageBoxButtons.OKOnly,
+                    CustomMessageBox.CustomMessageBoxIcon.Warning);
+                return;
+            }
+
+            var bulkWindow = new BulkOptimizeWindow(MainWindow.AddonManager)
+            {
+                Owner = Window.GetWindow(this)
+            };
+            bulkWindow.ShowDialog();
+        }
+
         private void Preview_Btn(object sender, RoutedEventArgs e)
         {
             var mainWindow = MainWindow.Instance;

@@ -77,7 +77,7 @@ public class GTextureDetailsTests
     }
 
     [Fact]
-    public void Validate_DoesNotWarnWhenMipMapCountIsNotOne()
+    public void Validate_WarnsWhenMipMapCountIsBelowTheExpectedAmount()
     {
         var details = new GTextureDetails
         {
@@ -89,7 +89,43 @@ public class GTextureDetailsTests
 
         details.Validate();
 
+        Assert.True(details.IsOptimizeNeeded);
+        Assert.Contains("mip maps", details.IsOptimizeNeededTooltip);
+    }
+
+    [Fact]
+    public void Validate_DoesNotWarnWhenMipMapCountIsAboveTheExpectedAmount()
+    {
+        var details = new GTextureDetails
+        {
+            Width = 1024,
+            Height = 1024,
+            MipMapCount = 11,
+            Type = "diffuse",
+            Compression = "D3DFMT_DXT5"
+        };
+
+        details.Validate();
+
         Assert.False(details.IsOptimizeNeeded);
         Assert.Equal(string.Empty, details.IsOptimizeNeededTooltip);
+    }
+
+    [Fact]
+    public void Validate_WarnsWhenTheTextureIsOverTheMemoryBudget()
+    {
+        var details = new GTextureDetails
+        {
+            Width = 2048,
+            Height = 2048,
+            MipMapCount = 12,
+            Type = "diffuse",
+            Compression = "D3DFMT_A8R8G8B8"
+        };
+
+        details.Validate();
+
+        Assert.True(details.IsOptimizeNeeded);
+        Assert.Contains("of memory", details.IsOptimizeNeededTooltip);
     }
 }

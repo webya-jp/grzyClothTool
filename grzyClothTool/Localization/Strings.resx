@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
@@ -1672,5 +1672,144 @@ Do you want to continue?</value>
   </data>
   <data name="Settings_PropLimitNote" xml:space="preserve">
     <value>Props (p_head, p_eyes, ...) are always limited to 128 (numbers 0-127). FiveM's extended range covers components only, so this cannot be raised.</value>
+  </data>
+  <data name="BulkOpt_Title" xml:space="preserve">
+    <value>Bulk texture optimization</value>
+  </data>
+  <data name="BulkOpt_Scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="BulkOpt_ScopeProject" xml:space="preserve">
+    <value>Whole project</value>
+  </data>
+  <data name="BulkOpt_ScopeAddon" xml:space="preserve">
+    <value>Selected addon</value>
+  </data>
+  <data name="BulkOpt_ScopeDrawable" xml:space="preserve">
+    <value>Selected drawable(s)</value>
+  </data>
+  <data name="BulkOpt_GenerateMipMaps" xml:space="preserve">
+    <value>Generate mip maps</value>
+  </data>
+  <data name="BulkOpt_FixPowerOfTwo" xml:space="preserve">
+    <value>Snap to power of two</value>
+  </data>
+  <data name="BulkOpt_PowerOfTwoMode" xml:space="preserve">
+    <value>Snap direction</value>
+  </data>
+  <data name="BulkOpt_PowerOfTwoDown" xml:space="preserve">
+    <value>Down (smaller)</value>
+  </data>
+  <data name="BulkOpt_PowerOfTwoUp" xml:space="preserve">
+    <value>Up (larger)</value>
+  </data>
+  <data name="BulkOpt_EnforceResolutionLimit" xml:space="preserve">
+    <value>Apply resolution limit</value>
+  </data>
+  <data name="BulkOpt_LimitDiffuse" xml:space="preserve">
+    <value>Limit (diffuse)</value>
+  </data>
+  <data name="BulkOpt_LimitNormal" xml:space="preserve">
+    <value>Limit (normal)</value>
+  </data>
+  <data name="BulkOpt_LimitSpecular" xml:space="preserve">
+    <value>Limit (specular)</value>
+  </data>
+  <data name="BulkOpt_EnforceMemoryLimit" xml:space="preserve">
+    <value>Memory limit per texture</value>
+  </data>
+  <data name="BulkOpt_MaxMemory" xml:space="preserve">
+    <value>Limit (MB)</value>
+  </data>
+  <data name="BulkOpt_OptimizeCompression" xml:space="preserve">
+    <value>Optimize compression format</value>
+  </data>
+  <data name="BulkOpt_OptimizeCompressionHint" xml:space="preserve">
+    <value>Compression optimization reads every image to find out whether the alpha channel is used, so the analysis takes noticeably longer.</value>
+  </data>
+  <data name="BulkOpt_Analyze" xml:space="preserve">
+    <value>Analyze</value>
+  </data>
+  <data name="BulkOpt_AnalyzeProgress" xml:space="preserve">
+    <value>Analyzing... {0} / {1}</value>
+  </data>
+  <data name="BulkOpt_AnalyzeDone" xml:space="preserve">
+    <value>Analyzed {0} textures, {1} of them need changes.</value>
+  </data>
+  <data name="BulkOpt_Idle" xml:space="preserve">
+    <value>Choose the rules and press Analyze.</value>
+  </data>
+  <data name="BulkOpt_NoTextures" xml:space="preserve">
+    <value>There is no texture in the selected scope.</value>
+  </data>
+  <data name="BulkOpt_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="BulkOpt_Revert" xml:space="preserve">
+    <value>Revert optimization</value>
+  </data>
+  <data name="BulkOpt_SelectAll" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="BulkOpt_SelectNone" xml:space="preserve">
+    <value>Select none</value>
+  </data>
+  <data name="BulkOpt_SelectOverBudget" xml:space="preserve">
+    <value>Select over the limit only</value>
+  </data>
+  <data name="BulkOpt_ColDrawable" xml:space="preserve">
+    <value>Drawable</value>
+  </data>
+  <data name="BulkOpt_ColTexture" xml:space="preserve">
+    <value>Texture</value>
+  </data>
+  <data name="BulkOpt_ColBefore" xml:space="preserve">
+    <value>Before</value>
+  </data>
+  <data name="BulkOpt_ColAfter" xml:space="preserve">
+    <value>After</value>
+  </data>
+  <data name="BulkOpt_ColSaved" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="BulkOpt_Summary" xml:space="preserve">
+    <value>{0} textures: {1} → {2} (saves {3}, {4}%)</value>
+  </data>
+  <data name="BulkOpt_SummaryEmpty" xml:space="preserve">
+    <value>No texture selected.</value>
+  </data>
+  <data name="BulkOpt_NoChanges" xml:space="preserve">
+    <value>Every texture already matches the rules, nothing to change.</value>
+  </data>
+  <data name="BulkOpt_NothingSelected" xml:space="preserve">
+    <value>No texture is checked.</value>
+  </data>
+  <data name="BulkOpt_Applied" xml:space="preserve">
+    <value>{0} textures will be optimized during the next build (about {1} saved).</value>
+  </data>
+  <data name="BulkOpt_BuildNote" xml:space="preserve">
+    <value>Nothing is written now: the source files stay untouched and the optimized textures are generated during the next resource build.</value>
+  </data>
+  <data name="BulkOpt_Reverted" xml:space="preserve">
+    <value>Reverted the optimization of {0} textures.</value>
+  </data>
+  <data name="BulkOpt_RevertNone" xml:space="preserve">
+    <value>No texture in this scope is flagged for optimization.</value>
+  </data>
+  <data name="Project_BulkOptimize" xml:space="preserve">
+    <value>Bulk optimize textures</value>
+  </data>
+  <data name="Texture_MemoryExceedsLimit" xml:space="preserve">
+    <value>Texture uses about {0} of memory, which is above the {1} MB limit. Optimize it to reduce the size.
+</value>
+  </data>
+  <data name="BulkOpt_CompressUncompressed" xml:space="preserve">
+    <value>Compress uncompressed (DXT5)</value>
+  </data>
+  <data name="BulkOpt_ColFormat" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="BulkOpt_SummaryBreakdown" xml:space="preserve">
+    <value>Compression: {0} saved on {1} textures / downscale: {2} on {3} textures</value>
   </data>
 </root>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
@@ -1672,5 +1672,144 @@ GTA5.exe があるフォルダーを選択してください。</value>
   </data>
   <data name="Settings_PropLimitNote" xml:space="preserve">
     <value>プロップ (p_head、p_eyes など) は常に 128 (番号 0〜127) に固定されます。FiveM の拡張はコンポーネントのみが対象のため、この上限は変更できません。</value>
+  </data>
+  <data name="BulkOpt_Title" xml:space="preserve">
+    <value>テクスチャ一括最適化</value>
+  </data>
+  <data name="BulkOpt_Scope" xml:space="preserve">
+    <value>対象範囲</value>
+  </data>
+  <data name="BulkOpt_ScopeProject" xml:space="preserve">
+    <value>プロジェクト全体</value>
+  </data>
+  <data name="BulkOpt_ScopeAddon" xml:space="preserve">
+    <value>選択中のアドオン</value>
+  </data>
+  <data name="BulkOpt_ScopeDrawable" xml:space="preserve">
+    <value>選択中のドロウアブル</value>
+  </data>
+  <data name="BulkOpt_GenerateMipMaps" xml:space="preserve">
+    <value>ミップマップを自動生成する</value>
+  </data>
+  <data name="BulkOpt_FixPowerOfTwo" xml:space="preserve">
+    <value>2 の冪に揃える</value>
+  </data>
+  <data name="BulkOpt_PowerOfTwoMode" xml:space="preserve">
+    <value>揃え方</value>
+  </data>
+  <data name="BulkOpt_PowerOfTwoDown" xml:space="preserve">
+    <value>切り下げ (小さくする)</value>
+  </data>
+  <data name="BulkOpt_PowerOfTwoUp" xml:space="preserve">
+    <value>切り上げ (大きくする)</value>
+  </data>
+  <data name="BulkOpt_EnforceResolutionLimit" xml:space="preserve">
+    <value>解像度の上限を適用する</value>
+  </data>
+  <data name="BulkOpt_LimitDiffuse" xml:space="preserve">
+    <value>上限 (diffuse)</value>
+  </data>
+  <data name="BulkOpt_LimitNormal" xml:space="preserve">
+    <value>上限 (normal)</value>
+  </data>
+  <data name="BulkOpt_LimitSpecular" xml:space="preserve">
+    <value>上限 (specular)</value>
+  </data>
+  <data name="BulkOpt_EnforceMemoryLimit" xml:space="preserve">
+    <value>1 テクスチャあたりの上限</value>
+  </data>
+  <data name="BulkOpt_MaxMemory" xml:space="preserve">
+    <value>上限 (MB)</value>
+  </data>
+  <data name="BulkOpt_OptimizeCompression" xml:space="preserve">
+    <value>圧縮形式を最適化する</value>
+  </data>
+  <data name="BulkOpt_OptimizeCompressionHint" xml:space="preserve">
+    <value>圧縮形式の最適化はアルファチャンネルの使用状況を調べるために全画像を読み込むので、解析に時間がかかります。</value>
+  </data>
+  <data name="BulkOpt_Analyze" xml:space="preserve">
+    <value>解析</value>
+  </data>
+  <data name="BulkOpt_AnalyzeProgress" xml:space="preserve">
+    <value>解析中... {0} / {1}</value>
+  </data>
+  <data name="BulkOpt_AnalyzeDone" xml:space="preserve">
+    <value>{0} 件のテクスチャを解析し、{1} 件に変更が必要です。</value>
+  </data>
+  <data name="BulkOpt_Idle" xml:space="preserve">
+    <value>条件を選んで「解析」を押してください。</value>
+  </data>
+  <data name="BulkOpt_NoTextures" xml:space="preserve">
+    <value>対象範囲にテクスチャがありません。</value>
+  </data>
+  <data name="BulkOpt_Apply" xml:space="preserve">
+    <value>適用</value>
+  </data>
+  <data name="BulkOpt_Revert" xml:space="preserve">
+    <value>元に戻す</value>
+  </data>
+  <data name="BulkOpt_SelectAll" xml:space="preserve">
+    <value>全選択</value>
+  </data>
+  <data name="BulkOpt_SelectNone" xml:space="preserve">
+    <value>全解除</value>
+  </data>
+  <data name="BulkOpt_SelectOverBudget" xml:space="preserve">
+    <value>上限超過のみ選択</value>
+  </data>
+  <data name="BulkOpt_ColDrawable" xml:space="preserve">
+    <value>ドロウアブル</value>
+  </data>
+  <data name="BulkOpt_ColTexture" xml:space="preserve">
+    <value>テクスチャ</value>
+  </data>
+  <data name="BulkOpt_ColBefore" xml:space="preserve">
+    <value>変更前</value>
+  </data>
+  <data name="BulkOpt_ColAfter" xml:space="preserve">
+    <value>削減後</value>
+  </data>
+  <data name="BulkOpt_ColSaved" xml:space="preserve">
+    <value>削減量</value>
+  </data>
+  <data name="BulkOpt_Summary" xml:space="preserve">
+    <value>{0} 件: {1} → {2} (削減 {3}、{4}%)</value>
+  </data>
+  <data name="BulkOpt_SummaryEmpty" xml:space="preserve">
+    <value>選択されたテクスチャはありません。</value>
+  </data>
+  <data name="BulkOpt_NoChanges" xml:space="preserve">
+    <value>すべてのテクスチャが条件を満たしています。変更はありません。</value>
+  </data>
+  <data name="BulkOpt_NothingSelected" xml:space="preserve">
+    <value>チェックされたテクスチャがありません。</value>
+  </data>
+  <data name="BulkOpt_Applied" xml:space="preserve">
+    <value>{0} 件のテクスチャを次回ビルド時に最適化します (約 {1} 削減)。</value>
+  </data>
+  <data name="BulkOpt_BuildNote" xml:space="preserve">
+    <value>この時点ではファイルは書き換えません。元ファイルはそのままで、最適化されたテクスチャは次回のリソースビルド時に生成されます。</value>
+  </data>
+  <data name="BulkOpt_Reverted" xml:space="preserve">
+    <value>{0} 件のテクスチャの最適化設定を解除しました。</value>
+  </data>
+  <data name="BulkOpt_RevertNone" xml:space="preserve">
+    <value>この範囲に最適化が設定されたテクスチャはありません。</value>
+  </data>
+  <data name="Project_BulkOptimize" xml:space="preserve">
+    <value>テクスチャ一括最適化</value>
+  </data>
+  <data name="Texture_MemoryExceedsLimit" xml:space="preserve">
+    <value>テクスチャのメモリ使用量は約 {0} で、上限 {1} MB を超えています。最適化してサイズを下げてください。
+</value>
+  </data>
+  <data name="BulkOpt_CompressUncompressed" xml:space="preserve">
+    <value>無圧縮テクスチャを圧縮する (DXT5)</value>
+  </data>
+  <data name="BulkOpt_ColFormat" xml:space="preserve">
+    <value>形式</value>
+  </data>
+  <data name="BulkOpt_SummaryBreakdown" xml:space="preserve">
+    <value>圧縮による削減: {0} ({1} 件) / 縮小による削減: {2} ({3} 件)</value>
   </data>
 </root>

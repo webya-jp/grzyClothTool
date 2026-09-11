@@ -41,5 +41,8 @@
     <Setting Name="MaxPropDrawablesPerAddon" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">127</Value>
     </Setting>
+    <Setting Name="MaxTextureMemoryMB" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">16</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

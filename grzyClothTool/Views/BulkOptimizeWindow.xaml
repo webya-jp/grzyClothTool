@@ -1,0 +1,262 @@
+﻿<Window x:Class="grzyClothTool.Views.BulkOptimizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:icons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+        xmlns:c="clr-namespace:grzyClothTool.Controls"
+        xmlns:loc="clr-namespace:grzyClothTool.Localization"
+        mc:Ignorable="d"
+        Title="{loc:Loc BulkOpt_Title}"
+        Height="760"
+        Width="1060"
+        MinHeight="620"
+        MinWidth="900"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource Brush50}"
+        Foreground="{DynamicResource Brush900}">
+
+    <Grid Margin="14">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Scope + options -->
+        <Border Grid.Row="0"
+                Background="{DynamicResource Brush75}"
+                BorderBrush="{DynamicResource Brush250}"
+                BorderThickness="1"
+                CornerRadius="6"
+                Padding="8">
+            <StackPanel>
+                <WrapPanel>
+                    <c:ModernLabelComboBox x:Name="ScopeBox"
+                                           Width="330"
+                                           Label="{loc:Loc BulkOpt_Scope}"
+                                           ItemsSource="{Binding ScopeOptions}"
+                                           SelectedItem="{Binding SelectedScope, Mode=TwoWay}" />
+                    <c:ModernLabelCheckBox Width="260"
+                                           Label="{loc:Loc BulkOpt_GenerateMipMaps}"
+                                           IsChecked="{Binding GenerateMipMaps, Mode=TwoWay}" />
+                    <c:ModernLabelCheckBox Width="330"
+                                           Label="{loc:Loc BulkOpt_CompressUncompressed}"
+                                           IsChecked="{Binding CompressUncompressed, Mode=TwoWay}" />
+                    <c:ModernLabelCheckBox Width="260"
+                                           Label="{loc:Loc BulkOpt_FixPowerOfTwo}"
+                                           IsChecked="{Binding FixPowerOfTwo, Mode=TwoWay}" />
+                    <c:ModernLabelComboBox Width="260"
+                                           IsEnabled="{Binding FixPowerOfTwo}"
+                                           Label="{loc:Loc BulkOpt_PowerOfTwoMode}"
+                                           ItemsSource="{Binding PowerOfTwoModes}"
+                                           SelectedItem="{Binding SelectedPowerOfTwoMode, Mode=TwoWay}" />
+                    <c:ModernLabelCheckBox Width="260"
+                                           Label="{loc:Loc BulkOpt_EnforceResolutionLimit}"
+                                           IsChecked="{Binding EnforceResolutionLimit, Mode=TwoWay}" />
+                    <c:ModernLabelComboBox Width="260"
+                                           IsEnabled="{Binding EnforceResolutionLimit}"
+                                           Label="{loc:Loc BulkOpt_LimitDiffuse}"
+                                           ItemsSource="{Binding ResolutionOptions}"
+                                           SelectedItem="{Binding LimitDiffuse, Mode=TwoWay}" />
+                    <c:ModernLabelComboBox Width="260"
+                                           IsEnabled="{Binding EnforceResolutionLimit}"
+                                           Label="{loc:Loc BulkOpt_LimitNormal}"
+                                           ItemsSource="{Binding ResolutionOptions}"
+                                           SelectedItem="{Binding LimitNormal, Mode=TwoWay}" />
+                    <c:ModernLabelComboBox Width="260"
+                                           IsEnabled="{Binding EnforceResolutionLimit}"
+                                           Label="{loc:Loc BulkOpt_LimitSpecular}"
+                                           ItemsSource="{Binding ResolutionOptions}"
+                                           SelectedItem="{Binding LimitSpecular, Mode=TwoWay}" />
+                    <c:ModernLabelCheckBox Width="260"
+                                           Label="{loc:Loc BulkOpt_EnforceMemoryLimit}"
+                                           IsChecked="{Binding EnforceMemoryLimit, Mode=TwoWay}" />
+                    <c:ModernLabelComboBox Width="260"
+                                           IsEnabled="{Binding EnforceMemoryLimit}"
+                                           Label="{loc:Loc BulkOpt_MaxMemory}"
+                                           ItemsSource="{Binding MemoryOptions}"
+                                           SelectedItem="{Binding MaxMemoryMB, Mode=TwoWay}" />
+                    <c:ModernLabelCheckBox Width="330"
+                                           Label="{loc:Loc BulkOpt_OptimizeCompression}"
+                                           IsChecked="{Binding OptimizeCompression, Mode=TwoWay}" />
+                </WrapPanel>
+
+                <TextBlock Text="{loc:Loc BulkOpt_OptimizeCompressionHint}"
+                           TextWrapping="Wrap"
+                           FontSize="11"
+                           Margin="7,2,0,0"
+                           Foreground="{DynamicResource Brush700}" />
+            </StackPanel>
+        </Border>
+
+        <!-- Analyze row -->
+        <Grid Grid.Row="1" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <c:CustomButton Grid.Column="0"
+                            x:Name="AnalyzeButton"
+                            AutomationProperties.AutomationId="BULK ANALYZE"
+                            Label="{loc:Loc BulkOpt_Analyze}"
+                            Width="160"
+                            Height="38"
+                            CornerRadius="5"
+                            MyBtnClickEvent="Analyze_Click" />
+
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="12,0,0,0">
+                <TextBlock x:Name="StatusLabel" AutomationProperties.AutomationId="BULK STATUS"
+                           Text="{Binding StatusMessage}"
+                           TextTrimming="CharacterEllipsis"
+                           Foreground="{DynamicResource Brush800}" />
+                <ProgressBar Height="6"
+                             Margin="0,4,0,0"
+                             Minimum="0"
+                             Maximum="100"
+                             Value="{Binding ProgressValue}"
+                             Visibility="{Binding ProgressVisibility}" />
+            </StackPanel>
+        </Grid>
+
+        <!-- Summary -->
+        <Border Grid.Row="2"
+                Margin="0,10,0,0"
+                Background="{DynamicResource Brush100}"
+                BorderBrush="{DynamicResource Brush250}"
+                BorderThickness="1"
+                CornerRadius="6"
+                Padding="12,8">
+            <StackPanel>
+                <TextBlock x:Name="SummaryLabel" AutomationProperties.AutomationId="BULK SUMMARY"
+                           Text="{Binding SummaryText}"
+                           FontSize="18"
+                           FontWeight="SemiBold"
+                           TextWrapping="Wrap"
+                           Foreground="{DynamicResource Brush950}" />
+                <TextBlock Text="{Binding SummaryDetail}"
+                           FontSize="12"
+                           Margin="0,4,0,0"
+                           TextWrapping="Wrap"
+                           Foreground="{DynamicResource Brush800}" />
+                <TextBlock Text="{loc:Loc BulkOpt_BuildNote}"
+                           FontSize="11"
+                           Margin="0,4,0,0"
+                           TextWrapping="Wrap"
+                           Foreground="{DynamicResource Brush700}" />
+            </StackPanel>
+        </Border>
+
+        <!-- Results -->
+        <Grid Grid.Row="3" Margin="0,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,6">
+                <c:CustomButton Label="{loc:Loc BulkOpt_SelectAll}" Width="130" Height="30" CornerRadius="5" Margin="0,0,6,0" MyBtnClickEvent="SelectAll_Click" />
+                <c:CustomButton Label="{loc:Loc BulkOpt_SelectNone}" Width="130" Height="30" CornerRadius="5" Margin="0,0,6,0" MyBtnClickEvent="SelectNone_Click" />
+                <c:CustomButton Label="{loc:Loc BulkOpt_SelectOverBudget}" Width="200" Height="30" CornerRadius="5" MyBtnClickEvent="SelectOverBudget_Click" />
+            </StackPanel>
+
+            <ListView Grid.Row="1"
+                      x:Name="PlanList"
+                      AutomationProperties.AutomationId="BULK PLAN LIST"
+                      ItemsSource="{Binding Plan}"
+                      Background="{DynamicResource Brush50}"
+                      Foreground="{DynamicResource Brush950}"
+                      BorderBrush="{DynamicResource Brush250}"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsOverBudget}" Value="True">
+                                <Setter Property="Background" Value="#33ef4444" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="40">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="160" DisplayMemberBinding="{Binding DrawableName}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader Content="{loc:Loc BulkOpt_ColDrawable}" Tag="DrawableName" Click="Header_Click" />
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="180" DisplayMemberBinding="{Binding TextureName}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader Content="{loc:Loc BulkOpt_ColTexture}" Tag="TextureName" Click="Header_Click" />
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="130" DisplayMemberBinding="{Binding FormatText}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader Content="{loc:Loc BulkOpt_ColFormat}" Tag="FormatText" Click="Header_Click" />
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="190" DisplayMemberBinding="{Binding BeforeText}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader Content="{loc:Loc BulkOpt_ColBefore}" Tag="BeforeBytes" Click="Header_Click" />
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="190" DisplayMemberBinding="{Binding AfterText}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader Content="{loc:Loc BulkOpt_ColAfter}" Tag="AfterBytes" Click="Header_Click" />
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="110" DisplayMemberBinding="{Binding SavedText}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader Content="{loc:Loc BulkOpt_ColSaved}" Tag="SavedBytes" Click="Header_Click" />
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+
+        <!-- Actions -->
+        <Grid Grid.Row="4" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <c:CustomButton Grid.Column="0"
+                            Label="{loc:Loc BulkOpt_Revert}"
+                            AutomationProperties.AutomationId="BULK REVERT"
+                            Width="200"
+                            Height="40"
+                            CornerRadius="5"
+                            MyBtnClickEvent="Revert_Click" />
+
+            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                <c:CustomButton Label="{loc:Loc Common_Close}"
+                                Width="120"
+                                Height="40"
+                                CornerRadius="5"
+                                Margin="0,0,8,0"
+                                MyBtnClickEvent="Close_Click" />
+                <c:CustomButton x:Name="ApplyButton"
+                                AutomationProperties.AutomationId="BULK APPLY"
+                                Label="{loc:Loc BulkOpt_Apply}"
+                                Width="200"
+                                Height="40"
+                                CornerRadius="5"
+                                MyBtnClickEvent="Apply_Click" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

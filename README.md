@@ -29,6 +29,39 @@
 `GRZYCLOTHTOOL_LANG=en|ja` を使えます (設定より優先され、設定ファイルは書き換えません)。
 自動 UI テストのように表示言語を固定したいときに使います。
 
+## テクスチャ一括最適化
+
+FiveM のサーバーログに `Asset xxx.ytd uses 64.0 MiB of physical memory. Oversized assets can and WILL
+lead to streaming issues` が大量に出る原因は、たいてい **無圧縮のディフューズテクスチャ**と
+**ミップマップ無し**のテクスチャです。このフォークでは、プロジェクト全体のテクスチャを
+まとめて条件で処理する **テクスチャ一括最適化** を追加しています。
+
+プロジェクト画面の右下、「3D プレビュー」の左にある **テクスチャ一括最適化** ボタンから開きます。
+
+対象範囲は **プロジェクト全体 / 選択中のアドオン / 選択中のドロウアブル** から選べます。
+適用できる条件は次のとおりです。
+
+| 条件 | 既定 | 内容 |
+| --- | --- | --- |
+| ミップマップを自動生成する | ON | ミップが足りないテクスチャに正しい段数を設定します。 |
+| 無圧縮テクスチャを圧縮する (DXT5) | ON | A8R8G8B8 などの無圧縮形式を DXT5 にします。メモリが約 1/4 になり、アルファも失われません。 |
+| 2 の冪に揃える | ON | 2 の冪でない解像度を直近の 2 の冪に揃えます (既定は切り下げ、切り上げも選べます)。 |
+| 解像度の上限を適用する | ON | diffuse 2048 / normal 512 / specular 256 が既定です。ダイアログ内で変更できます。 |
+| 1 テクスチャあたりの上限 | ON (16 MB) | ミップ込みの推定メモリが上限を超える間、幅と高さを半分にします。 |
+| 圧縮形式を最適化する | OFF | 実画像のアルファを調べて DXT1 / DXT5 を選び分けます。全画像を読むので時間がかかります。 |
+
+適用順序は **圧縮 → 2 の冪 → 解像度上限 → メモリ上限 → ミップ段数の再計算** です。
+先に圧縮するため、たとえば 4096x2048 の無圧縮 (42.7 MB) は DXT5 にするだけで 10.7 MB になり、
+解像度を落とさずに済みます。
+
+「解析」を押すとプランが一覧表示されます (変更が不要なテクスチャは出ません)。
+16 MB を超える行は強調表示され、「上限超過のみ選択」で絞り込めます。
+「適用」を押しても **その時点ではファイルを書き換えません**。元ファイルはそのままで、
+最適化されたテクスチャは **次回のリソースビルド時**に生成されます。「元に戻す」で解除できます。
+
+実測 (女性用アドオン、ydd 128 件 / ytd 421 件):
+合計 2052 MB → 853 MB (-58%)、16 MB 超が 18 件 → 0 件、最大テクスチャ 42.7 MB → 5.3 MB。
+
 ## 翻訳について
 
 - ドロウアブル、テクスチャ、アドオン、プロップ、コンポーネントなど、GTA V 衣装 MOD で
@@ -54,6 +87,33 @@
 
 **grzyClothTool** is a free tool to easily create and manage your GTA5 addon clothing packs.
 Now you can do _almost_ everything you could do before with _other available tools_, but now without spending any money!
+
+##
+
+# Bulk texture optimization (quick start)
+
+This fork adds a **bulk texture optimizer** for the whole project, aimed at the FiveM warning
+`Asset xxx.ytd uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues`.
+
+1. Open a project and click **Bulk optimize textures** (bottom right, next to *Preview 3D*).
+2. Pick the scope: whole project, selected addon, or selected drawable(s).
+3. Rules, all applied in this order — compression, power of two, resolution limit, memory budget,
+   mip count:
+   - **Generate mip maps** (on) — fills in a missing mip chain.
+   - **Compress uncompressed (DXT5)** (on) — re-encodes A8R8G8B8 and friends, which cuts their
+     memory to about a quarter without losing the alpha channel.
+   - **Snap to power of two** (on, rounds down by default).
+   - **Apply resolution limit** (on) — diffuse 2048 / normal 512 / specular 256 by default,
+     editable in the dialog.
+   - **Memory limit per texture** (on, 16 MB) — halves the texture until the estimated memory,
+     mip levels included, fits.
+   - **Optimize compression format** (off) — reads every image to pick DXT1 or DXT5 by alpha usage.
+4. Press **Analyze**, review the plan (textures that need no change are not listed), then **Apply**.
+   Nothing is written at that point: the source files stay untouched and the optimized textures are
+   generated during the next resource build. **Revert optimization** undoes it.
+
+Measured on a real female addon (128 ydd / 421 ytd): 2052 MB -> 853 MB of texture memory (-58%),
+18 textures above 16 MB -> 0, largest texture 42.7 MB -> 5.3 MB.
 
 ##
 
