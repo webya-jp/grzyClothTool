@@ -94,6 +94,19 @@ public class PersistentSettingsHelper
         }
     }
 
+    public string Language
+    {
+        get => _settings.Language ?? "Auto";
+        set
+        {
+            if (_settings.Language != value)
+            {
+                _settings.Language = value;
+                SaveSettings();
+            }
+        }
+    }
+
     public string SettingsFilePath => _settingsFilePath;
 
     public List<RecentProject> RecentlyOpenedProjects
@@ -154,6 +167,7 @@ public class PersistentSettings
 {
     public bool IsFirstRun { get; set; } = true;
     public string MainProjectsFolder { get; set; } = string.Empty;
+    public string Language { get; set; } = "Auto";
     public List<RecentProject> RecentlyOpenedProjects { get; set; } = [];
 }
 

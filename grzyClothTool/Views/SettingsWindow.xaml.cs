@@ -1,7 +1,9 @@
 ﻿using grzyClothTool.Controls;
 using grzyClothTool.Helpers;
+using grzyClothTool.Localization;
 using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
@@ -41,6 +43,29 @@ namespace grzyClothTool.Views
             }
         }
 
+
+        public static IReadOnlyList<LanguageOption> LanguageOptions => LocalizationManager.LanguageOptions;
+
+        private LanguageOption _selectedLanguage;
+        public LanguageOption SelectedLanguage
+        {
+            get
+            {
+                _selectedLanguage ??= LanguageOptions.FirstOrDefault(o => o.Language == LocalizationManager.Instance.CurrentLanguage)
+                                      ?? LanguageOptions[0];
+                return _selectedLanguage;
+            }
+            set
+            {
+                if (value != null && _selectedLanguage != value)
+                {
+                    _selectedLanguage = value;
+                    PersistentSettingsHelper.Instance.Language = value.Language.ToString();
+                    LocalizationManager.Instance.SetLanguage(value.Language);
+                    OnPropertyChanged(nameof(SelectedLanguage));
+                }
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

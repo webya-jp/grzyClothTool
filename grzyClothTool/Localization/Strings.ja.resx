@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Common_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="Common_Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="Common_Back" xml:space="preserve">
+    <value>戻る</value>
+  </data>
+  <data name="Common_Next" xml:space="preserve">
+    <value>次へ</value>
+  </data>
+  <data name="Common_Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Common_Delete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="Common_Remove" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="Common_Add" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="Common_Edit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="Common_Rename" xml:space="preserve">
+    <value>名前を変更</value>
+  </data>
+  <data name="Common_Browse" xml:space="preserve">
+    <value>参照</value>
+  </data>
+  <data name="Common_Apply" xml:space="preserve">
+    <value>適用</value>
+  </data>
+  <data name="Common_Reset" xml:space="preserve">
+    <value>リセット</value>
+  </data>
+  <data name="Common_Error" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Common_Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="Common_Information" xml:space="preserve">
+    <value>情報</value>
+  </data>
+  <data name="Common_Confirm" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="Common_Success" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="Common_Loading" xml:space="preserve">
+    <value>読み込み中...</value>
+  </data>
+  <data name="Common_Select" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="Common_SelectAll" xml:space="preserve">
+    <value>すべて選択</value>
+  </data>
+  <data name="Common_Copy" xml:space="preserve">
+    <value>コピー</value>
+  </data>
+  <data name="Common_Search" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="Common_Settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="Common_Name" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="Common_Type" xml:space="preserve">
+    <value>種類</value>
+  </data>
+  <data name="Common_Male" xml:space="preserve">
+    <value>男性</value>
+  </data>
+  <data name="Common_Female" xml:space="preserve">
+    <value>女性</value>
+  </data>
+  <data name="Common_Enabled" xml:space="preserve">
+    <value>有効</value>
+  </data>
+  <data name="Common_Disabled" xml:space="preserve">
+    <value>無効</value>
+  </data>
+  <data name="Common_None" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="Common_Skip" xml:space="preserve">
+    <value>スキップ</value>
+  </data>
+  <data name="Common_Finish" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="Common_Continue" xml:space="preserve">
+    <value>続行</value>
+  </data>
+  <data name="Common_Open" xml:space="preserve">
+    <value>開く</value>
+  </data>
+  <data name="Common_Refresh" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="Settings_LanguageHeader" xml:space="preserve">
+    <value>言語 / Language</value>
+  </data>
+  <data name="Settings_LanguageLabel" xml:space="preserve">
+    <value>UI の言語</value>
+  </data>
+  <data name="Settings_LanguageDescription" xml:space="preserve">
+    <value>自動 を選ぶと Windows の言語に従います。変更はすぐに反映されます。一部のテキストは再起動後に反映されます。</value>
+  </data>
+</root>

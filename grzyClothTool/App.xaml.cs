@@ -40,6 +40,10 @@ namespace grzyClothTool
 
         protected override void OnStartup(StartupEventArgs e)
         {
+            // apply the saved UI language before any window is created
+            Localization.LocalizationManager.Instance.SetLanguage(
+                Localization.LocalizationManager.ParseLanguage(Helpers.PersistentSettingsHelper.Instance.Language));
+
             ResetSplashCreated = new ManualResetEvent(false);
 
             // Create a new thread for the splash screen to run on

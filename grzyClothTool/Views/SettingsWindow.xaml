@@ -9,7 +9,8 @@
              xmlns:converters="clr-namespace:grzyClothTool.Converters"
              xmlns:enums="clr-namespace:grzyClothTool"
              xmlns:c="clr-namespace:grzyClothTool.Controls"
-             mc:Ignorable="d" 
+             xmlns:loc="clr-namespace:grzyClothTool.Localization"
+             mc:Ignorable="d"
              d:DesignHeight="550" d:DesignWidth="800"
              d:Background="{DynamicResource Brush50}">
     <Grid>
@@ -184,6 +185,21 @@
                             </GroupBox>
                         </StackPanel>
                         <StackPanel Margin="5" Grid.Column="1">
+                            <GroupBox Margin="0,5" Style="{DynamicResource FixedGroupBox}">
+                                <GroupBox.Header>
+                                    <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="{loc:Loc Settings_LanguageHeader}" />
+                                </GroupBox.Header>
+                                <StackPanel Margin="5">
+                                    <c:SettingsLabelComboBox
+                                        Margin="5"
+                                        Label="{loc:Loc Settings_LanguageLabel}"
+                                        LabelFontSize="12"
+                                        ItemsSource="{Binding LanguageOptions}"
+                                        SelectedItem="{Binding SelectedLanguage, Mode=TwoWay}"
+                                        Description="{loc:Loc Settings_LanguageDescription}" />
+                                </StackPanel>
+                            </GroupBox>
+
                             <GroupBox Margin="0,5" Height="380" Style="{DynamicResource FixedGroupBox}">
                                 <GroupBox.Header>
                                     <TextBlock FontSize="15" FontWeight="Bold" Foreground="{DynamicResource Brush950}" Text="General settings" />
