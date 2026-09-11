@@ -52,7 +52,15 @@
                 <MenuItem.Template>
                     <ControlTemplate TargetType="MenuItem">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-                            <TextBlock Padding="5,0" Text="{Binding AppVersion, RelativeSource={RelativeSource AncestorType=Window}}" />
+                            <TextBlock Padding="5,0">
+                                <TextBlock.Text>
+                                    <!-- split so that switching language updates the label without a restart -->
+                                    <MultiBinding StringFormat="{}{0}{1}">
+                                        <Binding Path="[Main_VersionLabel]" Source="{x:Static loc:LocalizationManager.Instance}" />
+                                        <Binding Path="AppVersionNumber" RelativeSource="{RelativeSource AncestorType=Window}" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
                         </StackPanel>
                     </ControlTemplate>
                 </MenuItem.Template>

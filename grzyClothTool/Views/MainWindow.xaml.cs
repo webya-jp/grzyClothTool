@@ -26,6 +26,8 @@ namespace grzyClothTool
     public partial class MainWindow : Window
     {
         public static string AppVersion => Loc.T("Main_VersionLabel") + UpdateHelper.GetCurrentVersion();
+        // bound separately from the label so that switching language updates the label without a restart
+        public static string AppVersionNumber => UpdateHelper.GetCurrentVersion();
         private static MainWindow _instance;
         public static MainWindow Instance => _instance;
         private static NavigationHelper _navigationHelper;
