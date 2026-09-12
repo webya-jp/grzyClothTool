@@ -180,6 +180,34 @@ public partial class BulkOptimizeWindow : Window, INotifyPropertyChanged
         set { _progressVisibility = value; OnPropertyChanged(); }
     }
 
+    private Visibility _cancelVisibility = Visibility.Collapsed;
+    public Visibility CancelVisibility
+    {
+        get => _cancelVisibility;
+        set { _cancelVisibility = value; OnPropertyChanged(); }
+    }
+
+    private Visibility _undoBakeVisibility = Visibility.Collapsed;
+    public Visibility UndoBakeVisibility
+    {
+        get => _undoBakeVisibility;
+        set { _undoBakeVisibility = value; OnPropertyChanged(); }
+    }
+
+    private bool _keepOriginalFiles = true;
+    /// <summary>
+    /// Keep the file a texture came from, so "write now" can be undone. When this is off the old
+    /// asset is deleted - but only when it lives inside the project, never a file of the user.
+    /// </summary>
+    public bool KeepOriginalFiles
+    {
+        get => _keepOriginalFiles;
+        set { _keepOriginalFiles = value; OnPropertyChanged(); }
+    }
+
+    private CancellationTokenSource? _bakeCts;
+    private readonly List<TextureBakeRecord> _bakeRecords = [];
+
     public BulkOptimizeWindow() : this(MainWindow.AddonManager)
     {
     }
@@ -413,6 +441,197 @@ public partial class BulkOptimizeWindow : Window, INotifyPropertyChanged
         StatusMessage = message;
     }
 
+    /// <summary>
+    /// Encodes the selected textures right away and repoints them at the generated file, instead of
+    /// only flagging them for the next build. That makes the 3D preview and the texture preview show
+    /// the real quality before anything is built.
+    /// </summary>
+    private async void BakeNow_Click(object sender, RoutedEventArgs e)
+    {
+        var selected = Plan.Where(p => p.IsSelected).ToList();
+        if (selected.Count == 0)
+        {
+            CustomMessageBox.Show(Loc.T("BulkOpt_NothingSelected"));
+            return;
+        }
+
+        string assetsPath;
+        try
+        {
+            assetsPath = FileHelper.GetProjectAssetsPath();
+        }
+        catch (Exception ex)
+        {
+            CustomMessageBox.Show(ex.Message, Loc.T("BulkOpt_Title"),
+                CustomMessageBox.CustomMessageBoxButtons.OKOnly, CustomMessageBox.CustomMessageBoxIcon.Warning);
+            return;
+        }
+
+        var isExternal = _addonManager?.IsExternalProject == true;
+        var question = Loc.T("BulkOpt_BakeConfirm", selected.Count);
+        if (isExternal)
+        {
+            // The source files belong to the user here, so the result is written next to the project
+            // and the texture is repointed - the original file on disk is left alone.
+            question += Environment.NewLine + Environment.NewLine + Loc.T("BulkOpt_BakeExternalNote");
+        }
+        else if (!KeepOriginalFiles)
+        {
+            question += Environment.NewLine + Environment.NewLine + Loc.T("BulkOpt_BakeDeleteNote");
+        }
+
+        var answer = CustomMessageBox.Show(question, Loc.T("BulkOpt_BakeConfirmTitle"),
+            CustomMessageBox.CustomMessageBoxButtons.YesNo, CustomMessageBox.CustomMessageBoxIcon.Question);
+        if (answer != CustomMessageBox.CustomMessageBoxResult.Yes)
+        {
+            return;
+        }
+
+        _bakeCts?.Cancel();
+        _bakeCts?.Dispose();
+        _bakeCts = new CancellationTokenSource();
+
+        AnalyzeButton.IsEnabled = false;
+        ApplyButton.IsEnabled = false;
+        BakeButton.IsEnabled = false;
+        CancelVisibility = Visibility.Visible;
+        ProgressVisibility = Visibility.Visible;
+        ProgressValue = 0;
+
+        var progress = new Progress<TextureBakeProgress>(p =>
+        {
+            ProgressValue = p.Percentage;
+            StatusMessage = Loc.T("BulkOpt_BakeProgress", p.Current, p.Total, p.TextureName);
+        });
+
+        TextureBakeResult result;
+        try
+        {
+            var options = new TextureBakeOptions
+            {
+                // An external project never gets its source deleted, whatever the checkbox says.
+                OriginalHandling = KeepOriginalFiles || isExternal
+                    ? TextureBakeOriginalHandling.Keep
+                    : TextureBakeOriginalHandling.Delete
+            };
+
+            var allTextures = CollectAllProjectTextures();
+            result = await TextureBakeHelper.BakeAsync(selected, assetsPath, options, allTextures, progress, _bakeCts.Token);
+        }
+        catch (Exception ex)
+        {
+            StatusMessage = ex.Message;
+            LogHelper.Log($"Writing the optimized textures failed: {ex.Message}", LogType.Error);
+            CustomMessageBox.Show(ex.Message, Loc.T("BulkOpt_Title"),
+                CustomMessageBox.CustomMessageBoxButtons.OKOnly, CustomMessageBox.CustomMessageBoxIcon.Error);
+            return;
+        }
+        finally
+        {
+            ProgressVisibility = Visibility.Collapsed;
+            CancelVisibility = Visibility.Collapsed;
+            AnalyzeButton.IsEnabled = true;
+            ApplyButton.IsEnabled = true;
+            BakeButton.IsEnabled = true;
+        }
+
+        if (result.Count == 0)
+        {
+            StatusMessage = Loc.T("BulkOpt_BakeNone");
+            CustomMessageBox.Show(Loc.T("BulkOpt_BakeNone"));
+            return;
+        }
+
+        _bakeRecords.AddRange(result.Records);
+        UndoBakeVisibility = KeepOriginalFiles && !_bakeRecords.All(r => r.PreviousFullPath == null)
+            ? Visibility.Visible
+            : Visibility.Collapsed;
+
+        SaveHelper.SetUnsavedChanges(true);
+
+        var message = Loc.T(
+            "BulkOpt_BakeDone",
+            result.Count,
+            TextureSizeHelper.FormatBytesAsMegabytes(result.FileBytesSaved),
+            TextureSizeHelper.FormatBytesAsMegabytes(result.MemoryBytesSaved));
+
+        if (result.WasCancelled)
+        {
+            message += Environment.NewLine + Loc.T("BulkOpt_BakeCancelled");
+        }
+
+        if (result.Failures.Count > 0)
+        {
+            message += Environment.NewLine + Loc.T("BulkOpt_BakeFailures", result.Failures.Count);
+        }
+
+        if (result.DeletedOriginals > 0)
+        {
+            message += Environment.NewLine + Loc.T("BulkOpt_BakeDeleted", result.DeletedOriginals);
+        }
+
+        LogHelper.Log(message);
+        CustomMessageBox.Show(message);
+        StatusMessage = message;
+
+        foreach (var entry in result.Records.Select(r => r.Texture).ToHashSet()
+                     .Select(t => Plan.FirstOrDefault(p => p.Texture == t))
+                     .Where(p => p != null)
+                     .ToList())
+        {
+            Plan.Remove(entry!);
+        }
+
+        UpdateSummary();
+    }
+
+    private void CancelBake_Click(object sender, RoutedEventArgs e)
+    {
+        _bakeCts?.Cancel();
+        StatusMessage = Loc.T("BulkOpt_BakeCancelling");
+    }
+
+    private async void UndoBake_Click(object sender, RoutedEventArgs e)
+    {
+        if (_bakeRecords.Count == 0)
+        {
+            CustomMessageBox.Show(Loc.T("BulkOpt_UndoBakeNone"));
+            return;
+        }
+
+        var count = await TextureBakeHelper.RevertAsync(_bakeRecords);
+        _bakeRecords.Clear();
+        UndoBakeVisibility = Visibility.Collapsed;
+
+        if (count == 0)
+        {
+            CustomMessageBox.Show(Loc.T("BulkOpt_UndoBakeNone"));
+            return;
+        }
+
+        SaveHelper.SetUnsavedChanges(true);
+
+        var message = Loc.T("BulkOpt_UndoBakeDone", count);
+        LogHelper.Log(message);
+        CustomMessageBox.Show(message);
+        StatusMessage = message;
+    }
+
+    /// <summary>Every texture of the project, used to keep a file that is still referenced.</summary>
+    private List<GTexture> CollectAllProjectTextures()
+    {
+        if (_addonManager?.Addons == null)
+        {
+            return [];
+        }
+
+        return [.. _addonManager.Addons
+            .SelectMany(a => a.Drawables ?? [])
+            .Where(d => d is not GDrawableReserved && d?.Textures != null)
+            .SelectMany(d => d.Textures)
+            .Where(t => t != null)];
+    }
+
     private void Revert_Click(object sender, RoutedEventArgs e)
     {
         var textures = CollectTextures().Select(t => t.Texture).ToList();
@@ -511,6 +730,8 @@ public partial class BulkOptimizeWindow : Window, INotifyPropertyChanged
     {
         _cts?.Cancel();
         _cts?.Dispose();
+        _bakeCts?.Cancel();
+        _bakeCts?.Dispose();
         base.OnClosed(e);
     }
 

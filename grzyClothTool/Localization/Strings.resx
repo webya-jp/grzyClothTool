@@ -1812,4 +1812,154 @@ Do you want to continue?</value>
   <data name="BulkOpt_SummaryBreakdown" xml:space="preserve">
     <value>Compression: {0} saved on {1} textures / downscale: {2} on {3} textures</value>
   </data>
+  <data name="TexDup_Title" xml:space="preserve">
+    <value>Texture duplicates</value>
+  </data>
+  <data name="TexDup_Scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="TexDup_CompareImageContent" xml:space="preserve">
+    <value>Also compare decoded images</value>
+  </data>
+  <data name="TexDup_CompareImageContentHint" xml:space="preserve">
+    <value>Without this option only files that are byte for byte identical are grouped, which is fast. With it every remaining texture is decoded and compared by size, format and pixels, so the same image stored in two different formats is found as well - but the scan takes much longer.</value>
+  </data>
+  <data name="TexDup_Scan" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="TexDup_Idle" xml:space="preserve">
+    <value>Press Scan to look for duplicated textures.</value>
+  </data>
+  <data name="TexDup_ScanProgress" xml:space="preserve">
+    <value>Scanning... {0} / {1}</value>
+  </data>
+  <data name="TexDup_ScanDone" xml:space="preserve">
+    <value>{0} textures scanned, {1} duplicate groups found.</value>
+  </data>
+  <data name="TexDup_NoTextures" xml:space="preserve">
+    <value>There is no texture in this scope.</value>
+  </data>
+  <data name="TexDup_NoDuplicates" xml:space="preserve">
+    <value>No duplicated texture found.</value>
+  </data>
+  <data name="TexDup_Summary" xml:space="preserve">
+    <value>{0} groups / {1} textures, sharing frees about {2} in the project folder.</value>
+  </data>
+  <data name="TexDup_SummaryEmpty" xml:space="preserve">
+    <value>No group selected.</value>
+  </data>
+  <data name="TexDup_ShareNote" xml:space="preserve">
+    <value>Sharing one file does not change the build output: GTA needs one .ytd per variation, so the same number of files is written as before. What it saves is project folder space and optimization work.</value>
+  </data>
+  <data name="TexDup_ExternalDisabled" xml:space="preserve">
+    <value>This is an external project, so the textures point at your own files. Sharing is disabled because it would delete files outside the project.</value>
+  </data>
+  <data name="TexDup_SelectAll" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="TexDup_SelectNone" xml:space="preserve">
+    <value>Select none</value>
+  </data>
+  <data name="TexDup_ColCount" xml:space="preserve">
+    <value>Copies</value>
+  </data>
+  <data name="TexDup_ColSize" xml:space="preserve">
+    <value>Size each</value>
+  </data>
+  <data name="TexDup_ColSavable" xml:space="preserve">
+    <value>Freed</value>
+  </data>
+  <data name="TexDup_ColDrawables" xml:space="preserve">
+    <value>Used by</value>
+  </data>
+  <data name="TexDup_ColVariations" xml:space="preserve">
+    <value>Variations</value>
+  </data>
+  <data name="TexDup_CountFormat" xml:space="preserve">
+    <value>{0} identical</value>
+  </data>
+  <data name="TexDup_ShareFiles" xml:space="preserve">
+    <value>Share one file</value>
+  </data>
+  <data name="TexDup_Shared" xml:space="preserve">
+    <value>{0} groups collapsed: {1} textures now share a file, {2} files removed ({3} freed).</value>
+  </data>
+  <data name="TexDup_NothingSelected" xml:space="preserve">
+    <value>No group is checked.</value>
+  </data>
+  <data name="TexDup_RemoveVariations" xml:space="preserve">
+    <value>Delete duplicate variations</value>
+  </data>
+  <data name="TexDup_NoVariationsToRemove" xml:space="preserve">
+    <value>The selected groups have no duplicate inside a single drawable, so nothing can be deleted.</value>
+  </data>
+  <data name="TexDup_RemoveConfirm" xml:space="preserve">
+    <value>{0} variations will be deleted:</value>
+  </data>
+  <data name="TexDup_RemoveConfirmTitle" xml:space="preserve">
+    <value>Delete duplicate variations</value>
+  </data>
+  <data name="TexDup_RemoveWarning" xml:space="preserve">
+    <value>This changes the texture numbers in game and the number of entries in the shop meta. Continue?</value>
+  </data>
+  <data name="TexDup_AndMore" xml:space="preserve">
+    <value>  ... and {0} more</value>
+  </data>
+  <data name="TexDup_Removed" xml:space="preserve">
+    <value>{0} duplicate variations deleted.</value>
+  </data>
+  <data name="Project_TextureDuplicates" xml:space="preserve">
+    <value>Find duplicate textures</value>
+  </data>
+  <data name="BulkOpt_BakeNow" xml:space="preserve">
+    <value>Write now</value>
+  </data>
+  <data name="BulkOpt_KeepOriginal" xml:space="preserve">
+    <value>Keep the original files (undoable)</value>
+  </data>
+  <data name="BulkOpt_CancelBake" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="BulkOpt_UndoBake" xml:space="preserve">
+    <value>Undo the last write</value>
+  </data>
+  <data name="BulkOpt_BakeConfirmTitle" xml:space="preserve">
+    <value>Write the optimized textures now</value>
+  </data>
+  <data name="BulkOpt_BakeConfirm" xml:space="preserve">
+    <value>{0} textures will be encoded now and stored in the project, so the preview shows the real quality before the build.</value>
+  </data>
+  <data name="BulkOpt_BakeExternalNote" xml:space="preserve">
+    <value>This is an external project: your own files are never overwritten. The optimized texture is written into the project folder and the texture is repointed at it.</value>
+  </data>
+  <data name="BulkOpt_BakeDeleteNote" xml:space="preserve">
+    <value>"Keep the original files" is off, so the previous asset is deleted once nothing uses it any more. The write cannot be undone.</value>
+  </data>
+  <data name="BulkOpt_BakeProgress" xml:space="preserve">
+    <value>Writing... {0} / {1} ({2})</value>
+  </data>
+  <data name="BulkOpt_BakeDone" xml:space="preserve">
+    <value>{0} textures written. File size: {1} saved, estimated memory: {2} saved.</value>
+  </data>
+  <data name="BulkOpt_BakeNone" xml:space="preserve">
+    <value>No texture could be written.</value>
+  </data>
+  <data name="BulkOpt_BakeCancelled" xml:space="preserve">
+    <value>Cancelled, the remaining textures were left untouched.</value>
+  </data>
+  <data name="BulkOpt_BakeCancelling" xml:space="preserve">
+    <value>Cancelling...</value>
+  </data>
+  <data name="BulkOpt_BakeFailures" xml:space="preserve">
+    <value>{0} textures could not be encoded and were skipped.</value>
+  </data>
+  <data name="BulkOpt_BakeDeleted" xml:space="preserve">
+    <value>{0} original files deleted.</value>
+  </data>
+  <data name="BulkOpt_UndoBakeDone" xml:space="preserve">
+    <value>{0} textures put back on their original file.</value>
+  </data>
+  <data name="BulkOpt_UndoBakeNone" xml:space="preserve">
+    <value>There is nothing to undo.</value>
+  </data>
 </root>

@@ -1812,4 +1812,154 @@ GTA5.exe があるフォルダーを選択してください。</value>
   <data name="BulkOpt_SummaryBreakdown" xml:space="preserve">
     <value>圧縮による削減: {0} ({1} 件) / 縮小による削減: {2} ({3} 件)</value>
   </data>
+  <data name="TexDup_Title" xml:space="preserve">
+    <value>テクスチャの重複</value>
+  </data>
+  <data name="TexDup_Scope" xml:space="preserve">
+    <value>対象範囲</value>
+  </data>
+  <data name="TexDup_CompareImageContent" xml:space="preserve">
+    <value>画像の中身も比較する</value>
+  </data>
+  <data name="TexDup_CompareImageContentHint" xml:space="preserve">
+    <value>オフの場合はファイルが完全に同一のものだけをまとめます(高速)。オンにすると残りのテクスチャを実際にデコードして、幅・高さ・形式・ピクセルで比較するため、別形式で保存された同じ画像も見つかりますが、処理時間は大幅に増えます。</value>
+  </data>
+  <data name="TexDup_Scan" xml:space="preserve">
+    <value>検出する</value>
+  </data>
+  <data name="TexDup_Idle" xml:space="preserve">
+    <value>「検出する」を押すと重複テクスチャを探します。</value>
+  </data>
+  <data name="TexDup_ScanProgress" xml:space="preserve">
+    <value>検出中... {0} / {1}</value>
+  </data>
+  <data name="TexDup_ScanDone" xml:space="preserve">
+    <value>{0} 件のテクスチャを調べ、重複グループを {1} 件見つけました。</value>
+  </data>
+  <data name="TexDup_NoTextures" xml:space="preserve">
+    <value>この範囲にはテクスチャがありません。</value>
+  </data>
+  <data name="TexDup_NoDuplicates" xml:space="preserve">
+    <value>重複しているテクスチャはありませんでした。</value>
+  </data>
+  <data name="TexDup_Summary" xml:space="preserve">
+    <value>{0} グループ / {1} 件。共有するとプロジェクトの容量が約 {2} 減ります。</value>
+  </data>
+  <data name="TexDup_SummaryEmpty" xml:space="preserve">
+    <value>グループが選択されていません。</value>
+  </data>
+  <data name="TexDup_ShareNote" xml:space="preserve">
+    <value>ファイルを共有してもビルド出力は変わりません。GTA はバリエーションごとに別の .ytd を必要とするため、書き出されるファイル数は従来どおりです。減るのはプロジェクトフォルダーの容量と、最適化にかかる手間です。</value>
+  </data>
+  <data name="TexDup_ExternalDisabled" xml:space="preserve">
+    <value>これは外部プロジェクトで、テクスチャはあなた自身のファイルを参照しています。プロジェクト外のファイルを削除してしまうため、共有は無効になっています。</value>
+  </data>
+  <data name="TexDup_SelectAll" xml:space="preserve">
+    <value>すべて選択</value>
+  </data>
+  <data name="TexDup_SelectNone" xml:space="preserve">
+    <value>選択を解除</value>
+  </data>
+  <data name="TexDup_ColCount" xml:space="preserve">
+    <value>重複数</value>
+  </data>
+  <data name="TexDup_ColSize" xml:space="preserve">
+    <value>1 件あたり</value>
+  </data>
+  <data name="TexDup_ColSavable" xml:space="preserve">
+    <value>削減量</value>
+  </data>
+  <data name="TexDup_ColDrawables" xml:space="preserve">
+    <value>使用しているドロウアブル</value>
+  </data>
+  <data name="TexDup_ColVariations" xml:space="preserve">
+    <value>バリエーション</value>
+  </data>
+  <data name="TexDup_CountFormat" xml:space="preserve">
+    <value>同一テクスチャ {0} 件</value>
+  </data>
+  <data name="TexDup_ShareFiles" xml:space="preserve">
+    <value>ファイルを共有する</value>
+  </data>
+  <data name="TexDup_Shared" xml:space="preserve">
+    <value>{0} グループを統合しました。{1} 件のテクスチャが同じファイルを参照し、{2} 個のファイルを削除しました({3} 削減)。</value>
+  </data>
+  <data name="TexDup_NothingSelected" xml:space="preserve">
+    <value>グループが 1 つも選択されていません。</value>
+  </data>
+  <data name="TexDup_RemoveVariations" xml:space="preserve">
+    <value>重複バリエーションを削除する</value>
+  </data>
+  <data name="TexDup_NoVariationsToRemove" xml:space="preserve">
+    <value>選択したグループには同一ドロウアブル内の重複が無いため、削除できるものはありません。</value>
+  </data>
+  <data name="TexDup_RemoveConfirm" xml:space="preserve">
+    <value>次の {0} 件のバリエーションを削除します:</value>
+  </data>
+  <data name="TexDup_RemoveConfirmTitle" xml:space="preserve">
+    <value>重複バリエーションの削除</value>
+  </data>
+  <data name="TexDup_RemoveWarning" xml:space="preserve">
+    <value>ゲーム内のテクスチャ番号とショップメタのエントリ数が変わります。実行しますか?</value>
+  </data>
+  <data name="TexDup_AndMore" xml:space="preserve">
+    <value>  ... 他 {0} 件</value>
+  </data>
+  <data name="TexDup_Removed" xml:space="preserve">
+    <value>重複バリエーションを {0} 件削除しました。</value>
+  </data>
+  <data name="Project_TextureDuplicates" xml:space="preserve">
+    <value>テクスチャの重複を探す</value>
+  </data>
+  <data name="BulkOpt_BakeNow" xml:space="preserve">
+    <value>今すぐ書き出す</value>
+  </data>
+  <data name="BulkOpt_KeepOriginal" xml:space="preserve">
+    <value>元に戻せるようにする(元ファイルを残す)</value>
+  </data>
+  <data name="BulkOpt_CancelBake" xml:space="preserve">
+    <value>中止</value>
+  </data>
+  <data name="BulkOpt_UndoBake" xml:space="preserve">
+    <value>直前の書き出しを元に戻す</value>
+  </data>
+  <data name="BulkOpt_BakeConfirmTitle" xml:space="preserve">
+    <value>最適化したテクスチャを今すぐ書き出す</value>
+  </data>
+  <data name="BulkOpt_BakeConfirm" xml:space="preserve">
+    <value>{0} 件のテクスチャを今すぐエンコードしてプロジェクトに保存します。ビルド前にプレビューで実際の画質を確認できるようになります。</value>
+  </data>
+  <data name="BulkOpt_BakeExternalNote" xml:space="preserve">
+    <value>これは外部プロジェクトです。あなたの元ファイルを上書きすることはありません。最適化結果はプロジェクトフォルダーに書き出し、参照だけを差し替えます。</value>
+  </data>
+  <data name="BulkOpt_BakeDeleteNote" xml:space="preserve">
+    <value>「元に戻せるようにする」がオフです。どこからも参照されなくなった元の素材は削除され、この書き出しは元に戻せません。</value>
+  </data>
+  <data name="BulkOpt_BakeProgress" xml:space="preserve">
+    <value>書き出し中... {0} / {1} ({2})</value>
+  </data>
+  <data name="BulkOpt_BakeDone" xml:space="preserve">
+    <value>{0} 件を書き出しました。ファイルサイズ: {1} 削減、推定メモリ: {2} 削減。</value>
+  </data>
+  <data name="BulkOpt_BakeNone" xml:space="preserve">
+    <value>書き出せたテクスチャはありませんでした。</value>
+  </data>
+  <data name="BulkOpt_BakeCancelled" xml:space="preserve">
+    <value>中止しました。残りのテクスチャはそのままです。</value>
+  </data>
+  <data name="BulkOpt_BakeCancelling" xml:space="preserve">
+    <value>中止しています...</value>
+  </data>
+  <data name="BulkOpt_BakeFailures" xml:space="preserve">
+    <value>{0} 件はエンコードできず、スキップしました。</value>
+  </data>
+  <data name="BulkOpt_BakeDeleted" xml:space="preserve">
+    <value>元のファイルを {0} 個削除しました。</value>
+  </data>
+  <data name="BulkOpt_UndoBakeDone" xml:space="preserve">
+    <value>{0} 件のテクスチャを元のファイルに戻しました。</value>
+  </data>
+  <data name="BulkOpt_UndoBakeNone" xml:space="preserve">
+    <value>元に戻せるものはありません。</value>
+  </data>
 </root>
