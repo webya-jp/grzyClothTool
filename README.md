@@ -29,6 +29,49 @@
 `GRZYCLOTHTOOL_LANG=en|ja` を使えます (設定より優先され、設定ファイルは書き換えません)。
 自動 UI テストのように表示言語を固定したいときに使います。
 
+## 言語ファイル (Localization フォルダ)
+
+画面の文言は exe と同じ場所にある **`Localization` フォルダの JSON ファイル**に入っています。
+
+```
+grzyClothTool.exe
+Localization\
+  en.json
+  ja.json
+```
+
+- 中身は **キー → 文言** の平坦な JSON (UTF-8 BOM なし、キー昇順) です。
+- **文言を直したいときはこの JSON を書き換えて、アプリを再起動するだけ**です。再ビルドは不要です。
+- `{0}` `{1}` のような書式プレースホルダはそのまま残してください。順番も変えないでください
+  (数値やファイル名がそこに埋め込まれます)。
+- `_languageName` は設定画面の言語一覧に出る表示名です。
+
+### 言語を追加する
+
+`Localization` に `<カルチャコード>.json` を置くだけで、設定画面の言語一覧に自動で出てきます。
+
+1. `en.json` をコピーして、例えば `ko.json` にリネームします。
+2. 値を翻訳します。キーは変更しないでください。
+3. `_languageName` を `"한국어"` のように設定します (省略した場合は
+   `CultureInfo.GetCultureInfo("ko").NativeName` が使われます)。
+4. アプリを再起動すると、設定の **言語 / Language** に追加した言語が並びます。
+   `--lang ko` や `GRZYCLOTHTOOL_LANG=ko` でも指定できます。
+
+翻訳が抜けているキーは `en.json` の値に、`en.json` にも無ければキー名そのものにフォールバックします。
+
+### フォルダが無い場合
+
+同じ JSON は exe 内にも埋め込まれています。`Localization` フォルダが配布物から失われても、
+埋め込み側が使われるので画面は壊れません (その場合は文言を編集できないだけです)。
+
+### 既知の事項
+
+- ビルド時に `SatelliteResourceLanguages=en` を指定しているため、.NET / WPF / WinForms 標準の
+  多言語サテライトリソース (publish 出力のルートに出ていた 20 個の言語フォルダ、約 33 MB) は
+  同梱していません。その影響で、.NET が出す一部の例外メッセージや WPF / WinForms の組み込み文言
+  (標準ダイアログのボタンなど) は OS の言語にかかわらず英語で表示されます。
+  アプリ自身の文言は `Localization` の JSON で完全に日本語化されています。
+
 ## テクスチャ一括最適化
 
 FiveM のサーバーログに `Asset xxx.ytd uses 64.0 MiB of physical memory. Oversized assets can and WILL
@@ -137,6 +180,38 @@ GTA はバリエーションごとに別名の .ytd を必要とするため、�
 Now you can do _almost_ everything you could do before with _other available tools_, but now without spending any money!
 
 ##
+
+# Localization files (quick start)
+
+The UI strings of this fork live in plain JSON files in a **`Localization` folder next to the executable**,
+not in compiled satellite assemblies:
+
+```
+grzyClothTool.exe
+Localization\
+  en.json
+  ja.json
+```
+
+- Each file is a flat **key → string** map (UTF-8 without BOM, keys sorted).
+- **To fix wording, edit the JSON and restart the app — no rebuild needed.**
+- Keep format placeholders such as `{0}` / `{1}` and their order; numbers and file names are
+  substituted there at runtime.
+- `_languageName` is the name shown in the language picker.
+
+**Adding a language:** copy `en.json` to `<culture code>.json` (for example `ko.json`), translate the
+values, keep the keys, and restart. The language appears in *Settings → 言語 / Language* automatically
+and can also be forced with `--lang ko` or `GRZYCLOTHTOOL_LANG=ko`. Missing keys fall back to the
+English value, then to the key name.
+
+**If the folder is missing:** the same catalogs are also embedded in the executable, so a distribution
+that lost the `Localization` folder still shows a correct UI — you just cannot edit the wording.
+
+**Known effect:** the project builds with `SatelliteResourceLanguages=en`, so the localized satellite
+resources of the .NET / WPF / WinForms assemblies (the ~20 language folders, about 33 MB, that used to
+sit in the root of a publish output) are no longer shipped. A few framework-provided strings — some
+.NET exception messages and built-in WPF/WinForms dialog texts — are therefore always English,
+regardless of the OS language. The application's own strings are unaffected.
 
 # Bulk texture optimization (quick start)
 

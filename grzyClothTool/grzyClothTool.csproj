@@ -13,6 +13,10 @@
 	  <PublishReadyToRun>true</PublishReadyToRun>
 	  
 	  <PublishTrimmed>false</PublishTrimmed>
+
+	  <!-- Keep only the English satellite resources of the .NET/WPF/WinForms assemblies.
+	       Without this, publish drops ~20 language folders (about 33 MB) next to the executable. -->
+	  <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
     <DebugSymbols>False</DebugSymbols>
@@ -78,15 +82,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Localization\Strings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Compile Update="Localization\Strings.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Strings.resx</DependentUpon>
-    </Compile>
+    <!-- UI strings live in editable JSON catalogs. They are copied next to the executable so the
+         wording can be corrected without rebuilding, and embedded as a fallback so the application
+         still starts when the Localization folder is missing from a distribution. -->
+    <Content Include="Localization\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Localization\*.json" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Properties\Settings.settings">

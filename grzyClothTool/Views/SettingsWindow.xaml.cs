@@ -111,7 +111,7 @@ namespace grzyClothTool.Views
         {
             get
             {
-                _selectedLanguage ??= LanguageOptions.FirstOrDefault(o => o.Language == LocalizationManager.Instance.CurrentLanguage)
+                _selectedLanguage ??= LanguageOptions.FirstOrDefault(o => o.Code == LocalizationManager.Instance.CurrentLanguageCode)
                                       ?? LanguageOptions[0];
                 return _selectedLanguage;
             }
@@ -120,8 +120,8 @@ namespace grzyClothTool.Views
                 if (value != null && _selectedLanguage != value)
                 {
                     _selectedLanguage = value;
-                    PersistentSettingsHelper.Instance.Language = value.Language.ToString();
-                    LocalizationManager.Instance.SetLanguage(value.Language);
+                    PersistentSettingsHelper.Instance.Language = value.Code;
+                    LocalizationManager.Instance.SetLanguage(value.Code);
                     OnPropertyChanged(nameof(SelectedLanguage));
                 }
             }
