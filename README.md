@@ -62,6 +62,54 @@ lead to streaming issues` が大量に出る原因は、たいてい **無圧縮
 実測 (女性用アドオン、ydd 128 件 / ytd 421 件):
 合計 2052 MB → 853 MB (-58%)、16 MB 超が 18 件 → 0 件、最大テクスチャ 42.7 MB → 5.3 MB。
 
+### 今すぐ書き出す (ビルド前にミップマップと圧縮を適用する)
+
+「適用」がビルド時まで待つのに対し、**今すぐ書き出す** はその場でエンコードします。
+対象のテクスチャを実際に .ytd に変換してプロジェクトの assets に書き出し、
+`GTexture` の参照をそれに差し替えたうえで、テクスチャ情報を再読込します。
+`ビルド時に最適化` フラグは外れるので、ビルドではその .ytd がそのままコピーされます。
+
+これにより **3D プレビューとテクスチャプレビューで、ビルド前に実際の画質を確認できます**。
+
+- 既定では **元ファイルを残す** が ON です。直後なら **直前の書き出しを元に戻す** で戻せます。
+  OFF にすると、どこからも参照されなくなった古い素材を削除します (元に戻せません)。
+- **外部プロジェクトではあなたの元ファイルを絶対に上書きしません**。
+  最適化結果はプロジェクト管理下に書き出し、参照だけを差し替えます。
+- 進捗表示と中止に対応しています。完了後に実ファイルサイズと推定メモリの削減量を表示します。
+- 元が .ytd の場合、**内部テクスチャ名は変更されません** (ドロウアブルのシェーダーが
+  その名前で参照しているため)。
+
+実測 (ytd 2050 件のパックの一部、2048px の diffuse 18 件): 
+実ファイル 3.2 MB 削減、推定メモリ 189 MB 削減、ミップ 10 段生成、内部テクスチャ名 18/18 件維持。
+
+## テクスチャの重複統合
+
+同じ画像が何度も入っているプロジェクトは珍しくありません。プロジェクト画面右下の
+**テクスチャの重複を探す** ボタンで、内容が同じテクスチャを検出できます。
+
+検出はまずファイル内容の MD5 で行い (高速)、**画像の中身も比較する** を ON にすると
+残りを実際にデコードして幅・高さ・ピクセルで比較します (別形式で保存された同じ画像も
+見つかりますが時間がかかります)。**ドロウアブルをまたいだ重複も対象**で、非同期・進捗表示付きです。
+
+グループごとに「同一テクスチャ n 件 / 使用しているドロウアブル / バリエーション /
+1 件あたりのサイズ / まとめた場合の削減量」を表示します。操作は 2 つあります。
+
+**ファイルを共有する** (既定・安全)
+同一内容の複数のテクスチャが 1 つの素材ファイルを参照するようにし、余分なコピーを
+プロジェクトの assets から削除します。**ビルド出力は一切変わりません** —
+GTA はバリエーションごとに別名の .ytd を必要とするため、書き出されるファイル数は従来どおりです。
+減るのはプロジェクトフォルダーの容量と、最適化にかかる手間 (同じ画像を 1 回処理すれば済む) です。
+外部プロジェクトはユーザーのファイルを参照しているため、この操作は無効化されます。
+
+**重複バリエーションを削除する** (任意・既定オフ・破壊的)
+**同一ドロウアブル内**で内容が同じバリエーション (例 `diff_000_a` と `diff_000_b` が同一) を削除します。
+ゲーム内のテクスチャ番号とショップメタのエントリ数が変わるため、実行前に消えるバリエーションを
+一覧表示して確認を求めます。ドロウアブルをまたいだ削除は行いません。
+
+実測 (ytd 2058 件 / 680 MB のパックを self-contained で取り込み):
+重複 **151 グループ / 963 件**、共有でプロジェクトの assets が **679 MB → 522 MB (-157 MB、-23%)**、
+ファイル数 2050 → 1238。同一ドロウアブル内の重複バリエーションは 3 件でした。
+
 ## 翻訳について
 
 - ドロウアブル、テクスチャ、アドオン、プロップ、コンポーネントなど、GTA V 衣装 MOD で
@@ -114,6 +162,46 @@ This fork adds a **bulk texture optimizer** for the whole project, aimed at the 
 
 Measured on a real female addon (128 ydd / 421 ytd): 2052 MB -> 853 MB of texture memory (-58%),
 18 textures above 16 MB -> 0, largest texture 42.7 MB -> 5.3 MB.
+
+5. **Write now** encodes the selected textures immediately instead of waiting for the build: each
+   result is written into the project assets, the texture is repointed at it and its details are
+   reloaded, so the **3D preview and the texture preview show the real quality before any build**.
+   *Keep the original files* is on by default, which makes **Undo the last write** possible.
+   An external project's own files are never overwritten — the result is written into the project
+   and only the reference changes. When the source is a .ytd its internal texture name is preserved,
+   because the drawable's shader references the texture by that name.
+
+Measured on 18 2048 px diffuse textures of a real pack: 3.2 MB smaller on disk, 189 MB less
+estimated video memory, a 10 level mip chain generated, 18/18 internal texture names unchanged.
+
+##
+
+# Duplicate texture merge (quick start)
+
+Packs often ship the same image many times over. Click **Find duplicate textures** (bottom right,
+next to *Bulk optimize textures*) to group textures that hold the same image, across drawables.
+
+Detection hashes the file contents with MD5, which is fast. **Also compare decoded images** decodes
+whatever is left and compares it by size and pixels, so the same image stored in two different
+formats is found too — at the cost of a much longer scan. The scan is asynchronous and reports
+progress, so a few thousand textures do not freeze the UI.
+
+Each group shows how many copies exist, which drawables and variations use them, the size of one
+copy and how much merging would free. Two actions are offered:
+
+- **Share one file** (default, safe) — every duplicate of a self-contained project points at a
+  single asset file and the extra copies are deleted from the project assets. **The build output
+  does not change**: GTA needs one .ytd per variation, so the same files are written as before.
+  What it saves is project folder space and optimization work. Disabled for external projects,
+  whose files belong to you.
+- **Delete duplicate variations** (optional, off by default, destructive) — removes variations of
+  **the same drawable** that hold the same image (e.g. `diff_000_a` and `diff_000_b`). This changes
+  the in-game texture numbers and the number of shop meta entries, so the exact list of variations
+  that would go away is shown for confirmation first. Duplicates across drawables are never deleted.
+
+Measured on a real pack imported as a self-contained project (2058 ytd, 680 MB): **151 duplicate
+groups covering 963 textures**, sharing shrank the project assets from **679 MB to 522 MB (-157 MB,
+-23%)** and 2050 files down to 1238.
 
 ##
 

@@ -1915,7 +1915,7 @@ GTA5.exe があるフォルダーを選択してください。</value>
     <value>今すぐ書き出す</value>
   </data>
   <data name="BulkOpt_KeepOriginal" xml:space="preserve">
-    <value>元に戻せるようにする(元ファイルを残す)</value>
+    <value>元ファイルを残す</value>
   </data>
   <data name="BulkOpt_CancelBake" xml:space="preserve">
     <value>中止</value>

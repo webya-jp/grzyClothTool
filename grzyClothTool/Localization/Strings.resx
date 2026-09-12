@@ -1915,7 +1915,7 @@ Do you want to continue?</value>
     <value>Write now</value>
   </data>
   <data name="BulkOpt_KeepOriginal" xml:space="preserve">
-    <value>Keep the original files (undoable)</value>
+    <value>Keep the original files</value>
   </data>
   <data name="BulkOpt_CancelBake" xml:space="preserve">
     <value>Cancel</value>
